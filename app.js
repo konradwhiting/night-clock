@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261019-3';
+  var BUILD = '20261019-4';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -564,6 +564,54 @@
       });
   }
 
+  /* ---------- light rail status ---------- */
+
+  // lightrail.json is written by a scheduled GitHub Action (see .github/workflows/lightrail.yml).
+  var rail = store.get(CACHE + 'rail', null);
+  var RAIL_REFRESH_MS = 5 * 60 * 1000;
+  var RAIL_STALE_MS = 90 * 60 * 1000;  // the job rewrites an unchanged status at least hourly
+
+  function renderRail() {
+    var box = $('rail');
+    if (!box) return;  // this page has no light rail area
+    var head, sub, quiet = true;
+    var age = rail && rail.updated ? Date.now() - Date.parse(rail.updated) : Infinity;
+    if (!rail || rail.state === 'setup') {
+      head = 'Not connected yet';
+      sub = 'Waiting for the Transport for NSW key';
+    } else if (rail.state === 'error') {
+      head = rail.text;
+      sub = rail.detail;
+    } else if (age > RAIL_STALE_MS) {
+      var z = zoned(new Date(Date.parse(rail.updated)), CITIES.syd.tz);
+      var t = clockText(z);
+      head = 'Status out of date';
+      sub = 'Last checked ' + t.hm + t.ap;
+    } else {
+      head = rail.text;
+      sub = rail.detail;
+      quiet = rail.state === 'ontime' || rail.state === 'quiet';
+    }
+    $('rail-head').textContent = head;
+    $('rail-sub').textContent = sub || '';
+    box.className = quiet ? 'rail' : 'rail rail-alert';
+  }
+
+  function loadRail() {
+    if (!$('rail')) return;  // no light rail area on this page, nothing to fetch
+    fetch(BASE + 'lightrail.json?t=' + Math.floor(Date.now() / 120000), { cache: 'no-store' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (data) { rail = data; store.set(CACHE + 'rail', data); })
+      .catch(function () { /* keep whatever we had */ })
+      .then(function () {
+        renderRail();
+        setTimeout(loadRail, RAIL_REFRESH_MS);
+      });
+  }
+
   /* ---------- screen wake lock ---------- */
 
   var wakeLock = null;
@@ -664,6 +712,7 @@
       keepAwake();
       tick();
       if (!weather || Date.now() - weather.fetchedAt > REFRESH_OK_MS) loadWeather();
+      renderRail();
     }
   });
 
@@ -674,8 +723,10 @@
   tick();
   renderWeather();
   renderNews();
+  renderRail();
   setInterval(tick, 1000);
   keepAwake();
   loadWeather();
   loadNews();
+  loadRail();
 })();

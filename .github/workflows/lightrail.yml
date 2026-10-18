@@ -1,0 +1,41 @@
+name: Update light rail status
+
+# Reads live Inner West Light Rail (L1 Dulwich Hill) trip updates from Transport for NSW
+# every 10 minutes and commits lightrail.json only when the status changes (or once an hour).
+# Needs a repository secret named TFNSW_API_KEY (free key from opendata.transport.nsw.gov.au).
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-lightrail
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install the GTFS-realtime reader
+        run: npm install --no-save --no-package-lock gtfs-realtime-bindings
+      - name: Fetch light rail status
+        env:
+          TFNSW_API_KEY: ${{ secrets.TFNSW_API_KEY }}
+        run: node scripts/update-lightrail.mjs
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain lightrail.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add lightrail.json
+            git commit -m "Update light rail status"
+            git pull --rebase
+            git push
+          fi

@@ -196,6 +196,24 @@ body { font-family: var(--body); }
 .wx-grid span:not(.g-l):not(.g-t) { color: var(--ink-2); }
 .wx-grid .g-hi { color: var(--ink); }
 
+/* light rail status (Earlwood page): quiet when on time, brighter when not */
+.rail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2em 0.9em;
+  margin-top: 0.9em;
+  padding-top: 0.7em;
+  border-top: 1px solid var(--line);
+  font-family: var(--display);
+  font-weight: 500;
+}
+.rail-line { font-family: var(--body); font-weight: 400; font-size: clamp(14px, 2.6cqw, 19px); color: var(--ink-2); }
+.rail-head { font-size: clamp(22px, 4.6cqw, 34px); color: var(--ink-2); }
+.rail-sub { font-family: var(--body); font-weight: 400; font-size: clamp(14px, 2.6cqw, 19px); color: var(--ink-3); }
+.rail-alert .rail-head { color: var(--ink); text-decoration: underline; text-underline-offset: 0.15em; }
+.rail-alert .rail-sub { color: var(--ink-2); }
+
 /* Sydney: rain first, temperature small */
 .wx-rainy .wx-now { gap: 0.6em; }
 .wx-rainy .wx-temp { font-size: clamp(28px, 6.2cqw, 40px); }
@@ -317,6 +335,8 @@ body { font-family: var(--body); }
   .wx-text .rain-head { font-size: 9.5cqw; }
   .wx-text .rain-sub, .rain-next { font-size: 3.8cqw; }
   .wx-grid { font-size: 5.4cqw; }
+  .rail-line, .rail-sub { font-size: 3.4cqw; }
+  .rail-head { font-size: 6.4cqw; }
 }
 
 /* short landscape screens such as small tablets */
@@ -332,6 +352,9 @@ body { font-family: var(--body); }
   .rain-sub, .rain-next { font-size: 14px; margin-top: 0.2em; }
   .wx-text .rain-head { font-size: 28px; margin-top: 0.2em; }
   .wx-grid { font-size: 20px; margin-top: 0.4em; padding-top: 0.4em; }
+  .rail { margin-top: 0.4em; padding-top: 0.4em; }
+  .rail-head { font-size: 22px; }
+  .rail-line, .rail-sub { font-size: 14px; }
   .rain-nc-cap { font-size: 11px; margin-bottom: 2px; }
   .rain-nc svg { height: 40px; }
   #foot { font-size: 11px; }
