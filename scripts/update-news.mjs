@@ -13,7 +13,7 @@ const gnews = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponen
 export const PLACES = {
   syd: {
     feeds: [
-      { area: 'Earlwood', url: gnews('Earlwood when:14d'), newest: true },
+      { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true },
       { area: 'Canterbury-Bankstown and Inner West', url: gnews('"Canterbury-Bankstown" OR "Inner West" Sydney when:7d'), newest: true },
       { source: 'ABC News NSW', url: 'https://www.abc.net.au/news/feed/5555986/rss.xml' }
     ]
@@ -73,9 +73,12 @@ export function parseFirstItem(xml) {
   return { title: first.title, link: first.link, published: first.published };
 }
 
+// Search feeds pick up obituaries and notices that are not news.
+const SKIP = /obituar|death notice|funeral notice|in memoriam|\bRIP\b/i;
+
 /** The most recently published item, or the first one if none has a date. */
-export function newestItem(xml) {
-  const items = parseItems(xml);
+export function newestItem(xml, exclude = SKIP) {
+  const items = parseItems(xml).filter((it) => !exclude.test(it.title));
   if (!items.length) return null;
   return items.reduce((best, it) =>
     (it.published || '') > (best.published || '') ? it : best, items[0]);
