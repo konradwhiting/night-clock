@@ -513,7 +513,7 @@
       var box = $(k + '-news');
       if (!n || !n.title) { box.hidden = true; return; }
       var age = n.published ? ' · ' + ago(Date.now() - Date.parse(n.published)) : '';
-      $(k + '-news-src').textContent = n.source + age;
+      $(k + '-news-src').textContent = (n.area ? n.area + ' · ' : '') + n.source + age;
       $(k + '-news-title').textContent = n.title;
       box.hidden = false;
     });

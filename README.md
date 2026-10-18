@@ -32,7 +32,7 @@ The numbers come from Open-Meteo for Earlwood. Weather models work on a grid rou
 
 ## Headlines
 
-The blank space in each column shows the top regional headline: ABC News NSW for Sydney and BBC News Sussex for Eastbourne (BBC News England if the Sussex feed is unavailable). They are hidden in portrait.
+The blank space in each column shows the top regional headline: Earlwood news (searched from Google News, falling back to Canterbury-Bankstown and Inner West, then ABC News NSW) for the left column and BBC News Sussex for Eastbourne (BBC News England if the Sussex feed is unavailable). They are hidden in portrait.
 
 A browser cannot read those RSS feeds directly, so a scheduled GitHub Action (`.github/workflows/news.yml`) fetches them once an hour and commits `news.json` when a headline changes. The page reads `news.json`. To refresh by hand, open the Actions tab, choose Update headlines, then Run workflow. Headlines are shown with their source for personal use.
 

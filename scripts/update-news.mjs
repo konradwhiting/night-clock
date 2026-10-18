@@ -6,10 +6,15 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const OUT = fileURLToPath(new URL('../news.json', import.meta.url));
 
-// First feed that works wins. The first item of a feed is its top story.
+// First feed that works wins. For BBC and ABC the first item is the top story.
+// Google News search feeds are not ranked by date, so those take the newest item instead.
+const gnews = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=en-AU&gl=AU&ceid=AU:en';
+
 export const PLACES = {
   syd: {
     feeds: [
+      { area: 'Earlwood', url: gnews('Earlwood when:14d'), newest: true },
+      { area: 'Canterbury-Bankstown and Inner West', url: gnews('"Canterbury-Bankstown" OR "Inner West" Sydney when:7d'), newest: true },
       { source: 'ABC News NSW', url: 'https://www.abc.net.au/news/feed/5555986/rss.xml' }
     ]
   },
@@ -40,18 +45,40 @@ function tagText(xml, name) {
   return raw.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 }
 
-/** Returns {title, link, published} for the first <item>, or null. */
-export function parseFirstItem(xml) {
-  const item = xml.match(/<item(?:\s[^>]*)?>[\s\S]*?<\/item>/i);
-  if (!item) return null;
-  const title = tagText(item[0], 'title');
+function itemFrom(block) {
+  let title = tagText(block, 'title');
   if (!title) return null;
-  const date = new Date(tagText(item[0], 'pubDate'));
+  // Google News appends the publisher to the title: "Headline - Publisher"
+  const publisher = tagText(block, 'source');
+  if (publisher && title.endsWith(' - ' + publisher)) title = title.slice(0, -(publisher.length + 3));
+  const date = new Date(tagText(block, 'pubDate'));
   return {
     title,
-    link: tagText(item[0], 'link'),
-    published: Number.isNaN(date.getTime()) ? null : date.toISOString()
+    link: tagText(block, 'link'),
+    published: Number.isNaN(date.getTime()) ? null : date.toISOString(),
+    publisher
   };
+}
+
+/** Returns every item in a feed, in feed order. */
+export function parseItems(xml) {
+  const blocks = xml.match(/<item(?:\s[^>]*)?>[\s\S]*?<\/item>/gi) || [];
+  return blocks.map(itemFrom).filter(Boolean);
+}
+
+/** Returns {title, link, published} for the first <item>, or null. */
+export function parseFirstItem(xml) {
+  const first = parseItems(xml)[0];
+  if (!first) return null;
+  return { title: first.title, link: first.link, published: first.published };
+}
+
+/** The most recently published item, or the first one if none has a date. */
+export function newestItem(xml) {
+  const items = parseItems(xml);
+  if (!items.length) return null;
+  return items.reduce((best, it) =>
+    (it.published || '') > (best.published || '') ? it : best, items[0]);
 }
 
 async function fetchFeed(url) {
@@ -74,8 +101,13 @@ async function main() {
     let found = null;
     for (const feed of place.feeds) {
       try {
-        const item = parseFirstItem(await fetchFeed(feed.url));
-        if (item) { found = { source: feed.source, ...item }; break; }
+        const xml = await fetchFeed(feed.url);
+        const item = feed.newest ? newestItem(xml) : parseFirstItem(xml);
+        if (item) {
+          const { publisher, ...rest } = item;
+          found = { ...(feed.area ? { area: feed.area } : {}), source: feed.source || publisher || 'News', ...rest };
+          break;
+        }
         console.warn(`${key}: no items in ${feed.url}`);
       } catch (err) {
         console.warn(`${key}: ${feed.url} failed: ${err.message}`);
