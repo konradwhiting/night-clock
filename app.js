@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261019-1';
+  var BUILD = '20261019-3';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -115,6 +115,7 @@
   els.syd.ncWrap = $('syd-nc-wrap');
   els.syd.ncCap = $('syd-nc-cap');
   els.syd.nc = $('syd-nc');
+  els.syd.grid = $('syd-grid');  // text-and-numbers forecast, used instead of the charts on the Earlwood page
   var foot = $('foot');
   var controls = $('controls');
   var btnHours = $('btn-hours');
@@ -454,8 +455,8 @@
         e.temp.textContent = '--°';
         e.desc.textContent = weather ? 'Forecast out of date' : 'Loading forecast';
         e.range.textContent = '';
-        e.chart.innerHTML = '';
-        if (e.rainHead) { e.rainHead.textContent = ''; e.rainSub.textContent = ''; e.ncWrap.hidden = true; }
+        if (e.chart) e.chart.innerHTML = '';
+        if (e.rainHead) { e.rainHead.textContent = ''; e.rainSub.textContent = ''; if (e.ncWrap) e.ncWrap.hidden = true; if (e.grid) e.grid.innerHTML = ''; }
         return;
       }
       var hi = Math.max.apply(null, win.temp);
@@ -464,7 +465,7 @@
       e.temp.textContent = Math.round(win.temp[0]) + '°';
       e.desc.textContent = codeText(win.code[0]);
       var portrait = window.innerHeight > window.innerWidth;
-      var cw = Math.round(e.chart.clientWidth) || 560;
+      var cw = e.chart ? Math.round(e.chart.clientWidth) || 560 : 0;
       if (e.rainHead) {
         // Sydney: rain first, temperature kept small
         e.range.textContent = 'High ' + Math.round(hi) + '° · low ' + Math.round(lo) + '°';
@@ -472,13 +473,27 @@
         e.rainHead.textContent = rs.head;
         e.rainSub.textContent = rs.sub;
         var nc = nowcastOf(weather[k]);
-        e.ncWrap.hidden = !nc;
+        if (e.ncWrap) e.ncWrap.hidden = !nc;
+        if (e.grid) {
+          // numbers instead of charts: every third hour, temperature and rain chance
+          e.ncCap.textContent = nc ? 'Next 2 hours: ' + nowcastText(nc) : '';
+          var cols = [0, 3, 6, 9, 12, 15, 18, 21];
+          var times = '<span class="g-l"></span>', temps = '<span class="g-l">Temp</span>', rains = '<span class="g-l">Rain</span>';
+          cols.forEach(function (i) {
+            var p = Math.round(win.pop[i]);
+            times += '<span class="g-t">' + (i === 0 ? 'Now' : hourLabel(win.t[i], CITIES[k].tz)) + '</span>';
+            temps += '<span>' + Math.round(win.temp[i]) + '°</span>';
+            rains += '<span' + (p >= 50 ? ' class="g-hi"' : '') + '>' + p + '%</span>';
+          });
+          e.grid.innerHTML = times + temps + rains;
+          return;
+        }
         if (nc) {
           e.ncCap.textContent = 'Next 2 hours · ' + nowcastText(nc);
-          e.nc.innerHTML = nowcastSVG(nc, Math.round(e.nc.clientWidth) || 220, portrait ? 46 : 60);
+          e.nc.innerHTML = nowcastSVG(nc, Math.round(e.nc.clientWidth) || 220, portrait ? 46 : (window.innerHeight <= 640 ? 40 : 60));
         }
         var roomy = !$(k + '-news');  // without a headline there is more height for the chart
-        e.chart.innerHTML = chartSVG(win, CITIES[k], cw, roomy ? Math.round(window.innerHeight * (portrait ? 0.28 : 0.25)) : (portrait ? 84 : 120), true);
+        e.chart.innerHTML = chartSVG(win, CITIES[k], cw, roomy ? Math.max(70, Math.round(e.chart.clientHeight) || 150) : (portrait ? 84 : 120), true);
       } else {
         e.range.textContent = 'Next 24h: high ' + Math.round(hi) + '°, low ' + Math.round(lo) + '° · '
           + (maxPop < 10 ? 'no rain expected' : 'rain chance up to ' + Math.round(maxPop) + '%');
@@ -494,6 +509,7 @@
     resizeTimer = setTimeout(renderWeather, 250);
   }
   window.addEventListener('resize', onResize);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(renderWeather);
   window.addEventListener('orientationchange', onResize);
 
   function renderFoot() {

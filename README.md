@@ -27,7 +27,7 @@ Choices are remembered on the iPad. Landscape is the main layout. Portrait also 
 
 ## Earlwood-only clock
 
-A second page at `/earlwood/` (for example `https://konradwhiting.github.io/night-clock/earlwood/`) shows only Earlwood: one large clock and the rain-first forecast, with no headlines. It uses the same code and headlines as the main page, so there is nothing extra to maintain. Add it to the Home Screen separately and it gets its own icon, named Earlwood Clock. The 24 or 12 hour and brightness choices are shared with the main clock, since both pages live on the same site.
+A second page at `/earlwood/` (for example `https://konradwhiting.github.io/night-clock/earlwood/`) shows only Earlwood: one large clock and a forecast made of text and numbers (no charts, no headlines): temperature, a plain-words rain outlook, the next two hours, and temperature and rain chance every three hours. It scales to short, wide tablet screens. It uses the same code and headlines as the main page, so there is nothing extra to maintain. Add it to the Home Screen separately and it gets its own icon, named Earlwood Clock. The 24 or 12 hour and brightness choices are shared with the main clock, since both pages live on the same site.
 
 ## Sydney rain
 
