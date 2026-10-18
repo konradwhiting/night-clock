@@ -29,7 +29,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | S6 | The screen protects itself from burn-in. | Content shifts a few pixels every minute. | Accepted on device |
 | S7 | I can put it on the Home Screen and it opens full screen. | Home Screen icon, no Safari toolbar, black status bar. | Accepted on device |
 | S8 | I can switch between 24 and 12 hour time. | 24 hour by default. One tap to switch, remembered. Also applies to the chart hour labels. | Accepted on device |
-| S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about once an hour. Hidden if no headline is available. Landscape only. | Accepted on device. The scheduled job has run once and fetched live headlines from both feeds |
+| S9 | As the sleeper, I can see the top regional headline for each place. | Earlwood (Sydney) shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about once an hour. Hidden if no headline is available. Landscape only. | Accepted on device. The scheduled job has run once and fetched live headlines from both feeds |
 | S10 | As the sleeper, I can see how likely rain is in Earlwood, without temperature taking the space. | Sydney forecast leads with a plain-words rain outlook (for example "Rain easing by 20:00"), chance now, peak chance and time, expected millimetres, a next-2-hours rain strip, and a 24 hour chart led by rain chance. Temperature shrinks to one small line. Eastbourne unchanged. | Built, awaiting customer check on the iPad |
 
 ## Ideas, not yet prioritised

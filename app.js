@@ -4,7 +4,7 @@
   'use strict';
 
   var CITIES = {
-    syd: { name: 'Sydney', tz: 'Australia/Sydney', lat: -33.92, lon: 151.13 },
+    syd: { name: 'Earlwood', tz: 'Australia/Sydney', lat: -33.92, lon: 151.13 },
     uk: { name: 'Eastbourne', tz: 'Europe/London', lat: 50.77, lon: 0.29 }
   };
   var KEYS = ['syd', 'uk'];
@@ -488,7 +488,7 @@
     var age = Date.now() - weather.fetchedAt;
     var z = zoned(new Date(weather.fetchedAt), CITIES.syd.tz);
     var t = clockText(z);
-    var text = 'Forecast from Open-Meteo, updated ' + t.hm + t.ap + ' Sydney time';
+    var text = 'Forecast from Open-Meteo, updated ' + t.hm + t.ap + ' Earlwood time';
     if (age > STALE_MS) text += ' · may be out of date, retrying';
     foot.textContent = text;
   }
