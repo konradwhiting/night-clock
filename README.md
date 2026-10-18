@@ -1,6 +1,6 @@
 # Night Clock
 
-A bedside clock for an old iPad (6th generation, iPadOS 17). It shows the time in Sydney and London, how far apart they are, and the weather for the next 24 hours in both cities. Warm red on black, dims itself at night.
+A bedside clock for an old iPad (6th generation, iPadOS 17). It shows the time in Sydney and the UK (Eastbourne), how far apart they are, and the weather for the next 24 hours in both places. Warm red on black, dims itself at night.
 
 ![Landscape](docs/screenshots/landscape.png)
 
@@ -19,17 +19,17 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies, no API keys. For
 
 Tap anywhere to show the controls for eight seconds.
 
-- Time: switch between 12 hour and 24 hour.
+- Time: switch between 24 hour (the default) and 12 hour.
 - Brightness: Auto (dim between 9pm and 6am Sydney time), Bright, Dim, Dimmest.
 
-Choices are remembered on the iPad. The layout adapts to landscape and portrait.
+Choices are remembered on the iPad. Landscape is the main layout. Portrait also works.
 
 ## What it does for a night screen
 
 - The picture shifts a few pixels every minute to protect the display.
 - If the network drops, the last forecast stays on screen with the time it was fetched.
 - The page reloads itself once a day around 3am Sydney time to pick up new versions.
-- Daylight saving is handled by the browser's time zone data, so the London gap changes correctly (10 hours now, 11 hours after the UK clocks go back on 25 October 2026).
+- Daylight saving is handled by the browser's time zone data, so the gap to the UK changes correctly (10 hours now, 11 hours after the UK clocks go back on 25 October 2026).
 
 ## Run it on a computer
 
@@ -52,4 +52,4 @@ Then open http://localhost:8000.
 ## Known limits
 
 - iPadOS 17 may not honour the screen wake lock for Home Screen apps, so Auto-Lock set to Never is the reliable way to keep the screen on.
-- Forecast locations are central London and Earlwood in Sydney. They are set at the top of `app.js`.
+- Forecast locations are Eastbourne, East Sussex and Earlwood in Sydney. They are set at the top of `app.js`.

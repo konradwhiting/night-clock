@@ -188,7 +188,7 @@ body { font-family: var(--body); }
   #app { padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
   .city { gap: 8px; }
   #city-syd .time { font-size: 21cqw; }
-  #city-lon .time { font-size: 18cqw; }
+  #city-uk .time { font-size: 18cqw; }
   .wx { padding-top: 8px; }
   .wx-temp { font-size: 52px; }
 }

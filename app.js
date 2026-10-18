@@ -1,13 +1,13 @@
-/* Night Clock: Sydney and London time, plus a 24 hour forecast for both.
+/* Night Clock: Sydney and Eastbourne time, plus a 24 hour forecast for both.
    Plain JavaScript, no build step. Written for Safari 17 (iPad 6th generation). */
 (function () {
   'use strict';
 
   var CITIES = {
     syd: { name: 'Sydney', tz: 'Australia/Sydney', lat: -33.92, lon: 151.13 },
-    lon: { name: 'London', tz: 'Europe/London', lat: 51.51, lon: -0.13 }
+    uk: { name: 'Eastbourne', tz: 'Europe/London', lat: 50.77, lon: 0.29 }
   };
-  var KEYS = ['syd', 'lon'];
+  var KEYS = ['syd', 'uk'];
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 'August', 'September', 'October', 'November', 'December'];
   var DIM_MODES = ['auto', 'bright', 'dim', 'dimmest'];
@@ -35,7 +35,7 @@
     }
   };
 
-  var hour12 = store.get('hour12', true) !== false;
+  var hour12 = store.get('hour12', false) === true;  // 24 hour unless the user switches
   var dimMode = store.get('dim', 'auto');
   if (DIM_MODES.indexOf(dimMode) < 0) dimMode = 'auto';
 
@@ -72,7 +72,7 @@
   }
 
   function zoneName(key, off) {
-    if (key === 'lon') return off === 0 ? 'GMT' : off === 60 ? 'BST' : offsetText(off);
+    if (key === 'uk') return off === 0 ? 'GMT' : off === 60 ? 'BST' : offsetText(off);
     return off === 660 ? 'AEDT' : off === 600 ? 'AEST' : offsetText(off);
   }
 
@@ -130,12 +130,12 @@
 
     setText(els.syd.meta, 'sydmeta', zoneName('syd', off.syd));
 
-    var gapMin = off.syd - off.lon;
+    var gapMin = off.syd - off.uk;
     var gapH = Math.abs(gapMin) / 60;
     var gapText = (gapH % 1 ? gapH.toFixed(1) : gapH) + 'h ' + (gapMin >= 0 ? 'behind' : 'ahead');
-    var dk = dayKey(z.lon) - dayKey(z.syd);
+    var dk = dayKey(z.uk) - dayKey(z.syd);
     var dayWord = dk < 0 ? ' · yesterday' : dk > 0 ? ' · tomorrow' : '';
-    setText(els.lon.meta, 'lonmeta', zoneName('lon', off.lon) + ' · ' + gapText + dayWord);
+    setText(els.uk.meta, 'ukmeta', zoneName('uk', off.uk) + ' · ' + gapText + dayWord);
 
     // brightness
     var level = dimMode === 'auto'
@@ -187,8 +187,8 @@
 
   function loadWeather() {
     var url = 'https://api.open-meteo.com/v1/forecast'
-      + '?latitude=' + CITIES.syd.lat + ',' + CITIES.lon.lat
-      + '&longitude=' + CITIES.syd.lon + ',' + CITIES.lon.lon
+      + '?latitude=' + CITIES.syd.lat + ',' + CITIES.uk.lat
+      + '&longitude=' + CITIES.syd.lon + ',' + CITIES.uk.lon
       + '&hourly=temperature_2m,precipitation_probability,weather_code,is_day'
       + '&timezone=GMT&forecast_days=3';
     var ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
@@ -201,7 +201,7 @@
       })
       .then(function (data) {
         var arr = Array.isArray(data) ? data : [data];
-        var next = { fetchedAt: Date.now(), syd: parseCity(arr[0]), lon: parseCity(arr[1]) };
+        var next = { fetchedAt: Date.now(), syd: parseCity(arr[0]), uk: parseCity(arr[1]) };
         weather = next;
         store.set('wx', next);
         renderWeather();
