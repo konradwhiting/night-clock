@@ -21,6 +21,7 @@ Tap anywhere to show the controls for eight seconds.
 
 - Time: switch between 24 hour (the default) and 12 hour.
 - Brightness: Auto (dim between 9pm and 6am Sydney time), Bright, Dim, Dimmest.
+- Full screen: shown in browsers that allow it (such as Chrome on an Android tablet). It hides the address bar. Not shown when the page is opened from the Home Screen.
 
 Choices are remembered on the iPad. Landscape is the main layout. Portrait also works.
 

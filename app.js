@@ -594,6 +594,29 @@
     showControls();
   });
 
+  // Full screen: for browsers that allow it (Chrome on Android does, Safari on iPad does not).
+  var btnFull = $('btn-full');
+  var fsRoot = document.documentElement;
+  var fsRequest = fsRoot.requestFullscreen || fsRoot.webkitRequestFullscreen;
+  var fsExit = document.exitFullscreen || document.webkitExitFullscreen;
+  function inFullscreen() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
+  function renderFull() { btnFull.textContent = inFullscreen() ? 'Exit full screen' : 'Full screen'; }
+  var standalone = navigator.standalone === true ||
+    (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
+  if (btnFull && fsRequest && fsExit && !standalone) {  // already full screen when run from the Home Screen
+    btnFull.hidden = false;
+    renderFull();
+    btnFull.addEventListener('click', function () {
+      try {
+        var p = inFullscreen() ? fsExit.call(document) : fsRequest.call(fsRoot);
+        if (p && p.catch) p.catch(function () { /* the browser said no */ });
+      } catch (e) { /* ignore */ }
+      showControls();
+    });
+    document.addEventListener('fullscreenchange', renderFull);
+    document.addEventListener('webkitfullscreenchange', renderFull);
+  }
+
   document.addEventListener('click', function (ev) {
     if (controls.contains(ev.target)) return;
     if (controls.hidden) { showControls(); keepAwake(); }
