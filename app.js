@@ -7,7 +7,11 @@
     syd: { name: 'Earlwood', tz: 'Australia/Sydney', lat: -33.92, lon: 151.13 },
     uk: { name: 'Eastbourne', tz: 'Europe/London', lat: 50.77, lon: 0.29 }
   };
-  var KEYS = ['syd', 'uk'];
+  // A page can narrow this down (see earlwood/index.html) by setting window.NIGHT_CLOCK first.
+  var CFG = window.NIGHT_CLOCK || {};
+  var KEYS = CFG.cities || ['syd', 'uk'];
+  var BASE = CFG.base || '';       // where news.json lives, relative to the page
+  var CACHE = CFG.cache || '';     // keeps each page's saved forecast and headlines apart
   var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 'August', 'September', 'October', 'November', 'December'];
   var DIM_MODES = ['auto', 'bright', 'dim', 'dimmest'];
@@ -139,12 +143,14 @@
 
     setText(els.syd.meta, 'sydmeta', zoneName('syd', off.syd));
 
-    var gapMin = off.syd - off.uk;
-    var gapH = Math.abs(gapMin) / 60;
-    var gapText = (gapH % 1 ? gapH.toFixed(1) : gapH) + 'h ' + (gapMin >= 0 ? 'behind' : 'ahead');
-    var dk = dayKey(z.uk) - dayKey(z.syd);
-    var dayWord = dk < 0 ? ' · yesterday' : dk > 0 ? ' · tomorrow' : '';
-    setText(els.uk.meta, 'ukmeta', zoneName('uk', off.uk) + ' · ' + gapText + dayWord);
+    if (z.uk) {
+      var gapMin = off.syd - off.uk;
+      var gapH = Math.abs(gapMin) / 60;
+      var gapText = (gapH % 1 ? gapH.toFixed(1) : gapH) + 'h ' + (gapMin >= 0 ? 'behind' : 'ahead');
+      var dk = dayKey(z.uk) - dayKey(z.syd);
+      var dayWord = dk < 0 ? ' · yesterday' : dk > 0 ? ' · tomorrow' : '';
+      setText(els.uk.meta, 'ukmeta', zoneName('uk', off.uk) + ' · ' + gapText + dayWord);
+    }
 
     // brightness
     var level = dimMode === 'auto'
@@ -181,7 +187,7 @@
 
   /* ---------- weather ---------- */
 
-  var weather = store.get('wx', null);
+  var weather = store.get(CACHE + 'wx', null);
   var weatherTimer = null;
 
   function parseCity(o) {
@@ -199,8 +205,8 @@
 
   function loadWeather() {
     var url = 'https://api.open-meteo.com/v1/forecast'
-      + '?latitude=' + CITIES.syd.lat + ',' + CITIES.uk.lat
-      + '&longitude=' + CITIES.syd.lon + ',' + CITIES.uk.lon
+      + '?latitude=' + KEYS.map(function (k) { return CITIES[k].lat; }).join(',')
+      + '&longitude=' + KEYS.map(function (k) { return CITIES[k].lon; }).join(',')
       + '&hourly=temperature_2m,precipitation_probability,precipitation,weather_code,is_day'
       + '&minutely_15=precipitation'
       + '&timezone=GMT&forecast_days=3';
@@ -214,9 +220,10 @@
       })
       .then(function (data) {
         var arr = Array.isArray(data) ? data : [data];
-        var next = { fetchedAt: Date.now(), syd: parseCity(arr[0]), uk: parseCity(arr[1]) };
+        var next = { fetchedAt: Date.now() };
+        KEYS.forEach(function (k, i) { next[k] = parseCity(arr[i]); });
         weather = next;
-        store.set('wx', next);
+        store.set(CACHE + 'wx', next);
         renderWeather();
         scheduleWeather(REFRESH_OK_MS);
       })
@@ -496,7 +503,7 @@
   /* ---------- regional headlines ---------- */
 
   // news.json is written by a scheduled GitHub Action (see .github/workflows/news.yml).
-  var news = store.get('news', null);
+  var news = store.get(CACHE + 'news', null);
   var NEWS_REFRESH_MS = 30 * 60 * 1000;
 
   function ago(ms) {
@@ -520,12 +527,12 @@
   }
 
   function loadNews() {
-    fetch('news.json?t=' + Math.floor(Date.now() / 600000), { cache: 'no-store' })
+    fetch(BASE + 'news.json?t=' + Math.floor(Date.now() / 600000), { cache: 'no-store' })
       .then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
       })
-      .then(function (data) { news = data; store.set('news', data); })
+      .then(function (data) { news = data; store.set(CACHE + 'news', data); })
       .catch(function () { /* keep whatever we had */ })
       .then(function () {
         renderNews();

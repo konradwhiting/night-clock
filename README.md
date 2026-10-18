@@ -24,6 +24,10 @@ Tap anywhere to show the controls for eight seconds.
 
 Choices are remembered on the iPad. Landscape is the main layout. Portrait also works.
 
+## Earlwood-only clock
+
+A second page at `/earlwood/` (for example `https://konradwhiting.github.io/night-clock/earlwood/`) shows only Earlwood: one large clock, the local headline, and the rain-first forecast. It uses the same code and headlines as the main page, so there is nothing extra to maintain. Add it to the Home Screen separately and it gets its own icon, named Earlwood Clock. The 24 or 12 hour and brightness choices are shared with the main clock, since both pages live on the same site.
+
 ## Sydney rain
 
 The Sydney column puts rain first. It shows a one-line outlook, the chance now, the peak chance and when, the millimetres expected, a strip for the next two hours and a 24 hour rain-chance chart. Temperature is one small line.
@@ -60,6 +64,7 @@ Then open http://localhost:8000.
 | `app.js` | Clock, time zones, forecast fetch and chart, headlines, controls |
 | `scripts/update-news.mjs`, `.github/workflows/news.yml` | Fetch the regional headlines on a schedule |
 | `news.json` | Latest headlines, written by the workflow |
+| `earlwood/` | The Earlwood-only page and its Home Screen manifest |
 | `manifest.webmanifest`, `icon-*.png` | Home Screen install |
 | `fonts/` | Seven-segment digit font (DSEG7 Classic, SIL Open Font License, licence included) |
 | `docs/requirements.md` | Product backlog, open questions and feedback log |
