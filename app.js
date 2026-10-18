@@ -472,7 +472,8 @@
           e.ncCap.textContent = 'Next 2 hours · ' + nowcastText(nc);
           e.nc.innerHTML = nowcastSVG(nc, Math.round(e.nc.clientWidth) || 220, portrait ? 46 : 60);
         }
-        e.chart.innerHTML = chartSVG(win, CITIES[k], cw, portrait ? 84 : 120, true);
+        var roomy = !$(k + '-news');  // without a headline there is more height for the chart
+        e.chart.innerHTML = chartSVG(win, CITIES[k], cw, roomy ? Math.round(window.innerHeight * (portrait ? 0.28 : 0.25)) : (portrait ? 84 : 120), true);
       } else {
         e.range.textContent = 'Next 24h: high ' + Math.round(hi) + '°, low ' + Math.round(lo) + '° · '
           + (maxPop < 10 ? 'no rain expected' : 'rain chance up to ' + Math.round(maxPop) + '%');
@@ -518,6 +519,7 @@
     KEYS.forEach(function (k) {
       var n = news && news[k];
       var box = $(k + '-news');
+      if (!box) return;  // this page has no headline area
       if (!n || !n.title) { box.hidden = true; return; }
       var age = n.published ? ' · ' + ago(Date.now() - Date.parse(n.published)) : '';
       $(k + '-news-src').textContent = (n.area ? n.area + ' · ' : '') + n.source + age;
@@ -527,6 +529,7 @@
   }
 
   function loadNews() {
+    if (!$('syd-news')) return;  // no headline area on this page, nothing to fetch
     fetch(BASE + 'news.json?t=' + Math.floor(Date.now() / 600000), { cache: 'no-store' })
       .then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);

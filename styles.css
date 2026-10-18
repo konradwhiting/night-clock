@@ -165,7 +165,7 @@ body { font-family: var(--body); }
 
 /* Earlwood-only page (earlwood/index.html): one wide column */
 #app.solo { grid-template-columns: minmax(0, 1fr); }
-.solo #city-syd .time { font-size: 20cqw; }
+.solo #city-syd .time { font-size: 25cqw; }
 .solo .news-title { -webkit-line-clamp: 2; }
 .solo .rain-nc { flex-basis: 34%; }
 
@@ -280,6 +280,6 @@ body { font-family: var(--body); }
 @media (orientation: portrait) {
   #app.solo { grid-template-rows: minmax(0, 1fr); }
   .solo .news { display: block; }
-  .solo #city-syd .time { font-size: 21cqw; }
+  .solo #city-syd .time { font-size: 26cqw; }
   .solo .wx-chart svg { height: auto; }
 }
