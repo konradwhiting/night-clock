@@ -174,9 +174,13 @@ body { font-family: var(--body); }
 .solo .rain-nc { flex-basis: 34%; }
 
 /* text-and-numbers forecast (Earlwood page) */
-.wx-text .rain-head { margin-top: 0.5em; font-size: clamp(30px, 6.4cqw, 46px); }
-.wx-text .rain-sub { font-size: clamp(16px, 3cqw, 22px); }
-.rain-next { font-size: clamp(16px, 3cqw, 22px); color: var(--ink); margin-top: 0.25em; }
+.wx-text { justify-content: center; }
+.wx-text .wx-temp { font-size: clamp(44px, 9cqw, 80px); }
+.wx-text .wx-desc { font-size: clamp(18px, 3.6cqw, 28px); }
+.wx-text .wx-range { font-size: clamp(16px, 3.2cqw, 24px); }
+.wx-text .rain-head { margin-top: 0.5em; font-size: clamp(36px, 8cqw, 68px); }
+.wx-text .rain-sub { font-size: clamp(18px, 3.6cqw, 28px); margin-top: 0.4em; }
+.rain-next { font-size: clamp(18px, 3.6cqw, 28px); color: var(--ink); margin-top: 0.35em; }
 .wx-grid {
   display: grid;
   grid-template-columns: auto repeat(8, 1fr);
@@ -329,11 +333,11 @@ body { font-family: var(--body); }
   .solo .wx-chart svg { height: auto; }
   /* portrait has height to spare: bigger text, spread out */
   .solo .wx { justify-content: space-evenly; }
-  .wx-text .wx-temp { font-size: 11cqw; }
-  .wx-text .wx-desc { font-size: 4.4cqw; }
-  .wx-text .wx-range { font-size: 3.4cqw; }
-  .wx-text .rain-head { font-size: 9.5cqw; }
-  .wx-text .rain-sub, .rain-next { font-size: 3.8cqw; }
+  .wx-text .wx-temp { font-size: 14cqw; }
+  .wx-text .wx-desc { font-size: 5cqw; }
+  .wx-text .wx-range { font-size: 3.6cqw; }
+  .wx-text .rain-head { font-size: 10.5cqw; }
+  .wx-text .rain-sub, .wx-text .rain-next { font-size: 4.2cqw; }
   .wx-grid { font-size: 5.4cqw; }
   .rail-line, .rail-sub { font-size: 3.4cqw; }
   .rail-head { font-size: 6.4cqw; }
@@ -350,7 +354,10 @@ body { font-family: var(--body); }
   .rain-row { margin-top: 0.3em; }
   .rain-head { font-size: 26px; }
   .rain-sub, .rain-next { font-size: 14px; margin-top: 0.2em; }
-  .wx-text .rain-head { font-size: 28px; margin-top: 0.2em; }
+  .wx-text .wx-temp { font-size: 40px; }
+  .wx-text .wx-desc, .wx-text .wx-range { font-size: 16px; }
+  .wx-text .rain-head { font-size: 38px; margin-top: 0.2em; }
+  .wx-text .rain-sub, .wx-text .rain-next { font-size: 18px; }
   .wx-grid { font-size: 20px; margin-top: 0.4em; padding-top: 0.4em; }
   .rail { margin-top: 0.4em; padding-top: 0.4em; }
   .rail-head { font-size: 22px; }

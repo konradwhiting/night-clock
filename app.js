@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261019-4';
+  var BUILD = '20261019-6';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -272,6 +272,15 @@
   }
 
   // Plain-words rain outlook for the next 24 hours.
+  // Rain total in words a child can picture instead of millimetres
+  function wetWords(mm) {
+    if (mm < 1) return 'just a sprinkle';
+    if (mm < 5) return 'a light drizzle, bring a coat';
+    if (mm < 15) return 'proper rain, puddles to jump in';
+    if (mm < 30) return 'heavy rain, big puddles and wet socks';
+    return 'a soaking downpour, stay inside';
+  }
+
   function rainSummary(win, nc, tz) {
     var n = 24, wet = [], total = 0, maxP = 0, pk = 0, i;
     for (i = 0; i < n; i++) {
@@ -304,7 +313,7 @@
     }
     var parts = ['Now ' + Math.round(win.pop[0]) + '%'];
     if (maxP >= 10) parts.push('peak ' + Math.round(maxP) + '% at ' + hourLabel(win.t[pk], tz));
-    if (total >= 0.1) parts.push('about ' + (total >= 10 ? Math.round(total) : total.toFixed(1)) + ' mm');
+    if (total >= 0.1) parts.push(wetWords(total));
     return { head: head, sub: parts.join(' · ') };
   }
 
@@ -474,9 +483,12 @@
         e.rainSub.textContent = rs.sub;
         var nc = nowcastOf(weather[k]);
         if (e.ncWrap) e.ncWrap.hidden = !nc;
-        if (e.grid) {
-          // numbers instead of charts: every third hour, temperature and rain chance
+        if (!e.chart) {
+          e.desc.textContent = 'Current';
+          e.range.textContent = 'High ' + Math.round(hi) + '°';
+          // text only (Earlwood page): the next two hours in words, and optionally a table of numbers
           e.ncCap.textContent = nc ? 'Next 2 hours: ' + nowcastText(nc) : '';
+          if (!e.grid) return;
           var cols = [0, 3, 6, 9, 12, 15, 18, 21];
           var times = '<span class="g-l"></span>', temps = '<span class="g-l">Temp</span>', rains = '<span class="g-l">Rain</span>';
           cols.forEach(function (i) {
