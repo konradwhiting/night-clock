@@ -84,3 +84,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | Date | Increment | Feedback | Decision |
 |------|-----------|----------|----------|
 | 19 Oct 2026 | 1 | Landscape, 24 hour, locations Eastbourne and Earlwood, repo named night-clock | Applied the same day |
+| 19 Oct 2026 | 1 | Make Sydney's digits larger than Eastbourne's | Sydney is now about 2.3 times the height of Eastbourne in landscape |
