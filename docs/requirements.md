@@ -29,7 +29,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | S6 | The screen protects itself from burn-in. | Content shifts a few pixels every minute. | Built |
 | S7 | I can put it on the Home Screen and it opens full screen. | Home Screen icon, no Safari toolbar, black status bar. | Built |
 | S8 | I can switch between 24 and 12 hour time. | 24 hour by default. One tap to switch, remembered. Also applies to the chart hour labels. | Built |
-| S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about every 30 minutes. Hidden if no headline is available. Landscape only. | Built, not yet seen with live data |
+| S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about every 30 minutes. Hidden if no headline is available. Landscape only. | Built. The scheduled job has run once and fetched live headlines from both feeds |
 
 ## Ideas, not yet prioritised
 
