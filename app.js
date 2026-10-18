@@ -3,6 +3,11 @@
 (function () {
   'use strict';
 
+  // Change this whenever the page or its files change. Open clocks compare it with the
+  // published app.js every half hour and reload themselves when it differs.
+  var BUILD = '20261019-1';
+  var SCRIPT_URL = document.currentScript && document.currentScript.src;
+
   var CITIES = {
     syd: { name: 'Earlwood', tz: 'Australia/Sydney', lat: -33.92, lon: 151.13 },
     uk: { name: 'Eastbourne', tz: 'Europe/London', lat: 50.77, lon: 0.29 }
@@ -625,6 +630,18 @@
     if (controls.hidden) { showControls(); keepAwake(); }
     else { controls.hidden = true; clearTimeout(hideTimer); }
   });
+
+  function checkForUpdate() {
+    if (!SCRIPT_URL) return;
+    fetch(SCRIPT_URL.split('?')[0] + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.text() : ''; })
+      .then(function (src) {
+        var m = src.match(/var BUILD = '([^']+)'/);
+        if (m && m[1] !== BUILD) location.reload();
+      })
+      .catch(function () { /* offline, try again later */ });
+  }
+  setInterval(checkForUpdate, 30 * 60 * 1000);
 
   document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'visible') {

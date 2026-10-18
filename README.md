@@ -45,7 +45,7 @@ A browser cannot read those RSS feeds directly, so a scheduled GitHub Action (`.
 
 - The picture shifts a few pixels every minute to protect the display.
 - If the network drops, the last forecast stays on screen with the time it was fetched.
-- The page reloads itself once a day around 3am Sydney time to pick up new versions.
+- Open clocks check every half hour whether a new version has been published and reload themselves when it has. They also reload around 3am Sydney time once a day. (When changing the code, bump `BUILD` at the top of `app.js` so open clocks notice.)
 - Daylight saving is handled by the browser's time zone data, so the gap to the UK changes correctly (10 hours now, 11 hours after the UK clocks go back on 25 October 2026).
 
 ## Run it on a computer
