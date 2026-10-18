@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Night Clock">
+<meta name="theme-color" content="#050303">
+<meta name="color-scheme" content="dark">
+<title>Night Clock</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&amp;family=Barlow:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main id="app">
+  <section class="city" id="city-syd" aria-label="Sydney">
+    <div class="top">
+      <header class="city-head">
+        <span class="city-name">Sydney</span>
+        <span class="city-meta" id="syd-meta"></span>
+      </header>
+      <div class="time"><span id="syd-hm">--:--</span><span class="ap" id="syd-ap"></span></div>
+      <div class="date" id="syd-date"></div>
+    </div>
+    <div class="wx">
+      <div class="wx-now">
+        <span class="wx-temp" id="syd-temp">--°</span>
+        <span class="wx-desc" id="syd-desc">Loading forecast</span>
+      </div>
+      <div class="wx-range" id="syd-range"></div>
+      <div class="wx-chart" id="syd-chart"></div>
+    </div>
+  </section>
+
+  <section class="city" id="city-lon" aria-label="London">
+    <div class="top">
+      <header class="city-head">
+        <span class="city-name">London</span>
+        <span class="city-meta" id="lon-meta"></span>
+      </header>
+      <div class="time"><span id="lon-hm">--:--</span><span class="ap" id="lon-ap"></span></div>
+      <div class="date" id="lon-date"></div>
+    </div>
+    <div class="wx">
+      <div class="wx-now">
+        <span class="wx-temp" id="lon-temp">--°</span>
+        <span class="wx-desc" id="lon-desc">Loading forecast</span>
+      </div>
+      <div class="wx-range" id="lon-range"></div>
+      <div class="wx-chart" id="lon-chart"></div>
+    </div>
+  </section>
+
+  <footer id="foot"></footer>
+</main>
+
+<nav id="controls" hidden aria-label="Display settings">
+  <button type="button" id="btn-hours"></button>
+  <button type="button" id="btn-dim"></button>
+  <span id="awake"></span>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>
