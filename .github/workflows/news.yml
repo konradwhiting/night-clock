@@ -4,7 +4,7 @@ name: Update headlines
 # commits news.json only when a headline has changed.
 on:
   schedule:
-    - cron: '7,37 * * * *'
+    - cron: '7 * * * *'
   workflow_dispatch:
 
 permissions:

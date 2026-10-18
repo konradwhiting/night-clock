@@ -29,7 +29,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | S6 | The screen protects itself from burn-in. | Content shifts a few pixels every minute. | Accepted on device |
 | S7 | I can put it on the Home Screen and it opens full screen. | Home Screen icon, no Safari toolbar, black status bar. | Accepted on device |
 | S8 | I can switch between 24 and 12 hour time. | 24 hour by default. One tap to switch, remembered. Also applies to the chart hour labels. | Accepted on device |
-| S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about every 30 minutes. Hidden if no headline is available. Landscape only. | Accepted on device. The scheduled job has run once and fetched live headlines from both feeds |
+| S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about once an hour. Hidden if no headline is available. Landscape only. | Accepted on device. The scheduled job has run once and fetched live headlines from both feeds |
 
 ## Ideas, not yet prioritised
 
@@ -91,3 +91,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | 19 Oct 2026 | 1 | Use the blank middle section for a top regional news headline | Added as S9. One headline per place, Sydney from ABC News NSW, Eastbourne from BBC News Sussex |
 | 19 Oct 2026 | 2 | LGTM on headlines in the middle section | Accepted from screenshots. Next: check on the real iPad |
 | 19 Oct 2026 | 1 and 2 | Set up on the iPad: all done, perfect for now | Accepted on device. Ideas list stays open for later |
+| 19 Oct 2026 | 2 | Headlines once an hour is enough | Job now runs hourly at 7 past, page checks every 30 minutes |

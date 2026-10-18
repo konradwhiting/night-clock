@@ -384,7 +384,7 @@
 
   // news.json is written by a scheduled GitHub Action (see .github/workflows/news.yml).
   var news = store.get('news', null);
-  var NEWS_REFRESH_MS = 15 * 60 * 1000;
+  var NEWS_REFRESH_MS = 30 * 60 * 1000;
 
   function ago(ms) {
     var m = Math.max(0, Math.round(ms / 60000));
