@@ -24,6 +24,12 @@ Tap anywhere to show the controls for eight seconds.
 
 Choices are remembered on the iPad. Landscape is the main layout. Portrait also works.
 
+## Headlines
+
+The blank space in each column shows the top regional headline: ABC News NSW for Sydney and BBC News Sussex for Eastbourne (BBC News England if the Sussex feed is unavailable). They are hidden in portrait.
+
+A browser cannot read those RSS feeds directly, so a scheduled GitHub Action (`.github/workflows/news.yml`) fetches them twice an hour and commits `news.json` when a headline changes. The page reads `news.json`. To refresh by hand, open the Actions tab, choose Update headlines, then Run workflow. Headlines are shown with their source for personal use.
+
 ## What it does for a night screen
 
 - The picture shifts a few pixels every minute to protect the display.
@@ -45,7 +51,9 @@ Then open http://localhost:8000.
 |------|---------|
 | `index.html` | Page structure and Home Screen settings |
 | `styles.css` | Layout and the night colour scheme |
-| `app.js` | Clock, time zones, forecast fetch and chart, controls |
+| `app.js` | Clock, time zones, forecast fetch and chart, headlines, controls |
+| `scripts/update-news.mjs`, `.github/workflows/news.yml` | Fetch the regional headlines on a schedule |
+| `news.json` | Latest headlines, written by the workflow |
 | `manifest.webmanifest`, `icon-*.png` | Home Screen install |
 | `fonts/` | Seven-segment digit font (DSEG7 Classic, SIL Open Font License, licence included) |
 | `docs/requirements.md` | Product backlog, open questions and feedback log |

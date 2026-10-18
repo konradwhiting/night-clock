@@ -29,6 +29,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | S6 | The screen protects itself from burn-in. | Content shifts a few pixels every minute. | Built |
 | S7 | I can put it on the Home Screen and it opens full screen. | Home Screen icon, no Safari toolbar, black status bar. | Built |
 | S8 | I can switch between 24 and 12 hour time. | 24 hour by default. One tap to switch, remembered. Also applies to the chart hour labels. | Built |
+| S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about every 30 minutes. Hidden if no headline is available. Landscape only. | Built, not yet seen with live data |
 
 ## Ideas, not yet prioritised
 
@@ -78,6 +79,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | # | Scope | Show and tell |
 |---|-------|---------------|
 | 1 | S1 to S8 as a first working version | Screenshots of landscape and portrait with sample forecast data. Done, feedback recorded below |
+| 2 | S9 regional headlines in the blank middle section | Screenshot with sample headlines, then live once the first scheduled run has finished |
 
 ## Feedback log
 
@@ -86,3 +88,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | 19 Oct 2026 | 1 | Landscape, 24 hour, locations Eastbourne and Earlwood, repo named night-clock | Applied the same day |
 | 19 Oct 2026 | 1 | Make Sydney's digits larger than Eastbourne's | Sydney is now about 2.3 times the height of Eastbourne in landscape |
 | 19 Oct 2026 | 1 | Change the font so it looks like the TV series 24 | Bold seven-segment digital display with faint unlit segments. A look in the same spirit, not a copy of the show's graphic. Sydney is about 2.3 times the size of Eastbourne. Customer to confirm it is the right feel |
+| 19 Oct 2026 | 1 | Use the blank middle section for a top regional news headline | Added as S9. One headline per place, Sydney from ABC News NSW, Eastbourne from BBC News Sussex |

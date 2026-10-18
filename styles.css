@@ -114,6 +114,29 @@ body { font-family: var(--body); }
   margin-top: 0.4em;
 }
 
+/* regional headline, fills the space between the clock and the forecast */
+.news { min-width: 0; }
+
+.news-src {
+  font-size: clamp(12px, 2.8cqw, 16px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 0.6em;
+}
+
+.news-title {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: clamp(19px, 4.6cqw, 32px);
+  line-height: 1.25;
+  color: var(--ink);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
 .wx {
   padding-top: clamp(12px, 2vh, 22px);
   border-top: 1px solid var(--line);
@@ -202,6 +225,7 @@ body { font-family: var(--body); }
   .city + .city { border-left: 0; border-top: 1px solid var(--line); }
   #app { padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
   .city { gap: 8px; }
+  .news { display: none; }  /* portrait is tight, headlines are for landscape */
   #city-syd .time { font-size: 20cqw; }
   #city-uk .time { font-size: 16cqw; }
   .wx { padding-top: 8px; }

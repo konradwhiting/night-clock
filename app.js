@@ -116,6 +116,7 @@
 
   var lastHourKey = null;
   var lastShift = null;
+  var lastNewsMinute = null;
   var lastDim = null;
 
   function tick() {
@@ -158,6 +159,7 @@
       var dy = ((minuteIndex * 11) % 17) - 8;
       app.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
     }
+    if (minuteIndex !== lastNewsMinute) { lastNewsMinute = minuteIndex; if (typeof renderNews === 'function') renderNews(); }
 
     // the forecast window moves on every hour
     var hourKey = Math.floor(now.getTime() / 3600000);
@@ -378,6 +380,46 @@
     foot.textContent = text;
   }
 
+  /* ---------- regional headlines ---------- */
+
+  // news.json is written by a scheduled GitHub Action (see .github/workflows/news.yml).
+  var news = store.get('news', null);
+  var NEWS_REFRESH_MS = 15 * 60 * 1000;
+
+  function ago(ms) {
+    var m = Math.max(0, Math.round(ms / 60000));
+    if (m < 60) return m + 'm ago';
+    var h = Math.round(m / 60);
+    if (h < 48) return h + 'h ago';
+    return Math.round(h / 24) + 'd ago';
+  }
+
+  function renderNews() {
+    KEYS.forEach(function (k) {
+      var n = news && news[k];
+      var box = $(k + '-news');
+      if (!n || !n.title) { box.hidden = true; return; }
+      var age = n.published ? ' · ' + ago(Date.now() - Date.parse(n.published)) : '';
+      $(k + '-news-src').textContent = n.source + age;
+      $(k + '-news-title').textContent = n.title;
+      box.hidden = false;
+    });
+  }
+
+  function loadNews() {
+    fetch('news.json?t=' + Math.floor(Date.now() / 600000), { cache: 'no-store' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (data) { news = data; store.set('news', data); })
+      .catch(function () { /* keep whatever we had */ })
+      .then(function () {
+        renderNews();
+        setTimeout(loadNews, NEWS_REFRESH_MS);
+      });
+  }
+
   /* ---------- screen wake lock ---------- */
 
   var wakeLock = null;
@@ -452,7 +494,9 @@
   renderAwake();
   tick();
   renderWeather();
+  renderNews();
   setInterval(tick, 1000);
   keepAwake();
   loadWeather();
+  loadNews();
 })();
