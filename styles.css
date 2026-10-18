@@ -163,11 +163,43 @@ body { font-family: var(--body); }
 
 .wx-chart svg { display: block; width: 100%; height: auto; margin-top: 0.7em; }
 
+/* Sydney: rain first, temperature small */
+.wx-rainy .wx-now { gap: 0.6em; }
+.wx-rainy .wx-temp { font-size: clamp(28px, 6.2cqw, 40px); }
+.wx-rainy .wx-desc { font-size: clamp(15px, 3.2cqw, 20px); }
+.wx-rainy .wx-range { margin: 0 0 0 auto; min-height: 0; font-size: clamp(13px, 2.8cqw, 17px); }
+.rain-row { display: flex; gap: 20px; align-items: flex-start; margin-top: 0.6em; }
+.rain-text { flex: 1 1 56%; min-width: 0; }
+.rain-head {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(26px, 6.6cqw, 42px);
+  line-height: 1.05;
+  color: var(--ink);
+}
+.rain-sub { font-size: clamp(14px, 3cqw, 19px); color: var(--ink-2); margin-top: 0.35em; }
+.rain-nc { flex: 0 0 38%; min-width: 0; }
+.rain-nc-cap {
+  font-size: clamp(11px, 2.4cqw, 14px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 4px;
+}
+.rain-nc svg { display: block; width: 100%; height: 60px; }
+.wx-rainy .wx-chart svg { margin-top: 0.7em; }
+
 /* chart parts */
 .night { fill: var(--line); }
 .bar   { fill: var(--ink); opacity: 0.32; }
 .axis  { stroke: var(--ink-3); stroke-width: 1; }
 .tick  { stroke: var(--ink-3); stroke-width: 1; }
+.bar-led { opacity: 0.55; }
+.bar-nc  { opacity: 0.85; }
+.grid  { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 3 5; opacity: 0.7; }
+.tline-thin { stroke-width: 2; opacity: 0.55; }
+.lbl-sm { font-size: 14px; }
+.lbl-halo { paint-order: stroke; stroke: var(--bg); stroke-width: 5px; stroke-linejoin: round; }
 .area  { fill: var(--ink); opacity: 0.1; }
 .tline { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
 .dot   { fill: var(--bg); stroke: var(--ink); stroke-width: 3; }
@@ -224,9 +256,12 @@ body { font-family: var(--body); }
   }
   .city + .city { border-left: 0; border-top: 1px solid var(--line); }
   #app { padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
-  .city { gap: 8px; }
+  .city { gap: 8px; padding-bottom: 14px; }
   .news { display: none; }  /* portrait is tight, headlines are for landscape */
-  #city-syd .time { font-size: 20cqw; }
+  #city-syd .time { font-size: 17cqw; }
+  .rain-nc svg { height: 46px; }
+  .rain-row { margin-top: 0.3em; }
+  .rain-head { font-size: clamp(24px, 5cqw, 34px); }
   #city-uk .time { font-size: 16cqw; }
   .wx { padding-top: 8px; }
   .wx-temp { font-size: 52px; }

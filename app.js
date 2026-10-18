@@ -101,6 +101,11 @@
       temp: $(k + '-temp'), desc: $(k + '-desc'), range: $(k + '-range'), chart: $(k + '-chart')
     };
   });
+  els.syd.rainHead = $('syd-rain-head');
+  els.syd.rainSub = $('syd-rain-sub');
+  els.syd.ncWrap = $('syd-nc-wrap');
+  els.syd.ncCap = $('syd-nc-cap');
+  els.syd.nc = $('syd-nc');
   var foot = $('foot');
   var controls = $('controls');
   var btnHours = $('btn-hours');
@@ -161,8 +166,8 @@
     }
     if (minuteIndex !== lastNewsMinute) { lastNewsMinute = minuteIndex; if (typeof renderNews === 'function') renderNews(); }
 
-    // the forecast window moves on every hour
-    var hourKey = Math.floor(now.getTime() / 3600000);
+    // the forecast window moves on every hour, the two hour rain strip every quarter hour
+    var hourKey = Math.floor(now.getTime() / 900000);
     if (hourKey !== lastHourKey) {
       lastHourKey = hourKey;
       renderWeather();
@@ -186,7 +191,9 @@
       temp: h.temperature_2m,
       pop: h.precipitation_probability,
       code: h.weather_code,
-      day: h.is_day
+      day: h.is_day,
+      precip: h.precipitation,
+      m15: o.minutely_15 ? { t: o.minutely_15.time.map(function (q) { return Date.parse(q + ':00Z'); }), mm: o.minutely_15.precipitation } : null
     };
   }
 
@@ -194,7 +201,8 @@
     var url = 'https://api.open-meteo.com/v1/forecast'
       + '?latitude=' + CITIES.syd.lat + ',' + CITIES.uk.lat
       + '&longitude=' + CITIES.syd.lon + ',' + CITIES.uk.lon
-      + '&hourly=temperature_2m,precipitation_probability,weather_code,is_day'
+      + '&hourly=temperature_2m,precipitation_probability,precipitation,weather_code,is_day'
+      + '&minutely_15=precipitation'
       + '&timezone=GMT&forecast_days=3';
     var ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
     var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 20000);
@@ -236,8 +244,79 @@
       temp: cut(w.temp).map(function (v) { return v == null ? 0 : v; }),
       pop: cut(w.pop).map(function (v) { return v == null ? 0 : v; }),
       code: cut(w.code),
-      day: cut(w.day)
+      day: cut(w.day),
+      mm: cut(w.precip || w.t.map(function () { return 0; })).map(function (v) { return v == null ? 0 : v; })
     };
+  }
+
+  // Next two hours in 15 minute steps (8 values, mm). Null if the data is missing or stale.
+  function nowcastOf(w) {
+    if (!w || !w.m15) return null;
+    var q0 = Math.floor(Date.now() / 900000) * 900000, i = -1;
+    for (var j = 0; j < w.m15.t.length; j++) { if (w.m15.t[j] >= q0) { i = j; break; } }
+    if (i < 0 || i + 8 > w.m15.t.length) return null;
+    return w.m15.mm.slice(i, i + 8).map(function (v) { return v == null ? 0 : v; });
+  }
+
+  // Plain-words rain outlook for the next 24 hours.
+  function rainSummary(win, nc, tz) {
+    var n = 24, wet = [], total = 0, maxP = 0, pk = 0, i;
+    for (i = 0; i < n; i++) {
+      wet.push(win.pop[i] >= 50 || win.mm[i] >= 0.3);
+      total += win.mm[i];
+      if (win.pop[i] > maxP) { maxP = win.pop[i]; pk = i; }
+    }
+    var nowWet = nc ? (nc[0] >= 0.1 || nc[1] >= 0.1) : wet[0];
+    var head, end;
+    if (nowWet) {
+      end = -1;
+      for (i = 1; i < n; i++) { if (!wet[i]) { end = i; break; } }
+      head = end < 0 ? 'Rain all day' : 'Rain easing by ' + hourLabel(win.t[end], tz);
+    } else {
+      var start = -1;
+      for (i = 0; i < n; i++) { if (wet[i]) { start = i; break; } }
+      if (start === 0) {
+        head = 'Rain likely soon';
+      } else if (start > 0) {
+        end = start + 1;
+        while (end < n && wet[end]) end++;
+        head = end < n
+          ? 'Rain ' + hourLabel(win.t[start], tz) + ' to ' + hourLabel(win.t[end], tz)
+          : 'Rain from ' + hourLabel(win.t[start], tz);
+      } else if (maxP >= 20) {
+        head = 'Dry, slim chance of showers';
+      } else {
+        head = 'Dry for the next 24 hours';
+      }
+    }
+    var parts = ['Now ' + Math.round(win.pop[0]) + '%'];
+    if (maxP >= 10) parts.push('peak ' + Math.round(maxP) + '% at ' + hourLabel(win.t[pk], tz));
+    if (total >= 0.1) parts.push('about ' + (total >= 10 ? Math.round(total) : total.toFixed(1)) + ' mm');
+    return { head: head, sub: parts.join(' · ') };
+  }
+
+  function nowcastText(nc) {
+    var peak = Math.max.apply(null, nc);
+    if (peak < 0.1) return 'Dry';
+    if (peak < 0.5) return 'Light rain';
+    if (peak < 1.5) return 'Moderate rain';
+    return 'Heavy rain';
+  }
+
+  function nowcastSVG(nc, W, H) {
+    var AX = H - 16, peak = Math.max(1, Math.max.apply(null, nc)), bw = (W - 2) / nc.length;
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Rain in the next two hours">';
+    nc.forEach(function (v, i) {
+      if (v < 0.05) return;
+      var bh = Math.max(3, v / peak * (AX - 4));
+      s += '<rect class="bar bar-nc" x="' + (1 + i * bw + 2).toFixed(1) + '" y="' + (AX - bh).toFixed(1)
+        + '" width="' + (bw - 4).toFixed(1) + '" height="' + bh.toFixed(1) + '"/>';
+    });
+    s += '<line class="axis" x1="0" y1="' + AX + '" x2="' + W + '" y2="' + AX + '"/>';
+    [['Now', 0, 'start'], ['+1h', W / 2, 'middle'], ['+2h', W, 'end']].forEach(function (m) {
+      s += '<text class="lbl lbl-sm" x="' + m[1] + '" y="' + (H - 2) + '" text-anchor="' + m[2] + '">' + m[0] + '</text>';
+    });
+    return s + '</svg>';
   }
 
   function codeText(c) {
@@ -262,10 +341,11 @@
   }
 
   // W and H are the chart's real pixel size, so labels stay a readable size in narrow columns.
-  function chartSVG(win, city, W, H) {
+  function chartSVG(win, city, W, H, rainLed) {
     var L = 8, R = 8;
     var NT = Math.round(H * 0.06), TOP = Math.max(34, Math.round(H * 0.22)), LB = Math.round(H * 0.5);
     var AX = Math.round(H * 0.8), BAR = Math.round(H * 0.22), LBL = Math.round(H * 0.97);
+    if (rainLed) { NT = 4; TOP = NT + 12; AX = H - 24; LB = AX - 12; BAR = AX - NT; LBL = H - 4; }
     var n = win.temp.length;
     var step = (W - L - R) / (n - 1);
     function x(i) { return L + step * i; }
@@ -301,27 +381,44 @@
       var p = win.pop[i];
       if (p >= 5) {
         var bh = Math.max(2, p / 100 * BAR);
-        s += '<rect class="bar" x="' + (x(i) + 1.5).toFixed(1) + '" y="' + (AX - bh).toFixed(1)
+        s += '<rect class="bar' + (rainLed ? ' bar-led' : '') + '" x="' + (x(i) + 1.5).toFixed(1) + '" y="' + (AX - bh).toFixed(1)
           + '" width="' + Math.max(2, step - 3).toFixed(1) + '" height="' + bh.toFixed(1) + '"/>';
       }
     }
 
     s += '<line class="axis" x1="' + L + '" y1="' + AX + '" x2="' + (W - R) + '" y2="' + AX + '"/>';
 
+    if (rainLed) {
+      // rain chance is the main story: a 50% guide line, the peak labelled, temperature kept as a thin line
+      var gy = AX - 0.5 * BAR;
+      s += '<line class="grid" x1="' + L + '" y1="' + gy.toFixed(1) + '" x2="' + (W - R) + '" y2="' + gy.toFixed(1) + '"/>';
+      s += '<text class="lbl lbl-sm lbl-halo" x="' + (W - R) + '" y="' + (gy - 4).toFixed(1) + '" text-anchor="end">50% chance</text>';
+      var pk = 0;
+      for (i = 0; i < n - 1; i++) { if (win.pop[i] > win.pop[pk]) pk = i; }
+      if (win.pop[pk] >= 10) {
+        var py = Math.max(16, AX - win.pop[pk] / 100 * BAR - 6);
+        var px = Math.min(W - 24, Math.max(24, x(pk) + step / 2));
+        s += '<text class="val" x="' + px.toFixed(1) + '" y="' + py.toFixed(1) + '" text-anchor="middle">'
+          + Math.round(win.pop[pk]) + '%</text>';
+      }
+    }
+
     // temperature
     var pts = win.temp.map(function (v, k) { return x(k).toFixed(1) + ',' + y(v).toFixed(1); });
-    s += '<polygon class="area" points="' + pts.join(' ') + ' ' + x(n - 1).toFixed(1) + ',' + (LB + 10)
+    if (!rainLed) s += '<polygon class="area" points="' + pts.join(' ') + ' ' + x(n - 1).toFixed(1) + ',' + (LB + 10)
       + ' ' + x(0).toFixed(1) + ',' + (LB + 10) + '"/>';
-    s += '<polyline class="tline" points="' + pts.join(' ') + '"/>';
-    s += '<circle class="dot" cx="' + x(0).toFixed(1) + '" cy="' + y(win.temp[0]).toFixed(1) + '" r="6"/>';
+    s += '<polyline class="tline' + (rainLed ? ' tline-thin' : '') + '" points="' + pts.join(' ') + '"/>';
+    if (!rainLed) s += '<circle class="dot" cx="' + x(0).toFixed(1) + '" cy="' + y(win.temp[0]).toFixed(1) + '" r="6"/>';
 
     function valueLabel(idx, v, dy) {
       var xx = Math.min(W - 20, Math.max(20, x(idx)));
       return '<text class="val" x="' + xx.toFixed(1) + '" y="' + (y(v) + dy).toFixed(1)
         + '" text-anchor="middle">' + Math.round(v) + '°</text>';
     }
-    s += valueLabel(hiI, hi, -10);
-    if (loI !== hiI && hi - lo >= 1) s += valueLabel(loI, lo, 30);
+    if (!rainLed) {
+      s += valueLabel(hiI, hi, -10);
+      if (loI !== hiI && hi - lo >= 1) s += valueLabel(loI, lo, 30);
+    }
 
     // hour labels
     var marks = W < 360 ? [0, 8, 16, 24] : [0, 6, 12, 18, 24];  // fewer labels in a narrow column
@@ -346,6 +443,7 @@
         e.desc.textContent = weather ? 'Forecast out of date' : 'Loading forecast';
         e.range.textContent = '';
         e.chart.innerHTML = '';
+        if (e.rainHead) { e.rainHead.textContent = ''; e.rainSub.textContent = ''; e.ncWrap.hidden = true; }
         return;
       }
       var hi = Math.max.apply(null, win.temp);
@@ -353,11 +451,26 @@
       var maxPop = Math.max.apply(null, win.pop);
       e.temp.textContent = Math.round(win.temp[0]) + '°';
       e.desc.textContent = codeText(win.code[0]);
-      e.range.textContent = 'Next 24h: high ' + Math.round(hi) + '°, low ' + Math.round(lo) + '° · '
-        + (maxPop < 10 ? 'no rain expected' : 'rain chance up to ' + Math.round(maxPop) + '%');
+      var portrait = window.innerHeight > window.innerWidth;
       var cw = Math.round(e.chart.clientWidth) || 560;
-      var ch = window.innerHeight > window.innerWidth ? 150 : 190;
-      e.chart.innerHTML = chartSVG(win, CITIES[k], cw, ch);
+      if (e.rainHead) {
+        // Sydney: rain first, temperature kept small
+        e.range.textContent = 'High ' + Math.round(hi) + '° · low ' + Math.round(lo) + '°';
+        var rs = rainSummary(win, nowcastOf(weather[k]), CITIES[k].tz);
+        e.rainHead.textContent = rs.head;
+        e.rainSub.textContent = rs.sub;
+        var nc = nowcastOf(weather[k]);
+        e.ncWrap.hidden = !nc;
+        if (nc) {
+          e.ncCap.textContent = 'Next 2 hours · ' + nowcastText(nc);
+          e.nc.innerHTML = nowcastSVG(nc, Math.round(e.nc.clientWidth) || 220, portrait ? 46 : 60);
+        }
+        e.chart.innerHTML = chartSVG(win, CITIES[k], cw, portrait ? 84 : 120, true);
+      } else {
+        e.range.textContent = 'Next 24h: high ' + Math.round(hi) + '°, low ' + Math.round(lo) + '° · '
+          + (maxPop < 10 ? 'no rain expected' : 'rain chance up to ' + Math.round(maxPop) + '%');
+        e.chart.innerHTML = chartSVG(win, CITIES[k], cw, portrait ? 150 : 190);
+      }
     });
     renderFoot();
   }

@@ -30,6 +30,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | S7 | I can put it on the Home Screen and it opens full screen. | Home Screen icon, no Safari toolbar, black status bar. | Accepted on device |
 | S8 | I can switch between 24 and 12 hour time. | 24 hour by default. One tap to switch, remembered. Also applies to the chart hour labels. | Accepted on device |
 | S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about once an hour. Hidden if no headline is available. Landscape only. | Accepted on device. The scheduled job has run once and fetched live headlines from both feeds |
+| S10 | As the sleeper, I can see how likely rain is in Earlwood, without temperature taking the space. | Sydney forecast leads with a plain-words rain outlook (for example "Rain easing by 20:00"), chance now, peak chance and time, expected millimetres, a next-2-hours rain strip, and a 24 hour chart led by rain chance. Temperature shrinks to one small line. Eastbourne unchanged. | Built, awaiting customer check on the iPad |
 
 ## Ideas, not yet prioritised
 
@@ -51,6 +52,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 
 ## Open questions for the customer
 
+0. Would a live rain radar for the Earlwood area be worth adding? It is the only source that sees showers street by street.
 1. Red or amber digits? (Built as warm red-orange, the least disruptive to night vision.)
 2. Is a public GitHub repository acceptable? It is needed for free GitHub Pages hosting.
 
@@ -92,3 +94,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | 19 Oct 2026 | 2 | LGTM on headlines in the middle section | Accepted from screenshots. Next: check on the real iPad |
 | 19 Oct 2026 | 1 and 2 | Set up on the iPad: all done, perfect for now | Accepted on device. Ideas list stays open for later |
 | 19 Oct 2026 | 2 | Headlines once an hour is enough | Job now runs hourly at 7 past, page checks every 30 minutes |
+| 19 Oct 2026 | 3 | Sydney: shrink temperature, show more on rain likelihood for Earlwood, ideally Hughes Park or Hansen Avenue | Added as S10. Forecast models are about 10 km grid, so Hughes Park, Hansen Avenue and the suburb centre all get the same numbers. Kept the suburb-level point, and did not put a street-level location in the public repo. A rain radar would be the way to get truly local. Offered to the customer |

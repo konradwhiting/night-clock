@@ -24,6 +24,12 @@ Tap anywhere to show the controls for eight seconds.
 
 Choices are remembered on the iPad. Landscape is the main layout. Portrait also works.
 
+## Sydney rain
+
+The Sydney column puts rain first. It shows a one-line outlook, the chance now, the peak chance and when, the millimetres expected, a strip for the next two hours and a 24 hour rain-chance chart. Temperature is one small line.
+
+The numbers come from Open-Meteo for Earlwood. Weather models work on a grid roughly 10 km wide, so they cannot tell one street or park from another, and the next-2-hours strip is the model's estimate, not radar. The location is set to the suburb on purpose, as the repository is public.
+
 ## Headlines
 
 The blank space in each column shows the top regional headline: ABC News NSW for Sydney and BBC News Sussex for Eastbourne (BBC News England if the Sussex feed is unavailable). They are hidden in portrait.
