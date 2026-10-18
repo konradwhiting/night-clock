@@ -565,7 +565,7 @@
 
   var hideTimer = null;
   function renderControls() {
-    btnHours.textContent = 'Time: ' + (hour12 ? '12 hour' : '24 hour');
+    if (btnHours) btnHours.textContent = 'Time: ' + (hour12 ? '12 hour' : '24 hour');
     btnDim.textContent = 'Brightness: ' + DIM_LABELS[dimMode];
   }
 
@@ -575,7 +575,7 @@
     hideTimer = setTimeout(function () { controls.hidden = true; }, 8000);
   }
 
-  btnHours.addEventListener('click', function () {
+  if (btnHours) btnHours.addEventListener('click', function () {
     hour12 = !hour12;
     store.set('hour12', hour12);
     last = {};
