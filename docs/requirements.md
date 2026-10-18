@@ -17,19 +17,19 @@ An old iPad (6th generation) lives on a bedside table and works as a night clock
 
 ## User stories
 
-Status key: Built means the code exists and passed my own render checks. Accepted means the customer has seen it and said yes.
+Status key: Built means the code exists and passed my own render checks. Accepted from screenshots means the customer has seen it and said yes. Accepted on device will mean it has also been checked on the real iPad.
 
 | ID | Story | Acceptance criteria | Status |
 |----|-------|---------------------|--------|
-| S1 | As the sleeper, I can read the Sydney time at a glance in a dark room. | Large digits, warm red on black, readable from across the room, no seconds ticking. | Built |
-| S2 | I can see the UK time and how far apart the two places are. | Eastbourne (UK) time shown with its zone (GMT or BST), the gap in hours, and whether it is yesterday or tomorrow there. Correct across both daylight saving changes. | Built |
-| S3 | The screen dims itself at night and I can override it. | Auto mode dims between 9pm and 6am Sydney time. Tap to choose Auto, Bright, Dim or Dimmest. Choice is remembered. | Built |
-| S4 | I can see the forecast for the next 24 hours in both cities. | Per place: temperature now, conditions, high and low, rain chance, and an hourly chart for the next 24 hours with night hours shaded. Refreshes by itself every 30 minutes. | Built |
-| S5 | The display keeps working if the network drops. | Last forecast is kept and shown, with a note of when it was fetched. Clock never depends on the network. | Built |
-| S6 | The screen protects itself from burn-in. | Content shifts a few pixels every minute. | Built |
-| S7 | I can put it on the Home Screen and it opens full screen. | Home Screen icon, no Safari toolbar, black status bar. | Built |
-| S8 | I can switch between 24 and 12 hour time. | 24 hour by default. One tap to switch, remembered. Also applies to the chart hour labels. | Built |
-| S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about every 30 minutes. Hidden if no headline is available. Landscape only. | Built. The scheduled job has run once and fetched live headlines from both feeds |
+| S1 | As the sleeper, I can read the Sydney time at a glance in a dark room. | Large digits, warm red on black, readable from across the room, no seconds ticking. | Accepted from screenshots |
+| S2 | I can see the UK time and how far apart the two places are. | Eastbourne (UK) time shown with its zone (GMT or BST), the gap in hours, and whether it is yesterday or tomorrow there. Correct across both daylight saving changes. | Accepted from screenshots |
+| S3 | The screen dims itself at night and I can override it. | Auto mode dims between 9pm and 6am Sydney time. Tap to choose Auto, Bright, Dim or Dimmest. Choice is remembered. | Accepted from screenshots |
+| S4 | I can see the forecast for the next 24 hours in both cities. | Per place: temperature now, conditions, high and low, rain chance, and an hourly chart for the next 24 hours with night hours shaded. Refreshes by itself every 30 minutes. | Accepted from screenshots |
+| S5 | The display keeps working if the network drops. | Last forecast is kept and shown, with a note of when it was fetched. Clock never depends on the network. | Accepted from screenshots |
+| S6 | The screen protects itself from burn-in. | Content shifts a few pixels every minute. | Accepted from screenshots |
+| S7 | I can put it on the Home Screen and it opens full screen. | Home Screen icon, no Safari toolbar, black status bar. | Accepted from screenshots |
+| S8 | I can switch between 24 and 12 hour time. | 24 hour by default. One tap to switch, remembered. Also applies to the chart hour labels. | Accepted from screenshots |
+| S9 | As the sleeper, I can see the top regional headline for each place. | Sydney shows the top ABC News NSW story, Eastbourne the top BBC News Sussex story, each with its source and age. Refreshes about every 30 minutes. Hidden if no headline is available. Landscape only. | Accepted from screenshots. The scheduled job has run once and fetched live headlines from both feeds |
 
 ## Ideas, not yet prioritised
 
@@ -89,3 +89,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | 19 Oct 2026 | 1 | Make Sydney's digits larger than Eastbourne's | Sydney is now about 2.3 times the height of Eastbourne in landscape |
 | 19 Oct 2026 | 1 | Change the font so it looks like the TV series 24 | Bold seven-segment digital display with faint unlit segments. A look in the same spirit, not a copy of the show's graphic. Sydney is about 2.3 times the size of Eastbourne. Customer to confirm it is the right feel |
 | 19 Oct 2026 | 1 | Use the blank middle section for a top regional news headline | Added as S9. One headline per place, Sydney from ABC News NSW, Eastbourne from BBC News Sussex |
+| 19 Oct 2026 | 2 | LGTM on headlines in the middle section | Accepted from screenshots. Next: check on the real iPad |
