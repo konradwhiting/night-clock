@@ -2,6 +2,14 @@
    Layout: two city columns (Sydney wider) in landscape, two stacked rows in portrait.
    Everything sizes from its column width (cqw), so the same rules fit both orientations. */
 
+@font-face {
+  font-family: "DSEG7 Classic";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/dseg7-classic-latin-700-normal.woff2") format("woff2");
+}
+
 :root {
   --bg: #050303;
   --ink: #ff7352;      /* digits: warm red-orange, gentlest on night vision */
@@ -9,6 +17,7 @@
   --ink-3: #8f3a29;    /* footnotes and axes */
   --line: #1f0e0a;     /* hairlines and night shading */
   --dim: 0.9;
+  --digits: "DSEG7 Classic", "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
   --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --body: "Barlow", -apple-system, "Helvetica Neue", Arial, sans-serif;
   color-scheme: dark;
@@ -34,7 +43,7 @@ body { font-family: var(--body); }
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   padding:
     max(24px, env(safe-area-inset-top))
     max(24px, env(safe-area-inset-right))
@@ -60,6 +69,7 @@ body { font-family: var(--body); }
 
 .city-head {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
@@ -73,23 +83,28 @@ body { font-family: var(--body); }
 .city-meta { letter-spacing: 0.04em; text-transform: none; color: var(--ink-2); text-align: right; }
 
 .time {
-  font-family: var(--display);
-  font-weight: 300;
-  font-size: 34cqw;
-  line-height: 0.92;
-  letter-spacing: -0.01em;
+  position: relative;
+  font-family: var(--digits);
+  font-weight: 700;
+  font-size: 24cqw;
+  line-height: 1;
+  letter-spacing: 0.02em;
   white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-  margin-top: 0.12em;
+  margin-top: 0.2em;
 }
 
-#city-syd .time { font-size: 50cqw; }
+/* unlit segments, like a real LED display */
+.time .ghost { position: absolute; left: 0; top: 0; opacity: 0.09; pointer-events: none; }
+.time .hm { white-space: pre; }
+
+#city-syd .time { font-size: 25cqw; }
 
 .ap {
+  font-family: var(--body);
   font-size: 0.2em;
   font-weight: 400;
   letter-spacing: 0.04em;
-  margin-left: 0.18em;
+  margin-left: 0.3em;
   color: var(--ink-2);
 }
 
@@ -187,7 +202,7 @@ body { font-family: var(--body); }
   .city + .city { border-left: 0; border-top: 1px solid var(--line); }
   #app { padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
   .city { gap: 8px; }
-  #city-syd .time { font-size: 21cqw; }
+  #city-syd .time { font-size: 20cqw; }
   #city-uk .time { font-size: 16cqw; }
   .wx { padding-top: 8px; }
   .wx-temp { font-size: 52px; }

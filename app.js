@@ -79,7 +79,10 @@
   function dayKey(z) { return z.y * 10000 + z.mo * 100 + z.d; }
 
   function clockText(z) {
-    if (hour12) return { hm: ((z.h % 12) || 12) + ':' + pad(z.mi), ap: z.h < 12 ? 'am' : 'pm' };
+    if (hour12) {
+      var h12 = (z.h % 12) || 12;
+      return { hm: (h12 < 10 ? ' ' : '') + h12 + ':' + pad(z.mi), ap: z.h < 12 ? 'am' : 'pm' };
+    }
     return { hm: pad(z.h) + ':' + pad(z.mi), ap: '' };
   }
 
@@ -319,7 +322,8 @@
     if (loI !== hiI && hi - lo >= 1) s += valueLabel(loI, lo, 30);
 
     // hour labels
-    [0, 6, 12, 18, 24].forEach(function (k) {
+    var marks = W < 360 ? [0, 8, 16, 24] : [0, 6, 12, 18, 24];  // fewer labels in a narrow column
+    marks.forEach(function (k) {
       var anchor = k === 0 ? 'start' : k === 24 ? 'end' : 'middle';
       var text = k === 0 ? 'Now' : hourLabel(win.t[k], city.tz);
       s += '<line class="tick" x1="' + x(k).toFixed(1) + '" y1="' + AX + '" x2="' + x(k).toFixed(1)

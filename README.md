@@ -1,6 +1,6 @@
 # Night Clock
 
-A bedside clock for an old iPad (6th generation, iPadOS 17). It shows the time in Sydney and the UK (Eastbourne), how far apart they are, and the weather for the next 24 hours in both places. Warm red on black, dims itself at night.
+A bedside clock for an old iPad (6th generation, iPadOS 17). It shows the time in Sydney and the UK (Eastbourne), how far apart they are, and the weather for the next 24 hours in both places. Warm red seven-segment digits on black, dims itself at night.
 
 ![Landscape](docs/screenshots/landscape.png)
 
@@ -47,6 +47,7 @@ Then open http://localhost:8000.
 | `styles.css` | Layout and the night colour scheme |
 | `app.js` | Clock, time zones, forecast fetch and chart, controls |
 | `manifest.webmanifest`, `icon-*.png` | Home Screen install |
+| `fonts/` | Seven-segment digit font (DSEG7 Classic, SIL Open Font License, licence included) |
 | `docs/requirements.md` | Product backlog, open questions and feedback log |
 
 ## Known limits

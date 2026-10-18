@@ -85,3 +85,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 |------|-----------|----------|----------|
 | 19 Oct 2026 | 1 | Landscape, 24 hour, locations Eastbourne and Earlwood, repo named night-clock | Applied the same day |
 | 19 Oct 2026 | 1 | Make Sydney's digits larger than Eastbourne's | Sydney is now about 2.3 times the height of Eastbourne in landscape |
+| 19 Oct 2026 | 1 | Change the font so it looks like the TV series 24 | Bold seven-segment digital display with faint unlit segments. A look in the same spirit, not a copy of the show's graphic. Sydney is about 2.3 times the size of Eastbourne. Customer to confirm it is the right feel |

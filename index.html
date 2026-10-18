@@ -14,7 +14,8 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&amp;family=Barlow:wght@400;500&amp;display=swap">
+<link rel="preload" href="fonts/dseg7-classic-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&amp;family=Barlow:wght@400;500&amp;display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,7 +27,7 @@
         <span class="city-name">Sydney</span>
         <span class="city-meta" id="syd-meta"></span>
       </header>
-      <div class="time"><span id="syd-hm">--:--</span><span class="ap" id="syd-ap"></span></div>
+      <div class="time"><span class="ghost" aria-hidden="true">88:88</span><span class="hm" id="syd-hm">--:--</span><span class="ap" id="syd-ap"></span></div>
       <div class="date" id="syd-date"></div>
     </div>
     <div class="wx">
@@ -45,7 +46,7 @@
         <span class="city-name">Eastbourne</span>
         <span class="city-meta" id="uk-meta"></span>
       </header>
-      <div class="time"><span id="uk-hm">--:--</span><span class="ap" id="uk-ap"></span></div>
+      <div class="time"><span class="ghost" aria-hidden="true">88:88</span><span class="hm" id="uk-hm">--:--</span><span class="ap" id="uk-ap"></span></div>
       <div class="date" id="uk-date"></div>
     </div>
     <div class="wx">
