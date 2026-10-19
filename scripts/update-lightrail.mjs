@@ -108,7 +108,14 @@ export function tripsFrom(feed, CANCELED = 3) {
         at = hhmm((st.departure && st.departure.time) || (st.arrival && st.arrival.time));
       }
     }
-    trips.push({ delay, cancelled: !!cancelled, at });
+    const stops = (u.stopTimeUpdate || []).map((st) => st.stopId).filter(Boolean);
+    trips.push({
+      delay, cancelled: !!cancelled, at,
+      info: cancelled ? {
+        tripId: u.trip && u.trip.tripId, routeId: u.trip && u.trip.routeId, direction: u.trip && u.trip.directionId,
+        start: u.trip && u.trip.startTime, firstStop: stops[0], lastStop: stops[stops.length - 1], stops: stops.length
+      } : undefined
+    });
   }
   return trips;
 }
@@ -155,7 +162,9 @@ async function main() {
       } else {
         const sydney = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', hour: '2-digit', minute: '2-digit', hour12: false }).format(now);
         const [nh, nm] = sydney.split(':').map(Number);
-        status = classify(tripsFrom(feed, cancelledCode), (nh % 24) * 60 + nm);
+        const parsed = tripsFrom(feed, cancelledCode);
+        for (const t of parsed) if (t.info) console.log('Cancelled trip:', JSON.stringify(t.info));
+        status = classify(parsed, (nh % 24) * 60 + nm);
         if (feedTime) status.feedTime = new Date(feedTime * 1000).toISOString();
       }
     } catch (err) {
