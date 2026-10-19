@@ -701,7 +701,21 @@
       var age = n.published ? ' · ' + ago(Date.now() - Date.parse(n.published)) : '';
       var pos = list.length > 1 ? ' · ' + (i + 1) + ' of ' + list.length : '';
       $(k + '-news-src').textContent = (n.area ? n.area + ' · ' : '') + n.source + age + pos;
-      $(k + '-news-title').textContent = n.title;
+      var tp = $(k + '-news-title');
+      if (tp.getAttribute('data-key') !== n.title) {  // rebuild only when the headline changes
+        tp.setAttribute('data-key', n.title);
+        tp.textContent = '';
+        if (/^https?:\/\//i.test(n.link || '')) {
+          var link = document.createElement('a');
+          link.href = n.link;
+          link.target = '_blank';  // the clock stays open behind the story
+          link.rel = 'noopener noreferrer';
+          link.textContent = n.title;
+          tp.appendChild(link);
+        } else {
+          tp.textContent = n.title;
+        }
+      }
       box.hidden = false;
     });
   }
@@ -858,6 +872,7 @@
 
   document.addEventListener('click', function (ev) {
     if (controls.contains(ev.target)) return;
+    if (ev.target.closest && ev.target.closest('.news-title a')) return;  // opening a story is not a tap on the clock
     if (controls.hidden) { showControls(); keepAwake(); }
     else { controls.hidden = true; clearTimeout(hideTimer); }
   });
