@@ -10,15 +10,14 @@ const OUT = fileURLToPath(new URL('../news.json', import.meta.url));
 // Google News search feeds are not ranked by date, so those take the newest item instead.
 const gnews = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=en-AU&gl=AU&ceid=AU:en';
 
-// A local story older than this gives way to the next feed, so the headline never sits for a day
-const LOCAL_MAX_AGE_H = 6;
+// A story older than this gives way to the next, wider feed, so the headline never sits for days
+const EARLWOOD_MAX_AGE_H = 24;
 
 export const PLACES = {
   syd: {
     feeds: [
-      { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true, maxAgeHours: LOCAL_MAX_AGE_H },
-      { area: 'Canterbury-Bankstown and Inner West', url: gnews('"Canterbury-Bankstown" OR "Inner West" Sydney when:7d'), newest: true, maxAgeHours: LOCAL_MAX_AGE_H },
-      { source: 'ABC News NSW', url: 'https://www.abc.net.au/news/feed/5555986/rss.xml' }
+      { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true, maxAgeHours: EARLWOOD_MAX_AGE_H },
+      { area: 'Inner West', url: gnews('"Inner West" Sydney when:7d'), newest: true }
     ]
   },
   uk: {
