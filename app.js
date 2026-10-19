@@ -110,6 +110,7 @@
       temp: $(k + '-temp'), desc: $(k + '-desc'), range: $(k + '-range'), chart: $(k + '-chart')
     };
   });
+  els.syd.wear = $('syd-wear');
   els.syd.rainHead = $('syd-rain-head');
   els.syd.rainSub = $('syd-rain-sub');
   els.syd.ncWrap = $('syd-nc-wrap');
@@ -292,6 +293,40 @@
     return 'very hot, stay cool and drink water';
   }
 
+  // What to wear for the day's high, in words a child can picture
+  function wearWords(t) {
+    if (t < 8) return 'Big coat and beanie';
+    if (t < 13) return 'Coat on';
+    if (t < 18) return 'Jumper weather';
+    if (t < 23) return 'Long sleeves, bring a light jumper';
+    if (t < 28) return 'T-shirt weather';
+    if (t < 33) return 'T-shirt, hat and sunscreen';
+    return 'Very hot: hat, water and shade';
+  }
+
+  // Umbrella verdict for the rest of today (next 12 hours), with when the rain is expected
+  function umbrellaOutlook(win, tz) {
+    var n = 12, maxP = 0, pk = 0, total = 0, first = -1, last = -1, i;
+    for (i = 0; i < n; i++) {
+      total += win.mm[i];
+      if (win.pop[i] > maxP) { maxP = win.pop[i]; pk = i; }
+      if (win.pop[i] >= 40 || win.mm[i] >= 0.3) { if (first < 0) first = i; last = i; }
+    }
+    var head = maxP >= 50 || total >= 1 ? 'Take an umbrella'
+      : maxP >= 30 || total >= 0.3 ? 'Maybe take an umbrella'
+      : 'No umbrella needed';
+    var sub;
+    if (first < 0) {
+      sub = maxP >= 10 ? 'Slim chance of showers, ' + Math.round(maxP) + '% at ' + hourLabel(win.t[pk], tz) : 'Dry for the rest of today';
+    } else if (first === 0) {
+      sub = 'Raining now' + (last < n - 1 ? ', easing by ' + hourLabel(win.t[last + 1], tz) : '');
+    } else {
+      sub = 'Rain from ' + hourLabel(win.t[first], tz) + (last < n - 1 ? ' to ' + hourLabel(win.t[last + 1], tz) : '')
+        + ' · peak ' + Math.round(maxP) + '%';
+    }
+    return { head: head, sub: sub };
+  }
+
   function rainSummary(win, nc, tz) {
     var n = 24, wet = [], total = 0, maxP = 0, pk = 0, i;
     for (i = 0; i < n; i++) {
@@ -472,9 +507,10 @@
       var e = els[k];
       var win = weather ? windowOf(weather[k]) : null;
       if (!win) {
-        e.temp.textContent = '--°';
-        e.desc.textContent = weather ? 'Forecast out of date' : 'Loading forecast';
-        e.range.textContent = '';
+        if (e.temp) e.temp.textContent = '--°';
+        if (e.desc) e.desc.textContent = weather ? 'Forecast out of date' : 'Loading forecast';
+        e.range.textContent = e.wear ? '--°' : '';
+        if (e.wear) e.wear.textContent = weather ? 'Forecast out of date' : 'Loading forecast';
         if (e.chart) e.chart.innerHTML = '';
         if (e.rainHead) { e.rainHead.textContent = ''; e.rainSub.textContent = ''; if (e.ncWrap) e.ncWrap.hidden = true; if (e.grid) e.grid.innerHTML = ''; }
         return;
@@ -482,8 +518,8 @@
       var hi = Math.max.apply(null, win.temp);
       var lo = Math.min.apply(null, win.temp);
       var maxPop = Math.max.apply(null, win.pop);
-      e.temp.textContent = Math.round(win.temp[0]) + '°';
-      e.desc.textContent = codeText(win.code[0]);
+      if (e.temp) e.temp.textContent = Math.round(win.temp[0]) + '°';
+      if (e.desc) e.desc.textContent = codeText(win.code[0]);
       var portrait = window.innerHeight > window.innerWidth;
       var cw = e.chart ? Math.round(e.chart.clientWidth) || 560 : 0;
       if (e.rainHead) {
@@ -495,20 +531,13 @@
         var nc = nowcastOf(weather[k]);
         if (e.ncWrap) e.ncWrap.hidden = !nc;
         if (!e.chart) {
-          e.desc.textContent = 'Now: ' + tempWords(win.temp[0]);
-          e.range.textContent = 'High ' + Math.round(hi) + '° · ' + tempWords(hi).split(',')[0];
-          // text only (Earlwood page): the next two hours in words, and optionally a table of numbers
+          // text only (Earlwood page): what to wear for the high, and whether to take an umbrella
+          e.range.textContent = Math.round(hi) + '°';
+          e.wear.textContent = wearWords(hi);
+          var u = umbrellaOutlook(win, CITIES[k].tz);
+          e.rainHead.textContent = u.head;
+          e.rainSub.textContent = u.sub;
           e.ncCap.textContent = nc ? 'Next 2 hours: ' + nowcastText(nc) : '';
-          if (!e.grid) return;
-          var cols = [0, 3, 6, 9, 12, 15, 18, 21];
-          var times = '<span class="g-l"></span>', temps = '<span class="g-l">Temp</span>', rains = '<span class="g-l">Rain</span>';
-          cols.forEach(function (i) {
-            var p = Math.round(win.pop[i]);
-            times += '<span class="g-t">' + (i === 0 ? 'Now' : hourLabel(win.t[i], CITIES[k].tz)) + '</span>';
-            temps += '<span>' + Math.round(win.temp[i]) + '°</span>';
-            rains += '<span' + (p >= 50 ? ' class="g-hi"' : '') + '>' + p + '%</span>';
-          });
-          e.grid.innerHTML = times + temps + rains;
           return;
         }
         if (nc) {

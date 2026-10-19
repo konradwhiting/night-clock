@@ -165,58 +165,43 @@ body { font-family: var(--body); }
 
 /* Earlwood-only page (earlwood/index.html): one wide column */
 #app.solo { grid-template-columns: minmax(0, 1fr); }
-.solo #city-syd .time { font-size: min(23cqw, 30vh); }  /* wide, short screens are limited by height */
-/* the forecast fills whatever height is left under the clock */
-.solo .wx { flex: 1 1 auto; display: flex; flex-direction: column; min-height: 0; }
+.solo .wx { min-height: 0; }
 .solo .wx-chart { flex: 1 1 0; min-height: 70px; max-height: 300px; position: relative; }
 .solo .wx-chart svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-top: 0; }
 .solo .news-title { -webkit-line-clamp: 2; }
 .solo .rain-nc { flex-basis: 34%; }
 
-/* text-and-numbers forecast (Earlwood page) */
-.wx-text { justify-content: center; }
-.wx-text .wx-temp { font-size: clamp(44px, 9cqw, 80px); }
-.wx-text .wx-desc { font-size: clamp(18px, 3.6cqw, 28px); }
-.wx-text .wx-range { font-size: clamp(16px, 3.2cqw, 24px); }
-.wx-text .rain-head { margin-top: 0.5em; font-size: clamp(36px, 8cqw, 68px); }
-.wx-text .rain-sub { font-size: clamp(18px, 3.6cqw, 28px); margin-top: 0.4em; }
-.rain-next { font-size: clamp(18px, 3.6cqw, 28px); color: var(--ink); margin-top: 0.35em; }
-.wx-grid {
-  display: grid;
-  grid-template-columns: auto repeat(8, 1fr);
-  gap: 0.35em 0;
-  margin-top: 0.9em;
-  padding-top: 0.7em;
-  border-top: 1px solid var(--line);
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: clamp(20px, 4.2cqw, 30px);
-  text-align: center;
-  font-variant-numeric: tabular-nums;
-}
-.wx-grid .g-l { text-align: left; color: var(--ink-2); font-family: var(--body); font-weight: 400; font-size: 0.6em; align-self: center; padding-right: 0.8em; }
-.wx-grid .g-t { color: var(--ink-2); font-size: 0.7em; }
-.wx-grid .g-hi { color: var(--ink); text-decoration: underline; text-underline-offset: 0.18em; }
-.wx-grid span:not(.g-l):not(.g-t) { color: var(--ink-2); }
-.wx-grid .g-hi { color: var(--ink); }
+/* Earlwood page, in order of importance: light rail (biggest), clock, then high + what to wear and umbrella side by side */
+.solo .city { gap: clamp(8px, 2vh, 18px); }
 
-/* light rail status (Earlwood page): quiet when on time, brighter when not */
 .rail {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.2em 0.9em;
-  margin-top: 0.9em;
-  padding-top: 0.7em;
-  border-top: 1px solid var(--line);
+  flex-direction: column;
+  gap: 0.1em;
+  padding-bottom: clamp(8px, 1.6vh, 16px);
+  border-bottom: 1px solid var(--line);
+}
+.rail-line { font-family: var(--body); font-weight: 400; font-size: clamp(14px, 2.6cqw, 22px); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+.rail-head {
   font-family: var(--display);
   font-weight: 500;
+  font-size: min(15cqw, 19vh);
+  line-height: 1;
+  color: var(--ink-2);
 }
-.rail-line { font-family: var(--body); font-weight: 400; font-size: clamp(14px, 2.6cqw, 19px); color: var(--ink-2); }
-.rail-head { font-size: clamp(22px, 4.6cqw, 34px); color: var(--ink-2); }
-.rail-sub { font-family: var(--body); font-weight: 400; font-size: clamp(14px, 2.6cqw, 19px); color: var(--ink-3); }
-.rail-alert .rail-head { color: var(--ink); text-decoration: underline; text-underline-offset: 0.15em; }
-.rail-alert .rail-sub { color: var(--ink-2); }
+.rail-sub { font-family: var(--body); font-weight: 400; font-size: clamp(18px, 3.8cqw, 32px); color: var(--ink-2); }
+.rail-alert .rail-head { color: var(--ink); text-decoration: underline; text-decoration-thickness: 0.05em; text-underline-offset: 0.12em; }
+.rail-alert .rail-sub { color: var(--ink); }
+
+.solo #city-syd .time { font-size: min(14cqw, 17vh); }
+.solo .top .city-head { display: none; }  /* the page is Earlwood only, the name is not needed */
+
+.wx-text { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3cqw, 40px); border-top: 0; padding-top: 0; flex: 0 0 auto; }
+.tile { min-width: 0; border-top: 1px solid var(--line); padding-top: clamp(6px, 1.2vh, 12px); }
+.tile-cap { font-size: clamp(13px, 2.4cqw, 20px); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+.tile-big { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 8cqw, 76px); line-height: 1.05; color: var(--ink); }
+.tile-sub { font-size: clamp(17px, 3.4cqw, 28px); color: var(--ink-2); margin-top: 0.25em; }
+.tile-note { font-size: clamp(14px, 2.8cqw, 22px); color: var(--ink-3); margin-top: 0.2em; }
 
 /* Sydney: rain first, temperature small */
 .wx-rainy .wx-now { gap: 0.6em; }
@@ -331,16 +316,16 @@ body { font-family: var(--body); }
   .solo .news { display: block; }
   .solo #city-syd .time { font-size: min(26cqw, 20vh); }
   .solo .wx-chart svg { height: auto; }
-  /* portrait has height to spare: bigger text, spread out */
-  .solo .wx { justify-content: space-evenly; }
-  .wx-text .wx-temp { font-size: 14cqw; }
-  .wx-text .wx-desc { font-size: 5cqw; }
-  .wx-text .wx-range { font-size: 3.6cqw; }
-  .wx-text .rain-head { font-size: 10.5cqw; }
-  .wx-text .rain-sub, .wx-text .rain-next { font-size: 4.2cqw; }
-  .wx-grid { font-size: 5.4cqw; }
-  .rail-line, .rail-sub { font-size: 3.4cqw; }
-  .rail-head { font-size: 6.4cqw; }
+  /* portrait has height to spare: stack the tiles and spread things out */
+  .solo .city { justify-content: space-between; }
+  .rail-head { font-size: 22cqw; }
+  .rail-sub { font-size: 5.2cqw; }
+  .rail-line { font-size: 3.6cqw; }
+  .wx-text { grid-template-columns: 1fr; gap: 3cqw; }
+  .tile-cap { font-size: 3.4cqw; }
+  .tile-big { font-size: 11cqw; }
+  .tile-sub { font-size: 4.6cqw; }
+  .tile-note { font-size: 3.6cqw; }
 }
 
 /* short landscape screens such as small tablets */
@@ -354,14 +339,11 @@ body { font-family: var(--body); }
   .rain-row { margin-top: 0.3em; }
   .rain-head { font-size: 26px; }
   .rain-sub, .rain-next { font-size: 14px; margin-top: 0.2em; }
-  .wx-text .wx-temp { font-size: 40px; }
-  .wx-text .wx-desc, .wx-text .wx-range { font-size: 16px; }
-  .wx-text .rain-head { font-size: 38px; margin-top: 0.2em; }
-  .wx-text .rain-sub, .wx-text .rain-next { font-size: 18px; }
-  .wx-grid { font-size: 20px; margin-top: 0.4em; padding-top: 0.4em; }
-  .rail { margin-top: 0.4em; padding-top: 0.4em; }
-  .rail-head { font-size: 22px; }
-  .rail-line, .rail-sub { font-size: 14px; }
+  .rail-line { font-size: 13px; }
+  .rail-sub { font-size: 18px; }
+  .tile-big { font-size: 40px; }
+  .tile-sub { font-size: 16px; }
+  .tile-note { font-size: 13px; }
   .rain-nc-cap { font-size: 11px; margin-bottom: 2px; }
   .rain-nc svg { height: 40px; }
   #foot { font-size: 11px; }
