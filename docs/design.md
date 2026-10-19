@@ -11,7 +11,7 @@ The two diagrams below were drawn by ChatGPT from prompts written for this proje
 How the screen works:
 
 - **Clock strip.** Large seven-segment time (12 hour on this page) and the date.
-- **Light rail row (first, biggest).** Words follow Transport for NSW: "Delays" and "Cancellations". The row also says when it was last checked. Normal service reads "Running normally" for now, until the exact words are chosen.
+- **Light rail row (first, biggest).** Words follow Transport for NSW: "Delays" and "Cancellations". The row also says when it was last checked. Normal service reads "Running normally" for now, until the exact words are chosen. On weekdays it follows her own trips instead of the whole line: before midday the trams from Dulwich Hill to Jubilee Park between 7:15am and 8:30am, and after midday the trams from Jubilee Park back to Dulwich Hill between 3pm and 4pm. It lists each tram with its time and whether it is on time, late or cancelled. Outside those windows, and at weekends, it shows the whole line. The stops are set in `MY_TRIPS` in `scripts/update-lightrail.mjs`.
 - **What to wear row.** Compares the temperature now with the day's high, so a cold morning that warms up says "Coat" with a note that a lighter layer will do later. The big number is the day's high.
 - **Rain row.** The umbrella verdict comes from how many of six weather models expect rain: half or more means "Take an umbrella", a third or more means "Maybe an umbrella", otherwise "No umbrella". Very wet days add gumboots and a raincoat.
 - **Attention.** A row turns solid orange when it needs attention (light rail delays or cancellations, umbrella needed). Otherwise it is a dim outline.
