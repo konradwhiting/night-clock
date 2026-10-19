@@ -45,7 +45,8 @@
     }
   };
 
-  var hour12 = store.get('hour12', false) === true;  // 24 hour unless the user switches
+  // 24 hour unless the user switches; a page can fix it with window.NIGHT_CLOCK.hour12 (the Earlwood page is 12 hour)
+  var hour12 = CFG.hour12 !== undefined ? CFG.hour12 === true : store.get('hour12', false) === true;
   var dimMode = store.get('dim', 'auto');
   if (DIM_MODES.indexOf(dimMode) < 0) dimMode = 'auto';
 
@@ -750,6 +751,7 @@
     put('rail-label', label);
     var ri = $('rail-ico');
     if (ri) ri.innerHTML = ICONS[rail && rail.cancelled > 0 && rail.state !== 'setup' ? 'tramx' : 'tram'];
+    if (hour12) sub = (sub || '').replace(/\b(\d{1,2}):(\d\d)\b/g, function (m, h, mi) { h = +h; return ((h % 12) || 12) + ':' + mi + (h < 12 ? 'am' : 'pm'); });
     put('rail-head', head);
     put('rail-sub', sub || '');
     box.className = quiet ? 'row quiet' : 'row on';
