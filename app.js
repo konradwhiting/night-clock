@@ -763,7 +763,7 @@
       sub = rail.detail;
       quiet = rail.state === 'ontime' || rail.state === 'quiet';
     }
-    var label = 'Light rail L1 Dulwich Hill';
+    var label = rail && rail.scope === 'yours' && rail.label ? 'Light rail · ' + rail.label : 'Light rail L1 Dulwich Hill';
     if (rail && rail.updated && rail.state !== 'setup') {
       var ct = clockText(zoned(new Date(Date.parse(rail.updated)), CITIES.syd.tz));
       label += ' · checked ' + ct.hm + ct.ap;

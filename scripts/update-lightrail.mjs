@@ -84,6 +84,58 @@ export function classify(trips, nowMin = null) {
   return out;
 }
 
+// Her school trips (Mon to Fri). Stop ids come from the Transport for NSW timetable (scripts/lightrail-stops.mjs).
+//   morning: Dulwich Hill, leaving just before 8am, to Jubilee Park (towards Central)
+//   afternoon: Jubilee Park (towards Dulwich Hill), around 3:20pm, back to Dulwich Hill
+export const MY_TRIPS = {
+  morning: { from: '220363', to: '203779', label: 'Dulwich Hill to Jubilee Park', window: [7 * 60 + 15, 8 * 60 + 30] },
+  afternoon: { from: '203780', to: '220363', label: 'Jubilee Park to Dulwich Hill', window: [15 * 60, 16 * 60] }
+};
+
+const sydneyMin = (epochSec) => {
+  const [h, m] = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', hour: '2-digit', minute: '2-digit', hour12: false })
+    .format(new Date(epochSec * 1000)).split(':').map(Number);
+  return (h % 24) * 60 + m;
+};
+const hmOf = (min) => String(Math.floor(min / 60) % 24).padStart(2, '0') + ':' + String(Math.round(min) % 60).padStart(2, '0');
+
+/**
+ * Trips that pass the origin stop and then the destination stop, with when they are due at the origin.
+ * window = [fromMin, toMin] of scheduled time (minutes since midnight, Sydney); null keeps every trip.
+ */
+export function myTrips(trips, cfg, nowMin = null, window = cfg.window) {
+  const out = [];
+  for (const t of trips) {
+    const st = t.stopTimes || [];
+    const i = st.findIndex((x) => x.id === cfg.from);
+    const j = st.findIndex((x) => x.id === cfg.to);
+    if (i < 0 || j <= i) continue;
+    const delaySec = st[i].delay != null ? st[i].delay : (typeof t.delay === 'number' ? t.delay : 0);
+    let expMin = null;
+    if (st[i].time) expMin = sydneyMin(st[i].time);
+    else if (i === 0 && typeof t.start === 'string') { const m = /^(\d+):(\d\d)/.exec(t.start); if (m) expMin = Number(m[1]) * 60 + Number(m[2]) + delaySec / 60; }
+    if (expMin == null) continue;
+    const schedMin = Math.round(st[i].time && st[i].delay == null ? expMin : expMin - delaySec / 60);
+    if (window && (schedMin < window[0] || schedMin > window[1])) continue;
+    if (nowMin != null && Math.max(expMin, schedMin) < nowMin - 5) continue;  // already gone
+    out.push({ schedMin, delayMin: minutes(Math.max(0, delaySec)), cancelled: !!t.cancelled });
+  }
+  return out.sort((a, b) => a.schedMin - b.schedMin);
+}
+
+/** A status for her trips only, in the same shape as classify(). Null when none are in view. */
+export function classifyMine(list) {
+  if (!list.length) return null;
+  const cancelled = list.filter((x) => x.cancelled).length;
+  const worst = Math.max(0, ...list.filter((x) => !x.cancelled).map((x) => x.delayMin));
+  let state = 'ontime', text = 'Running normally';
+  if (cancelled > 0) { state = 'delays'; text = 'Cancellations'; }
+  else if (worst >= MAJOR_S / 60) { state = 'delays'; text = 'Delays'; }
+  else if (worst >= MINOR_S / 60) { state = 'minor'; text = 'Delays'; }
+  const parts = list.slice(0, 4).map((x) => hmOf(x.schedMin) + (x.cancelled ? ' cancelled' : x.delayMin >= MINOR_S / 60 ? ' ' + x.delayMin + ' min late' : ' on time'));
+  return { state, text, detail: parts.join(' · '), cancelled };
+}
+
 /** Pulls {delay, cancelled} out of every TripUpdate in a decoded GTFS-realtime feed. */
 export function tripsFrom(feed, CANCELED = 3) {
   const trips = [];
@@ -109,8 +161,13 @@ export function tripsFrom(feed, CANCELED = 3) {
       }
     }
     const stops = (u.stopTimeUpdate || []).map((st) => st.stopId).filter(Boolean);
+    const stopTimes = (u.stopTimeUpdate || []).map((st) => {
+      const ev = st.departure || st.arrival || {};
+      const ownDelay = typeof ev.delay === 'number' ? ev.delay : null;
+      return { id: st.stopId, time: ev.time ? Number(ev.time) : null, delay: ownDelay };
+    });
     trips.push({
-      delay, cancelled: !!cancelled, at,
+      delay, cancelled: !!cancelled, at, stopTimes, start: u.trip && u.trip.startTime,
       info: cancelled ? {
         tripId: u.trip && u.trip.tripId, routeId: u.trip && u.trip.routeId, direction: u.trip && u.trip.directionId,
         start: u.trip && u.trip.startTime, firstStop: stops[0], lastStop: stops[stops.length - 1], stops: stops.length
@@ -164,7 +221,20 @@ async function main() {
         const [nh, nm] = sydney.split(':').map(Number);
         const parsed = tripsFrom(feed, cancelledCode);
         for (const t of parsed) if (t.info) console.log('Cancelled trip:', JSON.stringify(t.info));
-        status = classify(parsed, (nh % 24) * 60 + nm);
+        const nowMin = (nh % 24) * 60 + nm;
+        const lineStatus = classify(parsed, nowMin);
+        status = lineStatus;
+        // her trips: weekday mornings and afternoons
+        const dow = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', weekday: 'short' }).format(now);
+        for (const k of Object.keys(MY_TRIPS)) console.log('Her ' + k + ' trips in the feed (any time):', JSON.stringify(myTrips(parsed, MY_TRIPS[k], null, null).map((x) => hmOf(x.schedMin) + (x.cancelled ? 'X' : '+' + x.delayMin))));
+        if (!/^(Sat|Sun)/.test(dow)) {
+          const mode = nowMin < 12 * 60 ? 'morning' : 'afternoon';
+          const mine = classifyMine(myTrips(parsed, MY_TRIPS[mode], nowMin));
+          if (mine) {
+            status = { ...mine, trips: lineStatus.trips, worstMin: lineStatus.worstMin, scope: 'yours', label: MY_TRIPS[mode].label,
+              line: { state: lineStatus.state, text: lineStatus.text, detail: lineStatus.detail } };
+          }
+        }
         if (feedTime) status.feedTime = new Date(feedTime * 1000).toISOString();
       }
     } catch (err) {
@@ -174,7 +244,7 @@ async function main() {
 
   const next = { ...LINE, ...status, updated: now.toISOString() };
   const old = await readExisting();
-  const same = old && ['state', 'text', 'detail'].every((k) => old[k] === next[k]);
+  const same = old && ['state', 'text', 'detail', 'label'].every((k) => old[k] === next[k]);
   const fresh = old && old.updated && now - Date.parse(old.updated) < HEARTBEAT_MS;
   if (same && fresh) {
     console.log('Unchanged: ' + next.text + (next.detail ? ' (' + next.detail + ')' : ''));
