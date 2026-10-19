@@ -20,7 +20,7 @@ const MINOR_S = 5 * 60;       // 5 minutes late or more is a delay worth showing
 const MAJOR_S = 10 * 60;      // 10 minutes late or more is a real delay
 const FEED_MAX_AGE_S = 15 * 60;  // a feed older than this is not live
 const CANCEL_FADE_MIN = 30;     // stop flagging a cancelled trip this long after it was due
-const HEARTBEAT_MS = 60 * 60 * 1000;  // rewrite an unchanged status at most once an hour
+const HEARTBEAT_MS = 20 * 60 * 1000;  // rewrite an unchanged status at least every 20 minutes, so the 'checked' time stays honest
 
 const minutes = (s) => Math.round(s / 60);
 

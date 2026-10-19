@@ -745,7 +745,7 @@
     if (rail && rail.updated && rail.state !== 'setup') {
       var ct = clockText(zoned(new Date(Date.parse(rail.updated)), CITIES.syd.tz));
       label += ' · checked ' + ct.hm + ct.ap;
-      if (age > 20 * 60000) label += ' (' + (age > 90 * 60000 ? Math.round(age / 3600000) + ' h' : Math.round(age / 60000) + ' min') + ' ago)';
+      if (age > 35 * 60000) label += ' (' + (age > 90 * 60000 ? Math.round(age / 3600000) + ' h' : Math.round(age / 60000) + ' min') + ' ago)';
     }
     put('rail-label', label);
     var ri = $('rail-ico');
