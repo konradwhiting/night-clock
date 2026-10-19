@@ -651,6 +651,13 @@
       sub = rail.detail;
       quiet = rail.state === 'ontime' || rail.state === 'quiet';
     }
+    var label = 'Light rail L1 Dulwich Hill';
+    if (rail && rail.updated && rail.state !== 'setup') {
+      var ct = clockText(zoned(new Date(Date.parse(rail.updated)), CITIES.syd.tz));
+      label += ' · checked ' + ct.hm + ct.ap;
+      if (age > 20 * 60000) label += ' (' + (age > 90 * 60000 ? Math.round(age / 3600000) + ' h' : Math.round(age / 60000) + ' min') + ' ago)';
+    }
+    $('rail-label').textContent = label;
     $('rail-head').textContent = head;
     $('rail-sub').textContent = sub || '';
     box.className = quiet ? 'row quiet' : 'row on';
