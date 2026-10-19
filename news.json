@@ -9,20 +9,26 @@
     },
     {
       "area": "Inner West",
+      "source": "1News",
+      "title": "Judge dismisses Sydney serial rapist mitigation arguments",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaVVBdFhWZ0xPRTlBbHY0S0FqUnE4TnVKZlp6ZEltbHZoMkV3SzlucW5GTFA0Ui0wYnlFQ214MzR4QkpTWnp3UjhGOW1YU0tkcFFZUmk1XzZTU01CM1l3Si1lVUJtZHhnTXRUU2hSUEFfMWVTRDVBTWo5N3RhdDdHa0ctOE5nSkw5bU5nLVBVQXliR2k4Z3BqMw?oc=5",
+      "published": "2026-10-19T19:34:23.000Z"
+    },
+    {
+      "area": "Inner West",
       "source": "9Now",
       "title": "Watch 9News Latest Stories - Season 2026 - Alleged Sydney gunman arrested after three-day Inner West manhunt",
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOYkdaRjZOSWI1bGJueW8tbldfOHFQWFlsQXlUeUhKcWZsM0RBcHZKbC1UQ04tcU1EekExVVVtQWpRTUpHallONHBTYmY5TVhMZnY0SjlsQ0ZySE9ZMGUyRlpxMnJ0M1otNE85aXNsUjI3X1hpbTBjVm5UT2pnZDF2WjYwVEg4RW42Z1JueQ?oc=5",
       "published": "2026-10-19T09:17:04.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "1News",
-      "title": "Judge dismisses Sydney serial rapist mitigation arguments",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaVVBdFhWZ0xPRTlBbHY0S0FqUnE4TnVKZlp6ZEltbHZoMkV3SzlucW5GTFA0Ui0wYnlFQ214MzR4QkpTWnp3UjhGOW1YU0tkcFFZUmk1XzZTU01CM1l3Si1lVUJtZHhnTXRUU2hSUEFfMWVTRDVBTWo5N3RhdDdHa0ctOE5nSkw5bU5nLVBVQXliR2k4Z3BqMw?oc=5",
-      "published": "2026-10-19T04:35:55.000Z"
     }
   ],
   "uk": [
+    {
+      "source": "BBC News Sussex",
+      "title": "Jury in Katie Price ex's trial told to ignore egos",
+      "link": "https://www.bbc.co.uk/news/articles/cr86z4ldj1g5o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-19T16:39:35.000Z"
+    },
     {
       "source": "BBC News Sussex",
       "title": "Severe weather warning issued ahead of potential storm later this week",
@@ -31,27 +37,21 @@
     },
     {
       "source": "BBC News Sussex",
-      "title": "Sale of tapestry tickets for Hastings residents opens",
-      "link": "https://www.bbc.co.uk/news/articles/cq77p6pdkl27o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T12:40:57.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Boom in butterflies at rewilded beauty spot",
-      "link": "https://www.bbc.co.uk/news/articles/cr15jljdvnqzo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T11:03:55.000Z"
+      "title": "New Bishop of Arundel and Brighton ordained",
+      "link": "https://www.bbc.co.uk/news/articles/cmvg636q3d27o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-19T16:14:49.000Z"
     },
     {
       "source": "BBC News England",
-      "title": "Man accused of mass train stabbing admits wounding",
-      "link": "https://www.bbc.co.uk/news/articles/cvgdd2yevd3o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T11:22:26.000Z"
+      "title": "Man held after three Jewish women report assaults",
+      "link": "https://www.bbc.co.uk/news/articles/cr78p46q9648o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-19T20:51:48.000Z"
     },
     {
       "source": "BBC News England",
-      "title": "Trial hears Robinson 'intimidated' Daily Mail reporters",
-      "link": "https://www.bbc.co.uk/news/articles/cry83jz19v26o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T13:42:45.000Z"
+      "title": "Four arrested after police officer injured in shooting",
+      "link": "https://www.bbc.co.uk/news/articles/c6073pdxpvjvo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-19T15:50:14.000Z"
     }
   ]
 }
