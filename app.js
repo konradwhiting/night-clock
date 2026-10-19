@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261019-7';
+  var BUILD = '20261019-8';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -32,6 +32,7 @@
   /* ---------- small helpers ---------- */
 
   function $(id) { return document.getElementById(id); }
+  function put(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
   function pad(n) { return n < 10 ? '0' + n : '' + n; }
 
   var store = {
@@ -330,6 +331,7 @@
   };
   function setIcons(id, list) {
     var el = $(id);
+    if (!el) return;
     el.className = list.length > 2 ? 'ico ico-3' : list.length > 1 ? 'ico ico-2' : 'ico';
     el.innerHTML = list.map(function (n) { return ICONS[n]; }).join('');
   }
@@ -622,17 +624,17 @@
           var w = wearAdvice(plan.startTemp, plan.hi, plan.tomorrow ? 'At 7am' : 'Now');
           e.range.textContent = Math.round(plan.hi) + '°';
           e.wear.textContent = w.word;
-          $('syd-wear-sub').textContent = w.sub;
-          $('wear-cap').textContent = plan.tomorrow ? 'Tomorrow, what to wear' : 'What to wear';
-          $('wear-num-cap').textContent = plan.tomorrow ? "tomorrow's high" : "today's high";
+          put('syd-wear-sub', w.sub);
+          put('wear-cap', plan.tomorrow ? 'Tomorrow, what to wear' : 'What to wear');
+          put('wear-num-cap', plan.tomorrow ? "tomorrow's high" : "today's high");
           setIcons('wear-ico', w.icons);
           var u = rainOutlook(weather[k], plan, CITIES[k].tz);
-          $('rain-cap').textContent = plan.tomorrow ? 'Rain tomorrow?' : 'Rain today?';
+          put('rain-cap', plan.tomorrow ? 'Rain tomorrow?' : 'Rain today?');
           e.rainHead.textContent = u.head;
           e.rainSub.textContent = u.story;
-          $('syd-rain-note').textContent = u.note;
+          put('syd-rain-note', u.note);
           setIcons('rain-ico', u.icons);
-          $('tile-rain').className = 'row ' + (u.level === 'yes' ? 'on' : u.level === 'maybe' ? 'maybe' : 'quiet');
+          var tr = $('tile-rain'); if (tr) tr.className = 'row ' + (u.level === 'yes' ? 'on' : u.level === 'maybe' ? 'maybe' : 'quiet');
           return;
         }
         if (nc) {
@@ -745,10 +747,11 @@
       label += ' · checked ' + ct.hm + ct.ap;
       if (age > 20 * 60000) label += ' (' + (age > 90 * 60000 ? Math.round(age / 3600000) + ' h' : Math.round(age / 60000) + ' min') + ' ago)';
     }
-    $('rail-label').textContent = label;
-    $('rail-ico').innerHTML = ICONS[rail && rail.cancelled > 0 && rail.state !== 'setup' ? 'tramx' : 'tram'];
-    $('rail-head').textContent = head;
-    $('rail-sub').textContent = sub || '';
+    put('rail-label', label);
+    var ri = $('rail-ico');
+    if (ri) ri.innerHTML = ICONS[rail && rail.cancelled > 0 && rail.state !== 'setup' ? 'tramx' : 'tram'];
+    put('rail-head', head);
+    put('rail-sub', sub || '');
     box.className = quiet ? 'row quiet' : 'row on';
   }
 
@@ -850,16 +853,27 @@
     else { controls.hidden = true; clearTimeout(hideTimer); }
   });
 
-  function checkForUpdate() {
-    if (!SCRIPT_URL) return;
-    fetch(SCRIPT_URL.split('?')[0] + '?t=' + Date.now(), { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.text() : ''; })
-      .then(function (src) {
-        var m = src.match(/var BUILD = '([^']+)'/);
-        if (m && m[1] !== BUILD) location.reload();
-      })
-      .catch(function () { /* offline, try again later */ });
+  // The copy fetched at start is what the browser already holds; 'reload' fetches the published one
+  // and refreshes the browser's cache, so location.reload() then loads the new files.
+  var baseline = {};
+  function fetchText(url, mode) {
+    return fetch(url, { cache: mode }).then(function (r) { return r.ok ? r.text() : ''; }).catch(function () { return ''; });
   }
+  function watched() { return [SCRIPT_URL && SCRIPT_URL.split('?')[0], location.href.split('#')[0].split('?')[0]].filter(Boolean); }
+  function rememberBaseline() {
+    watched().forEach(function (u) { fetchText(u, 'default').then(function (t) { if (t) baseline[u] = t.length + ':' + t.slice(-200); }); });
+  }
+  function checkForUpdate() {
+    watched().forEach(function (u) {
+      fetchText(u, 'reload').then(function (t) {
+        var sig = t ? t.length + ':' + t.slice(-200) : '';
+        var m = t.match(/var BUILD = '([^']+)'/);
+        if (sig && ((baseline[u] && baseline[u] !== sig) || (m && m[1] !== BUILD))) location.reload();
+      });
+    });
+  }
+  rememberBaseline();
+  setTimeout(checkForUpdate, 2 * 60 * 1000);  // soon after start, in case the page came from a stale cache
   setInterval(checkForUpdate, 30 * 60 * 1000);
 
   document.addEventListener('visibilitychange', function () {
