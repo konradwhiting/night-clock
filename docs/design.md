@@ -15,6 +15,7 @@ How the screen works:
 - **What to wear row.** Compares the temperature now with the day's high, so a cold morning that warms up says "Coat" with a note that a lighter layer will do later. The big number is the day's high.
 - **Rain row.** The umbrella verdict comes from how many of six weather models expect rain: half or more means "Take an umbrella", a third or more means "Maybe an umbrella", otherwise "No umbrella". Very wet days add gumboots and a raincoat.
 - **Attention.** A row turns solid orange when it needs attention (light rail delays or cancellations, umbrella needed). Otherwise it is a dim outline.
+- **Colours.** Four daytime looks take turns, one per day (daylight cream, slate and teal, traffic light, sky blue). From 8pm to 6am the warm night look takes over. The Colours button in the settings panel (tap the screen) pins one look, or goes back to rotating.
 - **After 5pm** the page switches to tomorrow (labels read "Tomorrow", the window is 6am to 6pm).
 
 Differences between the diagram and the built page:

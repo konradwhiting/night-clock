@@ -321,9 +321,10 @@ body { font-family: var(--body); }
   align-items: center;
   gap: clamp(14px, 2.6cqw, 36px);
   padding: 0 clamp(16px, 3cqw, 40px);
-  border: 2px solid var(--ink-3);
+  border: 2px solid var(--rowline, var(--ink-3));
   border-radius: 20px;
   color: var(--ink);
+  background: var(--row-bg, transparent);
   overflow: hidden;
 }
 .row .ico { display: flex; gap: 0.15em; align-items: center; }
@@ -339,12 +340,36 @@ body { font-family: var(--body); }
 .row-num-cap { display: block; font-family: var(--body); font-weight: 400; font-size: clamp(13px, 2.2vh, 22px); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
 
 /* quiet: nothing to worry about, dimmer and outlined */
-.row.quiet { border-color: var(--ink-3); color: var(--ink-2); }
+.row.quiet, #tile-wear { border-color: var(--ok-line, var(--rowline, var(--ink-3))); }
+.row.quiet { color: var(--ink-2); }
 .row.quiet .row-label, .row.quiet .row-sub, .row.quiet .row-note { color: var(--ink-3); }
+.row.quiet .ico, #tile-wear .ico { color: var(--ok-icon, inherit); }
 /* needs attention: a solid block, impossible to miss */
-.row.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
-.row.on .row-label, .row.on .row-sub, .row.on .row-note, .row.on .row-num-cap { color: var(--bg); }
-.row.maybe { border-color: var(--ink); }
+.row.on { background: var(--alert, var(--ink)); border-color: var(--alert, var(--ink)); color: var(--on-alert, var(--bg)); }
+.row.on .row-label, .row.on .row-sub, .row.on .row-note, .row.on .row-num-cap { color: var(--on-alert, var(--bg)); }
+.row.maybe { border-color: var(--maybe, var(--ink)); }
+.row.maybe .ico { color: var(--maybe-icon, inherit); }
+
+/* Colour themes for the Earlwood page. The warm night look is the default set in :root; the page picks
+   one by setting data-theme on <html>: four daytime looks that take turns day by day, and night (8pm to 6am). */
+/* the unlit clock segments are quieter on the themed looks */
+[data-theme] .time .ghost { opacity: 0.06; }
+[data-theme="daylight"] {
+  --bg: #FBF8F3; --ink: #1E2A32; --ink-2: #3F4E58; --ink-3: #66727B; --line: #EDE7DB;
+  --rowline: #C9C0AE; --alert: #D9480F; --on-alert: #FFFFFF; --maybe: #D9480F;
+}
+[data-theme="slate"] {
+  --bg: #101418; --ink: #F2F5F7; --ink-2: #A9B5BE; --ink-3: #7B8993; --line: #1B2229;
+  --rowline: #2A343C; --alert: #FF6B4A; --on-alert: #1A0B07; --maybe: #2DD4BF; --ok-icon: #2DD4BF; --maybe-icon: #2DD4BF;
+}
+[data-theme="traffic"] {
+  --bg: #0B1220; --ink: #FFFFFF; --ink-2: #B5C1D6; --ink-3: #8393AD; --line: #16213A;
+  --rowline: #30A46C; --ok-line: #30A46C; --ok-icon: #4CC38A; --alert: #E5484D; --on-alert: #FFFFFF; --maybe: #F5A524; --maybe-icon: #F5A524;
+}
+[data-theme="sky"] {
+  --bg: #EAF2FB; --ink: #0B2545; --ink-2: #3C5A7D; --ink-3: #5A7596; --line: #D7E5F6;
+  --rowline: #B9CDE6; --row-bg: #FFFFFF; --alert: #F5A524; --on-alert: #2B1A00; --maybe: #1D6FD8; --ok-icon: #1D6FD8; --maybe-icon: #1D6FD8;
+}
 
 @media (orientation: portrait) {
   #app.solo #city-syd .time { font-size: min(14vh, 25cqw); }

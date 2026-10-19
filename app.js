@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261019-8';
+  var BUILD = '20261020-2';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -123,6 +123,7 @@
   var controls = $('controls');
   var btnHours = $('btn-hours');
   var btnDim = $('btn-dim');
+  var btnTheme = $('btn-theme');   // only on pages that offer colour themes
   var awakeNote = $('awake');
 
   var last = {};
@@ -131,6 +132,36 @@
   }
 
   /* ---------- clock ---------- */
+
+  /* ---------- colour themes (Earlwood page) ---------- */
+
+  // Four daytime looks take turns, one per day. From 8pm to 6am the warm night look takes over.
+  var DAY_THEMES = ['daylight', 'slate', 'traffic', 'sky'];
+  var THEME_LABELS = { auto: 'Rotating', daylight: 'Daylight', slate: 'Slate', traffic: 'Traffic light', sky: 'Sky', night: 'Night' };
+  var THEME_ORDER = ['auto', 'daylight', 'slate', 'traffic', 'sky', 'night'];
+  var NIGHT_FROM = 20, NIGHT_TO = 6;
+  var THEME_COLOURS = { night: '#050303', daylight: '#FBF8F3', slate: '#101418', traffic: '#0B1220', sky: '#EAF2FB' };
+  var themeMode = CFG.themes ? store.get('theme', 'auto') : null;
+  if (CFG.themes && THEME_ORDER.indexOf(themeMode) < 0) themeMode = 'auto';
+  var lastTheme = null;
+
+  function themeFor(z) {
+    if (themeMode && themeMode !== 'auto') return themeMode;
+    if (z.h >= NIGHT_FROM || z.h < NIGHT_TO) return 'night';
+    var days = Math.floor(Date.UTC(z.y, z.mo - 1, z.d) / 86400000);
+    return DAY_THEMES[days % DAY_THEMES.length];
+  }
+
+  function applyTheme(z) {
+    if (!CFG.themes) return;
+    var name = themeFor(z);
+    if (name === lastTheme) return;
+    lastTheme = name;
+    var root = document.documentElement;
+    if (name === 'night') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', name);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', THEME_COLOURS[name]);
+  }
 
   var lastHourKey = null;
   var lastShift = null;
@@ -160,6 +191,8 @@
       var dayWord = dk < 0 ? ' · yesterday' : dk > 0 ? ' · tomorrow' : '';
       setText(els.uk.meta, 'ukmeta', zoneName('uk', off.uk) + ' · ' + gapText + dayWord);
     }
+
+    applyTheme(z.syd);
 
     // brightness
     var level = dimMode === 'auto'
@@ -820,6 +853,7 @@
   function renderControls() {
     if (btnHours) btnHours.textContent = 'Time: ' + (hour12 ? '12 hour' : '24 hour');
     btnDim.textContent = 'Brightness: ' + DIM_LABELS[dimMode];
+    if (btnTheme) btnTheme.textContent = 'Colours: ' + THEME_LABELS[themeMode];
   }
 
   function showControls() {
@@ -837,6 +871,18 @@
     renderWeather();
     showControls();
   });
+
+  if (btnTheme) {
+    btnTheme.hidden = !CFG.themes;
+    btnTheme.addEventListener('click', function () {
+      themeMode = THEME_ORDER[(THEME_ORDER.indexOf(themeMode) + 1) % THEME_ORDER.length];
+      store.set('theme', themeMode);
+      lastTheme = null;
+      renderControls();
+      tick();
+      showControls();
+    });
+  }
 
   btnDim.addEventListener('click', function () {
     dimMode = DIM_MODES[(DIM_MODES.indexOf(dimMode) + 1) % DIM_MODES.length];
