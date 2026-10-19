@@ -61,9 +61,10 @@ export function classify(trips, nowMin = null) {
   }
   let state = 'ontime';
   let text = 'Running normally';
+  // Words follow Transport for NSW's own: Delays, Cancellations
   if (worst >= MAJOR_S) { state = 'delays'; text = 'Delays'; }
-  else if (cancelled > 0) { state = 'delays'; text = cancelled === 1 ? 'Cancelled trip' : 'Cancelled trips'; }
-  else if (worst >= MINOR_S) { state = 'minor'; text = 'Minor delays'; }
+  else if (worst >= MINOR_S) { state = 'minor'; text = 'Delays'; }
+  else if (cancelled > 0) { state = 'delays'; text = 'Cancellations'; }
 
   const times = [...new Set(live.filter((t) => t.at).map((t) => t.at))].sort();
   const bits = [];
