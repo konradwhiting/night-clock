@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261019-6';
+  var BUILD = '20261019-7';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -281,6 +281,17 @@
     return 'a soaking downpour, stay inside';
   }
 
+  // Temperature in words a child can picture (the number is always shown beside it)
+  function tempWords(t) {
+    if (t < 8) return 'freezing, big coat and beanie';
+    if (t < 13) return 'cold, coat on';
+    if (t < 18) return 'chilly, jumper weather';
+    if (t < 23) return 'mild, nice to be outside';
+    if (t < 28) return 'warm, t-shirt weather';
+    if (t < 33) return 'hot, hat and sunscreen';
+    return 'very hot, stay cool and drink water';
+  }
+
   function rainSummary(win, nc, tz) {
     var n = 24, wet = [], total = 0, maxP = 0, pk = 0, i;
     for (i = 0; i < n; i++) {
@@ -484,8 +495,8 @@
         var nc = nowcastOf(weather[k]);
         if (e.ncWrap) e.ncWrap.hidden = !nc;
         if (!e.chart) {
-          e.desc.textContent = 'Current';
-          e.range.textContent = 'High ' + Math.round(hi) + '°';
+          e.desc.textContent = 'Now: ' + tempWords(win.temp[0]);
+          e.range.textContent = 'High ' + Math.round(hi) + '° · ' + tempWords(hi).split(',')[0];
           // text only (Earlwood page): the next two hours in words, and optionally a table of numbers
           e.ncCap.textContent = nc ? 'Next 2 hours: ' + nowcastText(nc) : '';
           if (!e.grid) return;
