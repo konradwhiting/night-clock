@@ -197,16 +197,35 @@
   var weather = store.get(CACHE + 'wx', null);
   var weatherTimer = null;
 
+  // Six independent forecast models. Temperature is their average. "Rain chance" is the share of models that
+  // expect measurable rain in that hour, so one model on its own can no longer send you out with an umbrella.
+  var MODELS = ['ecmwf_ifs025', 'gfs_seamless', 'icon_seamless', 'gem_seamless', 'ukmo_seamless', 'meteofrance_seamless'];
+  var NMODELS = MODELS.length;
+
   function parseCity(o) {
     var h = o.hourly;
+    function each(base) {
+      return MODELS.map(function (m) { return h[base + '_' + m]; }).filter(Boolean);
+    }
+    function col(lists, i) {
+      return lists.map(function (a) { return a[i]; }).filter(function (v) { return v != null; });
+    }
+    var temps = each('temperature_2m'), precs = each('precipitation');
+    var temp = [], pop = [], precip = [];
+    h.time.forEach(function (_, i) {
+      var t = col(temps, i), p = col(precs, i);
+      temp.push(t.length ? t.reduce(function (a, b) { return a + b; }, 0) / t.length : h.temperature_2m_best_match[i]);
+      precip.push(p.length ? p.reduce(function (a, b) { return a + b; }, 0) / p.length : 0);
+      pop.push(p.length ? p.filter(function (v) { return v >= 0.1; }).length / p.length * 100 : 0);
+    });
     return {
       t: h.time.map(function (s) { return Date.parse(s + ':00Z'); }),
-      temp: h.temperature_2m,
-      pop: h.precipitation_probability,
-      code: h.weather_code,
-      day: h.is_day,
-      precip: h.precipitation,
-      m15: o.minutely_15 ? { t: o.minutely_15.time.map(function (q) { return Date.parse(q + ':00Z'); }), mm: o.minutely_15.precipitation } : null
+      temp: temp,
+      pop: pop,
+      code: h.weather_code_best_match,  // only used for the sky description
+      day: h.is_day_best_match,
+      precip: precip,
+      m15: o.minutely_15 ? { t: o.minutely_15.time.map(function (q) { return Date.parse(q + ':00Z'); }), mm: o.minutely_15.precipitation_best_match } : null
     };
   }
 
@@ -214,7 +233,8 @@
     var url = 'https://api.open-meteo.com/v1/forecast'
       + '?latitude=' + KEYS.map(function (k) { return CITIES[k].lat; }).join(',')
       + '&longitude=' + KEYS.map(function (k) { return CITIES[k].lon; }).join(',')
-      + '&hourly=temperature_2m,precipitation_probability,precipitation,weather_code,is_day'
+      + '&hourly=temperature_2m,precipitation,weather_code,is_day'
+      + '&models=' + MODELS.join(',') + ',best_match'
       + '&minutely_15=precipitation'
       + '&timezone=GMT&forecast_days=3';
     var ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
@@ -329,14 +349,14 @@
     var n = 12, maxP = 0, pk = 0, total = 0, first = -1, last = -1, i;
     for (i = 0; i < n; i++) {
       total += win.mm[i];
-      if (win.pop[i] > maxP && (win.code[i] >= 51 || win.mm[i] >= 0.1)) { maxP = win.pop[i]; pk = i; }
-      if (win.mm[i] >= 0.3 || (win.pop[i] >= 40 && win.code[i] >= 51 && win.mm[i] >= 0.1)) { if (first < 0) first = i; last = i; }
+      if (win.pop[i] > maxP) { maxP = win.pop[i]; pk = i; }
+      if (win.pop[i] >= 50 || win.mm[i] >= 0.5) { if (first < 0) first = i; last = i; }
     }
-    var level = maxP >= 50 || total >= 1 ? 'yes' : maxP >= 30 || total >= 0.3 ? 'maybe' : 'no';
+    var level = maxP >= 50 || total >= 1 ? 'yes' : maxP >= 30 || total >= 0.3 ? 'maybe' : 'no';  // half the models agree, or a third
     var head = level === 'yes' ? 'Take an umbrella' : level === 'maybe' ? 'Maybe an umbrella' : 'No umbrella';
     var sub;
     if (first < 0) {
-      sub = maxP >= 10 ? 'Slim chance of showers, ' + Math.round(maxP) + '% at ' + hourLabel(win.t[pk], tz) : 'Dry for the rest of today';
+      sub = maxP >= 30 ? 'Some forecasts show showers around ' + hourLabel(win.t[pk], tz) : 'Dry for the rest of today';
     } else if (first === 0) {
       sub = 'Raining now' + (last < n - 1 ? ', easing by ' + hourLabel(win.t[last + 1], tz) : '');
     } else {
@@ -349,7 +369,7 @@
   function rainSummary(win, nc, tz) {
     var n = 24, wet = [], total = 0, maxP = 0, pk = 0, i;
     for (i = 0; i < n; i++) {
-      wet.push(win.mm[i] >= 0.3 || (win.pop[i] >= 50 && win.code[i] >= 51 && win.mm[i] >= 0.1));
+      wet.push(win.pop[i] >= 50 || win.mm[i] >= 0.5);
       total += win.mm[i];
       if (win.pop[i] > maxP) { maxP = win.pop[i]; pk = i; }
     }
@@ -376,8 +396,9 @@
         head = 'Dry for the next 24 hours';
       }
     }
-    var parts = ['Now ' + Math.round(win.pop[0]) + '%'];
-    if (maxP >= 10) parts.push('peak ' + Math.round(maxP) + '% at ' + hourLabel(win.t[pk], tz));
+    var parts = [];
+    var kPk = Math.round(maxP / 100 * NMODELS);
+    parts.push(kPk > 0 ? kPk + ' of ' + NMODELS + ' forecasts show rain' + (maxP >= 10 ? ' at ' + hourLabel(win.t[pk], tz) : '') : 'No forecast shows rain');
     if (total >= 0.1) parts.push(wetWords(total));
     return { head: head, sub: parts.join(' · ') };
   }
@@ -593,7 +614,7 @@
     var age = Date.now() - weather.fetchedAt;
     var z = zoned(new Date(weather.fetchedAt), CITIES.syd.tz);
     var t = clockText(z);
-    var text = 'Forecast from Open-Meteo, updated ' + t.hm + t.ap + ' Earlwood time';
+    var text = 'Average of ' + NMODELS + ' forecasts via Open-Meteo, updated ' + t.hm + t.ap + ' Earlwood time';
     if (age > STALE_MS) text += ' · may be out of date, retrying';
     foot.textContent = text;
   }
