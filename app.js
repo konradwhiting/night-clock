@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261020-2';
+  var BUILD = '20261020-3';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -196,7 +196,7 @@
 
     // brightness
     var level = dimMode === 'auto'
-      ? ((z.syd.h >= 21 || z.syd.h < 6) ? AUTO_NIGHT : AUTO_DAY)
+      ? ((z.syd.h >= (CFG.themes ? NIGHT_FROM : 21) || z.syd.h < 6) ? AUTO_NIGHT : AUTO_DAY)
       : DIM_LEVEL[dimMode];
     if (level !== lastDim) {
       lastDim = level;
