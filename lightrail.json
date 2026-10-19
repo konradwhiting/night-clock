@@ -1,8 +1,12 @@
 {
   "line": "L1",
   "name": "Dulwich Hill",
-  "state": "setup",
-  "text": "Not connected yet",
-  "detail": "Waiting for the Transport for NSW key",
-  "updated": "2026-10-19T01:37:30.863Z"
+  "state": "delays",
+  "text": "Delays",
+  "detail": "Up to 6 min late · 1 trip cancelled",
+  "trips": 23,
+  "worstMin": 6,
+  "cancelled": 1,
+  "feedTime": "2026-10-19T01:39:06.000Z",
+  "updated": "2026-10-19T01:39:15.097Z"
 }
