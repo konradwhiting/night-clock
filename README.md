@@ -69,6 +69,7 @@ Then open http://localhost:8000.
 | `manifest.webmanifest`, `icon-*.png` | Home Screen install |
 | `fonts/` | Seven-segment digit font (DSEG7 Classic, SIL Open Font License, licence included) |
 | `docs/requirements.md` | Product backlog, open questions and feedback log |
+| `docs/design.md` | Earlwood page design and how it works, with diagrams |
 
 ## Known limits
 
