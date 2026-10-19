@@ -1,15 +1,50 @@
 {
-  "syd": {
-    "area": "Earlwood",
-    "source": "News24",
-    "title": "Sydney man arrested after pulling shotgun and plunging major suburb into lockdown",
-    "link": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxONFZka193M01sQ19Mc1A3cU5SS0RFYWI1R2F1Yy1SRGNmZVRUQkNwMlBEZlprN0pwdG1zaFNYSXNsMjZDbl9HalJ0c1VwQjBaaVdxR3YzX3ZTWG9qa29RTEpKVk5LVDBaNmZuUXBndUxaSVRQdU9GMERTSXg5Nm1TUHFwd0ZCRUJwalV0V2pnNWVIMlRQM3BhSHRjd0F1cE9qQUhuck5KRTF6c0FxX2FQejVpQnVQeWs5LXFPaVR5WmYxWGdSV2hFd2RxZE5PZWdZc2k1TWFzQWQ4dDlWYTM3YzRMN1hMdUtzdnFaRHBVbXlKZV8tWThhdnNOQnZwUzhjWEQxZlBOYXpLeF9fZEt5eldjaHZMNGhwTzM3b19ER0p5eXRVWDQyddIBqAJBVV95cUxONFZka193M01sQ19Mc1A3cU5SS0RFYWI1R2F1Yy1SRGNmZVRUQkNwMlBEZlprN0pwdG1zaFNYSXNsMjZDbl9HalJ0c1VwQjBaaVdxR3YzX3ZTWG9qa29RTEpKVk5LVDBaNmZuUXBndUxaSVRQdU9GMERTSXg5Nm1TUHFwd0ZCRUJwalV0V2pnNWVIMlRQM3BhSHRjd0F1cE9qQUhuck5KRTF6c0FxX2FQejVpQnVQeWs5LXFPaVR5WmYxWGdSV2hFd2RxZE5PZWdZc2k1TWFzQWQ4dDlWYTM3YzRMN1hMdUtzdnFaRHBVbXlKZV8tWThhdnNOQnZwUzhjWEQxZlBOYXpLeF9fZEt5eldjaHZMNGhwTzM3b19ER0p5eXRVWDQydQ?oc=5",
-    "published": "2026-10-18T21:03:18.000Z"
-  },
-  "uk": {
-    "source": "BBC News Sussex",
-    "title": "Hospice care meant 'moments of clarity' for twin",
-    "link": "https://www.bbc.co.uk/news/articles/c6kgl3ejjwllo?at_medium=RSS&at_campaign=rss",
-    "published": "2026-10-19T05:16:08.000Z"
-  }
+  "syd": [
+    {
+      "area": "Earlwood",
+      "source": "News24",
+      "title": "Sydney man arrested after pulling shotgun and plunging major suburb into lockdown",
+      "link": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxONFZka193M01sQ19Mc1A3cU5SS0RFYWI1R2F1Yy1SRGNmZVRUQkNwMlBEZlprN0pwdG1zaFNYSXNsMjZDbl9HalJ0c1VwQjBaaVdxR3YzX3ZTWG9qa29RTEpKVk5LVDBaNmZuUXBndUxaSVRQdU9GMERTSXg5Nm1TUHFwd0ZCRUJwalV0V2pnNWVIMlRQM3BhSHRjd0F1cE9qQUhuck5KRTF6c0FxX2FQejVpQnVQeWs5LXFPaVR5WmYxWGdSV2hFd2RxZE5PZWdZc2k1TWFzQWQ4dDlWYTM3YzRMN1hMdUtzdnFaRHBVbXlKZV8tWThhdnNOQnZwUzhjWEQxZlBOYXpLeF9fZEt5eldjaHZMNGhwTzM3b19ER0p5eXRVWDQyddIBqAJBVV95cUxONFZka193M01sQ19Mc1A3cU5SS0RFYWI1R2F1Yy1SRGNmZVRUQkNwMlBEZlprN0pwdG1zaFNYSXNsMjZDbl9HalJ0c1VwQjBaaVdxR3YzX3ZTWG9qa29RTEpKVk5LVDBaNmZuUXBndUxaSVRQdU9GMERTSXg5Nm1TUHFwd0ZCRUJwalV0V2pnNWVIMlRQM3BhSHRjd0F1cE9qQUhuck5KRTF6c0FxX2FQejVpQnVQeWs5LXFPaVR5WmYxWGdSV2hFd2RxZE5PZWdZc2k1TWFzQWQ4dDlWYTM3YzRMN1hMdUtzdnFaRHBVbXlKZV8tWThhdnNOQnZwUzhjWEQxZlBOYXpLeF9fZEt5eldjaHZMNGhwTzM3b19ER0p5eXRVWDQydQ?oc=5",
+      "published": "2026-10-18T21:03:18.000Z"
+    },
+    {
+      "area": "Inner West",
+      "source": "7NEWS",
+      "title": "Armed manhunt locks down Sydney's inner west",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMFQteU5zTlhfenRfNWFXbmhLbGNEeDJUYzVuSFROanVrelQ0WFR1dHpnNzhJSWhkWVJZakJNOTd2Z01Bejd1eWJlSDZ0NktSRVFFZnhnZVV6TzNwblJjVFZQUFdqWmdHN3JKNXNjeW55MG9FYmpfbk9VeFNZQVc1X0pzeWhFakQyTTl2d3pMQ1dnVUlTR2Rj?oc=5",
+      "published": "2026-10-18T21:07:12.000Z"
+    }
+  ],
+  "uk": [
+    {
+      "source": "BBC News Sussex",
+      "title": "Hospice care meant 'moments of clarity' for twin",
+      "link": "https://www.bbc.co.uk/news/articles/c6kgl3ejjwllo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-19T05:16:08.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "Park trees to be felled after elm disease outbreak",
+      "link": "https://www.bbc.co.uk/news/articles/cmewed8799pqo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-19T05:17:30.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "Hedgehogs worthy banknote winners, rescuers say",
+      "link": "https://www.bbc.co.uk/news/articles/cq62y83n0dexo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-18T06:05:23.000Z"
+    },
+    {
+      "source": "BBC News England",
+      "title": "NHS data breaches a disgrace, health secretary says",
+      "link": "https://www.bbc.co.uk/news/articles/cq2e9nw82ljdo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-18T10:52:31.000Z"
+    },
+    {
+      "source": "BBC News England",
+      "title": "Suspects hunted after police officer injured in shooting",
+      "link": "https://www.bbc.co.uk/news/articles/c63elzvjpgn2o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-18T13:10:18.000Z"
+    }
+  ]
 }

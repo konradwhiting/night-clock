@@ -686,14 +686,21 @@
     return Math.round(h / 24) + 'd ago';
   }
 
+  var NEWS_ROTATE_MS = 30 * 60 * 1000;  // the headline changes every half hour, in step on every screen
+
   function renderNews() {
     KEYS.forEach(function (k) {
-      var n = news && news[k];
+      var list = news && news[k];
+      if (list && !Array.isArray(list)) list = [list];  // older single-headline file
       var box = $(k + '-news');
       if (!box) return;  // this page has no headline area
-      if (!n || !n.title) { box.hidden = true; return; }
+      list = (list || []).filter(function (n) { return n && n.title; });
+      if (!list.length) { box.hidden = true; return; }
+      var i = Math.floor(Date.now() / NEWS_ROTATE_MS) % list.length;
+      var n = list[i];
       var age = n.published ? ' · ' + ago(Date.now() - Date.parse(n.published)) : '';
-      $(k + '-news-src').textContent = (n.area ? n.area + ' · ' : '') + n.source + age;
+      var pos = list.length > 1 ? ' · ' + (i + 1) + ' of ' + list.length : '';
+      $(k + '-news-src').textContent = (n.area ? n.area + ' · ' : '') + n.source + age + pos;
       $(k + '-news-title').textContent = n.title;
       box.hidden = false;
     });

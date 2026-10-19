@@ -1,4 +1,4 @@
-// Fetches the top regional headline for each place from public RSS feeds and
+// Fetches the top regional headlines (several per place, the page rotates through them) from public RSS feeds and
 // writes news.json next to index.html. Run by .github/workflows/news.yml.
 // Node 20 or newer, no dependencies.
 import { readFile, writeFile } from 'node:fs/promises';
@@ -12,18 +12,19 @@ const gnews = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponen
 
 // A story older than this gives way to the next, wider feed, so the headline never sits for days
 const EARLWOOD_MAX_AGE_H = 24;
+const MAX_ITEMS = 6;  // headlines kept per place
 
 export const PLACES = {
   syd: {
     feeds: [
-      { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true, maxAgeHours: EARLWOOD_MAX_AGE_H },
-      { area: 'Inner West', url: gnews('"Inner West" Sydney when:7d'), newest: true }
+      { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true, maxAgeHours: EARLWOOD_MAX_AGE_H, take: 3 },
+      { area: 'Inner West', url: gnews('"Inner West" Sydney when:7d'), newest: true, take: 3 }
     ]
   },
   uk: {
     feeds: [
-      { source: 'BBC News Sussex', url: 'https://feeds.bbci.co.uk/news/england/sussex/rss.xml' },
-      { source: 'BBC News England', url: 'https://feeds.bbci.co.uk/news/england/rss.xml' }
+      { source: 'BBC News Sussex', url: 'https://feeds.bbci.co.uk/news/england/sussex/rss.xml', take: 3 },
+      { source: 'BBC News England', url: 'https://feeds.bbci.co.uk/news/england/rss.xml', take: 2 }
     ]
   }
 };
@@ -86,6 +87,17 @@ export function newestItem(xml, exclude = SKIP) {
     (it.published || '') > (best.published || '') ? it : best, items[0]);
 }
 
+// Several outlets rewrite the same story. Two headlines sharing three or more longer words, and a third of the shorter one, count as one.
+const STOP = new Set(['after', 'about', 'their', 'with', 'from', 'that', 'this', 'into', 'over', 'says', 'were', 'have', 'will', 'been', 'what']);
+const words = (t) => new Set(t.toLowerCase().replace(/'s\b/g, '').replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter((w) => w.length >= 4 && !STOP.has(w)));
+export function sameStory(a, b) {
+  const A = words(a), B = words(b);
+  if (!A.size || !B.size) return false;
+  let common = 0;
+  for (const w of A) if (B.has(w)) common++;
+  return common >= 3 && common / Math.min(A.size, B.size) >= 0.3;
+}
+
 async function fetchFeed(url) {
   const res = await fetch(url, {
     headers: { 'User-Agent': 'night-clock/1.0 (+https://github.com/konradwhiting/night-clock)' },
@@ -103,26 +115,25 @@ async function main() {
   let updated = 0;
 
   for (const [key, place] of Object.entries(PLACES)) {
-    let found = null;
+    const list = [];
     for (const feed of place.feeds) {
       try {
         const xml = await fetchFeed(feed.url);
-        const item = feed.newest ? newestItem(xml) : parseFirstItem(xml);
-        const tooOld = item && feed.maxAgeHours && item.published
-          && Date.now() - Date.parse(item.published) > feed.maxAgeHours * 3600 * 1000;
-        if (tooOld) { console.log(`${key}: newest story in ${feed.area || feed.source} is over ${feed.maxAgeHours}h old, trying the next feed`); continue; }
-        if (item) {
+        let items = parseItems(xml).filter((it) => !SKIP.test(it.title));
+        if (feed.newest) items.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
+        items = items.filter((it) => !(feed.maxAgeHours && it.published
+          && Date.now() - Date.parse(it.published) > feed.maxAgeHours * 3600 * 1000));
+        for (const item of items.slice(0, feed.take || 1)) {
+          if (list.some((x) => sameStory(x.title, item.title))) continue;
           const { publisher, ...rest } = item;
-          found = { ...(feed.area ? { area: feed.area } : {}), source: feed.source || publisher || 'News', ...rest };
-          break;
+          list.push({ ...(feed.area ? { area: feed.area } : {}), source: feed.source || publisher || 'News', ...rest });
         }
-        console.warn(`${key}: no items in ${feed.url}`);
       } catch (err) {
         console.warn(`${key}: ${feed.url} failed: ${err.message}`);
       }
     }
-    if (found) { next[key] = found; updated++; }
-    else console.warn(`${key}: keeping the previous headline`);
+    if (list.length) { next[key] = list.slice(0, MAX_ITEMS); updated++; }
+    else console.warn(`${key}: keeping the previous headlines`);
   }
 
   if (updated === 0) {
