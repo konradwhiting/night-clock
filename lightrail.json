@@ -1,15 +1,12 @@
 {
   "line": "L1",
   "name": "Dulwich Hill",
-  "state": "delays",
-  "text": "Cancellations",
-  "detail": "The 19:40 tram was cancelled",
-  "trips": 17,
+  "state": "ontime",
+  "text": "Running normally",
+  "detail": "21 trams tracked",
+  "trips": 21,
   "worstMin": 1,
-  "cancelled": 1,
-  "cancelledAt": [
-    "19:40"
-  ],
-  "feedTime": "2026-10-19T09:10:21.000Z",
-  "updated": "2026-10-19T09:10:29.423Z"
+  "cancelled": 0,
+  "feedTime": "2026-10-19T09:20:21.000Z",
+  "updated": "2026-10-19T09:20:25.962Z"
 }
