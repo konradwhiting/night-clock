@@ -325,8 +325,10 @@ body { font-family: var(--body); }
   color: var(--ink);
   overflow: hidden;
 }
-.row .ico { width: min(15vh, 13cqw); height: min(15vh, 13cqw); }
-.row .ico svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.row .ico { display: flex; gap: 0.15em; align-items: center; }
+.row .ico svg { display: block; flex: none; width: min(15vh, 13cqw); height: min(15vh, 13cqw); fill: none; stroke: currentColor; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.row .ico-2 svg { width: min(11vh, 10cqw); height: min(11vh, 10cqw); }
+.row .ico-3 svg { width: min(8.5vh, 8cqw); height: min(8.5vh, 8cqw); }
 .row .ico svg circle { fill: currentColor; }
 .row-label { font-size: clamp(14px, 2.4vh, 24px); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
 .row-word { font-family: var(--display); font-weight: 500; font-size: min(10.5vh, 10cqw); line-height: 1; margin-top: 0.05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -347,7 +349,7 @@ body { font-family: var(--body); }
   #app.solo #city-syd .time { font-size: min(14vh, 25cqw); }
   #app.solo .top { flex-direction: column; align-items: flex-start; gap: 4px; }
   #app.solo .date { text-align: left; font-size: 3.6vh; }
-  .row .ico { width: min(10vh, 16cqw); height: min(10vh, 16cqw); }
+  .row .ico svg { width: min(10vh, 12cqw); height: min(10vh, 12cqw); }
   .row-word { font-size: min(7.5vh, 10cqw); }
   .row-num { font-size: min(10vh, 18cqw); }
 }

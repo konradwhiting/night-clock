@@ -294,19 +294,34 @@
   }
 
   // What to wear for the day's high: a short word, a reason, and which picture to show
-  var WEAR_ICONS = {
-    tshirt: '<svg viewBox="0 0 64 64"><path d="M22 8L8 16l6 12 6-3v31h24V25l6 3 6-12-14-8c-2 4-6 6-10 6s-8-2-10-6z"/></svg>',
-    jumper: '<svg viewBox="0 0 64 64"><path d="M22 8L6 20l2 30h8l2-20v26h28V30l2 20h8l2-30L42 8c-2 4-6 6-10 6s-8-2-10-6z"/></svg>',
-    coat: '<svg viewBox="0 0 64 64"><path d="M22 8L6 20l2 30h8l2-20v26h28V30l2 20h8l2-30L42 8c-2 4-6 6-10 6s-8-2-10-6z"/><path d="M32 14v42"/></svg>'
+  function svg(body) { return '<svg viewBox="0 0 64 64">' + body + '</svg>'; }
+  var JUMPER = 'M22 8L6 20l2 30h8l2-20v26h28V30l2 20h8l2-30L42 8c-2 4-6 6-10 6s-8-2-10-6z';
+  var ICONS = {
+    tshirt: svg('<path d="M22 8L8 16l6 12 6-3v31h24V25l6 3 6-12-14-8c-2 4-6 6-10 6s-8-2-10-6z"/>'),
+    jumper: svg('<path d="' + JUMPER + '"/>'),
+    coat: svg('<path d="' + JUMPER + '"/><path d="M32 14v42"/>'),
+    sun: svg('<circle cx="32" cy="32" r="10" style="fill:none"/><path d="M32 6v8M32 50v8M6 32h8M50 32h8M14 14l6 6M44 44l6 6M14 50l6-6M44 20l6-6"/>'),
+    hat: svg('<path d="M16 36c0-12 6-20 16-20s16 8 16 20M6 40c0-3 12-6 26-6s26 3 26 6-12 6-26 6S6 43 6 40zM17 31c10 3 20 3 30 0"/>'),
+    umbrella: svg('<path d="M32 6V3M5 34C5 18 18 8 32 8s27 10 27 26c-4-5-8-5-13.5 0C41 29 37 29 32 34c-5-5-9-5-13.5 0C13 29 9 29 5 34z"/><path d="M32 34v16a6 6 0 0 1-12 0"/>'),
+    boots: svg('<path d="M8 8h15v30l13 6v10H8zM40 14h14v24l6 3v13H40z"/>'),
+    raincoat: svg('<path d="' + JUMPER + '"/><path d="M22 8c0-10 20-10 20 0M32 14v42"/>'),
+    tram: svg('<path d="M32 8V2M20 2h24"/><rect x="14" y="8" width="36" height="38" rx="6"/><rect x="20" y="14" width="24" height="14" rx="2"/><circle cx="22" cy="38" r="2.5"/><circle cx="42" cy="38" r="2.5"/><path d="M22 46l-6 12M42 46l6 12"/>'),
+    tramx: svg('<path d="M32 8V2M20 2h24"/><rect x="14" y="8" width="36" height="38" rx="6"/><rect x="20" y="14" width="24" height="14" rx="2"/><circle cx="22" cy="38" r="2.5"/><circle cx="42" cy="38" r="2.5"/><path d="M22 46l-6 12M42 46l6 12"/><path d="M6 6L58 58" style="stroke-width:5"/>')
   };
+  function setIcons(id, list) {
+    var el = $(id);
+    el.className = list.length > 2 ? 'ico ico-3' : list.length > 1 ? 'ico ico-2' : 'ico';
+    el.innerHTML = list.map(function (n) { return ICONS[n]; }).join('');
+  }
+
   function wearWords(t) {
-    if (t < 8) return { word: 'Big coat', sub: 'Freezing, add a beanie', icon: 'coat' };
-    if (t < 13) return { word: 'Coat', sub: 'Cold today', icon: 'coat' };
-    if (t < 18) return { word: 'Warm jumper', sub: 'Chilly today', icon: 'jumper' };
-    if (t < 23) return { word: 'Jumper', sub: 'Mild, a light one will do', icon: 'jumper' };
-    if (t < 28) return { word: 'T-shirt', sub: 'Warm today', icon: 'tshirt' };
-    if (t < 33) return { word: 'T-shirt + hat', sub: 'Hot, sunscreen too', icon: 'tshirt' };
-    return { word: 'Keep cool', sub: 'Very hot, drink water', icon: 'tshirt' };
+    if (t < 8) return { word: 'Big coat', sub: 'Freezing, add a beanie', icons: ['coat'] };
+    if (t < 13) return { word: 'Coat', sub: 'Cold today', icons: ['coat'] };
+    if (t < 18) return { word: 'Warm jumper', sub: 'Chilly today', icons: ['jumper'] };
+    if (t < 23) return { word: 'Jumper', sub: 'Mild, a light one will do', icons: ['jumper'] };
+    if (t < 28) return { word: 'T-shirt', sub: 'Warm today', icons: ['tshirt'] };
+    if (t < 33) return { word: 'T-shirt + hat', sub: 'Hot, sunscreen too', icons: ['sun', 'hat'] };
+    return { word: 'Keep cool', sub: 'Very hot, drink water', icons: ['sun', 'hat'] };
   }
 
   // Umbrella verdict for the rest of today (next 12 hours), with when the rain is expected
@@ -328,7 +343,7 @@
       sub = 'Rain from ' + hourLabel(win.t[first], tz) + (last < n - 1 ? ' to ' + hourLabel(win.t[last + 1], tz) : '')
         + ' · peak ' + Math.round(maxP) + '%';
     }
-    return { head: head, sub: sub, level: level };
+    return { head: head, sub: sub, level: level, total: total };
   }
 
   function rainSummary(win, nc, tz) {
@@ -540,11 +555,12 @@
           e.range.textContent = Math.round(hi) + '°';
           e.wear.textContent = w.word;
           $('syd-wear-sub').textContent = 'Now ' + Math.round(win.temp[0]) + '° · ' + tempWords(win.temp[0]);
-          $('wear-ico').innerHTML = WEAR_ICONS[w.icon];
+          setIcons('wear-ico', w.icons);
           var u = umbrellaOutlook(win, CITIES[k].tz);
           e.rainHead.textContent = u.head;
           e.rainSub.textContent = rs.head;
           $('syd-rain-note').textContent = rs.sub;
+          setIcons('rain-ico', u.total >= 15 ? ['umbrella', 'raincoat', 'boots'] : u.total >= 5 ? ['umbrella', 'boots'] : ['umbrella']);
           $('tile-rain').className = 'row ' + (u.level === 'yes' ? 'on' : u.level === 'maybe' ? 'maybe' : 'quiet');
           return;
         }
@@ -659,6 +675,7 @@
       if (age > 20 * 60000) label += ' (' + (age > 90 * 60000 ? Math.round(age / 3600000) + ' h' : Math.round(age / 60000) + ' min') + ' ago)';
     }
     $('rail-label').textContent = label;
+    $('rail-ico').innerHTML = ICONS[rail && rail.cancelled > 0 && rail.state !== 'setup' ? 'tramx' : 'tram'];
     $('rail-head').textContent = head;
     $('rail-sub').textContent = sub || '';
     box.className = quiet ? 'row quiet' : 'row on';
