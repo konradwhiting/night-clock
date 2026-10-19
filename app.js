@@ -296,10 +296,10 @@
   // Rain total in words a child can picture instead of millimetres
   function wetWords(mm) {
     if (mm < 1) return 'just a sprinkle';
-    if (mm < 5) return 'a light drizzle, bring a coat';
+    if (mm < 5) return 'light drizzle';
     if (mm < 15) return 'proper rain, puddles to jump in';
-    if (mm < 30) return 'heavy rain, big puddles and wet socks';
-    return 'a soaking downpour, stay inside';
+    if (mm < 30) return 'heavy rain, big puddles';
+    return 'a downpour, stay inside';
   }
 
   // Temperature in words a child can picture (the number is always shown beside it)
@@ -334,36 +334,81 @@
     el.innerHTML = list.map(function (n) { return ICONS[n]; }).join('');
   }
 
+  // Which band of weather a temperature falls in: a short word for the row, a feel word, and the pictures
   function wearWords(t) {
-    if (t < 8) return { word: 'Big coat', sub: 'Freezing, add a beanie', icons: ['coat'] };
-    if (t < 13) return { word: 'Coat', sub: 'Cold today', icons: ['coat'] };
-    if (t < 18) return { word: 'Warm jumper', sub: 'Chilly today', icons: ['jumper'] };
-    if (t < 23) return { word: 'Jumper', sub: 'Mild, a light one will do', icons: ['jumper'] };
-    if (t < 28) return { word: 'T-shirt', sub: 'Warm today', icons: ['tshirt'] };
-    if (t < 33) return { word: 'T-shirt + hat', sub: 'Hot, sunscreen too', icons: ['sun', 'hat'] };
-    return { word: 'Keep cool', sub: 'Very hot, drink water', icons: ['sun', 'hat'] };
+    if (t < 8) return { word: 'Big coat', feel: 'Freezing', icons: ['coat'] };
+    if (t < 13) return { word: 'Coat', feel: 'Cold', icons: ['coat'] };
+    if (t < 18) return { word: 'Warm jumper', feel: 'Chilly', icons: ['jumper'] };
+    if (t < 23) return { word: 'Jumper', feel: 'Mild', icons: ['jumper'] };
+    if (t < 28) return { word: 'T-shirt', feel: 'Warm', icons: ['tshirt'] };
+    if (t < 33) return { word: 'T-shirt and hat', feel: 'Hot', icons: ['sun', 'hat'] };
+    return { word: 'Keep cool', feel: 'Very hot', icons: ['sun', 'hat'] };
   }
 
-  // Umbrella verdict for the rest of today (next 12 hours), with when the rain is expected
-  function umbrellaOutlook(win, tz) {
-    var n = 12, maxP = 0, pk = 0, total = 0, first = -1, last = -1, i;
-    for (i = 0; i < n; i++) {
-      total += win.mm[i];
-      if (win.pop[i] > maxP) { maxP = win.pop[i]; pk = i; }
-      if (win.pop[i] >= 50 || win.mm[i] >= 0.5) { if (first < 0) first = i; last = i; }
+  // What to wear when you leave, and what you will want later. startLabel is 'Now' or 'At 7am'.
+  function wearAdvice(start, hi, startLabel) {
+    var a = wearWords(start), b = wearWords(hi);
+    var s0 = Math.round(start), h0 = Math.round(hi);
+    if (a.word !== b.word && hi - start >= 4) {
+      var pics = a.icons.concat(b.icons.filter(function (n) { return a.icons.indexOf(n) < 0; })).slice(0, 2);
+      return { word: a.word, sub: startLabel + ' ' + s0 + '° · warming to ' + h0 + '° (' + b.word.toLowerCase() + ' later)', icons: pics };
+    }
+    return { word: b.word, sub: b.feel + ' · ' + startLabel.toLowerCase() + ' ' + s0 + '°, high ' + h0 + '°', icons: b.icons };
+  }
+
+  // The part of the day the page is about. Until 5pm: the rest of today (to 10pm). After 5pm: tomorrow, 6am to 6pm.
+  // Returns indexes into the forecast arrays plus the matching day's high.
+  function dayPlan(w, tz, nowTemp) {
+    var now = Date.now(), z = zoned(new Date(now), tz);
+    var tomorrow = z.h >= 17;
+    var hourStart = Math.floor(now / 3600000) * 3600000;
+    var from, to, key;
+    if (!tomorrow) {
+      from = hourStart; to = hourStart + (22 - z.h) * 3600000;
+      key = dayKey(z);
+    } else {
+      from = hourStart + (24 - z.h + 6) * 3600000; to = from + 12 * 3600000;
+      key = dayKey(zoned(new Date(now + 86400000), tz));
+    }
+    var idx = [], hi = -Infinity, startTemp = nowTemp, i;
+    for (i = 0; i < w.t.length; i++) {
+      if (w.t[i] >= from && w.t[i] < to) idx.push(i);
+      if (w.temp[i] != null && dayKey(zoned(new Date(w.t[i]), tz)) === key && w.temp[i] > hi) hi = w.temp[i];
+      if (tomorrow && w.t[i] === from + 3600000) startTemp = w.temp[i];
+    }
+    if (!idx.length || hi === -Infinity) return null;
+    return { tomorrow: tomorrow, idx: idx, hi: hi, startTemp: startTemp };
+  }
+
+  // Umbrella verdict and a plain-words story for the window, from the blended forecasts
+  function rainOutlook(w, plan, tz) {
+    var idx = plan.idx, n = idx.length, maxP = 0, pk = 0, total = 0, first = -1, last = -1, k;
+    for (k = 0; k < n; k++) {
+      var p = w.pop[idx[k]], mm = w.precip[idx[k]] || 0;
+      total += mm;
+      if (p > maxP) { maxP = p; pk = k; }
+      if (p >= 50 || mm >= 0.5) { if (first < 0) first = k; last = k; }
     }
     var level = maxP >= 50 || total >= 1 ? 'yes' : maxP >= 30 || total >= 0.3 ? 'maybe' : 'no';  // half the models agree, or a third
-    var head = level === 'yes' ? 'Take an umbrella' : level === 'maybe' ? 'Maybe an umbrella' : 'No umbrella';
-    var sub;
+    var head = level === 'no' ? 'No umbrella' : level === 'maybe' ? 'Maybe an umbrella'
+      : total >= 15 ? 'Umbrella and raincoat' : total >= 5 ? 'Umbrella and gumboots' : 'Take an umbrella';
+    function hr(k2) { return hourLabel(w.t[idx[k2]], tz); }
+    var story;
     if (first < 0) {
-      sub = maxP >= 30 ? 'Some forecasts show showers around ' + hourLabel(win.t[pk], tz) : 'Dry for the rest of today';
+      story = maxP >= 30 ? 'Some forecasts show showers around ' + hr(pk) : plan.tomorrow ? 'Dry all day tomorrow' : 'Dry for the rest of today';
     } else if (first === 0) {
-      sub = 'Raining now' + (last < n - 1 ? ', easing by ' + hourLabel(win.t[last + 1], tz) : '');
+      var ends = last < n - 1 ? 'easing by ' + hr(last + 1) : 'rain all day';
+      story = plan.tomorrow ? 'Rain early, ' + ends : 'Raining now, ' + ends;
     } else {
-      sub = 'Rain from ' + hourLabel(win.t[first], tz) + (last < n - 1 ? ' to ' + hourLabel(win.t[last + 1], tz) : '')
-        + ' · peak ' + Math.round(maxP) + '%';
+      story = 'Rain from ' + hr(first) + (last < n - 1 ? ' to ' + hr(last + 1) : ' on');
     }
-    return { head: head, sub: sub, level: level, total: total };
+    var kPk = Math.round(maxP / 100 * NMODELS);
+    var note = kPk > 0 ? kPk + ' of ' + NMODELS + ' forecasts show rain at ' + hr(pk) : 'No forecast shows rain';
+    if (level !== 'no' && total >= 0.1) note += ' · ' + wetWords(total);
+    var icons = ['umbrella'];
+    if (level === 'yes' && total >= 15) icons = ['umbrella', 'raincoat', 'boots'];
+    else if (level === 'yes' && total >= 5) icons = ['umbrella', 'boots'];
+    return { head: head, story: story, note: note, level: level, icons: icons };
   }
 
   function rainSummary(win, nc, tz) {
@@ -571,17 +616,22 @@
         var nc = nowcastOf(weather[k]);
         if (e.ncWrap) e.ncWrap.hidden = !nc;
         if (!e.chart) {
-          // text only (Earlwood page): what to wear for the high, and whether to take an umbrella
-          var w = wearWords(hi);
-          e.range.textContent = Math.round(hi) + '°';
+          // text only (Earlwood page): what to wear, and whether to take an umbrella, for today or tomorrow
+          var plan = dayPlan(weather[k], CITIES[k].tz, win.temp[0]);
+          if (!plan) { e.wear.textContent = 'Out of date'; return; }
+          var w = wearAdvice(plan.startTemp, plan.hi, plan.tomorrow ? 'At 7am' : 'Now');
+          e.range.textContent = Math.round(plan.hi) + '°';
           e.wear.textContent = w.word;
-          $('syd-wear-sub').textContent = 'Now ' + Math.round(win.temp[0]) + '° · ' + tempWords(win.temp[0]);
+          $('syd-wear-sub').textContent = w.sub;
+          $('wear-cap').textContent = plan.tomorrow ? 'Tomorrow, what to wear' : 'What to wear';
+          $('wear-num-cap').textContent = plan.tomorrow ? "tomorrow's high" : "today's high";
           setIcons('wear-ico', w.icons);
-          var u = umbrellaOutlook(win, CITIES[k].tz);
+          var u = rainOutlook(weather[k], plan, CITIES[k].tz);
+          $('rain-cap').textContent = plan.tomorrow ? 'Rain tomorrow?' : 'Rain today?';
           e.rainHead.textContent = u.head;
-          e.rainSub.textContent = rs.head;
-          $('syd-rain-note').textContent = rs.sub;
-          setIcons('rain-ico', u.total >= 15 ? ['umbrella', 'raincoat', 'boots'] : u.total >= 5 ? ['umbrella', 'boots'] : ['umbrella']);
+          e.rainSub.textContent = u.story;
+          $('syd-rain-note').textContent = u.note;
+          setIcons('rain-ico', u.icons);
           $('tile-rain').className = 'row ' + (u.level === 'yes' ? 'on' : u.level === 'maybe' ? 'maybe' : 'quiet');
           return;
         }

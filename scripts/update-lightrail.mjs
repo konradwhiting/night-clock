@@ -19,6 +19,7 @@ const LINE = { line: 'L1', name: 'Dulwich Hill' };
 const MINOR_S = 5 * 60;       // 5 minutes late or more is a delay worth showing
 const MAJOR_S = 10 * 60;      // 10 minutes late or more is a real delay
 const FEED_MAX_AGE_S = 15 * 60;  // a feed older than this is not live
+const CANCEL_FADE_MIN = 30;     // stop flagging a cancelled trip this long after it was due
 const HEARTBEAT_MS = 60 * 60 * 1000;  // rewrite an unchanged status at most once an hour
 
 const minutes = (s) => Math.round(s / 60);
@@ -39,27 +40,43 @@ const hhmm = (v) => {
  * Turns a list of trips ({delay: seconds or null, cancelled: boolean}) into a status.
  * Pure, so it can be tested without the network.
  */
-export function classify(trips) {
-  const cancelled = trips.filter((t) => t.cancelled).length;
+export function classify(trips, nowMin = null) {
+  // minutes since a cancelled trip was due, or null if its time is unknown (or it is still ahead)
+  const since = (t) => {
+    if (nowMin == null || !t.at) return null;
+    const [h, m] = t.at.split(':').map(Number);
+    const diff = (nowMin - (h * 60 + m) + 1440) % 1440;
+    return diff < 720 ? diff : null;
+  };
+  // a cancelled trip that was due over half an hour ago no longer matters to anyone leaving now
+  const allCancelled = trips.filter((t) => t.cancelled);
+  const live = allCancelled.filter((t) => { const d = since(t); return d == null || d <= CANCEL_FADE_MIN; });
+  const cancelled = live.length;
   const delays = trips.filter((t) => !t.cancelled && typeof t.delay === 'number').map((t) => Math.max(0, t.delay));
   const worst = delays.length ? Math.max(...delays) : 0;
-  const tracked = trips.length - cancelled;
+  const tracked = trips.length - allCancelled.length;
 
   if (trips.length === 0) {
     return { state: 'quiet', text: 'No trips in the live feed', detail: '', trips: 0, worstMin: 0, cancelled: 0 };
   }
   let state = 'ontime';
-  let text = 'Running on time';
-  if (cancelled > 0 || worst >= MAJOR_S) { state = 'delays'; text = 'Delays'; }
+  let text = 'Running normally';
+  if (worst >= MAJOR_S) { state = 'delays'; text = 'Delays'; }
+  else if (cancelled > 0) { state = 'delays'; text = cancelled === 1 ? 'Cancelled trip' : 'Cancelled trips'; }
   else if (worst >= MINOR_S) { state = 'minor'; text = 'Minor delays'; }
 
+  const times = [...new Set(live.filter((t) => t.at).map((t) => t.at))].sort();
   const bits = [];
   if (state === 'ontime') bits.push(tracked + (tracked === 1 ? ' tram' : ' trams') + ' tracked');
   else if (worst >= MINOR_S) bits.push('Up to ' + minutes(worst) + ' min late');
-  const times = [...new Set(trips.filter((t) => t.cancelled && t.at).map((t) => t.at))].sort();
   if (cancelled > 0) {
-    const shown = times.slice(0, 3).join(', ') + (times.length > 3 ? '…' : '');
-    bits.push(cancelled + (cancelled === 1 ? ' trip cancelled' : ' trips cancelled') + (times.length ? ' (' + shown + ')' : ''));
+    if (times.length === 1 && cancelled === 1) {
+      const past = since(live.find((t) => t.at)) != null;
+      bits.push('The ' + times[0] + ' tram ' + (past ? 'was' : 'is') + ' cancelled');
+    } else {
+      const shown = times.slice(0, 3).join(', ') + (times.length > 3 ? '…' : '');
+      bits.push(cancelled + ' trips cancelled' + (times.length ? ': ' + shown : ''));
+    }
   }
   const out = { state, text, detail: bits.join(' · '), trips: tracked, worstMin: minutes(worst), cancelled };
   if (times.length) out.cancelledAt = times;
@@ -135,7 +152,9 @@ async function main() {
       if (feedTime && ageS > FEED_MAX_AGE_S) {
         status = { state: 'error', text: 'Status unavailable', detail: 'Live feed is ' + minutes(ageS) + ' min old' };
       } else {
-        status = classify(tripsFrom(feed, cancelledCode));
+        const sydney = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', hour: '2-digit', minute: '2-digit', hour12: false }).format(now);
+        const [nh, nm] = sydney.split(':').map(Number);
+        status = classify(tripsFrom(feed, cancelledCode), (nh % 24) * 60 + nm);
         if (feedTime) status.feedTime = new Date(feedTime * 1000).toISOString();
       }
     } catch (err) {
