@@ -308,7 +308,7 @@ body { font-family: var(--body); }
 #app.solo { padding-top: max(24px, env(safe-area-inset-top)); padding-bottom: max(30px, env(safe-area-inset-bottom)); }
 #app.solo .city { gap: clamp(8px, 1.6vh, 16px); padding: 0 clamp(8px, 1.6vw, 24px); }
 #app.solo .top { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex: 0 0 auto; }
-#app.solo #city-syd .time { font-size: min(17vh, 21cqw); margin-top: 0; }
+#app.solo #city-syd .time { font-size: min(15vh, 21cqw); margin-top: 0; }
 #app.solo .date { font-size: min(5vh, 4.2cqw); margin: 0; text-align: right; color: var(--ink); }
 #app.solo .rows { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; gap: clamp(8px, 1.6vh, 16px); }
 
@@ -329,17 +329,18 @@ body { font-family: var(--body); }
 .row .ico svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
 .row .ico svg circle { fill: currentColor; }
 .row-label { font-size: clamp(14px, 2.4vh, 24px); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
-.row-word { font-family: var(--display); font-weight: 500; font-size: min(12.5vh, 10.5cqw); line-height: 1; margin-top: 0.05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.row-sub { font-size: clamp(18px, 3.9vh, 38px); line-height: 1.15; margin-top: 0.15em; color: var(--ink-2); }
+.row-word { font-family: var(--display); font-weight: 500; font-size: min(10.5vh, 10cqw); line-height: 1; margin-top: 0.05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-sub { font-size: clamp(17px, 3.5vh, 34px); line-height: 1.15; margin-top: 0.1em; color: var(--ink-2); }
+.row-note { font-size: clamp(15px, 2.8vh, 26px); line-height: 1.15; margin-top: 0.1em; color: var(--ink-2); }
 .row-num { font-family: var(--display); font-weight: 500; font-size: min(17vh, 15cqw); line-height: 1; text-align: right; }
 .row-num-cap { display: block; font-family: var(--body); font-weight: 400; font-size: clamp(13px, 2.2vh, 22px); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
 
 /* quiet: nothing to worry about, dimmer and outlined */
 .row.quiet { border-color: var(--line); color: var(--ink-2); }
-.row.quiet .row-label, .row.quiet .row-sub { color: var(--ink-3); }
+.row.quiet .row-label, .row.quiet .row-sub, .row.quiet .row-note { color: var(--ink-3); }
 /* needs attention: a solid block, impossible to miss */
 .row.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
-.row.on .row-label, .row.on .row-sub, .row.on .row-num-cap { color: var(--bg); }
+.row.on .row-label, .row.on .row-sub, .row.on .row-note, .row.on .row-num-cap { color: var(--bg); }
 .row.maybe { border-color: var(--ink); }
 
 @media (orientation: portrait) {

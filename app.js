@@ -539,11 +539,12 @@
           var w = wearWords(hi);
           e.range.textContent = Math.round(hi) + '°';
           e.wear.textContent = w.word;
-          $('syd-wear-sub').textContent = w.sub;
+          $('syd-wear-sub').textContent = 'Now ' + Math.round(win.temp[0]) + '° · ' + tempWords(win.temp[0]);
           $('wear-ico').innerHTML = WEAR_ICONS[w.icon];
           var u = umbrellaOutlook(win, CITIES[k].tz);
           e.rainHead.textContent = u.head;
-          e.rainSub.textContent = u.sub + (nc && nowcastText(nc) !== 'Dry' ? ' · ' + nowcastText(nc) + ' now' : '');
+          e.rainSub.textContent = rs.head;
+          $('syd-rain-note').textContent = rs.sub;
           $('tile-rain').className = 'row ' + (u.level === 'yes' ? 'on' : u.level === 'maybe' ? 'maybe' : 'quiet');
           return;
         }
