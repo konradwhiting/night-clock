@@ -23,6 +23,18 @@ const HEARTBEAT_MS = 60 * 60 * 1000;  // rewrite an unchanged status at most onc
 
 const minutes = (s) => Math.round(s / 60);
 
+// "13:42:00" (GTFS start time, local) or a Unix time in seconds -> "13:42" in Sydney
+const hhmm = (v) => {
+  if (typeof v === 'string') {
+    const m = /^(\d+):(\d\d)/.exec(v);
+    return m ? String(Number(m[1]) % 24).padStart(2, '0') + ':' + m[2] : null;
+  }
+  const n = Number(v);
+  if (!n) return null;
+  return new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', hour: '2-digit', minute: '2-digit', hour12: false })
+    .format(new Date(n * 1000));
+};
+
 /**
  * Turns a list of trips ({delay: seconds or null, cancelled: boolean}) into a status.
  * Pure, so it can be tested without the network.
@@ -44,8 +56,14 @@ export function classify(trips) {
   const bits = [];
   if (state === 'ontime') bits.push(tracked + (tracked === 1 ? ' tram' : ' trams') + ' tracked');
   else if (worst >= MINOR_S) bits.push('Up to ' + minutes(worst) + ' min late');
-  if (cancelled > 0) bits.push(cancelled + (cancelled === 1 ? ' trip cancelled' : ' trips cancelled'));
-  return { state, text, detail: bits.join(' · '), trips: tracked, worstMin: minutes(worst), cancelled };
+  const times = [...new Set(trips.filter((t) => t.cancelled && t.at).map((t) => t.at))].sort();
+  if (cancelled > 0) {
+    const shown = times.slice(0, 3).join(', ') + (times.length > 3 ? '…' : '');
+    bits.push(cancelled + (cancelled === 1 ? ' trip cancelled' : ' trips cancelled') + (times.length ? ' (' + shown + ')' : ''));
+  }
+  const out = { state, text, detail: bits.join(' · '), trips: tracked, worstMin: minutes(worst), cancelled };
+  if (times.length) out.cancelledAt = times;
+  return out;
 }
 
 /** Pulls {delay, cancelled} out of every TripUpdate in a decoded GTFS-realtime feed. */
@@ -63,7 +81,16 @@ export function tripsFrom(feed, CANCELED = 3) {
         if (d != null) { delay = d; break; }
       }
     }
-    trips.push({ delay, cancelled: !!cancelled });
+    // when a cancelled trip was due to run: its scheduled start time, else its first stop time
+    let at = null;
+    if (cancelled) {
+      at = hhmm(u.trip && u.trip.startTime);
+      for (const st of u.stopTimeUpdate || []) {
+        if (at) break;
+        at = hhmm((st.departure && st.departure.time) || (st.arrival && st.arrival.time));
+      }
+    }
+    trips.push({ delay, cancelled: !!cancelled, at });
   }
   return trips;
 }
