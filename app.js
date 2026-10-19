@@ -293,15 +293,20 @@
     return 'very hot, stay cool and drink water';
   }
 
-  // What to wear for the day's high, in words a child can picture
+  // What to wear for the day's high: a short word, a reason, and which picture to show
+  var WEAR_ICONS = {
+    tshirt: '<svg viewBox="0 0 64 64"><path d="M22 8L8 16l6 12 6-3v31h24V25l6 3 6-12-14-8c-2 4-6 6-10 6s-8-2-10-6z"/></svg>',
+    jumper: '<svg viewBox="0 0 64 64"><path d="M22 8L6 20l2 30h8l2-20v26h28V30l2 20h8l2-30L42 8c-2 4-6 6-10 6s-8-2-10-6z"/></svg>',
+    coat: '<svg viewBox="0 0 64 64"><path d="M22 8L6 20l2 30h8l2-20v26h28V30l2 20h8l2-30L42 8c-2 4-6 6-10 6s-8-2-10-6z"/><path d="M32 14v42"/></svg>'
+  };
   function wearWords(t) {
-    if (t < 8) return 'Big coat and beanie';
-    if (t < 13) return 'Coat on';
-    if (t < 18) return 'Jumper weather';
-    if (t < 23) return 'Long sleeves, bring a light jumper';
-    if (t < 28) return 'T-shirt weather';
-    if (t < 33) return 'T-shirt, hat and sunscreen';
-    return 'Very hot: hat, water and shade';
+    if (t < 8) return { word: 'Big coat', sub: 'Freezing, add a beanie', icon: 'coat' };
+    if (t < 13) return { word: 'Coat', sub: 'Cold today', icon: 'coat' };
+    if (t < 18) return { word: 'Warm jumper', sub: 'Chilly today', icon: 'jumper' };
+    if (t < 23) return { word: 'Jumper', sub: 'Mild, a light one will do', icon: 'jumper' };
+    if (t < 28) return { word: 'T-shirt', sub: 'Warm today', icon: 'tshirt' };
+    if (t < 33) return { word: 'T-shirt + hat', sub: 'Hot, sunscreen too', icon: 'tshirt' };
+    return { word: 'Keep cool', sub: 'Very hot, drink water', icon: 'tshirt' };
   }
 
   // Umbrella verdict for the rest of today (next 12 hours), with when the rain is expected
@@ -312,9 +317,8 @@
       if (win.pop[i] > maxP) { maxP = win.pop[i]; pk = i; }
       if (win.pop[i] >= 40 || win.mm[i] >= 0.3) { if (first < 0) first = i; last = i; }
     }
-    var head = maxP >= 50 || total >= 1 ? 'Take an umbrella'
-      : maxP >= 30 || total >= 0.3 ? 'Maybe take an umbrella'
-      : 'No umbrella needed';
+    var level = maxP >= 50 || total >= 1 ? 'yes' : maxP >= 30 || total >= 0.3 ? 'maybe' : 'no';
+    var head = level === 'yes' ? 'Take an umbrella' : level === 'maybe' ? 'Maybe an umbrella' : 'No umbrella';
     var sub;
     if (first < 0) {
       sub = maxP >= 10 ? 'Slim chance of showers, ' + Math.round(maxP) + '% at ' + hourLabel(win.t[pk], tz) : 'Dry for the rest of today';
@@ -324,7 +328,7 @@
       sub = 'Rain from ' + hourLabel(win.t[first], tz) + (last < n - 1 ? ' to ' + hourLabel(win.t[last + 1], tz) : '')
         + ' · peak ' + Math.round(maxP) + '%';
     }
-    return { head: head, sub: sub };
+    return { head: head, sub: sub, level: level };
   }
 
   function rainSummary(win, nc, tz) {
@@ -510,7 +514,7 @@
         if (e.temp) e.temp.textContent = '--°';
         if (e.desc) e.desc.textContent = weather ? 'Forecast out of date' : 'Loading forecast';
         e.range.textContent = e.wear ? '--°' : '';
-        if (e.wear) e.wear.textContent = weather ? 'Forecast out of date' : 'Loading forecast';
+        if (e.wear) e.wear.textContent = weather ? 'Out of date' : 'Loading';
         if (e.chart) e.chart.innerHTML = '';
         if (e.rainHead) { e.rainHead.textContent = ''; e.rainSub.textContent = ''; if (e.ncWrap) e.ncWrap.hidden = true; if (e.grid) e.grid.innerHTML = ''; }
         return;
@@ -532,12 +536,15 @@
         if (e.ncWrap) e.ncWrap.hidden = !nc;
         if (!e.chart) {
           // text only (Earlwood page): what to wear for the high, and whether to take an umbrella
+          var w = wearWords(hi);
           e.range.textContent = Math.round(hi) + '°';
-          e.wear.textContent = wearWords(hi);
+          e.wear.textContent = w.word;
+          $('syd-wear-sub').textContent = w.sub;
+          $('wear-ico').innerHTML = WEAR_ICONS[w.icon];
           var u = umbrellaOutlook(win, CITIES[k].tz);
           e.rainHead.textContent = u.head;
-          e.rainSub.textContent = u.sub;
-          e.ncCap.textContent = nc ? 'Next 2 hours: ' + nowcastText(nc) : '';
+          e.rainSub.textContent = u.sub + (nc && nowcastText(nc) !== 'Dry' ? ' · ' + nowcastText(nc) + ' now' : '');
+          $('tile-rain').className = 'row ' + (u.level === 'yes' ? 'on' : u.level === 'maybe' ? 'maybe' : 'quiet');
           return;
         }
         if (nc) {
@@ -646,7 +653,7 @@
     }
     $('rail-head').textContent = head;
     $('rail-sub').textContent = sub || '';
-    box.className = quiet ? 'rail' : 'rail rail-alert';
+    box.className = quiet ? 'row quiet' : 'row on';
   }
 
   function loadRail() {

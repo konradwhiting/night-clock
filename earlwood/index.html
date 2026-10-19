@@ -22,30 +22,36 @@
 
 <main id="app" class="solo">
   <section class="city" id="city-syd" aria-label="Earlwood">
-    <div class="rail" id="rail" aria-live="polite">
-      <span class="rail-line">Light rail L1 Dulwich Hill</span>
-      <span class="rail-head" id="rail-head">Checking</span>
-      <span class="rail-sub" id="rail-sub"></span>
-    </div>
     <div class="top">
-      <header class="city-head">
-        <span class="city-name">Earlwood</span>
-        <span class="city-meta" id="syd-meta"></span>
-      </header>
       <div class="time"><span class="ghost" aria-hidden="true">88:88</span><span class="hm" id="syd-hm">--:--</span><span class="ap" id="syd-ap"></span></div>
       <div class="date" id="syd-date"></div>
+      <span class="city-meta" id="syd-meta" hidden></span>
     </div>
-    <div class="wx wx-text">
-      <div class="tile" id="tile-wear">
-        <div class="tile-cap">Today's high</div>
-        <div class="tile-big" id="syd-range">--°</div>
-        <div class="tile-sub" id="syd-wear"></div>
+    <div class="rows">
+      <div class="row quiet" id="rail" aria-live="polite">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 8V2M20 2h24"/><rect x="14" y="8" width="36" height="38" rx="6"/><rect x="20" y="14" width="24" height="14" rx="2"/><circle cx="22" cy="38" r="2.5"/><circle cx="42" cy="38" r="2.5"/><path d="M22 46l-6 12M42 46l6 12"/></svg></div>
+        <div class="row-body">
+          <div class="row-label">Light rail L1 Dulwich Hill</div>
+          <div class="row-word" id="rail-head">Checking</div>
+          <div class="row-sub" id="rail-sub"></div>
+        </div>
       </div>
-      <div class="tile" id="tile-rain">
-        <div class="tile-cap">Rain today?</div>
-        <div class="tile-big" id="syd-rain-head"></div>
-        <div class="tile-sub" id="syd-rain-sub"></div>
-        <div class="tile-note" id="syd-nc-cap"></div>
+      <div class="row" id="tile-wear">
+        <div class="ico" id="wear-ico" aria-hidden="true"></div>
+        <div class="row-body">
+          <div class="row-label">What to wear</div>
+          <div class="row-word" id="syd-wear">--</div>
+          <div class="row-sub" id="syd-wear-sub"></div>
+        </div>
+        <div class="row-num"><span id="syd-range">--°</span><span class="row-num-cap">today's high</span></div>
+      </div>
+      <div class="row quiet" id="tile-rain">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 6V3M5 34C5 18 18 8 32 8s27 10 27 26c-4-5-8-5-13.5 0C41 29 37 29 32 34c-5-5-9-5-13.5 0C13 29 9 29 5 34z"/><path d="M32 34v16a6 6 0 0 1-12 0"/></svg></div>
+        <div class="row-body">
+          <div class="row-label">Rain today?</div>
+          <div class="row-word" id="syd-rain-head"></div>
+          <div class="row-sub" id="syd-rain-sub"></div>
+        </div>
       </div>
     </div>
   </section>

@@ -171,38 +171,6 @@ body { font-family: var(--body); }
 .solo .news-title { -webkit-line-clamp: 2; }
 .solo .rain-nc { flex-basis: 34%; }
 
-/* Earlwood page, in order of importance: light rail (biggest), clock, then high + what to wear and umbrella side by side */
-.solo .city { gap: clamp(8px, 2vh, 18px); }
-
-.rail {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1em;
-  padding-bottom: clamp(8px, 1.6vh, 16px);
-  border-bottom: 1px solid var(--line);
-}
-.rail-line { font-family: var(--body); font-weight: 400; font-size: clamp(14px, 2.6cqw, 22px); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
-.rail-head {
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: min(15cqw, 19vh);
-  line-height: 1;
-  color: var(--ink-2);
-}
-.rail-sub { font-family: var(--body); font-weight: 400; font-size: clamp(18px, 3.8cqw, 32px); color: var(--ink-2); }
-.rail-alert .rail-head { color: var(--ink); text-decoration: underline; text-decoration-thickness: 0.05em; text-underline-offset: 0.12em; }
-.rail-alert .rail-sub { color: var(--ink); }
-
-.solo #city-syd .time { font-size: min(14cqw, 17vh); }
-.solo .top .city-head { display: none; }  /* the page is Earlwood only, the name is not needed */
-
-.wx-text { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3cqw, 40px); border-top: 0; padding-top: 0; flex: 0 0 auto; }
-.tile { min-width: 0; border-top: 1px solid var(--line); padding-top: clamp(6px, 1.2vh, 12px); }
-.tile-cap { font-size: clamp(13px, 2.4cqw, 20px); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
-.tile-big { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 8cqw, 76px); line-height: 1.05; color: var(--ink); }
-.tile-sub { font-size: clamp(17px, 3.4cqw, 28px); color: var(--ink-2); margin-top: 0.25em; }
-.tile-note { font-size: clamp(14px, 2.8cqw, 22px); color: var(--ink-3); margin-top: 0.2em; }
-
 /* Sydney: rain first, temperature small */
 .wx-rainy .wx-now { gap: 0.6em; }
 .wx-rainy .wx-temp { font-size: clamp(28px, 6.2cqw, 40px); }
@@ -316,16 +284,6 @@ body { font-family: var(--body); }
   .solo .news { display: block; }
   .solo #city-syd .time { font-size: min(26cqw, 20vh); }
   .solo .wx-chart svg { height: auto; }
-  /* portrait has height to spare: stack the tiles and spread things out */
-  .solo .city { justify-content: space-between; }
-  .rail-head { font-size: 22cqw; }
-  .rail-sub { font-size: 5.2cqw; }
-  .rail-line { font-size: 3.6cqw; }
-  .wx-text { grid-template-columns: 1fr; gap: 3cqw; }
-  .tile-cap { font-size: 3.4cqw; }
-  .tile-big { font-size: 11cqw; }
-  .tile-sub { font-size: 4.6cqw; }
-  .tile-note { font-size: 3.6cqw; }
 }
 
 /* short landscape screens such as small tablets */
@@ -339,12 +297,56 @@ body { font-family: var(--body); }
   .rain-row { margin-top: 0.3em; }
   .rain-head { font-size: 26px; }
   .rain-sub, .rain-next { font-size: 14px; margin-top: 0.2em; }
-  .rail-line { font-size: 13px; }
-  .rail-sub { font-size: 18px; }
-  .tile-big { font-size: 40px; }
-  .tile-sub { font-size: 16px; }
-  .tile-note { font-size: 13px; }
   .rain-nc-cap { font-size: 11px; margin-bottom: 2px; }
   .rain-nc svg { height: 40px; }
   #foot { font-size: 11px; }
+}
+
+/* ---------- Earlwood page: a clock strip and three big answers ----------
+   Light rail, what to wear, umbrella. Built to be read from across the kitchen, so words are huge
+   and a row turns into a solid block when it needs attention. */
+#app.solo { padding-top: max(24px, env(safe-area-inset-top)); padding-bottom: max(30px, env(safe-area-inset-bottom)); }
+#app.solo .city { gap: clamp(8px, 1.6vh, 16px); padding: 0 clamp(8px, 1.6vw, 24px); }
+#app.solo .top { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex: 0 0 auto; }
+#app.solo #city-syd .time { font-size: min(17vh, 21cqw); margin-top: 0; }
+#app.solo .date { font-size: min(5vh, 4.2cqw); margin: 0; text-align: right; color: var(--ink); }
+#app.solo .rows { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; gap: clamp(8px, 1.6vh, 16px); }
+
+.row {
+  flex: 1 1 0;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(14px, 2.6cqw, 36px);
+  padding: 0 clamp(16px, 3cqw, 40px);
+  border: 2px solid var(--ink-3);
+  border-radius: 20px;
+  color: var(--ink);
+  overflow: hidden;
+}
+.row .ico { width: min(15vh, 13cqw); height: min(15vh, 13cqw); }
+.row .ico svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.row .ico svg circle { fill: currentColor; }
+.row-label { font-size: clamp(14px, 2.4vh, 24px); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+.row-word { font-family: var(--display); font-weight: 500; font-size: min(12.5vh, 10.5cqw); line-height: 1; margin-top: 0.05em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-sub { font-size: clamp(18px, 3.9vh, 38px); line-height: 1.15; margin-top: 0.15em; color: var(--ink-2); }
+.row-num { font-family: var(--display); font-weight: 500; font-size: min(17vh, 15cqw); line-height: 1; text-align: right; }
+.row-num-cap { display: block; font-family: var(--body); font-weight: 400; font-size: clamp(13px, 2.2vh, 22px); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+
+/* quiet: nothing to worry about, dimmer and outlined */
+.row.quiet { border-color: var(--line); color: var(--ink-2); }
+.row.quiet .row-label, .row.quiet .row-sub { color: var(--ink-3); }
+/* needs attention: a solid block, impossible to miss */
+.row.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.row.on .row-label, .row.on .row-sub, .row.on .row-num-cap { color: var(--bg); }
+.row.maybe { border-color: var(--ink); }
+
+@media (orientation: portrait) {
+  #app.solo #city-syd .time { font-size: min(14vh, 25cqw); }
+  #app.solo .top { flex-direction: column; align-items: flex-start; gap: 4px; }
+  #app.solo .date { text-align: left; font-size: 3.6vh; }
+  .row .ico { width: min(10vh, 16cqw); height: min(10vh, 16cqw); }
+  .row-word { font-size: min(7.5vh, 10cqw); }
+  .row-num { font-size: min(10vh, 18cqw); }
 }
