@@ -10,11 +10,14 @@ const OUT = fileURLToPath(new URL('../news.json', import.meta.url));
 // Google News search feeds are not ranked by date, so those take the newest item instead.
 const gnews = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=en-AU&gl=AU&ceid=AU:en';
 
+// A local story older than this gives way to the next feed, so the headline never sits for a day
+const LOCAL_MAX_AGE_H = 6;
+
 export const PLACES = {
   syd: {
     feeds: [
-      { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true },
-      { area: 'Canterbury-Bankstown and Inner West', url: gnews('"Canterbury-Bankstown" OR "Inner West" Sydney when:7d'), newest: true },
+      { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true, maxAgeHours: LOCAL_MAX_AGE_H },
+      { area: 'Canterbury-Bankstown and Inner West', url: gnews('"Canterbury-Bankstown" OR "Inner West" Sydney when:7d'), newest: true, maxAgeHours: LOCAL_MAX_AGE_H },
       { source: 'ABC News NSW', url: 'https://www.abc.net.au/news/feed/5555986/rss.xml' }
     ]
   },
@@ -106,6 +109,9 @@ async function main() {
       try {
         const xml = await fetchFeed(feed.url);
         const item = feed.newest ? newestItem(xml) : parseFirstItem(xml);
+        const tooOld = item && feed.maxAgeHours && item.published
+          && Date.now() - Date.parse(item.published) > feed.maxAgeHours * 3600 * 1000;
+        if (tooOld) { console.log(`${key}: newest story in ${feed.area || feed.source} is over ${feed.maxAgeHours}h old, trying the next feed`); continue; }
         if (item) {
           const { publisher, ...rest } = item;
           found = { ...(feed.area ? { area: feed.area } : {}), source: feed.source || publisher || 'News', ...rest };
