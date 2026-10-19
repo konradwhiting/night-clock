@@ -338,7 +338,7 @@ body { font-family: var(--body); }
 .row-num-cap { display: block; font-family: var(--body); font-weight: 400; font-size: clamp(13px, 2.2vh, 22px); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
 
 /* quiet: nothing to worry about, dimmer and outlined */
-.row.quiet { border-color: var(--line); color: var(--ink-2); }
+.row.quiet { border-color: var(--ink-3); color: var(--ink-2); }
 .row.quiet .row-label, .row.quiet .row-sub, .row.quiet .row-note { color: var(--ink-3); }
 /* needs attention: a solid block, impossible to miss */
 .row.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
