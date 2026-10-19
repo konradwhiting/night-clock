@@ -1,0 +1,22 @@
+name: List light rail stops
+
+# One-off helper. Run it by hand from the Actions tab (or the API) to print the Inner West Light Rail
+# stops and an example trip each way into the run log. Needs the TFNSW_API_KEY secret. Changes nothing.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stops:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: List stops
+        env:
+          TFNSW_API_KEY: ${{ secrets.TFNSW_API_KEY }}
+        run: node scripts/lightrail-stops.mjs
