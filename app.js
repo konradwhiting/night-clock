@@ -329,8 +329,8 @@
     var n = 12, maxP = 0, pk = 0, total = 0, first = -1, last = -1, i;
     for (i = 0; i < n; i++) {
       total += win.mm[i];
-      if (win.pop[i] > maxP) { maxP = win.pop[i]; pk = i; }
-      if (win.pop[i] >= 40 || win.mm[i] >= 0.3) { if (first < 0) first = i; last = i; }
+      if (win.pop[i] > maxP && (win.code[i] >= 51 || win.mm[i] >= 0.1)) { maxP = win.pop[i]; pk = i; }
+      if (win.mm[i] >= 0.3 || (win.pop[i] >= 40 && win.code[i] >= 51 && win.mm[i] >= 0.1)) { if (first < 0) first = i; last = i; }
     }
     var level = maxP >= 50 || total >= 1 ? 'yes' : maxP >= 30 || total >= 0.3 ? 'maybe' : 'no';
     var head = level === 'yes' ? 'Take an umbrella' : level === 'maybe' ? 'Maybe an umbrella' : 'No umbrella';
@@ -349,7 +349,7 @@
   function rainSummary(win, nc, tz) {
     var n = 24, wet = [], total = 0, maxP = 0, pk = 0, i;
     for (i = 0; i < n; i++) {
-      wet.push(win.pop[i] >= 50 || win.mm[i] >= 0.3);
+      wet.push(win.mm[i] >= 0.3 || (win.pop[i] >= 50 && win.code[i] >= 51 && win.mm[i] >= 0.1));
       total += win.mm[i];
       if (win.pop[i] > maxP) { maxP = win.pop[i]; pk = i; }
     }
