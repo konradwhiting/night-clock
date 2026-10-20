@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261021-2';
+  var BUILD = '20261021-4';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -259,6 +259,7 @@
       pop: pop,
       code: h.weather_code_best_match,  // only used for the sky description
       day: h.is_day_best_match,
+      uv: h.uv_index_best_match || [],
       precip: precip,
       m15: o.minutely_15 ? { t: o.minutely_15.time.map(function (q) { return Date.parse(q + ':00Z'); }), mm: o.minutely_15.precipitation_best_match } : null
     };
@@ -268,7 +269,7 @@
     var url = 'https://api.open-meteo.com/v1/forecast'
       + '?latitude=' + KEYS.map(function (k) { return CITIES[k].lat; }).join(',')
       + '&longitude=' + KEYS.map(function (k) { return CITIES[k].lon; }).join(',')
-      + '&hourly=temperature_2m,precipitation,weather_code,is_day'
+      + '&hourly=temperature_2m,precipitation,weather_code,is_day,uv_index'
       + '&models=' + MODELS.join(',') + ',best_match'
       + '&minutely_15=precipitation'
       + '&timezone=GMT&forecast_days=3';
@@ -314,6 +315,7 @@
       pop: cut(w.pop).map(function (v) { return v == null ? 0 : v; }),
       code: cut(w.code),
       day: cut(w.day),
+      uv: cut(w.uv || []),
       mm: cut(w.precip || w.t.map(function () { return 0; })).map(function (v) { return v == null ? 0 : v; })
     };
   }
@@ -370,26 +372,44 @@
     el.innerHTML = list.map(function (n) { return ICONS[n]; }).join('');
   }
 
-  // Which band of weather a temperature falls in: a short word for the row, a feel word, and the pictures
+  // What to wear, by temperature in degrees C, tuned for Sydney: a short word for the row, a light-hearted line, and the pictures.
+  // The hat is not here: it comes from the UV index (see below), because a mild day can still have a very high UV.
   function wearWords(t) {
-    if (t < 8) return { word: 'Big coat', feel: 'Freezing', icons: ['coat'] };
-    if (t < 13) return { word: 'Coat', feel: 'Cold', icons: ['coat'] };
-    if (t < 18) return { word: 'Warm jumper', feel: 'Chilly', icons: ['jumper'] };
-    if (t < 23) return { word: 'Jumper', feel: 'Mild', icons: ['jumper'] };
-    if (t < 28) return { word: 'T-shirt', feel: 'Warm', icons: ['tshirt'] };
-    if (t < 33) return { word: 'T-shirt and hat', feel: 'Hot', icons: ['sun', 'hat'] };
-    return { word: 'Keep cool', feel: 'Very hot', icons: ['sun', 'hat'] };
+    if (t < 8) return { word: 'Big coat', line: 'Penguin weather. Wear everything warm.', icons: ['coat'] };
+    if (t < 12) return { word: 'Coat', line: 'Coat on, hands in pockets, no heroes.', icons: ['coat'] };
+    if (t < 16) return { word: 'Warm jumper', line: "Jumper up. Be cool when it's warmer.", icons: ['jumper'] };
+    if (t < 20) return { word: 'Jumper', line: 'Jumper now, sleeves up by lunch.', icons: ['jumper'] };
+    if (t < 24) return { word: 'Light layer', line: "Jumper optional. Pack it, don't wear it.", icons: ['tshirt'] };
+    if (t < 28) return { word: 'T-shirt', line: 'Short sleeves. Jumper stays home.', icons: ['tshirt'] };
+    if (t < 32) return { word: 'Light and loose', line: 'T-shirt weather. Drink like a camel.', icons: ['tshirt'] };
+    if (t < 36) return { word: 'Keep cool', line: 'A stinker. Shade, water, walk like a lizard.', icons: ['sun'] };
+    return { word: 'Seek shade', line: 'Hot enough to fry an egg. Stay in the shade.', icons: ['sun'] };
   }
 
-  // What to wear when you leave, and what you will want later. startLabel is 'Now' or 'At 7am'.
-  function wearAdvice(start, hi, startLabel) {
+  // UV words (Australian scale); sun protection is advised from UV 3
+  function uvWord(u) { return u >= 11 ? 'extreme' : u >= 8 ? 'very high' : u >= 6 ? 'high' : 'moderate'; }
+
+  // What to wear when you leave, and what you will want later. startLabel is 'Now' or 'At 7am'. maxUv is the day's highest UV in school hours.
+  function wearAdvice(start, hi, startLabel, maxUv) {
     var a = wearWords(start), b = wearWords(hi);
     var s0 = Math.round(start), h0 = Math.round(hi);
-    if (a.word !== b.word && hi - start >= 4) {
+    var uv = maxUv >= 3;
+    var out;
+    if (start < 24 && a.word !== b.word && hi - start >= 4) {
+      // starts cool and warms up: dress for the start, and say what comes off
       var pics = a.icons.concat(b.icons.filter(function (n) { return a.icons.indexOf(n) < 0; })).slice(0, 2);
-      return { word: a.word, sub: startLabel + ' ' + s0 + '° · warming to ' + h0 + '° (' + b.word.toLowerCase() + ' later)', icons: pics };
+      out = { word: a.word, sub: 'Layers on now, off by lunch.', icons: pics,
+        note: startLabel + ' ' + s0 + '° → ' + h0 + '°' };
+    } else {
+      // otherwise dress for the cooler start; on a warm start use the hotter advice for the day
+      var pick = start < 24 ? a : b;
+      out = { word: pick.word, sub: pick.line, icons: pick.icons.slice(), note: startLabel + ' ' + s0 + '°' };
     }
-    return { word: b.word, sub: b.feel + ' · ' + startLabel.toLowerCase() + ' ' + s0 + '°, high ' + h0 + '°', icons: b.icons };
+    if (uv) {
+      if (out.icons.indexOf('hat') < 0) out.icons = out.icons.slice(0, 1).concat(['hat']);
+      out.uv = 'UV ' + Math.round(maxUv) + ': slip, slop, slap!';
+    }
+    return out;
   }
 
   // The part of the day the page is about. Until 5pm: the rest of today (to 10pm). After 5pm: tomorrow, 6am to 6pm.
@@ -406,14 +426,16 @@
       from = hourStart + (24 - z.h + 6) * 3600000; to = from + 12 * 3600000;
       key = dayKey(zoned(new Date(now + 86400000), tz));
     }
-    var idx = [], hi = -Infinity, startTemp = nowTemp, i;
+    var idx = [], hi = -Infinity, startTemp = nowTemp, maxUv = 0, i;
     for (i = 0; i < w.t.length; i++) {
       if (w.t[i] >= from && w.t[i] < to) idx.push(i);
       if (w.temp[i] != null && dayKey(zoned(new Date(w.t[i]), tz)) === key && w.temp[i] > hi) hi = w.temp[i];
       if (tomorrow && w.t[i] === from + 3600000) startTemp = w.temp[i];
+      var zi = zoned(new Date(w.t[i]), tz);
+      if (w.uv && w.uv[i] != null && dayKey(zi) === key && zi.h >= 8 && zi.h < 16 && w.uv[i] > maxUv) maxUv = w.uv[i];   // school hours
     }
     if (!idx.length || hi === -Infinity) return null;
-    return { tomorrow: tomorrow, idx: idx, hi: hi, startTemp: startTemp };
+    return { tomorrow: tomorrow, idx: idx, hi: hi, startTemp: startTemp, maxUv: maxUv };
   }
 
   // Umbrella verdict and a plain-words story for the window, from the blended forecasts
@@ -440,7 +462,7 @@
     }
     var kPk = Math.round(maxP / 100 * NMODELS);
     var note = kPk > 0 ? kPk + ' of ' + NMODELS + ' forecasts show rain at ' + hr(pk) : 'No forecast shows rain';
-    if (level !== 'no' && total >= 0.1) note += ' · ' + wetWords(total);
+    if (level !== 'no' && total >= 0.1) note += ' · ' + (total < 1 ? (level === 'maybe' ? 'umbrella optional' : 'a light shower') : wetWords(total));
     var icons = ['umbrella'];
     if (level === 'yes' && total >= 15) icons = ['umbrella', 'raincoat', 'boots'];
     else if (level === 'yes' && total >= 5) icons = ['umbrella', 'boots'];
@@ -655,10 +677,11 @@
           // text only (Earlwood page): what to wear, and whether to take an umbrella, for today or tomorrow
           var plan = dayPlan(weather[k], CITIES[k].tz, win.temp[0]);
           if (!plan) { e.wear.textContent = 'Out of date'; return; }
-          var w = wearAdvice(plan.startTemp, plan.hi, plan.tomorrow ? 'At 7am' : 'Now');
+          var w = wearAdvice(plan.startTemp, plan.hi, plan.tomorrow ? 'At 7am' : 'Now', plan.maxUv);
           e.range.textContent = Math.round(plan.hi) + '°';
           e.wear.textContent = w.word;
           put('syd-wear-sub', w.sub);
+          put('syd-wear-note', w.note + (w.uv ? ' · ' + w.uv : ''));
           put('wear-cap', plan.tomorrow ? 'Tomorrow, what to wear' : 'What to wear');
           put('wear-num-cap', plan.tomorrow ? "tomorrow's high" : "today's high");
           setIcons('wear-ico', w.icons);
