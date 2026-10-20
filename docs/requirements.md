@@ -33,6 +33,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | S10 | As the sleeper, I can see how likely rain is in Earlwood, without temperature taking the space. | Sydney forecast leads with a plain-words rain outlook (for example "Rain easing by 20:00"), chance now, peak chance and time, expected millimetres, a next-2-hours rain strip, and a 24 hour chart led by rain chance. Temperature shrinks to one small line. Eastbourne unchanged. | Built, awaiting customer check on the iPad |
 | S11 | As the sleeper, I can have a second clock that shows only Earlwood, at its own address. | `/earlwood/` page with one large clock and a text-and-numbers forecast. No charts, no headline and no Eastbourne. Fits short, wide screens. No Eastbourne. Own Home Screen icon and name. | Built, awaiting customer check |
 | S12 | As the sleeper, I can see at a glance whether Sydney Light Rail L1 Dulwich Hill is running on time. | Earlwood page shows a Light rail panel with a plain status (Running on time, Minor delays, Delays), a short detail line, and says so when the status is out of date or not connected. Quiet when on time, brighter when not. Live data from Transport for NSW trip updates, read by a scheduled job every 10 minutes. Minor delay is 5 minutes late or more, Delays is 10 minutes or more or any cancelled trip. | Built, awaiting the Transport for NSW key and customer check |
+| S13 | As the family, we can see how good the forecast has been, checked against what actually happened, for temperature and rain. | `/accuracy/` page, open to the whole family, worked out live from free open data (Open-Meteo previous-runs forecasts against the ERA5 archive). Shows the typical miss on the high and low, each model against the six-model average, whether the umbrella advice caught wet days and stayed quiet on dry ones, rain day by day, the last 14 days and the biggest misses. Look back 30, 60 or 90 days, °C or °F. States plainly that "what happened" is a reconstruction, not a rain gauge. Costs nothing, no timer. | Built (21 Oct 2026), customer likes it. Earlwood only |
 
 ## Ideas, not yet prioritised
 
@@ -44,6 +45,15 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 - Fahrenheit option.
 - Editable auto-dim hours.
 - Service worker so the page loads with no network at all.
+
+### Actions from the forecast accuracy page (21 Oct 2026)
+
+- [ ] Same accuracy page for Eastbourne, using the same method.
+- [ ] Link the accuracy page from somewhere the family will find it (the clock's settings panel or a Home Screen shortcut).
+- [ ] Judge the forecast against real readings, not a reconstruction: log what the clock showed each morning and compare with the nearest Bureau of Meteorology station. Check first whether the Bureau's terms and any registration cost allow it; keep it private if not.
+- [ ] After about two months of data, decide whether to drop or down-weight Météo-France, the weakest model in the first 59-day check (about 3.6 °C off on lows). Dropping it improved lows but made highs slightly worse, so no change yet.
+- [ ] Keep the Bureau's day forecast for Sydney as a private cross-check on request (free, personal use). Using it on a public page needs Bureau registration, cost unverified.
+- [ ] Look at the two umbrella misses in the first check (27 Aug and 19 Oct, light rain missed) and the 7 false alarms, all near misses, to see whether the "Take an umbrella" threshold needs tuning.
 
 ## Decisions from the customer (19 Oct 2026)
 
@@ -105,3 +115,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | 19 Oct 2026 | 3 | Earlwood page: remove the hourly table, show just Current and High | Table and low temperature removed. Page shows current temperature, the day's high, the rain outlook and the next two hours |
 | 19 Oct 2026 | 3 | Describe rain amounts so kids can understand, not millimetres | Millimetres replaced with words on both clocks: just a sprinkle, a light drizzle (bring a coat), proper rain (puddles to jump in), heavy rain (wet socks), a soaking downpour |
 | 19 Oct 2026 | 4 | Describe the temperature in kid-friendly words too, keeping the numbers | Earlwood page shows e.g. 24° Now: warm, t-shirt weather, and High 24° · warm. Bands: freezing, cold, chilly, mild, warm, hot, very hot |
+| 21 Oct 2026 | 3 | Check what the clock predicts for rain and temperature against what actually happened, and make it visible to all the family | Added as S13. Page at /accuracy/ built from free open data, no timer. First 59-day check: highs off by 0.9 °C and lows by 0.8 °C; "Take an umbrella" caught 17 of 19 wet days with 7 false alarms. Follow-up actions listed under Ideas |
