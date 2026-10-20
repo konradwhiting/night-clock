@@ -24,6 +24,11 @@ const HEARTBEAT_MS = 20 * 60 * 1000;  // rewrite an unchanged status at least ev
 
 const minutes = (s) => Math.round(s / 60);
 
+// The live feed has been seen carrying a delay of about 42 hours on a few late-night trips (a stop repeated with a time
+// two days ahead). No tram is that late, so a delay beyond this is treated as a feed error and ignored.
+const MAX_SANE_DELAY_S = 2 * 60 * 60;
+const sane = (d) => (typeof d === 'number' && Math.abs(d) <= MAX_SANE_DELAY_S ? d : null);
+
 // "13:42:00" (GTFS start time, local) or a Unix time in seconds -> "13:42" in Sydney
 const hhmm = (v) => {
   if (typeof v === 'string') {
@@ -143,11 +148,14 @@ export function tripsFrom(feed, CANCELED = 3) {
     const u = e.tripUpdate;
     if (!u) continue;
     const cancelled = u.trip && u.trip.scheduleRelationship === CANCELED;
-    let delay = typeof u.delay === 'number' ? u.delay : null;
+    let delay = sane(u.delay);
+    let ignored = typeof u.delay === 'number' && delay == null;
     if (delay == null) {
       for (const s of u.stopTimeUpdate || []) {
-        const d = s.arrival && typeof s.arrival.delay === 'number' ? s.arrival.delay
+        const raw = s.arrival && typeof s.arrival.delay === 'number' ? s.arrival.delay
           : s.departure && typeof s.departure.delay === 'number' ? s.departure.delay : null;
+        const d = sane(raw);
+        if (raw != null && d == null) ignored = true;
         if (d != null) { delay = d; break; }
       }
     }
@@ -163,12 +171,12 @@ export function tripsFrom(feed, CANCELED = 3) {
     const stops = (u.stopTimeUpdate || []).map((st) => st.stopId).filter(Boolean);
     const stopTimes = (u.stopTimeUpdate || []).map((st) => {
       const ev = st.departure || st.arrival || {};
-      const ownDelay = typeof ev.delay === 'number' ? ev.delay : null;
+      const ownDelay = sane(typeof ev.delay === 'number' ? ev.delay : null);
       return { id: st.stopId, time: ev.time ? Number(ev.time) : null, delay: ownDelay };
     });
     trips.push({
       delay, cancelled: !!cancelled, at, stopTimes, start: u.trip && u.trip.startTime,
-      id: u.trip && u.trip.tripId, startDate: u.trip && u.trip.startDate,
+      id: u.trip && u.trip.tripId, startDate: u.trip && u.trip.startDate, ignoredDelay: ignored,
       info: cancelled ? {
         tripId: u.trip && u.trip.tripId, routeId: u.trip && u.trip.routeId, direction: u.trip && u.trip.directionId,
         start: u.trip && u.trip.startTime, firstStop: stops[0], lastStop: stops[stops.length - 1], stops: stops.length
@@ -221,6 +229,8 @@ async function main() {
         const sydney = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Sydney', hour: '2-digit', minute: '2-digit', hour12: false }).format(now);
         const [nh, nm] = sydney.split(':').map(Number);
         const parsed = tripsFrom(feed, cancelledCode);
+        const bad = parsed.filter((t) => t.ignoredDelay).length;
+        if (bad) console.log('Ignored an impossible delay (over 2 hours) on ' + bad + ' trips: ' + parsed.filter((t) => t.ignoredDelay).map((t) => t.id + ' ' + t.start).join(', '));
         for (const t of parsed) if (t.info) console.log('Cancelled trip:', JSON.stringify(t.info));
         for (const t of parsed) {
           if (!t.cancelled && typeof t.delay === 'number' && t.delay >= 300) {
