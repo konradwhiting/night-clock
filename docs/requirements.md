@@ -34,6 +34,7 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | S11 | As the sleeper, I can have a second clock that shows only Earlwood, at its own address. | `/earlwood/` page with one large clock and a text-and-numbers forecast. No charts, no headline and no Eastbourne. Fits short, wide screens. No Eastbourne. Own Home Screen icon and name. | Built, awaiting customer check |
 | S12 | As the sleeper, I can see at a glance whether Sydney Light Rail L1 Dulwich Hill is running on time. | Earlwood page shows a Light rail panel with a plain status (Running on time, Minor delays, Delays), a short detail line, and says so when the status is out of date or not connected. Quiet when on time, brighter when not. Live data from Transport for NSW trip updates, read by a scheduled job every 10 minutes. Minor delay is 5 minutes late or more, Delays is 10 minutes or more or any cancelled trip. | Built, awaiting the Transport for NSW key and customer check |
 | S13 | As the family, we can see how good the forecast has been, checked against what actually happened, for temperature and rain. | `/accuracy/` page, open to the whole family, worked out live from free open data (Open-Meteo previous-runs forecasts against the ERA5 archive). Shows the typical miss on the high and low, each model against the six-model average, whether the umbrella advice caught wet days and stayed quiet on dry ones, rain day by day, the last 14 days and the biggest misses. Look back 30, 60 or 90 days, °C or °F. States plainly that "what happened" is a reconstruction, not a rain gauge. Costs nothing, no timer. | Built (21 Oct 2026), customer likes it. Earlwood only |
+| S14 | As the owner of the bedside iPad, I can put one icon on the Home Screen that rotates through my clocks. | `/rotate/` page shows one clock full screen at a time and switches every 5 minutes (`?every=N` to change). From 8pm to 6am Sydney time it stays on the two-city bedside clock. Tap the bottom-right corner for the next clock. Dots at the bottom show which one is on screen. Only one clock runs at a time to spare the old iPad. Clocks are listed at the top of the page; one with no address is skipped. | Built (21 Oct 2026) with the Earlwood morning clock and the two-city clock. The Eastbourne clock is switched off until it has a web address |
 
 ## Ideas, not yet prioritised
 
@@ -61,6 +62,12 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 - [ ] Replace the README screenshot (`docs/screenshots/landscape.png`, from 19 Oct). It still shows the first build: "SYDNEY" label, 24-hour time, an ABC News NSW headline and red-on-black only. Use a current picture of the three-row Earlwood clock, and add a themes picture.
 - [ ] Remove the old two-city page (root `index.html`) and its headlines job (`news.yml`, `scripts/update-news.mjs`, `news.json`) from this repository, **only after** the bedside iPad is using the `bedside-clock` address. Removing it earlier would break whatever device still opens the old address.
 - [ ] Bring this backlog up to date: stories for what was built after S12 (three-row Earlwood redesign, rotating colour themes, her school-trip light rail, news rotation and links, 12-hour time, the Eastbourne and bedside clocks), plus the parked items (news timer, hosting, bus tracker).
+
+### Actions: clock rotator (21 Oct 2026)
+
+- [ ] Put the Eastbourne clock online, then set its address in `rotate/index.html` (the `url: null` entry) so it joins the rotation.
+- [ ] Put the bedside two-city clock at its own address (`bedside-clock`) and point the rotator at it. Until then the rotator uses the copy at the root of this site.
+- [ ] Check the rotator on the real iPad 6: switching, the night rule, and that the screen stays on (set Auto-Lock to Never). Decide whether 5 minutes suits.
 
 ## Decisions from the customer (19 Oct 2026)
 
@@ -124,3 +131,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | 19 Oct 2026 | 4 | Describe the temperature in kid-friendly words too, keeping the numbers | Earlwood page shows e.g. 24° Now: warm, t-shirt weather, and High 24° · warm. Bands: freezing, cold, chilly, mild, warm, hot, very hot |
 | 21 Oct 2026 | 3 | Check what the clock predicts for rain and temperature against what actually happened, and make it visible to all the family | Added as S13. Page at /accuracy/ built from free open data, no timer. First 59-day check: highs off by 0.9 °C and lows by 0.8 °C; "Take an umbrella" caught 17 of 19 wet days with 7 false alarms. Follow-up actions listed under Ideas |
 | 21 Oct 2026 | 3 | The README screenshot looks like the two-city clock and is out of date | Confirmed: it is the first build (19 Oct). Tidy-up actions added to the backlog under Ideas |
+| 21 Oct 2026 | 3 | Rotate across the three clocks on the iPad 6; parents stay in F, the others in C | Added as S14. 5 minutes per clock and the two-city clock overnight are defaults, easy to change. Eastbourne clock waits for a web address |

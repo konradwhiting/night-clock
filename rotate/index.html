@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Clocks">
+<meta name="theme-color" content="#050303">
+<meta name="color-scheme" content="dark">
+<title>Clocks</title>
+<link rel="apple-touch-icon" href="../icon-180.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #050303; overflow: hidden; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; background: #050303; opacity: 0; transition: opacity 0.8s ease; }
+  iframe.on { opacity: 1; z-index: 1; }
+  #dots { position: fixed; left: 0; right: 0; bottom: max(8px, env(safe-area-inset-bottom)); display: flex; justify-content: center; gap: 10px; z-index: 3; pointer-events: none; }
+  #dots i { width: 7px; height: 7px; border-radius: 50%; background: #8f3a29; opacity: 0.55; }
+  #dots i.on { background: #ff7352; opacity: 0.9; }
+  #next { position: fixed; right: 0; bottom: 0; width: 96px; height: 96px; z-index: 4; background: transparent; border: 0; padding: 0; }
+</style>
+</head>
+<body>
+<iframe id="a" title="Clock"></iframe>
+<iframe id="b" title="Clock"></iframe>
+<div id="dots" aria-hidden="true"></div>
+<button id="next" type="button" aria-label="Next clock"></button>
+
+<script>
+(function () {
+  'use strict';
+
+  // The clocks to rotate through. Set `url` to the clock's address; an item with url: null is switched off.
+  // `night: true` marks the clock that stays on screen overnight (8pm to 6am Sydney time).
+  var CLOCKS = [
+    { name: 'Earlwood morning clock', url: '../earlwood/' },
+    { name: 'Two-city bedside clock', url: '../', night: true },
+    { name: 'Eastbourne clock', url: null }   // not online yet: put its address here when it is
+  ];
+  var EVERY_MIN = 5;           // minutes on each clock (add ?every=1 to the address to try a faster rotation)
+  var NIGHT_FROM = 20, NIGHT_TO = 6;
+  var TZ = 'Australia/Sydney';
+
+  var q = /[?&]every=([0-9.]+)/.exec(location.search);
+  if (q && +q[1] > 0) EVERY_MIN = +q[1];
+
+  var live = CLOCKS.filter(function (c) { return c.url; });
+  var frames = [document.getElementById('a'), document.getElementById('b')];
+  var dotsEl = document.getElementById('dots');
+  var showing = -1;     // index into live
+  var front = 0;        // which iframe is on screen
+  var timer = null;
+
+  live.forEach(function () { dotsEl.appendChild(document.createElement('i')); });
+
+  function sydneyHour() {
+    return +new Intl.DateTimeFormat('en-GB', { timeZone: TZ, hour: 'numeric', hourCycle: 'h23' }).format(new Date());
+  }
+  var force = /[?&]force=(day|night)/.exec(location.search);   // for testing: ?force=day or ?force=night
+  function isNight() {
+    if (force) return force[1] === 'night';
+    var h = sydneyHour(); return h >= NIGHT_FROM || h < NIGHT_TO;
+  }
+  function nightIndex() {
+    for (var i = 0; i < live.length; i++) if (live[i].night) return i;
+    return 0;
+  }
+
+  function paintDots() {
+    Array.prototype.forEach.call(dotsEl.children, function (d, i) { d.className = i === showing ? 'on' : ''; });
+    dotsEl.style.display = live.length > 1 ? 'flex' : 'none';
+  }
+
+  // Load the clock into the hidden frame, then fade it in and blank the old one so only one clock runs at a time.
+  var blankTimers = [null, null];
+  function show(i) {
+    if (i === showing) return;
+    var back = 1 - front;
+    var f = frames[back];
+    clearTimeout(blankTimers[back]);          // a pending "blank this frame" must not hit the clock we are about to load
+    f.onload = function () {
+      f.onload = null;
+      var was = front;
+      f.className = 'on';
+      frames[was].className = '';
+      front = back;
+      blankTimers[was] = setTimeout(function () { if (was !== front) frames[was].src = 'about:blank'; }, 900);
+    };
+    f.src = live[i].url;
+    showing = i;
+    paintDots();
+  }
+
+  function advance() {
+    if (isNight()) { show(nightIndex()); return; }   // overnight the bedside clock stays put
+    show((showing + 1) % live.length);
+  }
+
+  function schedule() {
+    clearTimeout(timer);
+    timer = setTimeout(function () { advance(); schedule(); }, EVERY_MIN * 60 * 1000);
+  }
+
+  document.getElementById('next').addEventListener('click', function () { advance(); schedule(); });
+
+  // keep the screen on (needs Safari 16.4 or newer; also set Auto-Lock to Never in Settings)
+  var lock = null;
+  function keepAwake() {
+    if (!('wakeLock' in navigator) || document.visibilityState !== 'visible' || lock) return;
+    navigator.wakeLock.request('screen').then(function (l) { lock = l; l.addEventListener('release', function () { lock = null; }); }).catch(function () { /* not allowed */ });
+  }
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') keepAwake(); });
+  document.addEventListener('click', keepAwake);
+
+  // start on the right clock for the time of day
+  show(isNight() ? nightIndex() : 0);
+  schedule();
+  keepAwake();
+
+  // reload once a day at 3am Sydney time so a new version is picked up
+  var started = Date.now();
+  setInterval(function () {
+    if (Date.now() - started > 20 * 3600 * 1000 && sydneyHour() === 3) location.reload();
+  }, 60 * 1000);
+})();
+</script>
+</body>
+</html>

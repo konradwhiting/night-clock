@@ -68,6 +68,7 @@ Then open http://localhost:8000.
 | `earlwood/` | The Earlwood-only page and its Home Screen manifest |
 | `manifest.webmanifest`, `icon-*.png` | Home Screen install |
 | `fonts/` | Seven-segment digit font (DSEG7 Classic, SIL Open Font License, licence included) |
+| `rotate/` | One page that rotates through the clocks full screen, for the bedside iPad |
 | `accuracy/` | A page for the family showing how good the forecast has been, worked out live from open data |
 | `docs/requirements.md` | Product backlog, open questions and feedback log |
 | `docs/design.md` | Earlwood page design and how it works, with diagrams |
