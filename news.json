@@ -2,6 +2,13 @@
   "syd": [
     {
       "area": "Inner West",
+      "source": "Green Left",
+      "title": "Save the Inner West: Rally to Protest the 'Our Fairer Future' Plans",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWHZVMFROQ3NBUzRBOFJ0bU55a0tEcXB3YVRDemhIdElnMV9ZUnBQVzA0RGJ1Z1NCWTVJS1hPUmpONS1jUHJSQUxCcVY1ZURBLU00amdranBGdmh3ekYtOHNTSXNFT1Q4MklFZzFVRlBmbm9pTzBNQ0VTV2tiN0lURVhLeC00czJkWE16dHF1Zlk0WkR2MFZDZnFHRU4?oc=5",
+      "published": "2026-10-20T02:46:25.000Z"
+    },
+    {
+      "area": "Inner West",
       "source": "Sydney Times",
       "title": "Inner West Gets 190 New Bus Trips To Complement Southwest Metro",
       "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOLXo3Y1ZIVkF5OW5QQU9NTENoOHdkMUdOOXFiZHFpSkdkNk5sYVhqbXRfUWxhSTJORnNRMmZpMzM5ZzNXLVlOTFM1Tm50SFlsSFZfUk52Q0Y2ZVFkRjdoeUJMT2ZqSG1ldXk0TVNMQV9CMzNMS0FKcnJ1VlBaSHBZVjJvdVlobnR1aVg3eXptRlM4MkRTVzJpSlNMdUdPYWlsTEF5TjZObm1aYlNKbzJvWm4zMlNNRm0waUtuc0VaVFFDbHROX3c3a2Y2UjZ0a0Q4UnhoRmQ5cEJ5QnpMZl8xaGc0RFhMaFdBZzJGcEtNZ2dMWVU?oc=5",
@@ -13,16 +20,21 @@
       "title": "Notorious Sydney bus routes boosted with 190 extra services",
       "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNRVF1bjNQMFhpM3VvRU9nZEZBSWpqeHlyMXVQMGYyWUxJaVRjdmpHaHFJck9Ldk1kUS1tc0JvOU1MMy1zb1ZrNFlrU1pLSEpYQ2w3ME5Xa2hfbHpIOUlOdVlkWTNodkM4ZmJJZE1PR3g5YU1IUzJLMTVCTUhqNTUyc195Y0FZWlFZc1ZMUjlNM2ZEYVktbThrLUtPbDZ1NE5ZXzlhTkxBMTdJemE0TXVrMDNSa1F0RlN0RFlJdXQ5bE1ZRExORVBHUDFqSXZUbGtvV3p1ekNJRW42Y0luVGRtXy1Tek1PN0R5ekl6LWpjMzA3YWlQ?oc=5",
       "published": "2026-10-19T20:49:22.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "1News",
-      "title": "Judge dismisses Sydney serial rapist mitigation arguments",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaVVBdFhWZ0xPRTlBbHY0S0FqUnE4TnVKZlp6ZEltbHZoMkV3SzlucW5GTFA0Ui0wYnlFQ214MzR4QkpTWnp3UjhGOW1YU0tkcFFZUmk1XzZTU01CM1l3Si1lVUJtZHhnTXRUU2hSUEFfMWVTRDVBTWo5N3RhdDdHa0ctOE5nSkw5bU5nLVBVQXliR2k4Z3BqMw?oc=5",
-      "published": "2026-10-19T19:34:23.000Z"
     }
   ],
   "uk": [
+    {
+      "source": "BBC News Sussex",
+      "title": "Drivers urged to be alert during deer rutting season",
+      "link": "https://www.bbc.co.uk/news/articles/c3vgx0ejv84ro?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-20T05:12:54.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "Love Islander channels online criticism in new role",
+      "link": "https://www.bbc.co.uk/news/articles/cmy56p6evrgno?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-20T05:12:17.000Z"
+    },
     {
       "source": "BBC News Sussex",
       "title": "Jury in Katie Price ex's trial told to ignore egos",
@@ -30,28 +42,16 @@
       "published": "2026-10-19T16:39:35.000Z"
     },
     {
-      "source": "BBC News Sussex",
-      "title": "Severe weather warning issued ahead of potential storm later this week",
-      "link": "https://www.bbc.co.uk/weather/articles/crp3g7y9n5y7o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T10:30:48.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "New Bishop of Arundel and Brighton ordained",
-      "link": "https://www.bbc.co.uk/news/articles/cmvg636q3d27o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T16:14:49.000Z"
+      "source": "BBC News England",
+      "title": "NHS trust prosecuted over children's sepsis deaths",
+      "link": "https://www.bbc.co.uk/news/articles/c6jrw1xx419xo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-20T05:28:13.000Z"
     },
     {
       "source": "BBC News England",
-      "title": "Man held after three Jewish women report assaults",
-      "link": "https://www.bbc.co.uk/news/articles/cr78p46q9648o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T20:51:48.000Z"
-    },
-    {
-      "source": "BBC News England",
-      "title": "Four arrested after police officer injured in shooting",
-      "link": "https://www.bbc.co.uk/news/articles/c6073pdxpvjvo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T15:50:14.000Z"
+      "title": "My son has disappeared off the face of the earth fighting for Russia",
+      "link": "https://www.bbc.co.uk/news/articles/c60e325g7p87o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-20T05:10:37.000Z"
     }
   ]
 }
