@@ -89,7 +89,8 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 Nothing here is prioritised yet. "Needs" says what is waiting on a person or a decision.
 
 ### Light rail
-- [ ] **Job timing (customer to change in cron-job.org):** keep the existing light rail job but set it to every 15 minutes, and add a second job, "school mornings", every 5 minutes on weekdays from 7:00 to 8:55am (`*/5 7-8 * * 1-5`, Australia/Sydney). Lets the status arrive about 8 minutes late at worst on school mornings, instead of up to 15. Decide later whether the afternoon window (3:00 to 4:00pm) also needs the faster check.
+- [ ] **Job timing (customer to change in cron-job.org):** keep the existing light rail job but set it to every 15 minutes, and add a second job, "school mornings", every 5 minutes on weekdays from 7:10 to 7:30am (`10-30/5 7 * * 1-5`, Australia/Sydney: runs at 7:10, 7:15, 7:20, 7:25 and 7:30). She leaves the house at 7:30 to reach the train station, so the status is freshest when she goes. The 15-minute job covers the rest of the day. Decide later whether the afternoon window (3:00 to 4:00pm) also needs a faster check.
+- [ ] Idea: a "leave by" view for the morning. At 7:30 show the first tram she can realistically catch after the walk to the stop (needs her walking time). Her tram list window stays 7:15 to 8:30am because her leaving time varies.
 - [ ] **Normal service wording.** It reads "Running normally" as a placeholder. *Needs:* the exact words from the customer.
 - [ ] **Planned closures and trackwork** from Transport for NSW's alerts feed (for example the L1 weeknight closures on 26 and 27 Oct, 8pm to 1am). Check the alerts feed works with the existing key. Keep lift and access alerts off the screen. *Needs:* decision to go ahead.
 - [ ] **Check her trips on a real school morning** (about 7:15am) against Transport for NSW departures.
