@@ -1,8 +1,8 @@
 {
   "line": {
-    "state": "ontime",
-    "text": "Running normally",
-    "detail": "25 trams tracked"
+    "state": "delays",
+    "text": "Cancellations",
+    "detail": "The 14:58 tram was cancelled"
   },
   "name": "Dulwich Hill",
   "state": "ontime",
@@ -13,6 +13,6 @@
   "worstMin": 1,
   "scope": "yours",
   "label": "Jubilee Park to Dulwich Hill",
-  "feedTime": "2026-10-20T03:30:20.000Z",
-  "updated": "2026-10-20T03:30:35.198Z"
+  "feedTime": "2026-10-20T04:00:35.000Z",
+  "updated": "2026-10-20T04:00:45.165Z"
 }
