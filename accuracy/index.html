@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>How good is the Earlwood forecast?</title>
+<style>
+:root { --bg:#FBF8F3; --card:#FFFFFF; --ink:#1E2A32; --ink2:#52606A; --line:#DDD5C6; --good:#2F7D4F; --bad:#C2410C; --warn:#B7791F; --accent:#2B6CB0; --bar1:#2B6CB0; --bar2:#C2410C; }
+@media (prefers-color-scheme: dark) { :root { --bg:#101418; --card:#171D23; --ink:#F2F5F7; --ink2:#A9B5BE; --line:#2A343C; --good:#4CC38A; --bad:#FF8A5C; --warn:#F5C451; --accent:#7FB2F0; --bar1:#7FB2F0; --bar2:#FF8A5C; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, "Helvetica Neue", Arial, sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 26px; margin: 0 0 4px; font-weight: 600; }
+h2 { font-size: 20px; margin: 32px 0 8px; font-weight: 600; }
+p { margin: 6px 0; }
+.sub { color: var(--ink2); }
+.cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.card .big { font-size: 34px; font-weight: 600; line-height: 1.1; }
+.card .lbl { color: var(--ink2); font-size: 14px; }
+table { width:100%; border-collapse: collapse; background: var(--card); border:1px solid var(--line); border-radius: 12px; overflow:hidden; font-size: 15px; }
+th, td { padding: 8px 10px; text-align:left; border-bottom: 1px solid var(--line); }
+th { color: var(--ink2); font-weight: 500; font-size: 13px; }
+tr:last-child td { border-bottom: 0; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.wrap { overflow-x: auto; }
+.ok { color: var(--good); font-weight: 500; } .miss { color: var(--bad); font-weight: 500; } .meh { color: var(--warn); font-weight: 500; }
+.controls { display:flex; gap: 10px; flex-wrap: wrap; align-items:center; margin: 12px 0; }
+select, button { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+.note { font-size: 14px; color: var(--ink2); background: var(--card); border:1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+svg { width:100%; height:auto; display:block; background: var(--card); border:1px solid var(--line); border-radius: 12px; }
+svg text { fill: var(--ink2); font-size: 11px; }
+.legend { font-size: 13px; color: var(--ink2); margin: 6px 0; }
+.sw { display:inline-block; width:10px; height:10px; border-radius:2px; margin: 0 4px 0 10px; }
+footer { margin-top: 32px; font-size: 13px; color: var(--ink2); }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>How good is the Earlwood forecast?</h1>
+  <p class="sub">The clock's forecast, checked against what actually happened. Updates itself every time you open this page.</p>
+
+  <div class="controls">
+    <label>Look back over <select id="days"><option value="30">30 days</option><option value="60" selected>60 days</option><option value="90">90 days</option></select></label>
+    <button id="unit" type="button">Show °F</button>
+    <span id="status" class="sub">Loading…</span>
+  </div>
+
+  <div class="cards" id="cards"></div>
+
+  <h2>Temperature: how far off were the high and the low?</h2>
+  <p class="sub">Average miss in degrees, for the forecast made the day before. Smaller is better.</p>
+  <div class="wrap"><table id="tmodels"></table></div>
+
+  <h2>Umbrella advice: did it get it right?</h2>
+  <p class="sub" id="rainsum"></p>
+  <div class="wrap"><table id="train"></table></div>
+
+  <h2>Rain, day by day</h2>
+  <div class="legend"><span class="sw" style="background:var(--bar1)"></span>forecast <span class="sw" style="background:var(--bar2)"></span>what fell (mm)</div>
+  <div id="chart"></div>
+
+  <h2>The last 14 days</h2>
+  <div class="wrap"><table id="trecent"></table></div>
+
+  <h2>The biggest misses</h2>
+  <div class="wrap"><table id="tmiss"></table></div>
+
+  <h2>How this is worked out</h2>
+  <div class="note">
+    <p><b>The forecast.</b> The clock averages six weather models (ECMWF, GFS, ICON, GEM, UK Met Office and Météo-France). "Chance of rain" is the share of the six that expect rain in an hour. This page takes each model's forecast as it was issued the day before, so it is the same method the clock uses.</p>
+    <p><b>"Take an umbrella"</b> means half or more of the models agreed on rain at some point, or about 1 mm or more was forecast. <b>"Maybe"</b> means a third or more, or about 0.3 mm. A <b>wet day</b> here means 1 mm or more fell.</p>
+    <p><b>What actually happened.</b> This is a computer reconstruction of the weather (called ERA5, from Open-Meteo's free archive), not a rain gauge or thermometer in the yard. It is very good for temperature and fair for rain. Light showers of a few tenths of a millimetre are the hardest to judge, so treat small differences with care.</p>
+    <p><b>Not covered.</b> The Bureau of Meteorology's own forecast and observations are not used here.</p>
+  </div>
+
+  <footer>Weather data by <a href="https://open-meteo.com">Open-Meteo.com</a> (CC BY 4.0).</footer>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var PLACE = { name: 'Earlwood', lat: -33.92, lon: 151.13, tz: 'Australia/Sydney' };
+  var MODELS = ['ecmwf_ifs025', 'gfs_seamless', 'icon_seamless', 'gem_seamless', 'ukmo_seamless', 'meteofrance_seamless'];
+  var LABEL = { ecmwf_ifs025: 'ECMWF (Europe)', gfs_seamless: 'GFS (USA)', icon_seamless: 'ICON (Germany)', gem_seamless: 'GEM (Canada)', ukmo_seamless: 'UK Met Office', meteofrance_seamless: 'Météo-France' };
+  var fahr = false;
+  try { fahr = localStorage.getItem('accuracy.fahr') === '1'; } catch (e) { /* storage may be blocked */ }
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }); }
+  function t1(c) { return (fahr ? c * 9 / 5 + 32 : c); }              // temperature
+  function dt(c) { return (fahr ? c * 9 / 5 : c); }                    // difference in temperature
+  function deg(c) { return Math.round(t1(c)) + '°'; }
+  function d1(x) { return (Math.round(x * 10) / 10).toFixed(1); }
+  function mean(a) { return a.reduce(function (x, y) { return x + y; }, 0) / a.length; }
+  function mae(a) { return mean(a.map(Math.abs)); }
+  function dayName(d) { var x = new Date(d + 'T12:00:00'); return x.toLocaleDateString('en-AU', { weekday: 'short', day: 'numeric', month: 'short' }); }
+
+  function addDays(d, n) { var x = new Date(d + 'T12:00:00Z'); x.setUTCDate(x.getUTCDate() + n); return x.toISOString().slice(0, 10); }
+  function todayInPlace() { return new Date().toLocaleDateString('en-CA', { timeZone: PLACE.tz }); }
+
+  function load(days) {
+    $('status').textContent = 'Loading…';
+    var today = todayInPlace();
+    var prev = 'https://previous-runs-api.open-meteo.com/v1/forecast?latitude=' + PLACE.lat + '&longitude=' + PLACE.lon
+      + '&hourly=temperature_2m_previous_day1,precipitation_previous_day1&models=' + MODELS.join(',')
+      + '&past_days=' + days + '&forecast_days=1&timezone=' + encodeURIComponent(PLACE.tz);
+    var arch = 'https://archive-api.open-meteo.com/v1/archive?latitude=' + PLACE.lat + '&longitude=' + PLACE.lon
+      + '&start_date=' + addDays(today, -days) + '&end_date=' + addDays(today, -1)
+      + '&hourly=temperature_2m,precipitation&timezone=' + encodeURIComponent(PLACE.tz);
+    return Promise.all([fetch(prev), fetch(arch)]).then(function (rs) {
+      if (!rs[0].ok || !rs[1].ok) throw new Error('The weather service did not answer (' + rs[0].status + ', ' + rs[1].status + ')');
+      return Promise.all([rs[0].json(), rs[1].json()]);
+    }).then(function (j) { return build(j[0].hourly, j[1].hourly); });
+  }
+
+  function build(P, A) {
+    var at = {};
+    A.time.forEach(function (t, i) { at[t] = i; });
+    var byDay = {};
+    P.time.forEach(function (t, i) { if (at[t] !== undefined) (byDay[t.slice(0, 10)] = byDay[t.slice(0, 10)] || []).push(i); });
+    var out = [];
+    Object.keys(byDay).sort().forEach(function (d) {
+      var idx = byDay[d];
+      if (idx.length < 24) return;
+      var aT = idx.map(function (i) { return A.temperature_2m[at[P.time[i]]]; });
+      var aR = idx.map(function (i) { return A.precipitation[at[P.time[i]]]; });
+      if (aT.some(function (v) { return v == null; }) || aR.some(function (v) { return v == null; })) return;
+      var f = {}, ok = true;
+      MODELS.forEach(function (m) {
+        var T = idx.map(function (i) { return P['temperature_2m_previous_day1_' + m][i]; });
+        var R = idx.map(function (i) { var v = P['precipitation_previous_day1_' + m][i]; return v == null ? null : v; });
+        if (T.some(function (v) { return v == null; }) || R.some(function (v) { return v == null; })) { ok = false; return; }
+        f[m] = { hi: Math.max.apply(null, T), lo: Math.min.apply(null, T), mm: R.reduce(function (a, b) { return a + b; }, 0), R: R };
+      });
+      if (!ok) return;
+      var share = idx.map(function (_, k) { return MODELS.filter(function (m) { return f[m].R[k] >= 0.1; }).length / MODELS.length * 100; });
+      var r = {
+        d: d,
+        aHi: Math.max.apply(null, aT), aLo: Math.min.apply(null, aT), aMm: aR.reduce(function (a, b) { return a + b; }, 0),
+        f: f,
+        hi: mean(MODELS.map(function (m) { return f[m].hi; })), lo: mean(MODELS.map(function (m) { return f[m].lo; })),
+        mm: mean(MODELS.map(function (m) { return f[m].mm; })), peak: Math.max.apply(null, share)
+      };
+      r.advice = (r.peak >= 50 || r.mm >= 1) ? 'yes' : (r.peak >= 30 || r.mm >= 0.3) ? 'maybe' : 'no';
+      r.wet = r.aMm >= 1;
+      out.push(r);
+    });
+    return out;
+  }
+
+  function table(id, head, rows) {
+    $(id).innerHTML = '<thead><tr>' + head.map(function (h, i) { return '<th' + (i ? ' class="n"' : '') + '>' + h + '</th>'; }).join('') + '</tr></thead><tbody>'
+      + rows.map(function (r) { return '<tr>' + r.map(function (c, i) { return '<td' + (i ? ' class="n"' : '') + '>' + c + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody>';
+  }
+
+  function render(res) {
+    var n = res.length;
+    if (!n) { $('status').textContent = 'No days to compare yet.'; return; }
+    var u = fahr ? '°F' : '°C';
+    $('status').textContent = n + ' days, ' + dayName(res[0].d) + ' to ' + dayName(res[n - 1].d);
+    $('unit').textContent = fahr ? 'Show °C' : 'Show °F';
+
+    var eHi = res.map(function (r) { return dt(r.hi - r.aHi); }), eLo = res.map(function (r) { return dt(r.lo - r.aLo); });
+    var wet = res.filter(function (r) { return r.wet; }), dry = res.filter(function (r) { return !r.wet; });
+    var caught = wet.filter(function (r) { return r.advice === 'yes'; }).length;
+    var falseA = dry.filter(function (r) { return r.advice === 'yes'; }).length;
+    var rightDry = dry.filter(function (r) { return r.advice === 'no'; }).length;
+    var rainMae = mae(res.map(function (r) { return r.mm - r.aMm; }));
+
+    $('cards').innerHTML =
+      '<div class="card"><div class="lbl">Typical miss on the day\'s high</div><div class="big">' + d1(mae(eHi)) + u + '</div><div class="lbl">low: ' + d1(mae(eLo)) + u + '</div></div>'
+      + '<div class="card"><div class="lbl">Wet days the umbrella advice caught</div><div class="big">' + caught + ' of ' + wet.length + '</div><div class="lbl">"Take an umbrella" shown on those days</div></div>'
+      + '<div class="card"><div class="lbl">Dry days it stayed quiet</div><div class="big">' + rightDry + ' of ' + dry.length + '</div><div class="lbl">' + falseA + ' false alarms</div></div>'
+      + '<div class="card"><div class="lbl">Typical miss on daily rain</div><div class="big">' + d1(rainMae) + ' mm</div><div class="lbl">average actual: ' + d1(mean(res.map(function (r) { return r.aMm; }))) + ' mm a day</div></div>';
+
+    // models
+    var rows = MODELS.map(function (m) {
+      return [esc(LABEL[m]), d1(mae(res.map(function (r) { return dt(r.f[m].hi - r.aHi); }))), d1(mae(res.map(function (r) { return dt(r.f[m].lo - r.aLo); }))), d1(mae(res.map(function (r) { return r.f[m].mm - r.aMm; })))];
+    });
+    rows.sort(function (a, b) { return (+a[1] + +a[2]) - (+b[1] + +b[2]); });
+    rows.push(['<b>The clock (average of all six)</b>', '<b>' + d1(mae(eHi)) + '</b>', '<b>' + d1(mae(eLo)) + '</b>', '<b>' + d1(rainMae) + '</b>']);
+    table('tmodels', ['Model', 'High miss (' + u + ')', 'Low miss (' + u + ')', 'Rain miss (mm/day)'], rows);
+
+    // umbrella
+    var cnt = function (adv, w) { return res.filter(function (r) { return r.advice === adv && r.wet === w; }).length; };
+    $('rainsum').textContent = 'A wet day is one with 1 mm or more of rain. Out of ' + n + ' days, ' + wet.length + ' were wet.';
+    table('train', ['Advice shown', 'On wet days', 'On dry days'], [
+      ['Take an umbrella', cnt('yes', true), cnt('yes', false)],
+      ['Maybe an umbrella', cnt('maybe', true), cnt('maybe', false)],
+      ['No umbrella', '<span class="miss">' + cnt('no', true) + '</span> missed', cnt('no', false)]
+    ]);
+
+    // chart: last 30 days
+    var last = res.slice(-30), W = 800, H = 180, L = 30, B = 26, bw = (W - L) / last.length;
+    var mx = Math.max.apply(null, last.map(function (r) { return Math.max(r.mm, r.aMm); }).concat([5]));
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Forecast and actual rain for each of the last 30 days">';
+    s += '<line x1="' + L + '" y1="' + (H - B) + '" x2="' + W + '" y2="' + (H - B) + '" stroke="var(--line)"/>';
+    s += '<text x="2" y="14">' + Math.round(mx) + ' mm</text><text x="2" y="' + (H - B - 2) + '">0</text>';
+    last.forEach(function (r, i) {
+      var x = L + i * bw, h1 = r.mm / mx * (H - B - 20), h2 = r.aMm / mx * (H - B - 20);
+      s += '<rect x="' + (x + 1) + '" y="' + (H - B - h1) + '" width="' + (bw / 2 - 1) + '" height="' + h1 + '" fill="var(--bar1)"/>';
+      s += '<rect x="' + (x + bw / 2) + '" y="' + (H - B - h2) + '" width="' + (bw / 2 - 1) + '" height="' + h2 + '" fill="var(--bar2)"/>';
+      if (i % 5 === 0) s += '<text x="' + x + '" y="' + (H - 8) + '">' + r.d.slice(8) + '/' + r.d.slice(5, 7) + '</text>';
+    });
+    $('chart').innerHTML = s + '</svg>';
+
+    // last 14 days
+    var verdict = function (r) {
+      if (r.advice === 'yes') return r.wet ? '<span class="ok">Right</span>' : (r.aMm >= 0.5 ? '<span class="meh">Close (' + d1(r.aMm) + ' mm)</span>' : '<span class="miss">False alarm</span>');
+      if (r.advice === 'no') return r.wet ? '<span class="miss">Missed</span>' : '<span class="ok">Right</span>';
+      return '<span class="meh">Maybe</span>';
+    };
+    table('trecent', ['Day', 'Forecast high / low', 'Actual high / low', 'Forecast rain', 'What fell', 'Advice', 'Result'],
+      res.slice(-14).reverse().map(function (r) {
+        return [dayName(r.d), deg(r.hi) + ' / ' + deg(r.lo), deg(r.aHi) + ' / ' + deg(r.aLo), Math.round(r.peak) + '%, ' + d1(r.mm) + ' mm', d1(r.aMm) + ' mm',
+          r.advice === 'yes' ? 'Take' : r.advice === 'maybe' ? 'Maybe' : 'None', verdict(r)];
+      }));
+
+    // biggest misses
+    var bad = res.filter(function (r) { return (r.advice === 'no' && r.wet) || (r.advice === 'yes' && r.aMm < 0.5); })
+      .sort(function (a, b) { return Math.abs(b.mm - b.aMm) - Math.abs(a.mm - a.aMm); }).slice(0, 8);
+    table('tmiss', ['Day', 'What went wrong', 'Forecast', 'What fell'], bad.length ? bad.map(function (r) {
+      return [dayName(r.d), r.advice === 'no' ? 'Rain not expected' : 'Rain expected but stayed dry', Math.round(r.peak) + '%, ' + d1(r.mm) + ' mm', d1(r.aMm) + ' mm'];
+    }) : [['None in this period', '', '', '']]);
+  }
+
+  var current = null;
+  function go() {
+    load(+$('days').value).then(function (res) { current = res; render(res); })
+      .catch(function (e) { $('status').textContent = 'Could not load: ' + e.message; });
+  }
+  $('days').addEventListener('change', go);
+  $('unit').addEventListener('click', function () {
+    fahr = !fahr;
+    try { localStorage.setItem('accuracy.fahr', fahr ? '1' : '0'); } catch (e) { /* ignore */ }
+    if (current) render(current);
+  });
+  $('unit').textContent = fahr ? 'Show °C' : 'Show °F';
+  go();
+})();
+</script>
+</body>
+</html>
