@@ -62,13 +62,68 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 - [ ] Rewrite `README.md` for what this repository now is: the Earlwood Morning Clock (`/earlwood/`), the family forecast accuracy page (`/accuracy/`) and the light rail job. It still describes the original "Night Clock" two-city bedside clock. Say where the other clocks live (`bedside-clock`, `eastbourne-clock`).
 - [ ] Replace the README screenshot (`docs/screenshots/landscape.png`, from 19 Oct). It still shows the first build: "SYDNEY" label, 24-hour time, an ABC News NSW headline and red-on-black only. Use a current picture of the three-row Earlwood clock, and add a themes picture.
 - [ ] Remove the old two-city page (root `index.html`) and its headlines job (`news.yml`, `scripts/update-news.mjs`, `news.json`) from this repository, **only after** the bedside iPad is using the `bedside-clock` address. Removing it earlier would break whatever device still opens the old address.
-- [ ] Bring this backlog up to date: stories for what was built after S12 (three-row Earlwood redesign, rotating colour themes, her school-trip light rail, news rotation and links, 12-hour time, the Eastbourne and bedside clocks), plus the parked items (news timer, hosting, bus tracker).
+- [x] (done 21 Oct 2026, see "Built since S12" below) Bring this backlog up to date: stories for what was built after S12 (three-row Earlwood redesign, rotating colour themes, her school-trip light rail, news rotation and links, 12-hour time, the Eastbourne and bedside clocks), plus the parked items (news timer, hosting, bus tracker).
 
 ### Actions: clock rotator (21 Oct 2026)
 
 - [ ] Put the Eastbourne clock online, then set its address in `rotate/index.html` (the `url: null` entry) so it joins the rotation.
 - [ ] Put the bedside two-city clock at its own address (`bedside-clock`) and point the rotator at it. Until then the rotator uses the copy at the root of this site.
 - [ ] Check the rotator on the real iPad 6: switching, the night rule, and that the screen stays on (set Auto-Lock to Never). Decide whether 5 minutes suits.
+
+## Built since S12 (written up 21 Oct 2026, for the record)
+
+- **Earlwood Morning Clock, three big rows** (`/earlwood/`): light rail first, what to wear, umbrella. No boxes of small text. Words follow Transport for NSW: "Delays", "Cancellations". Row fills solid in an alert colour when it needs attention. 12-hour time.
+- **Light rail follows her school trips** on weekdays: 7:15 to 8:30am Dulwich Hill to Jubilee Park, 3:00 to 4:00pm back. Shows each tram with its time and on time, late or cancelled. Cancellations fade 30 minutes after their time. Delays over 2 hours are ignored as feed errors (a 2,508-minute glitch on 21 Oct). Checked time shown on the row.
+- **Weather**: average of six Open-Meteo models; rain chance is the share of models that expect rain; umbrella verdict Take / Maybe / No; today or tomorrow after 5pm.
+- **What to wear for Sydney** (S15): clothing bands, light-hearted lines, hat from the UV index.
+- **Rotating colour themes**: four daytime looks (one per day) and the warm night look from 8pm to 6am, on the Earlwood page and the two-city page, with a Colours button. Screen dims from 8pm.
+- **Headlines**: several per place, rotated every 30 minutes, tappable (open in a new tab). Sydney side is Earlwood then Inner West only.
+- **Rotator** (S14) and **accuracy page** (S13).
+- **Eastbourne Clock for the parents** (own repo `eastbourne-clock`, private, not online yet): Eastbourne two thirds, Earlwood one third, each with clock, headline and weather; °F; 12 hour; plain wording.
+- **Bedside two-city clock** moved to its own repo (`bedside-clock`, private, not online yet).
+- **Willingdon bus tracker**: investigation only, notes and a stop table in `willingdon-bus/`.
+
+## Backlog to prioritise (21 Oct 2026)
+
+Nothing here is prioritised yet. "Needs" says what is waiting on a person or a decision.
+
+### Light rail
+- [ ] **Normal service wording.** It reads "Running normally" as a placeholder. *Needs:* the exact words from the customer.
+- [ ] **Planned closures and trackwork** from Transport for NSW's alerts feed (for example the L1 weeknight closures on 26 and 27 Oct, 8pm to 1am). Check the alerts feed works with the existing key. Keep lift and access alerts off the screen. *Needs:* decision to go ahead.
+- [ ] **Check her trips on a real school morning** (about 7:15am) against Transport for NSW departures.
+- [ ] Watch how the clock handles the 26 and 27 Oct closures; if it shows nothing useful, the alerts feed becomes worth adding.
+
+### Weather and forecast quality
+- [ ] Bureau of Meteorology day forecast as a private cross-check on request (free, personal use). Using it on a public page needs Bureau registration; **cost unverified** and the customer does not want to pay.
+- [ ] Rain radar in the umbrella row (RainViewer, free for personal use). **Parked** as too busy for the kitchen display. *When asked:* mock it up first, small.
+- [ ] Add "feels like" temperature (humidity and wind) to the clothing choice, maybe.
+- [ ] Tune the "Take an umbrella" rule after more data (borderline 50% days were wrong about twice as often as strong ones). Already listed under the accuracy actions.
+
+### Eastbourne clock (parents) and hosting
+- [ ] **Put the Eastbourne clock online** with no personal name in the address: Cloudflare Pages account, or make the repo public and use GitHub Pages. *Needs:* the customer to create the account or flip the repo public.
+- [ ] **News timer** for the Eastbourne repo (cron-job.org, every 30 minutes) with a GitHub token limited to `eastbourne-clock`. *Needs:* the customer.
+- [ ] **Put the bedside clock online** (`bedside-clock`), then point the iPad and the rotator at it and remove the old two-city page from the Earlwood repo.
+- [ ] Build the same news timer for `bedside-clock`.
+- [ ] Add a one-line **bus row** under the Eastbourne date once bus times exist (below).
+- [ ] Decide whether to move the Earlwood clock off the `konradwhiting` address too.
+
+### Bus tracker, Willingdon (own folder `willingdon-bus/`)
+- [ ] **Register for a free Bus Open Data Service key** (store as a secret, never paste it in chat). *Needs:* the customer.
+- [ ] Check that the feed gives per-stop expected times and disruption notices for the 1A and LINK. Confirm which routes call at `1400EB0085` and which stop is for the return trip.
+- [ ] Build the script, with alerts only after the customer confirms where to send them.
+- [ ] Add the bus row to the Eastbourne clock.
+
+### Old tablet (kitchen clock, son-proofing)
+Name everything **old-tablet**. Tablet is a Motorola/Lenovo Android 7 device, MAC 40:a1:08:fe:82:0a, last seen at 192.168.86.38. *Customer has the tablet now.*
+- [ ] Clear data or uninstall the broken installed app ("Earlwood keeps stopping"); use Chrome full screen instead.
+- [ ] **Screen pinning** with a PIN (Settings, Security).
+- [ ] Disable YouTube and games on the tablet; Stay awake while charging as a backup.
+- [ ] **Pi-hole**: pihole3 has never seen the tablet (no lease, no DNS queries). Get it onto Pi-hole DNS (DHCP, or static 192.168.86.252 with DNS 1 = 192.168.86.4), then add a static lease and a group `old-tablet` (deny all, allow only the clock's domains). Do not use `Kids-Offline`. Do not pause Pi-hole while the tablet is on. *Needs:* the tablet's current IP, and the customer's go-ahead before any Pi-hole change.
+- [ ] Full screen drops out when the page reloads (3am, or after an update). Find a free way to reopen it, or accept a tap each morning.
+
+### Housekeeping
+- [ ] The README and screenshot in this repository are out of date (listed above).
+- [ ] Keep the backlogs in the three clock repos in step (the `eastbourne-clock` and `bedside-clock` repos have none of their own yet).
 
 ## Decisions from the customer (19 Oct 2026)
 
@@ -135,3 +190,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | 21 Oct 2026 | 3 | Rotate across the three clocks on the iPad 6; parents stay in F, the others in C | Added as S14. 5 minutes per clock and the two-city clock overnight are defaults, easy to change. Eastbourne clock waits for a web address |
 | 21 Oct 2026 | 3 | In the rotator the two-city clock stays red/night; does it only show the night theme? | It had no themes on the live site (they were only in the unhosted bedside-clock copy). Themes turned on for the root page: same daily rotation, night look 8pm to 6am Sydney time, and a Colours button |
 | 21 Oct 2026 | 3 | Review what to wear for Australia (22° said jumper); make the wording amusing; use "Jumper optional. Pack it, don't wear it." for 20 to 23° | Added as S15. Bands shifted for Sydney, funny lines added, hat now driven by UV (sun safety guidance: protect from UV 3). Rain line fixed so it no longer says "umbrella optional" under "Take an umbrella" |
+| 21 Oct 2026 | all | Add everything to the backlog so work can be prioritised later | Added "Built since S12" and a grouped "Backlog to prioritise" (light rail, weather, Eastbourne clock and hosting, bus tracker, old tablet, housekeeping) with what each item needs |
