@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261020-3';
+  var BUILD = '20261020-4';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -330,7 +330,7 @@
   // Plain-words rain outlook for the next 24 hours.
   // Rain total in words a child can picture instead of millimetres
   function wetWords(mm) {
-    if (mm < 1) return 'just a sprinkle';
+    if (mm < 1) return 'umbrella optional';
     if (mm < 5) return 'light drizzle';
     if (mm < 15) return 'proper rain, puddles to jump in';
     if (mm < 30) return 'heavy rain, big puddles';
