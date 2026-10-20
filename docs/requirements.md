@@ -55,6 +55,13 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 - [ ] Keep the Bureau's day forecast for Sydney as a private cross-check on request (free, personal use). Using it on a public page needs Bureau registration, cost unverified.
 - [ ] Look at the two umbrella misses in the first check (27 Aug and 19 Oct, light rain missed) and the 7 false alarms, all near misses, to see whether the "Take an umbrella" threshold needs tuning.
 
+### Actions: tidy the Earlwood repository (21 Oct 2026)
+
+- [ ] Rewrite `README.md` for what this repository now is: the Earlwood Morning Clock (`/earlwood/`), the family forecast accuracy page (`/accuracy/`) and the light rail job. It still describes the original "Night Clock" two-city bedside clock. Say where the other clocks live (`bedside-clock`, `eastbourne-clock`).
+- [ ] Replace the README screenshot (`docs/screenshots/landscape.png`, from 19 Oct). It still shows the first build: "SYDNEY" label, 24-hour time, an ABC News NSW headline and red-on-black only. Use a current picture of the three-row Earlwood clock, and add a themes picture.
+- [ ] Remove the old two-city page (root `index.html`) and its headlines job (`news.yml`, `scripts/update-news.mjs`, `news.json`) from this repository, **only after** the bedside iPad is using the `bedside-clock` address. Removing it earlier would break whatever device still opens the old address.
+- [ ] Bring this backlog up to date: stories for what was built after S12 (three-row Earlwood redesign, rotating colour themes, her school-trip light rail, news rotation and links, 12-hour time, the Eastbourne and bedside clocks), plus the parked items (news timer, hosting, bus tracker).
+
 ## Decisions from the customer (19 Oct 2026)
 
 - Layout: landscape. Portrait stays working but is not tuned further.
@@ -116,3 +123,4 @@ Status key: Built means the code exists and passed my own render checks. Accepte
 | 19 Oct 2026 | 3 | Describe rain amounts so kids can understand, not millimetres | Millimetres replaced with words on both clocks: just a sprinkle, a light drizzle (bring a coat), proper rain (puddles to jump in), heavy rain (wet socks), a soaking downpour |
 | 19 Oct 2026 | 4 | Describe the temperature in kid-friendly words too, keeping the numbers | Earlwood page shows e.g. 24° Now: warm, t-shirt weather, and High 24° · warm. Bands: freezing, cold, chilly, mild, warm, hot, very hot |
 | 21 Oct 2026 | 3 | Check what the clock predicts for rain and temperature against what actually happened, and make it visible to all the family | Added as S13. Page at /accuracy/ built from free open data, no timer. First 59-day check: highs off by 0.9 °C and lows by 0.8 °C; "Take an umbrella" caught 17 of 19 wet days with 7 false alarms. Follow-up actions listed under Ideas |
+| 21 Oct 2026 | 3 | The README screenshot looks like the two-city clock and is out of date | Confirmed: it is the first build (19 Oct). Tidy-up actions added to the backlog under Ideas |
