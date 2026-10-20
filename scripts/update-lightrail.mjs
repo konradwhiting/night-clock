@@ -131,14 +131,27 @@ export function myTrips(trips, cfg, nowMin = null, window = cfg.window) {
 /** A status for her trips only, in the same shape as classify(). Null when none are in view. */
 export function classifyMine(list) {
   if (!list.length) return null;
+  const shown = list.slice(0, 4);
+  const ok = (x) => !x.cancelled && x.delayMin < MINOR_S / 60;
   const cancelled = list.filter((x) => x.cancelled).length;
   const worst = Math.max(0, ...list.filter((x) => !x.cancelled).map((x) => x.delayMin));
   let state = 'ontime', text = 'Running normally';
-  if (cancelled > 0) { state = 'delays'; text = 'Cancellations'; }
-  else if (worst >= MAJOR_S / 60) { state = 'delays'; text = 'Delays'; }
+  if (cancelled > 0) {
+    text = 'Cancellations';
+    // A cancelled tram with another one on time within 10 minutes costs only a short wait: a notice (amber), not an alarm (red).
+    const shortWait = list.every((x, i) => {
+      if (!x.cancelled) return true;
+      const next = list.slice(i + 1).find((y) => !y.cancelled);
+      return !!next && next.schedMin - x.schedMin <= 10 && ok(next);
+    });
+    state = shortWait && worst < MINOR_S / 60 ? 'notice' : 'delays';
+  } else if (worst >= MAJOR_S / 60) { state = 'delays'; text = 'Delays'; }
   else if (worst >= MINOR_S / 60) { state = 'minor'; text = 'Delays'; }
-  const parts = list.slice(0, 4).map((x) => hmOf(x.schedMin) + (x.cancelled ? ' cancelled' : x.delayMin >= MINOR_S / 60 ? ' ' + x.delayMin + ' min late' : ' on time'));
-  return { state, text, detail: parts.join(' · '), cancelled };
+  // Problems first, then the trams that are fine, grouped: "08:09 cancelled · 08:15, 08:21, 08:27 on time"
+  const problems = shown.filter((x) => !ok(x)).map((x) => hmOf(x.schedMin) + (x.cancelled ? ' cancelled' : ' ' + x.delayMin + ' min late'));
+  const good = shown.filter(ok).map((x) => hmOf(x.schedMin));
+  const detail = problems.concat(good.length ? [good.join(', ') + ' on time'] : []).join(' · ');
+  return { state, text, detail, cancelled };
 }
 
 /** Pulls {delay, cancelled} out of every TripUpdate in a decoded GTFS-realtime feed. */

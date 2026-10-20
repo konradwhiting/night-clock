@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261021-4';
+  var BUILD = '20261021-5';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
@@ -795,7 +795,7 @@
 
   // lightrail.json is written by a scheduled GitHub Action (see .github/workflows/lightrail.yml).
   var rail = store.get(CACHE + 'rail', null);
-  var RAIL_REFRESH_MS = 5 * 60 * 1000;
+  var RAIL_REFRESH_MS = 2 * 60 * 1000;   // the tablet re-reads the status file every 2 minutes
   var RAIL_STALE_MS = 90 * 60 * 1000;  // the job rewrites an unchanged status at least hourly
 
   function renderRail() {
@@ -831,7 +831,7 @@
     if (hour12) sub = (sub || '').replace(/\b(\d{1,2}):(\d\d)\b/g, function (m, h, mi) { h = +h; return ((h % 12) || 12) + ':' + mi + (h < 12 ? 'am' : 'pm'); });
     put('rail-head', head);
     put('rail-sub', sub || '');
-    box.className = quiet ? 'row quiet' : 'row on';
+    box.className = quiet ? 'row quiet' : rail && rail.state === 'notice' ? 'row maybe' : 'row on';
   }
 
   function loadRail() {
