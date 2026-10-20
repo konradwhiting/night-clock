@@ -5,7 +5,7 @@
 
   // Change this whenever the page or its files change. Open clocks compare it with the
   // published app.js every half hour and reload themselves when it differs.
-  var BUILD = '20261020-4';
+  var BUILD = '20261021-2';
   var SCRIPT_URL = document.currentScript && document.currentScript.src;
 
   var CITIES = {
