@@ -2,6 +2,13 @@
   "syd": [
     {
       "area": "Inner West",
+      "source": "9Now",
+      "title": "Watch 9News Latest Stories - Season 2026 - Alleged Sydney gunman arrested after three-day Inner West manhunt",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOYkdaRjZOSWI1bGJueW8tbldfOHFQWFlsQXlUeUhKcWZsM0RBcHZKbC1UQ04tcU1EekExVVVtQWpRTUpHallONHBTYmY5TVhMZnY0SjlsQ0ZySE9ZMGUyRlpxMnJ0M1otNE85aXNsUjI3X1hpbTBjVm5UT2pnZDF2WjYwVEg4RW42Z1JueQ?oc=5",
+      "published": "2026-10-20T09:45:38.000Z"
+    },
+    {
+      "area": "Inner West",
       "source": "Green Left",
       "title": "Save the Inner West: Rally to Protest the 'Our Fairer Future' Plans",
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWHZVMFROQ3NBUzRBOFJ0bU55a0tEcXB3YVRDemhIdElnMV9ZUnBQVzA0RGJ1Z1NCWTVJS1hPUmpONS1jUHJSQUxCcVY1ZURBLU00amdranBGdmh3ekYtOHNTSXNFT1Q4MklFZzFVRlBmbm9pTzBNQ0VTV2tiN0lURVhLeC00czJkWE16dHF1Zlk0WkR2MFZDZnFHRU4?oc=5",
@@ -9,37 +16,30 @@
     },
     {
       "area": "Inner West",
-      "source": "Sydney Times",
-      "title": "Inner West Gets 190 New Bus Trips To Complement Southwest Metro",
-      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOLXo3Y1ZIVkF5OW5QQU9NTENoOHdkMUdOOXFiZHFpSkdkNk5sYVhqbXRfUWxhSTJORnNRMmZpMzM5ZzNXLVlOTFM1Tm50SFlsSFZfUk52Q0Y2ZVFkRjdoeUJMT2ZqSG1ldXk0TVNMQV9CMzNMS0FKcnJ1VlBaSHBZVjJvdVlobnR1aVg3eXptRlM4MkRTVzJpSlNMdUdPYWlsTEF5TjZObm1aYlNKbzJvWm4zMlNNRm0waUtuc0VaVFFDbHROX3c3a2Y2UjZ0a0Q4UnhoRmQ5cEJ5QnpMZl8xaGc0RFhMaFdBZzJGcEtNZ2dMWVU?oc=5",
-      "published": "2026-10-19T23:09:20.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "The Daily Telegraph",
-      "title": "Notorious Sydney bus routes boosted with 190 extra services",
-      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNRVF1bjNQMFhpM3VvRU9nZEZBSWpqeHlyMXVQMGYyWUxJaVRjdmpHaHFJck9Ldk1kUS1tc0JvOU1MMy1zb1ZrNFlrU1pLSEpYQ2w3ME5Xa2hfbHpIOUlOdVlkWTNodkM4ZmJJZE1PR3g5YU1IUzJLMTVCTUhqNTUyc195Y0FZWlFZc1ZMUjlNM2ZEYVktbThrLUtPbDZ1NE5ZXzlhTkxBMTdJemE0TXVrMDNSa1F0RlN0RFlJdXQ5bE1ZRExORVBHUDFqSXZUbGtvV3p1ekNJRW42Y0luVGRtXy1Tek1PN0R5ekl6LWpjMzA3YWlQ?oc=5",
-      "published": "2026-10-19T20:49:22.000Z"
+      "source": "NSW Government",
+      "title": "Inner West gets 190 new bus trips to complement Southwest Metro",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSnAtRVlXdU9DUUhuQ3o2OHphbzg3UENWcDU2MWRldDV2WjFaNllaODc2c0dMNkl5d2EyUnhGUXYzWW1KMV9HM1VxQUhBazJXTVdLd01LZ2xlR1pDUGtoMVFPcjU3MEcwQlhVRUQwWkNBLTFXUEdSYlB2X3FMTHVSandOcThpOVlER1VBU054c1hZS3czb0luV2ZpWEo2Q3Y4Z2hLOXdhQVlGdmM?oc=5",
+      "published": "2026-10-20T01:09:38.000Z"
     }
   ],
   "uk": [
     {
       "source": "BBC News Sussex",
-      "title": "Drivers urged to be alert during deer rutting season",
-      "link": "https://www.bbc.co.uk/news/articles/c3vgx0ejv84ro?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-20T05:12:54.000Z"
+      "title": "Appeal after honeymoon items stolen from newlyweds",
+      "link": "https://www.bbc.co.uk/news/articles/ck8dz7r445yzo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-20T10:39:23.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Love Islander channels online criticism in new role",
-      "link": "https://www.bbc.co.uk/news/articles/cmy56p6evrgno?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-20T05:12:17.000Z"
+      "title": "Storm Austen to bring severe gales to UK as weather warning issued",
+      "link": "https://www.bbc.co.uk/weather/articles/c9rkyjzgp6kdo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-20T09:42:56.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Jury in Katie Price ex's trial told to ignore egos",
-      "link": "https://www.bbc.co.uk/news/articles/cr86z4ldj1g5o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-19T16:39:35.000Z"
+      "title": "Brighton band caught up in riots during Paris gig",
+      "link": "https://www.bbc.co.uk/news/articles/c679pvl0vw2yo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-20T09:50:32.000Z"
     },
     {
       "source": "BBC News England",
