@@ -168,6 +168,7 @@ export function tripsFrom(feed, CANCELED = 3) {
     });
     trips.push({
       delay, cancelled: !!cancelled, at, stopTimes, start: u.trip && u.trip.startTime,
+      id: u.trip && u.trip.tripId, startDate: u.trip && u.trip.startDate,
       info: cancelled ? {
         tripId: u.trip && u.trip.tripId, routeId: u.trip && u.trip.routeId, direction: u.trip && u.trip.directionId,
         start: u.trip && u.trip.startTime, firstStop: stops[0], lastStop: stops[stops.length - 1], stops: stops.length
@@ -221,6 +222,12 @@ async function main() {
         const [nh, nm] = sydney.split(':').map(Number);
         const parsed = tripsFrom(feed, cancelledCode);
         for (const t of parsed) if (t.info) console.log('Cancelled trip:', JSON.stringify(t.info));
+        for (const t of parsed) {
+          if (!t.cancelled && typeof t.delay === 'number' && t.delay >= 300) {
+            const st = (t.stopTimes || []).slice(0, 3).map((x) => x.id + '@' + (x.time ? new Date(x.time * 1000).toISOString() : '-') + '/d' + x.delay);
+            console.log('Late trip:', JSON.stringify({ id: t.id, startDate: t.startDate, start: t.start, delayMin: Math.round(t.delay / 60), firstStops: st }));
+          }
+        }
         const nowMin = (nh % 24) * 60 + nm;
         const lineStatus = classify(parsed, nowMin);
         status = lineStatus;
