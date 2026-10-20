@@ -2,17 +2,17 @@
   "line": {
     "state": "minor",
     "text": "Delays",
-    "detail": "Up to 8 min late · The 08:09 tram was cancelled"
+    "detail": "Up to 7 min late · The 08:09 tram was cancelled"
   },
   "name": "Dulwich Hill",
-  "state": "delays",
-  "text": "Cancellations",
-  "detail": "08:09 cancelled · 08:15 on time · 08:21 on time · 08:27 on time",
-  "cancelled": 1,
-  "trips": 37,
-  "worstMin": 8,
+  "state": "ontime",
+  "text": "Running normally",
+  "detail": "08:15 on time · 08:21 on time · 08:27 on time",
+  "cancelled": 0,
+  "trips": 35,
+  "worstMin": 7,
   "scope": "yours",
   "label": "Dulwich Hill to Jubilee Park",
-  "feedTime": "2026-10-20T21:10:21.000Z",
-  "updated": "2026-10-20T21:10:25.046Z"
+  "feedTime": "2026-10-20T21:20:21.000Z",
+  "updated": "2026-10-20T21:20:26.974Z"
 }
