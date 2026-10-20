@@ -7,12 +7,12 @@
   "name": "Dulwich Hill",
   "state": "ontime",
   "text": "Running normally",
-  "detail": "07:15 on time · 07:21 on time · 07:27 on time",
+  "detail": "07:15 on time · 07:21 on time · 07:27 on time · 07:33 on time",
   "cancelled": 0,
-  "trips": 24,
+  "trips": 23,
   "worstMin": 1,
   "scope": "yours",
   "label": "Dulwich Hill to Jubilee Park",
-  "feedTime": "2026-10-20T19:30:35.000Z",
-  "updated": "2026-10-20T19:30:37.886Z"
+  "feedTime": "2026-10-20T19:40:20.000Z",
+  "updated": "2026-10-20T19:40:26.731Z"
 }
