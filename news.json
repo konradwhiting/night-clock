@@ -1,11 +1,25 @@
 {
   "syd": [
     {
+      "area": "Earlwood",
+      "source": "Kahawatungu",
+      "title": "John Howard Siblings: A Look at the Australian Politician’s Family Tree",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORFRPOTd2czZfNmRtYzBNNGRlVEs4cUFnRE1MalVkb3JQZmtMM3VZLWpDanBwRWd1Q2pOZjVGMXRaUlVaZndHOTNuaTQzMVRycGFMT0czbUhKTkFlX0JEMkt2OHVjaDhETmJMd294ZHJ0eWhtdDZYTUhXVmNtRmM5NTFFWDRqWktqekFoZ0JWV0RzaWlTM2MwRXpCNC1aeUpuUGfSAaIBQVVfeXFMTkRUTzk3dnM2XzZkbWMwTTRkZVRLOHFBZ0RNTGpVZG9yUGZrTDN1WS1qQ2pwcEVndUNqTmY1RjF0WlJVWmZ3Rzkzbmk0MzFUcnBhTE9HM21ISk5BZV9CRDJLdjh1Y2g4RE5iTHdveGRydHlobXQ2WE1IV1ZjbUZjOTUxRVg0alpLanpBaGdCVldEc2lpUzNjMEV6QjQtWnlKblBn?oc=5",
+      "published": "2026-10-21T12:13:38.000Z"
+    },
+    {
       "area": "Inner West",
       "source": "7NEWS",
       "title": "Armed manhunt locks down Sydney's inner west",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMFQteU5zTlhfenRfNWFXbmhLbGNEeDJUYzVuSFROanVrelQ0WFR1dHpnNzhJSWhkWVJZakJNOTd2Z01Bejd1eWJlSDZ0NktSRVFFZnhnZVV6TzNwblJjVFZQUFdqWmdHN3JKNXNjeW55MG9FYmpfbk9VeFNZQVc1X0pzeWhFakQyTTl2d3pMQ1dnVUlTR2Rj?oc=5",
       "published": "2026-10-21T08:45:16.000Z"
+    },
+    {
+      "area": "Inner West",
+      "source": "Build Australia",
+      "title": "Six design teams shortlisted for Sydney’s new Bays West suburb",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcEpLTnhxLXlYemNCd1ZJRExBZy00Ul9zWERVWW94VUVnVXhhSFRsRmxWMENIY3NFYWo5djYwdmFRN3JoRXhyVERIRHJDQWI0cUhjd0NJVTY4aS1BTlZuMHdoT0liZ09VMVVMM2hrOElKdEpVLWpya0NucGE5ZmNLMFJfakVYVEpBRXZBMHhuYXBaSVp6V3JCb2FpenZnTHNJWnhaUUxfZkI?oc=5",
+      "published": "2026-10-21T05:26:17.000Z"
     },
     {
       "area": "Inner West",
@@ -18,33 +32,33 @@
   "uk": [
     {
       "source": "BBC News Sussex",
+      "title": "Abuse victims may lose trust, immunity case told",
+      "link": "https://www.bbc.co.uk/news/articles/c6ly392y4x0ko?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-21T14:45:06.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
       "title": "'Like Hilary Swank, I had a baby in my fifties'",
       "link": "https://www.bbc.co.uk/news/articles/c6y8lr43lj4po?at_medium=RSS&at_campaign=rss",
       "published": "2026-10-21T05:08:01.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "'Success still seems unreal' says Gruffalo artist",
-      "link": "https://www.bbc.co.uk/news/articles/cx5yn573ne29o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-21T05:08:25.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Jury considers verdict in Kieran Hayler rape trial",
-      "link": "https://www.bbc.co.uk/news/articles/crwydlv1p210o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-20T11:59:55.000Z"
+      "title": "Residents report Bayeux Tapestry ticket issues",
+      "link": "https://www.bbc.co.uk/news/articles/cqly0zlvxey6o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-21T11:39:41.000Z"
     },
     {
       "source": "BBC News England",
-      "title": "Data-breach NHS worker told woman she had cancer",
-      "link": "https://www.bbc.co.uk/news/articles/cjn5vq6n7r54o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-21T05:28:43.000Z"
+      "title": "Teenage boy guilty of trying to murder girl, 15, in school",
+      "link": "https://www.bbc.co.uk/news/articles/cm0j0q9znzdlo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-21T12:03:52.000Z"
     },
     {
       "source": "BBC News England",
-      "title": "Man charged after three Jewish women assaulted",
-      "link": "https://www.bbc.co.uk/news/articles/c60rl0vdr87eo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-21T09:52:16.000Z"
+      "title": "Two gas workers guilty over fatal explosion",
+      "link": "https://www.bbc.co.uk/news/articles/cj20vnpx36wwo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-21T15:04:46.000Z"
     }
   ]
 }
