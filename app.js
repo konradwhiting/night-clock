@@ -718,6 +718,29 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(renderWeather);
   window.addEventListener('orientationchange', onResize);
 
+  // Earlwood page: if a card's words would overflow it (long text on a small tablet), shrink that
+  // page's card text step by step until everything fits. --fit is read by the portrait .row rule.
+  var fitTimer = null;
+  function fitRows() {
+    var rows = document.querySelector('#app.solo .rows');
+    if (!rows) return;
+    var fit = 1;
+    rows.style.setProperty('--fit', '1');
+    function over() {
+      for (var i = 0; i < rows.children.length; i++) if (rows.children[i].scrollHeight > rows.children[i].clientHeight + 1) return true;
+      return false;
+    }
+    while (fit > 0.7 && over()) { fit -= 0.04; rows.style.setProperty('--fit', fit.toFixed(2)); }
+  }
+  function queueFit() { clearTimeout(fitTimer); fitTimer = setTimeout(fitRows, 120); }
+  window.addEventListener('resize', queueFit);
+  window.addEventListener('orientationchange', queueFit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(queueFit);
+  if (window.MutationObserver) {
+    var rowsEl = document.querySelector('#app.solo .rows');
+    if (rowsEl) new MutationObserver(queueFit).observe(rowsEl, { childList: true, characterData: true, subtree: true, attributeFilter: ['class'] });
+  }
+
   function renderFoot() {
     if (!weather) { foot.textContent = 'Forecast not loaded yet'; return; }
     var age = Date.now() - weather.fetchedAt;

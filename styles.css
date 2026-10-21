@@ -223,6 +223,8 @@ body { font-family: var(--body); }
   font-size: 12px;
   letter-spacing: 0.04em;
   color: var(--ink-3);
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 
 #controls {
@@ -374,16 +376,31 @@ body { font-family: var(--body); }
 @media (orientation: portrait) {
   #app.solo #city-syd .time { font-size: min(14vh, 25cqw); }
   #app.solo .top { flex-direction: column; align-items: flex-start; gap: 4px; }
-  #app.solo .date { text-align: left; font-size: 3.6vh; }
-  .row .ico svg { width: min(10vh, 12cqw); height: min(10vh, 12cqw); }
-  /* sized from the width, not the height: on a tall narrow tablet the vh sizes overflow the cards */
-  .row { gap: 2.2cqw; padding: 0 2.6cqw; }
-  .row-label { font-size: clamp(11px, 2.5cqw, 20px); letter-spacing: 0.08em; }
-  .row-word { font-size: min(7vh, 8.2cqw); white-space: normal; line-height: 1.05; text-overflow: clip; }
-  .row-sub { font-size: clamp(13px, 3.6cqw, 28px); }
-  .row-note { font-size: clamp(12px, 3cqw, 22px); }
-  .row-num { font-size: min(9vh, 13cqw); }
-  .row-num-cap { font-size: clamp(10px, 2cqw, 18px); letter-spacing: 0.06em; }
-  .row .ico svg, .row .ico-2 svg { width: min(8vh, 9.5cqw); height: min(8vh, 9.5cqw); }
-  .row .ico-3 svg { width: min(6vh, 7cqw); height: min(6vh, 7cqw); }
+  #app.solo .date { text-align: left; font-size: max(18px, min(3.6vh, 6.2cqw)); }
+  /* Narrow tablet: the icon sits beside the label and word, and the detail lines run the full card width.
+     Everything inside a card is in em off one base size taken from the width, so fitRows() in app.js
+     can shrink a whole card (--fit) if its words are long. */
+  #app.solo .rows { gap: 10px; }
+  #foot { font-size: 11px; letter-spacing: 0; }
+  .row {
+    flex: 1 1 auto;
+    font-size: calc(var(--fit, 1) * clamp(16px, 5cqw, 34px));
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "ico label num" "ico word num" "sub sub sub" "note note note";
+    column-gap: 0.6em; row-gap: 0;
+    align-content: center;
+    padding: 0.5em 0.7em;
+  }
+  .row-body { display: contents; }
+  .row-body > :empty { display: none; }
+  .row .ico { grid-area: ico; flex-direction: column; align-self: center; }
+  .row-label { grid-area: label; align-self: end; font-size: 0.8em; letter-spacing: 0.06em; }
+  .row-word { grid-area: word; align-self: start; font-size: 2.4em; white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.02; }
+  .row-sub { grid-area: sub; font-size: 1em; margin-top: 0.3em; }
+  .row-note { grid-area: note; font-size: 0.88em; margin-top: 0.2em; }
+  .row-num { grid-area: num; align-self: center; font-size: 3.2em; }
+  .row-num-cap { font-size: 0.22em; letter-spacing: 0.06em; }
+  .row .ico svg, .row .ico-2 svg { width: 2.6em; height: 2.6em; }
+  .row .ico-2 svg { width: 1.8em; height: 1.8em; }
+  .row .ico-3 svg { width: 1.4em; height: 1.4em; }
 }
