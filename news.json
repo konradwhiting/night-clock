@@ -2,24 +2,17 @@
   "syd": [
     {
       "area": "Inner West",
-      "source": "City Hub Sydney",
-      "title": "Inner West To Receive 190 New Bus Trips To Complement New Metro",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZ0xtdFZaamxya3BpSUtQRHNGZUtQQVNoeXpsYU1HQ2xCakxyb3JzUTBGTDZQTTNiUEZrT2ZGSTA2OTIxZVlWek5ERGVabVJxMUhDVnFfUkVRNmtsTExXLUtRUnUtTU1vZXZVMTlqUnd1VjdHbFNXUWZiVjB4ZDNfa0RZVXFuWVRpOHZRU1Vrc2Q?oc=5",
-      "published": "2026-10-22T03:46:45.000Z"
+      "source": "SMH.com.au",
+      "title": "Catholic Church seeking $18m windfall for inner west uni site",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSzRrNGt2b3dUQWVZMUZneVI5VlBFdHpZQkk2ai1EUTdQY3NnTFA3YVk3RzVZczF6MjBEVG54eHQxN3FQUWhlRU1vVVBhbTMzcmlpb1NkOWpWMUFoV1pFckpvM0g2bWowYlN4YXVGdlJRaTBTN19IckNQQ2h0emVJd05hNG9laXNlc2t1eTdzRmRCczhabVlqZEl6WmlkLTNuTFI2ZksyUWF3Y1RXMkpuR3haWXVOc1V5TnJMQXdVdVg?oc=5",
+      "published": "2026-10-22T18:01:00.000Z"
     },
     {
       "area": "Inner West",
-      "source": "The Guardian",
-      "title": "‘Huge moment’: long-awaited extension to Sydney’s metro line to open next week",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPelJlMXVwbU1JMXBTTVJ1RzJwOEVfQm5Hb1VGR0c0WU55SEZiM3c0R0k5Ynh6MWV3azZncnkyR1RJbll6eXVqRzB3OFltUjlPSE1PUkdFM1JXbWNJRGxHaEdjS2pZMDlXa1ByVmpxVjF6c2VIM2oxOS1hVE5ZSUxCQUZ6cWQxZGo5dlhJcWNPZHBFQkd6aVNhR3l3M05UblN5V1lsb0VWNjNoVjE0TU1uY0dEbjA?oc=5",
-      "published": "2026-10-21T20:01:00.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "Time Out Worldwide",
-      "title": "The best new restaurants and bars in Sydney right now",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNUURadlE5M0hHSXA4YnJJRm1vSzMyMTZLdWhTUklFZE9qNmJfWXd3QUpUY2FBdzJtdXkyQmdmZ1JUbTBoeVRVWmNYZ2JvaVRiMTUxRUVNdVVhMko2b2REV0EyUHBWQlRlX1YwMjBjYTR2V2t0Q0xwMVo4QWVtbDhBWC1yQQ?oc=5",
-      "published": "2026-10-21T13:00:00.000Z"
+      "source": "SMH.com.au",
+      "title": "A Sydney council wants to add thousands of homes. Residents oppose such ‘radical change’",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNYU05ZUV3dWNnUXpZeFRiMjQ5U29YQ01rQndzUTIxUUlWbHI4X19CQXJSbjhxT2RxRGY1b2ZxNjhqN1B6bXdabjJVMXlNQjZfMFNoNmZrVkdkcEFfQnBYcE1oRHgzZGVZbXBPS0tUdm8tRUdLMmh3aFEzSlp5LVJOVTQxbW1DSFRJekYyckZxOFo1N2kwY3gtX0NBY2lSUUtIcTBkdWRMXy1xNXlROUY4eDdCY05Md2E1NUc4Y1RHZ2ZVWlR0S2VEUlVLQmNJTGlWWHhBVHI3V0hhZw?oc=5",
+      "published": "2026-10-22T18:00:00.000Z"
     }
   ],
   "uk": [
@@ -31,15 +24,21 @@
     },
     {
       "source": "BBC News Sussex",
-      "title": "Sussex prepares for impact of Storm Austen",
-      "link": "https://www.bbc.co.uk/news/articles/c6wyrp29xdvmo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-22T14:52:30.000Z"
+      "title": "Fresh drought measures to protect drinking water",
+      "link": "https://www.bbc.co.uk/news/articles/cqglwgjzzpd5o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-22T18:51:58.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Hospital order for man who fatally stabbed brother",
-      "link": "https://www.bbc.co.uk/news/articles/cxly41858141o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-22T14:48:11.000Z"
+      "title": "Crews tackle large fire at business park",
+      "link": "https://www.bbc.co.uk/news/articles/cvrly27179n1o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-22T17:18:25.000Z"
+    },
+    {
+      "source": "BBC News England",
+      "title": "Woman charged after police officer injured in shooting",
+      "link": "https://www.bbc.co.uk/news/articles/c8n5ve5gg35no?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-22T19:52:40.000Z"
     },
     {
       "source": "BBC News England",
