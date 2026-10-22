@@ -4,9 +4,9 @@
   "state": "delays",
   "text": "Delays",
   "detail": "Up to 37 min late",
-  "trips": 16,
+  "trips": 21,
   "worstMin": 37,
   "cancelled": 0,
-  "feedTime": "2026-10-22T12:10:20.000Z",
-  "updated": "2026-10-22T12:10:26.754Z"
+  "feedTime": "2026-10-22T12:30:36.000Z",
+  "updated": "2026-10-22T12:30:38.858Z"
 }
