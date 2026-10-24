@@ -9,6 +9,13 @@
     },
     {
       "area": "Inner West",
+      "source": "Secret Sydney",
+      "title": "5SOS Announces exclusive 2-Day Sydney merch pop-up event",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9VbXJWMmFnWHpXVUJuczZwZ20xT3FYeXZTVkVmZUdhYVh5THh2czNtSU5zUkR2MW9wcG4tckh3V3dqOC1jV016VHBMREpJQm1CUEh6bWthUlFmZ2V4b2xIZ3JWeWx5d1FnY0NV?oc=5",
+      "published": "2026-10-23T04:38:02.000Z"
+    },
+    {
+      "area": "Inner West",
       "source": "Sydney Times",
       "title": "New Bus Route To Connect Inner West Residents From Balmain East To Leichhardt",
       "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNdVRUa2VHZENjREpYOHRTbmhXbXRuaDVvV2dFcnBsdy1RN0REUV9NbVdoaFd6V2VFeEdldGttUHQ0Ujh5M29DMWFZbmN2VkQ4eVktTTcyblZITVkxMVJMdGxOaGRjVnRrU09LNzNibnl1UDYzYUdIUDE3ZnlzWHcwbHlSQUZMc2J2ZnVsR05iY3Qtd3lla0YxRFNCbUVPa0NMOEQ1eWExYmsyOFVhTFRmd1puVG01c202YzlzaFBrd3MtbVp6aldod056R0NhVDRVLTc2X1pFeFYwTS1hLTlXV0ZGQ2s2YTZtd0JrSmhDaWRYeFRlWTNYbmZtX1hodVVZekEyZkN3?oc=5",
@@ -16,6 +23,12 @@
     }
   ],
   "uk": [
+    {
+      "source": "BBC News Sussex",
+      "title": "Yellow warning for rain in place across South East",
+      "link": "https://www.bbc.co.uk/news/articles/ck5ynqzj4qggo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-24T11:31:52.000Z"
+    },
     {
       "source": "BBC News Sussex",
       "title": "Joe Marler 'riding Traitors wave' on podcast tour",
@@ -29,22 +42,16 @@
       "published": "2026-10-24T06:01:46.000Z"
     },
     {
-      "source": "BBC News Sussex",
-      "title": "The Masked Singer costumes on display at museum",
-      "link": "https://www.bbc.co.uk/news/articles/c8p3g4nx96gzo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-24T06:03:01.000Z"
+      "source": "BBC News England",
+      "title": "Mum dies after trying to rescue sons swept away at sea in Bahamas",
+      "link": "https://www.bbc.co.uk/news/articles/cm86z5n0yvy6o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-24T09:45:47.000Z"
     },
     {
       "source": "BBC News England",
-      "title": "Man dies after car crashes into Lidl supermarket",
-      "link": "https://www.bbc.co.uk/news/articles/cwrky7j13r4vo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-23T21:16:38.000Z"
-    },
-    {
-      "source": "BBC News England",
-      "title": "Why a convicted £33m tax fraudster is living it up in Dubai",
-      "link": "https://www.bbc.co.uk/news/articles/cmy83v286571o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-24T06:32:35.000Z"
+      "title": "Man killed by car in Lidl crash was inside store",
+      "link": "https://www.bbc.co.uk/news/articles/cqp8g4l1lz78o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-24T08:56:22.000Z"
     }
   ]
 }
