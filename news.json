@@ -2,6 +2,13 @@
   "syd": [
     {
       "area": "Inner West",
+      "source": "The Australian",
+      "title": "National real estate market",
+      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOcEdmTk9XamJBVXRabnB0c1duRWQwek9qVEsyOEp4VkdBQkJEYkxobjdZeWxvNTN0cjNjQldRRkxjVnlIVXlOMHc5NmVsWVpNaGM1X3pjTVN6MzctUklIQUhnTjlhLXphT0tYUzVoLWxSbjhwRDJ6QnFjeTJuMUUxUFIwUlFNaW5GN2otbElpcXQ2eTlBQlNMN09yR0p0Uzg0ZlFiNno0V2ZqbVJndWs3bDJvR1FLUlVsSzNNb1lvX01Ud2NFSjdXMGhkQ05meF9TcHI4dWwySi1DM2R6LTFleWxIbHZtb2FlV3g2eHlZdGJDdG9uS1EwcnpJZVI?oc=5",
+      "published": "2026-10-23T20:02:17.000Z"
+    },
+    {
+      "area": "Inner West",
       "source": "Urban List",
       "title": "Sydney's Southwest Its Getting Its Own Version Of The GreenWay With A New 13.8km Shared Track",
       "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAyT2dqUGhZZjA5ek5tVHRxNmlEbHB1MTBfMWRERlRYcW1VNkR0UVNjVkZIS1diTC12Z2x5VTR1U2FydC1UM004YjktbFUydF9yV3gwd0E2blM5OW9LR1Y2WU9hdHphMXZobGc?oc=5",
@@ -13,13 +20,6 @@
       "title": "5SOS Announces exclusive 2-Day Sydney merch pop-up event",
       "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9VbXJWMmFnWHpXVUJuczZwZ20xT3FYeXZTVkVmZUdhYVh5THh2czNtSU5zUkR2MW9wcG4tckh3V3dqOC1jV016VHBMREpJQm1CUEh6bWthUlFmZ2V4b2xIZ3JWeWx5d1FnY0NV?oc=5",
       "published": "2026-10-23T04:38:02.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "The Daily Telegraph",
-      "title": "New bus route to connect Inner West transport hubs after years of community campaigning",
-      "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPZ0F1TDVXdzJhNDJQTDdBbmtyNTVTdUhKVk5wZEpxeEFxNzJKYmNnQ2x3WVlJWUp6YkUtTGNGd1pUQUtJTjBKVXUzQWl6anFWN3VYVjVXX1RBekJIWW1NNVZFOWhoLThrMVdHeXFJcjM3eEFxM295WjJhOXdWQjJZWVh6MHdXYzNxdERqZlVuQ2tYbFJjd01adE1GVnVSb2JRZ1V1N3ItdUVINGxNN3JJanlGU2hMQTl6M0lRZTJTcmU1aGtZWnl5VjduU0dLUEs2M2MxR3JyaV9uQ25Gckx5RVRNYUljb2cydHc3bXluZFNmeExlZEg3cW93UksxVHN0NWFLOHp6N0pDaHE1bnc3Zm1aRnk?oc=5",
-      "published": "2026-10-22T21:34:56.000Z"
     }
   ],
   "uk": [
@@ -51,7 +51,7 @@
       "source": "BBC News England",
       "title": "Storm Boelo amber warnings kick in as parts of UK brace for 80mph gusts",
       "link": "https://www.bbc.co.uk/news/articles/cmr4ydglq9r3o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-24T20:30:43.000Z"
+      "published": "2026-10-24T22:44:36.000Z"
     }
   ]
 }
