@@ -1,25 +1,32 @@
 {
   "syd": [
     {
+      "area": "Earlwood",
+      "source": "Clarence Valley Independent",
+      "title": "Vale John McNamara",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4xcUNQMVZyUENwamo4bmk4ODNZSERkcExfNFdPVTFNMmxRaTNLR3RzbjJRQmxMWXZ2OGJBR1g5ZjB3Y2ZZYXJmLU1vRWc4bGNpcnhz?oc=5",
+      "published": "2026-10-25T04:00:00.000Z"
+    },
+    {
+      "area": "Inner West",
+      "source": "7NEWS",
+      "title": "Teen stabbed in Sydney inner west ambush",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZUJqZ3QzQ3ljVzVNdklLOHVQMmFsOHlWQ0JSaWxYYWYyY18xb1JJY3VZWXVzOVJtOWlQREdZdU4zYnFOdnRFOHFXemQ5NWdMMTNHMTlTVl8yY3RFWWpfT0JyOTloOGdjcUFiZHpKMWJBcFJBaDJ4bFVOM1RyaGVwejlucFBZbl9lbjB6V3U5cXVGaG8?oc=5",
+      "published": "2026-10-25T20:51:22.000Z"
+    },
+    {
+      "area": "Inner West",
+      "source": "The Land",
+      "title": "'Critical' threat: more than 300 fire ant reports investigated in Sydney",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNLXlGbU5USzVCMS1RWkxYeFIyQ2U5c2J3Vks5Z0hvVFVVQWlIRXZVb2FieHFzeWI5VFBvamkzejNNZXJuTzVuVTc5bHlIdjBZRHFpNy01TzFSZXJ5OFp0NDM0TXJ5U1FSRWVkYURzTjl4VzZzbmZfaC1zakpYYTNFMGU5ajNpRDJodE5qTVJXR1pSYmhoaVgxT3p5WjYwNWdNcjFsWA?oc=5",
+      "published": "2026-10-25T19:02:54.000Z"
+    },
+    {
       "area": "Inner West",
       "source": "The Daily Telegraph",
       "title": "Teenager rushed to hospital after Glebe stabbing",
       "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOM0xTOTdkNTV6c0U0SDEwcnYxN0R4eHQ0Y0JvMFF6a3ZZamMtRk00YzdURGVTZGtTbkpFdWdNQklGOGMySUdZWGUyQy11WjhmeTBCYk1XYm5lNFZlTWFfTk5LNFk3MjNtSnFnQXVtZHN4Y3Q3NXNBTVBSeTl3VzBEN0dPbVRjcFB2TEhmUmYtSmFhRXJZdHRLM0c0WnVHbW1RVWRsc0cyU3JnMzFRaW1MdzdnWDJUa1VxVG0wNWxrMkt5Ym84WG5OVnA0Y2FmZGVvVnVKQ0dUcG8yUk56WGVfM3hXQ00xby1BQ3VEeGttaWExUmZockt0dFByS3FZdkE?oc=5",
       "published": "2026-10-25T04:27:46.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "The West Australian",
-      "title": "Not again?! Lynx want answers after more scoreboard errors",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZVRudTBOeDdRRGtEYUxKNXgxS0puOV9qRnhBbG8tSUZqQ1JVVUxDNUJ4Nl9JdV82ZXMxcmZMV0tzV3pWRTFmQ3FJaTlDTTJSeEVVM2llOFJUV3hGdUx2NVJGUEFJMzV1WWpTaW5qTlRhRzdtUEFrUGVVOElHUUpqUkVqZFFpRFhnYXpiQnR4emRQeEYxbGg4VWpjNUt1WnJITW5GY3drRmRuMWhPTHktWkdla0hjNnJDTHZFaXVmV3NSTmpWbDZ6TmlxVHpOcHdCVU56VDBrZw?oc=5",
-      "published": "2026-10-25T04:19:00.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "Drinks Digest",
-      "title": "Made in the Inner West Festival launches",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMHMtS3dxRmJUSS1VakN4XzNYVFhqaXpfdElyNEc3VjBfM3hRRzR1Z3BkbWVSTkpNalJ0cHhrallIbTVEWWpiREpsWEJjaTlvM21HY19FTzhJT1BwUWlHUEw3QndGRmMtNlRRWlM3aEZSQmlPMWwzWVYzYXJ1UERHbVl6MNIBiAFBVV95cUxNbjBKRTBWcXROaDF2cFA3cjBvUWZIeXVmbEdnNG9HeUV1WFNTWkZJdV9zRFpRSGgyNTJwQlRUOEpJSzhZVG5GeEJSLTU4LXdaYTV6Q3BuUG1qZi1kdVI5Q0JMOFBDd2MwZk5zcDVKaDVjX0RRVWlkM0ZTU2hqLTJGQTJVT3ZaSUlh?oc=5",
-      "published": "2026-10-24T20:57:56.000Z"
     }
   ],
   "uk": [
@@ -46,12 +53,6 @@
       "title": "Couple were celebrating anniversary before Bahamas tragedy",
       "link": "https://www.bbc.co.uk/news/articles/c623drpx31xzo?at_medium=RSS&at_campaign=rss",
       "published": "2026-10-25T14:38:51.000Z"
-    },
-    {
-      "source": "BBC News England",
-      "title": "Four-year-old girl dies after fall from tower block",
-      "link": "https://www.bbc.co.uk/news/articles/cwj34vzrj865o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-25T14:00:37.000Z"
     }
   ]
 }
