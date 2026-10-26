@@ -2,50 +2,56 @@
   "syd": [
     {
       "area": "Inner West",
+      "source": "7NEWS",
+      "title": "Sydney inner west suburbs locked down as deadly fire ant threat escalates",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeUpnYjJYX1ZiVEJPOE83MF9YYnEwT2VteElmNWpKR3FZZlctX3R0WEJ6MVhVOXgtTV9jaGdjRDN3bVhmX1JDZzhmWms0MW9VN0k4VjF4QWZTUU8yejRKdFhIS3d3ZHk2YmtSY3VZZXNtMU9tcXZDUUJaQi1ZSEptZ1FCMW1sYzkwVjZyVzI1UXRlRU9aSUFReU90SlNjLU1fcVBaUHN6aFJDZGV1ZjRDVjJ0bVo2RTVmd0ZudVE0M3V6Z9IBxwFBVV95cUxPbWZOTDhCc1pIZ1JLUWk0SnA0dnQ2endiSmtQWHN6NGkxeXBKYUNJZ05JWHJKVURRaTRkQjZzRWFTWmRHQU1mVzNkTzF6dVE0V3VZbVBzWWlJRTVJVHo2T003MkhwNkxYVXVtSUhuNU5NeUZUdENhNDdRdkM1OWNzTVNsemI4clExNEJ0Y05uT1Y2akpPT1dfdkZiTkZ3Y0VkcWF0NEdoMmdpNjdhRDlzelRUU2p4MmxUaVZrQmttOWdBSGZpWWlN?oc=5",
+      "published": "2026-10-26T12:30:00.000Z"
+    },
+    {
+      "area": "Inner West",
+      "source": "Herald Sun",
+      "title": "‘It’s madness’: Hundreds of Sydney heritage properties at risk",
+      "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPT1RJaV9fMXNQUWo4RFg1Qks5c2hNRUttWmVidHpmNXFuU3VkRW5fWlhLZnVVNDAxWmxMQ2JzR3VVMnhjMFNPQkhjekdjZlgzMk5oSlpia0VFVnNJcjlIaXJRRWU1Wm1rX2JMdnFCd0h4RmN2cW9JUlY4dGc2bTc1ME9nRU1GRTduSHBCYjVVdXBfMkx3Z1VSbDUtclBjcjNGT3lUaTBoamVDamlad19raHN3NG4xeXBUcE5vM0NLdVVjUS1sU2VOcEdoZW1RSEtya0FqV0ExNGJfbmlXVXEtOEg5WnZmdU55eThFbmJqYlVGRWJ5Q3VMYnBqWFRaSGdmenVUTURGRldBbENTOXJoTXExVmFDSEpCQ21v?oc=5",
+      "published": "2026-10-26T07:20:06.000Z"
+    },
+    {
+      "area": "Inner West",
       "source": "Drinks Trade",
       "title": "What’s On: Made in the Inner West Festival, & more",
       "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPT3dQU3ZuekZtYU52UFp2WGNySHFIOThJN3lwNXFEYTV1Rk9sTlpHbVFuQXN0NDduWWpXenc5Wnl6WF9pZmpTU2kwdEljaFFaMUpHWDBJVXFiOUtUb09vZURpZktVYXlqUmZvbnpzMnUweGlUWER1eXE1NmI1SHhzbnBwdjVfS0tqeFE?oc=5",
-      "published": "2026-10-26T05:52:25.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "Daily Mail",
-      "title": "Sydney suburb Enfield plunged into biosecurity lockdown after discovery of 'super pest' that could cost Australia $2billion a year",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPY3lQTFhueWhXYmlGVExqSzdSNEJnYUhFVzlzb2k5RmdjRGlISFVlWFlmU3ZMMXdpQXFuekVjd2p6OWNRNXdVY2pIRlRiMGY5aU9zWHhjaXhfTGhkS19DSkRTWFZzb0JGYTVQWVE5b0tTa2dfaEpmYWU5T1llYzlmdmRWTDRsU3ZiRi1aLVVycHQzbUtrMjNLZkpvX1NaUlgzSi0xStIBqgFBVV95cUxOeTg5N0JhZ3VOeDhmMk9HekRTdF92eDhCamV6dkNUeFY5U1BpODF4LUdfSlplZTk1OFQ0MmxOLWRYbWxWbUdpNGJ0ZVVvMGp4MG1CNWNCWWllWHktUW1uY25QdzRvTHhUQ3dMcEJwcTB5SjJVT0lSbzhQTFNGamdtdDgyVGc2MklocnVmSlFSeFpuWFZFbGFxWGc1ZE5hMm5nWXU5bFc1UWpFUQ?oc=5",
-      "published": "2026-10-26T02:27:00.000Z"
-    },
-    {
-      "area": "Inner West",
-      "source": "News24",
-      "title": "Fire ant crackdown: New restrictions imposed in Sydney’s Inner West",
-      "link": "https://news.google.com/rss/articles/CBMiswJBVV95cUxPTnFra1dhcUo2QW9xUXNMRlVQZkQtMGt3MHBXLU9tc1NaRmlLbDVOVllOR3Y3Z2lYSWZpN0RySG5BS0x3eC1GdlhuanlrN3hOc0xEQVZHelBWZjdaaURrZ012LXFNdUpaZl8xQzdNSHZXbVBTMnVyY3VhOFRaemU4QU1sd1VHNmtJWWxrOUQtbWdFX0p1SEtuRVpMTnVpUlNaQXlCb3cxeTZqMWg3ZmJleHI2TDY0dmM5a3NFdzJtdVNheWluaGxCNjZEWHotcTZBbWk0MlFNQ2Flczd6clBXSFQ0MlVxdFZWYk1FZ1NEZUh0WUZrYWVubXlCUVMyU0o1RHZEVlBDU3ByWmFsNnJYUGY3Q1V3Z2xEcXZpdlEwVDYzZzJMOWZrSDAyb2ZyS096SXhr0gG4AkFVX3lxTE04RklOQ3lkWHlxUzVDZ29SRlhwZmpmbzVPbTF5X3Q1VGRqb0lZaUs5anBZRHVzVFJ0cG4wR0dPRm1NZnpXem9xaUlMUXk1UkNOSzZzNktFY19Pc2pfMjIzWC1kbkhPNFpsdDh6c1V1TU5kbERKTEVmeWNWa3pGMEQ4VzdKbnI1blBPWWl2bnhnVm1RTkhKQ0NfUlV4eklFWGJBSVBqdk96VEJ4QTRXclFEc25SbzNSSk5CTEJ1VTVUUnNPN05pYlN6ME12dXJJdURvS01YTlZWUV9QVnVoQnVXR3ZISEVWY2IwMndPcFBFZmFfdW5LQkctSmdZaDlUYnBqS0ZkclN4eXhwMTk2X21aNjNtMk5ERDU5cFktWWR4Nk0zczlKT0VkWDFpSXcxMy1ObUN0RWxnLQ?oc=5",
-      "published": "2026-10-26T00:20:13.000Z"
+      "published": "2026-10-26T06:01:55.000Z"
     }
   ],
   "uk": [
     {
       "source": "BBC News Sussex",
-      "title": "Thousands without power after Storm Boelo winds",
-      "link": "https://www.bbc.co.uk/news/articles/cqe8lr73n6e8o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-25T14:50:53.000Z"
+      "title": "Quads used for clean-up of plastic pellets stolen",
+      "link": "https://www.bbc.co.uk/news/articles/cqly02nj0kj6o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-26T12:42:50.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "£1.4m funding for Brighton and Hove roads programme",
-      "link": "https://www.bbc.co.uk/news/articles/c6dxwjjkr747o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-25T17:51:48.000Z"
+      "title": "Flood warnings and water shortages after storm",
+      "link": "https://www.bbc.co.uk/news/articles/ck1wvzr7d8j7o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-26T10:15:00.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Rain returns but parts of Sussex still in severe drought",
-      "link": "https://www.bbc.co.uk/news/articles/c6r7yl4528k3o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-25T07:07:33.000Z"
+      "title": "Helipad rule change request after rise in demand",
+      "link": "https://www.bbc.co.uk/news/articles/c94g142lgke2o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-26T06:08:41.000Z"
     },
     {
       "source": "BBC News England",
-      "title": "Couple were celebrating anniversary before Bahamas tragedy",
-      "link": "https://www.bbc.co.uk/news/articles/c623drpx31xzo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-25T14:38:51.000Z"
+      "title": "Woman wins £127k claim in family dispute over caring for mum at home",
+      "link": "https://www.bbc.co.uk/news/articles/cr93zp78g580o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-26T06:23:01.000Z"
+    },
+    {
+      "source": "BBC News England",
+      "title": "Council speaker charged with threats to kill",
+      "link": "https://www.bbc.co.uk/news/articles/cqly0my6x3mdo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-10-26T10:31:57.000Z"
     }
   ]
 }
