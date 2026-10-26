@@ -3,10 +3,13 @@
   "name": "Dulwich Hill",
   "state": "delays",
   "text": "Delays",
-  "detail": "Up to 13 min late",
-  "trips": 33,
+  "detail": "Up to 13 min late · The 18:40 tram was cancelled",
+  "trips": 32,
   "worstMin": 13,
-  "cancelled": 0,
-  "feedTime": "2026-10-26T07:30:21.000Z",
-  "updated": "2026-10-26T07:30:34.975Z"
+  "cancelled": 1,
+  "cancelledAt": [
+    "18:40"
+  ],
+  "feedTime": "2026-10-26T07:40:21.000Z",
+  "updated": "2026-10-26T07:40:27.322Z"
 }
