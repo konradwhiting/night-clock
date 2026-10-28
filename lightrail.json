@@ -7,12 +7,12 @@
   "name": "Dulwich Hill",
   "state": "minor",
   "text": "Delays",
-  "detail": "15:41 6 min late · 15:35, 15:47, 15:59 on time",
+  "detail": "15:41 6 min late · 15:47, 15:59 on time",
   "cancelled": 0,
-  "trips": 37,
+  "trips": 36,
   "worstMin": 7,
   "scope": "yours",
   "label": "Jubilee Park to Dulwich Hill",
-  "feedTime": "2026-10-28T04:40:21.000Z",
-  "updated": "2026-10-28T04:40:25.275Z"
+  "feedTime": "2026-10-28T04:50:21.000Z",
+  "updated": "2026-10-28T04:50:25.833Z"
 }
