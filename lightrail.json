@@ -3,10 +3,10 @@
   "name": "Dulwich Hill",
   "state": "ontime",
   "text": "Running normally",
-  "detail": "35 trams tracked",
-  "trips": 35,
-  "worstMin": 1,
+  "detail": "33 trams tracked",
+  "trips": 33,
+  "worstMin": 3,
   "cancelled": 0,
-  "feedTime": "2026-10-28T07:20:21.000Z",
-  "updated": "2026-10-28T07:20:24.244Z"
+  "feedTime": "2026-10-28T07:30:21.000Z",
+  "updated": "2026-10-28T07:30:34.016Z"
 }
