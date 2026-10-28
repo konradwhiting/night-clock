@@ -1,12 +1,8 @@
 {
   "line": "L1",
   "name": "Dulwich Hill",
-  "state": "minor",
-  "text": "Delays",
-  "detail": "Up to 8 min late",
-  "trips": 22,
-  "worstMin": 8,
-  "cancelled": 0,
-  "feedTime": "2026-10-28T02:20:21.000Z",
-  "updated": "2026-10-28T02:20:25.107Z"
+  "state": "error",
+  "text": "Status unavailable",
+  "detail": "Feed problem: HTTP 504",
+  "updated": "2026-10-28T02:30:33.071Z"
 }
