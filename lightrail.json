@@ -4,9 +4,9 @@
   "state": "minor",
   "text": "Delays",
   "detail": "Up to 6 min late",
-  "trips": 22,
+  "trips": 28,
   "worstMin": 6,
   "cancelled": 0,
-  "feedTime": "2026-10-31T22:20:21.000Z",
-  "updated": "2026-10-31T22:20:26.726Z"
+  "feedTime": "2026-10-31T22:40:21.000Z",
+  "updated": "2026-10-31T22:40:28.200Z"
 }
