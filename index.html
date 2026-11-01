@@ -28,30 +28,15 @@
         <span class="city-meta" id="syd-meta"></span>
       </header>
       <div class="time"><span class="ghost" aria-hidden="true">88:88</span><span class="hm" id="syd-hm">--:--</span><span class="ap" id="syd-ap"></span></div>
-      <div class="date" id="syd-date"></div>
-    </div>
-    <div class="news" id="syd-news" hidden>
-      <div class="news-src" id="syd-news-src"></div>
-      <p class="news-title" id="syd-news-title"></p>
-    </div>
-    <div class="wx wx-rainy">
-      <div class="wx-now">
-        <span class="wx-temp" id="syd-temp">--°</span>
-        <span class="wx-desc" id="syd-desc">Loading forecast</span>
-        <span class="wx-range" id="syd-range"></span>
-      </div>
-      <div class="rain-row">
-        <div class="rain-text">
-          <div class="rain-head" id="syd-rain-head"></div>
-          <div class="rain-sub" id="syd-rain-sub"></div>
-        </div>
-        <div class="rain-nc" id="syd-nc-wrap" hidden>
-          <div class="rain-nc-cap" id="syd-nc-cap"></div>
-          <div id="syd-nc"></div>
+      <div class="date-row">
+        <div class="date" id="syd-date"></div>
+        <div class="wx-now">
+          <span class="wx-temp" id="syd-temp">--°</span>
+          <span class="wx-desc" id="syd-desc">Loading forecast</span>
         </div>
       </div>
-      <div class="wx-chart" id="syd-chart"></div>
     </div>
+    <div class="news news-list" id="syd-news" hidden></div>
   </section>
 
   <section class="city" id="city-uk" aria-label="Eastbourne">
@@ -61,29 +46,26 @@
         <span class="city-meta" id="uk-meta"></span>
       </header>
       <div class="time"><span class="ghost" aria-hidden="true">88:88</span><span class="hm" id="uk-hm">--:--</span><span class="ap" id="uk-ap"></span></div>
-      <div class="date" id="uk-date"></div>
-    </div>
-    <div class="news" id="uk-news" hidden>
-      <div class="news-src" id="uk-news-src"></div>
-      <p class="news-title" id="uk-news-title"></p>
-    </div>
-    <div class="wx">
-      <div class="wx-now">
-        <span class="wx-temp" id="uk-temp">--°</span>
-        <span class="wx-desc" id="uk-desc">Loading forecast</span>
+      <div class="date-row">
+        <div class="date" id="uk-date"></div>
+        <div class="wx-now">
+          <span class="wx-temp" id="uk-temp">--°</span>
+          <span class="wx-desc" id="uk-desc">Loading forecast</span>
+        </div>
       </div>
-      <div class="wx-range" id="uk-range"></div>
-      <div class="wx-chart" id="uk-chart"></div>
     </div>
+    <div class="news news-list" id="uk-news" hidden></div>
   </section>
 
   <footer id="foot"></footer>
+  <button type="button" id="btn-news-page" aria-label="Refresh news">↻ News</button>
 </main>
 
 <nav id="controls" hidden aria-label="Display settings">
   <button type="button" id="btn-hours"></button>
   <button type="button" id="btn-theme"></button>
   <button type="button" id="btn-dim"></button>
+  <button type="button" id="btn-news">Refresh news</button>
   <button type="button" id="btn-full" hidden></button>
   <span id="awake"></span>
 </nav>

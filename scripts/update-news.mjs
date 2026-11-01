@@ -11,20 +11,24 @@ const OUT = fileURLToPath(new URL('../news.json', import.meta.url));
 const gnews = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=en-AU&gl=AU&ceid=AU:en';
 
 // A story older than this gives way to the next, wider feed, so the headline never sits for days
-const EARLWOOD_MAX_AGE_H = 24;
-const MAX_ITEMS = 6;  // headlines kept per place
+const EARLWOOD_MAX_AGE_H = 72;
+const MAX_AGE_H = 72;
+const MAX_ITEMS = 14;  // headlines kept per place, most local first; the page shows as many as fit
+const gnewsUk = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=en-GB&gl=GB&ceid=GB:en';
 
 export const PLACES = {
   syd: {
     feeds: [
       { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true, maxAgeHours: EARLWOOD_MAX_AGE_H, take: 3 },
-      { area: 'Inner West', url: gnews('"Inner West" Sydney when:7d'), newest: true, take: 3 }
+      { area: 'Earlwood area', url: gnews('"Inner West" Sydney when:7d'), newest: true, maxAgeHours: MAX_AGE_H, take: 6 },
+      { area: 'Nearby', url: gnews('Canterbury-Bankstown OR Marrickville OR "Dulwich Hill" OR Campsie OR Hurlstone when:7d'), newest: true, maxAgeHours: MAX_AGE_H, take: 6 }
     ]
   },
   uk: {
     feeds: [
-      { source: 'BBC News Sussex', url: 'https://feeds.bbci.co.uk/news/england/sussex/rss.xml', take: 3 },
-      { source: 'BBC News England', url: 'https://feeds.bbci.co.uk/news/england/rss.xml', take: 2 }
+      { area: 'Eastbourne', url: gnewsUk('Eastbourne Sussex when:7d'), newest: true, maxAgeHours: MAX_AGE_H, take: 6 },
+      { area: 'East Sussex', url: gnewsUk('"East Sussex" when:3d'), newest: true, maxAgeHours: MAX_AGE_H, take: 5 },
+      { source: 'BBC News Sussex', url: 'https://feeds.bbci.co.uk/news/england/sussex/rss.xml', maxAgeHours: MAX_AGE_H, take: 4 }
     ]
   }
 };
@@ -76,8 +80,11 @@ export function parseFirstItem(xml) {
   return { title: first.title, link: first.link, published: first.published };
 }
 
+// Left out: outlets behind a paywall (donation or registration asks are fine) and weak sources (rewrites, press releases).
+export const EXCLUDED_SOURCES = /smh\.com\.au|sydney morning herald|the age|theage\.com|afr|financial review|daily telegraph|telegraph\.co|^the telegraph|^the australian$|courier.?mail|herald sun|herald-sun|west australian|the times|financial times|economist|wall street|new york times|washington post|ssbcrack|senator james|news24/i;
+
 // Search feeds pick up obituaries and notices that are not news.
-const SKIP = /obituar|death notice|funeral notice|in memoriam|\bRIP\b/i;
+const SKIP = /obituar|death notice|funeral notice|in memoriam|\bRIP\b|property value estimate/i;
 
 /** The most recently published item, or the first one if none has a date. */
 export function newestItem(xml, exclude = SKIP) {
@@ -119,7 +126,7 @@ async function main() {
     for (const feed of place.feeds) {
       try {
         const xml = await fetchFeed(feed.url);
-        let items = parseItems(xml).filter((it) => !SKIP.test(it.title));
+        let items = parseItems(xml).filter((it) => !SKIP.test(it.title) && !EXCLUDED_SOURCES.test(it.publisher || feed.source || ''));
         if (feed.newest) items.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
         items = items.filter((it) => !(feed.maxAgeHours && it.published
           && Date.now() - Date.parse(it.published) > feed.maxAgeHours * 3600 * 1000));

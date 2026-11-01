@@ -123,6 +123,7 @@
   var controls = $('controls');
   var btnHours = $('btn-hours');
   var btnDim = $('btn-dim');
+  var btnNews = $('btn-news');   // only on pages with a headline list
   var btnTheme = $('btn-theme');   // only on pages that offer colour themes
   var awakeNote = $('awake');
 
@@ -652,10 +653,16 @@
       if (!win) {
         if (e.temp) e.temp.textContent = '--°';
         if (e.desc) e.desc.textContent = weather ? 'Forecast out of date' : 'Loading forecast';
-        e.range.textContent = e.wear ? '--°' : '';
+        if (e.range) e.range.textContent = e.wear ? '--°' : '';
         if (e.wear) e.wear.textContent = weather ? 'Out of date' : 'Loading';
         if (e.chart) e.chart.innerHTML = '';
         if (e.rainHead) { e.rainHead.textContent = ''; e.rainSub.textContent = ''; if (e.ncWrap) e.ncWrap.hidden = true; if (e.grid) e.grid.innerHTML = ''; }
+        return;
+      }
+      if (!e.chart && !e.rainHead) {
+        // two-city page: just the main thing, e.g. "18°C" and "Mostly clear"
+        if (e.temp) e.temp.textContent = Math.round(win.temp[0]) + '°C';
+        if (e.desc) e.desc.textContent = codeText(win.code[0]);
         return;
       }
       var hi = Math.max.apply(null, win.temp);
@@ -742,13 +749,13 @@
   }
 
   function renderFoot() {
-    if (!weather) { foot.textContent = 'Forecast not loaded yet'; return; }
+    if (!weather) { foot.textContent = 'Forecast not loaded yet' + newsNote; return; }
     var age = Date.now() - weather.fetchedAt;
     var z = zoned(new Date(weather.fetchedAt), CITIES.syd.tz);
     var t = clockText(z);
     var text = 'Average of ' + NMODELS + ' forecasts via Open-Meteo, updated ' + t.hm + t.ap + ' Earlwood time';
     if (age > STALE_MS) text += ' · may be out of date, retrying';
-    foot.textContent = text;
+    foot.textContent = text + newsNote;
   }
 
   /* ---------- regional headlines ---------- */
@@ -756,6 +763,12 @@
   // news.json is written by a scheduled GitHub Action (see .github/workflows/news.yml).
   var news = store.get(CACHE + 'news', null);
   var NEWS_REFRESH_MS = 30 * 60 * 1000;
+  var NEWS_MAX_AGE_MS = 72 * 3600 * 1000;    // older headlines are left out
+  var NEWS_STALE_MS = 24 * 3600 * 1000;      // if even the newest is older than this, say so in the footer
+  var CAN_HOVER = !(window.matchMedia && window.matchMedia('(hover: none)').matches);
+  var newsNote = '';
+  // Outlets that put their stories behind a paywall are left out altogether (donation or registration asks, like The Guardian, are kept).
+  var EXCLUDED_SOURCES = /smh\.com\.au|sydney morning herald|the age|theage\.com|afr|financial review|daily telegraph|telegraph\.co|^the telegraph|^the australian$|courier.?mail|herald sun|herald-sun|west australian|the times|financial times|economist|wall street|new york times|washington post|ssbcrack|senator james|news24/i;
 
   function ago(ms) {
     var m = Math.max(0, Math.round(ms / 60000));
@@ -765,43 +778,79 @@
     return Math.round(h / 24) + 'd ago';
   }
 
-  var NEWS_ROTATE_MS = 30 * 60 * 1000;  // the headline changes every half hour, in step on every screen
-
+  // The page lists every headline that fits, most local first (the updater orders them: the suburb, then the
+  // wider area, then the region). Rebuilt only when the list changes; the fit is re-checked every call.
   function renderNews() {
+    var newest = 0;
     KEYS.forEach(function (k) {
       var list = news && news[k];
       if (list && !Array.isArray(list)) list = [list];  // older single-headline file
       var box = $(k + '-news');
       if (!box) return;  // this page has no headline area
-      list = (list || []).filter(function (n) { return n && n.title; });
+      list = (list || []).filter(function (n) { return n && n.title && !EXCLUDED_SOURCES.test(n.source || ''); });
+      list.forEach(function (n) { var t = n.published ? Date.parse(n.published) : 0; if (t > newest) newest = t; });
+      list = list.filter(function (n) { return !n.published || Date.now() - Date.parse(n.published) <= NEWS_MAX_AGE_MS; });
       if (!list.length) { box.hidden = true; return; }
-      var i = Math.floor(Date.now() / NEWS_ROTATE_MS) % list.length;
-      var n = list[i];
-      var age = n.published ? ' · ' + ago(Date.now() - Date.parse(n.published)) : '';
-      var pos = list.length > 1 ? ' · ' + (i + 1) + ' of ' + list.length : '';
-      $(k + '-news-src').textContent = (n.area ? n.area + ' · ' : '') + n.source + age + pos;
-      var tp = $(k + '-news-title');
-      if (tp.getAttribute('data-key') !== n.title) {  // rebuild only when the headline changes
-        tp.setAttribute('data-key', n.title);
-        tp.textContent = '';
-        if (/^https?:\/\//i.test(n.link || '')) {
-          var link = document.createElement('a');
-          link.href = n.link;
-          link.target = '_blank';  // the clock stays open behind the story
-          link.rel = 'noopener noreferrer';
-          link.textContent = n.title;
-          tp.appendChild(link);
-        } else {
-          tp.textContent = n.title;
-        }
-      }
       box.hidden = false;
+      var sig = list.map(function (n) { return n.title; }).join('|');
+      if (box.getAttribute('data-key') !== sig) {
+        box.setAttribute('data-key', sig);
+        box.textContent = '';
+        list.forEach(function (n) {
+          var item = document.createElement('div');
+          item.className = 'news-item';
+          item.setAttribute('data-ts', n.published ? Date.parse(n.published) : '');
+          item.setAttribute('data-src', (n.area ? n.area + ' · ' : '') + n.source);
+          var src = document.createElement('div');
+          src.className = 'news-src';
+          item.appendChild(src);
+          var tp = document.createElement('p');
+          tp.className = 'news-title';
+          if (CAN_HOVER && /^https?:\/\//i.test(n.link || '')) {  // no links on a touch screen: a stray tap would leave the clock
+            var link = document.createElement('a');
+            link.href = n.link;
+            link.target = '_blank';  // the clock stays open behind the story
+            link.rel = 'noopener noreferrer';
+            link.textContent = n.title;
+            tp.appendChild(link);
+          } else {
+            tp.textContent = n.title;
+          }
+          item.appendChild(tp);
+          box.appendChild(item);
+        });
+      }
+      Array.prototype.forEach.call(box.children, function (item) {
+        var ts = +item.getAttribute('data-ts');
+        item.firstChild.textContent = item.getAttribute('data-src') + (ts ? ' · ' + ago(Date.now() - ts) : '');
+        item.hidden = false;
+      });
+      fitNews(box);
     });
+    var note = news && newest && Date.now() - newest > NEWS_STALE_MS ? ' · headlines may be out of date' : '';
+    if (note !== newsNote) { newsNote = note; renderFoot(); }
   }
 
-  function loadNews() {
+  // Hide the headlines that would not fit fully in the space left under the clock.
+  function fitNews(box) {
+    var limit = box.clientHeight;
+    var full = true;
+    Array.prototype.forEach.call(box.children, function (item) {
+      if (full && item.offsetTop + item.offsetHeight > limit + 1) full = false;
+      item.hidden = !full;
+    });
+  }
+  function fitAllNews() { KEYS.forEach(function (k) { var b = $(k + '-news'); if (b && !b.hidden) { Array.prototype.forEach.call(b.children, function (i) { i.hidden = false; }); fitNews(b); } }); }
+  window.addEventListener('resize', fitAllNews);
+  window.addEventListener('orientationchange', fitAllNews);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAllNews);
+
+  var newsTimer = null;
+  function loadNews(manual) {
     if (!$('syd-news')) return;  // no headline area on this page, nothing to fetch
-    fetch(BASE + 'news.json?t=' + Math.floor(Date.now() / 600000), { cache: 'no-store' })
+    clearTimeout(newsTimer);
+    // a manual refresh skips the ten minute cache bucket
+    fetch(BASE + 'news.json?t=' + (manual === true ? Date.now() : Math.floor(Date.now() / 600000)), { cache: 'no-store' })
       .then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
@@ -810,7 +859,13 @@
       .catch(function () { /* keep whatever we had */ })
       .then(function () {
         renderNews();
-        setTimeout(loadNews, NEWS_REFRESH_MS);
+        newsTimer = setTimeout(loadNews, NEWS_REFRESH_MS);
+        if (manual === true && (btnNews || btnNewsPage)) {
+          var z = zoned(new Date(), CITIES.syd.tz), t = clockText(z);
+          if (btnNews) btnNews.textContent = 'News checked ' + t.hm + t.ap;
+          if (btnNewsPage) btnNewsPage.textContent = '↻ ' + t.hm.trim() + t.ap;
+          setTimeout(function () { if (btnNews) btnNews.textContent = 'Refresh news'; if (btnNewsPage) btnNewsPage.textContent = '↻ News'; }, 4000);
+        }
       });
   }
 
@@ -940,6 +995,15 @@
   });
 
   // Full screen: for browsers that allow it (Chrome on Android does, Safari on iPad does not).
+  var btnNewsPage = $('btn-news-page');   // small button in the corner of the main page
+  function refreshNews(ev) {
+    if (ev) ev.stopPropagation();   // a tap here must not also open the settings panel
+    if (btnNews) btnNews.textContent = 'Checking…';
+    if (btnNewsPage) btnNewsPage.textContent = '↻ …';
+    loadNews(true);
+  }
+  if (btnNews) btnNews.addEventListener('click', refreshNews);
+  if (btnNewsPage) btnNewsPage.addEventListener('click', refreshNews);
   var btnFull = $('btn-full');
   var fsRoot = document.documentElement;
   var fsRequest = fsRoot.requestFullscreen || fsRoot.webkitRequestFullscreen;

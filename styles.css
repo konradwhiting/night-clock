@@ -268,7 +268,7 @@ body { font-family: var(--body); }
   .city + .city { border-left: 0; border-top: 1px solid var(--line); }
   #app { padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(24px, env(safe-area-inset-bottom)); }
   .city { gap: 8px; padding-bottom: 14px; }
-  .news { display: none; }  /* portrait is tight, headlines are for landscape */
+  .news:not(.news-list) { display: none; }  /* the one-headline box is hidden in portrait; the v2 list fits what it can */
   #city-syd .time { font-size: 17cqw; }
   .rain-nc svg { height: 46px; }
   .rain-row { margin-top: 0.3em; }
@@ -404,3 +404,29 @@ body { font-family: var(--body); }
   .row .ico-2 svg { width: 1.8em; height: 1.8em; }
   .row .ico-3 svg { width: 1.4em; height: 1.4em; }
 }
+
+/* v2: the weather sits beside the date, right under the clock */
+.date-row { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.3em 1em; }
+.date-row .wx-now { gap: 0.5em; }
+.date-row .wx-temp { font-size: clamp(28px, 6.2cqw, 40px); }
+.date-row .wx-desc { font-size: clamp(15px, 3.2cqw, 20px); }
+
+/* v2: a list of local headlines fills the space under the clock */
+.city { justify-content: flex-start; }
+.news-list { flex: 1 1 0; min-height: 0; overflow: hidden; position: relative; padding-bottom: 8px; }
+.news-item { padding: 0.7em 0; border-top: 1px solid var(--line); }
+.news-item .news-src { margin-bottom: 0.3em; }
+.news-list .news-title { -webkit-line-clamp: 3; font-size: clamp(16px, 3.6cqw, 26px); }
+
+@media (orientation: portrait) {
+  .news-list .news-title { font-size: clamp(16px, 3.4cqw, 24px); -webkit-line-clamp: 2; }
+  .news-item { padding: 0.5em 0; }
+}
+
+/* v2: small refresh-news button in the corner of the main page */
+#btn-news-page {
+  position: fixed; right: max(10px, env(safe-area-inset-right)); bottom: max(8px, env(safe-area-inset-bottom));
+  font: 500 12px/1 var(--body); letter-spacing: 0.04em; color: var(--ink-3);
+  background: transparent; border: 1px solid var(--line); border-radius: 14px; padding: 7px 12px; opacity: var(--dim);
+}
+#btn-news-page:active { background: var(--line); }
