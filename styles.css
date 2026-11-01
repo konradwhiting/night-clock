@@ -242,8 +242,9 @@ body { font-family: var(--body); }
   gap: 12px 16px;
   max-width: calc(100vw - 32px);
   padding: 12px 16px;
-  background: #140805;
-  border: 1px solid var(--ink-3);
+  background: var(--bg);  /* follows the theme, so the dark text on the daylight looks stays readable */
+  border: 2px solid var(--ink-2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
   border-radius: 14px;
   filter: brightness(var(--ctl, 0.9));  /* dims with the display but stays opaque */
   z-index: 5;
@@ -255,12 +256,12 @@ body { font-family: var(--body); }
   padding: 0 20px;
   font: 500 18px var(--body);
   color: var(--ink);
-  background: transparent;
-  border: 1px solid var(--ink-3);
+  background: var(--line);
+  border: 1px solid var(--ink-2);
   border-radius: 10px;
 }
 
-#controls button:active { background: var(--line); }
+#controls button:active { background: var(--ink-3); }
 #awake { font-size: 14px; color: var(--ink-2); max-width: 280px; }
 
 @media (orientation: portrait) {
