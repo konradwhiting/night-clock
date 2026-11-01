@@ -798,11 +798,25 @@
         box.textContent = '';
         list.forEach(function (n) {
           var item = document.createElement('div');
-          item.className = 'news-item';
+          // how close the story is: 1 the suburb or town itself, 2 the wider area, 3 the region
+          var tier = /^(Earlwood area|Earlwood|Eastbourne)$/.test(n.area || '') ? 1 : n.area ? 2 : 3;
+          item.className = 'news-item tier-' + tier;
           item.setAttribute('data-ts', n.published ? Date.parse(n.published) : '');
-          item.setAttribute('data-src', (n.area ? n.area + ' · ' : '') + n.source);
           var src = document.createElement('div');
           src.className = 'news-src';
+          if (tier === 2) {
+            var tag = document.createElement('span');
+            tag.className = 'news-tag';
+            tag.textContent = n.area;
+            src.appendChild(tag);
+          }
+          var who = document.createElement('span');
+          who.className = 'news-who';
+          who.textContent = n.source;
+          src.appendChild(who);
+          var age = document.createElement('span');
+          age.className = 'news-age';
+          src.appendChild(age);
           item.appendChild(src);
           var tp = document.createElement('p');
           tp.className = 'news-title';
@@ -822,7 +836,7 @@
       }
       Array.prototype.forEach.call(box.children, function (item) {
         var ts = +item.getAttribute('data-ts');
-        item.firstChild.textContent = item.getAttribute('data-src') + (ts ? ' · ' + ago(Date.now() - ts) : '');
+        item.querySelector('.news-age').textContent = ts ? ago(Date.now() - ts) : '';
         item.hidden = false;
       });
       fitNews(box);
