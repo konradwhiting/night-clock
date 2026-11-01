@@ -1,6 +1,13 @@
 {
   "syd": [
     {
+      "area": "Earlwood",
+      "source": "SMH.com.au",
+      "title": "Passenger presses his luck",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPR28xQktpRVFsRU1wQmpHcG5acld1OU9lRDNjVWtxaExIUVljRGZSTmV4SEMxYVVRN21XenNFSWpBOFRKRy1lN2RiM1B6bmZvWXgtTmdRQlkwdVZPUGY0V0RvME5JOEhVZkFETmthMHBOckxOMXFDakVJRkFtTUNjQkRDZm41SF9waVBn?oc=5",
+      "published": "2026-11-01T10:00:00.000Z"
+    },
+    {
       "area": "Inner West",
       "source": "The Guardian",
       "title": "Disquiet grows in Albanese’s back yard as Grayndler artists unite against ‘insane’ AI proposal",
@@ -18,6 +25,12 @@
   "uk": [
     {
       "source": "BBC News Sussex",
+      "title": "Man dies and two others injured in late-night crash",
+      "link": "https://www.bbc.co.uk/news/articles/cqn49rdpwv7ko?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-01T13:17:37.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
       "title": "Brighton's West Pier and its battle with nature",
       "link": "https://www.bbc.co.uk/news/articles/crz98q2gw24xo?at_medium=RSS&at_campaign=rss",
       "published": "2026-11-01T07:18:52.000Z"
@@ -29,22 +42,16 @@
       "published": "2026-11-01T07:17:22.000Z"
     },
     {
-      "source": "BBC News Sussex",
-      "title": "Man arrested on suspicion of attempted murder",
-      "link": "https://www.bbc.co.uk/news/articles/cxr5ypygrlrlo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-10-31T10:57:13.000Z"
+      "source": "BBC News England",
+      "title": "Cambridge scientist dies in Spanish train crash",
+      "link": "https://www.bbc.co.uk/news/articles/cq5ynzvkn1d8o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-01T13:41:05.000Z"
     },
     {
       "source": "BBC News England",
-      "title": "The homes row brewing in the town with no plan",
-      "link": "https://www.bbc.co.uk/news/articles/cq14d2mxvkv5o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-01T06:24:08.000Z"
-    },
-    {
-      "source": "BBC News England",
-      "title": "Second night of drone disruption at Jersey Airport",
-      "link": "https://www.bbc.co.uk/news/articles/cqkgl4nmp8lyo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-01T01:52:00.000Z"
+      "title": "Five teenagers stabbed at Halloween party",
+      "link": "https://www.bbc.co.uk/news/articles/c6n4ed1l2pn1o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-01T13:59:37.000Z"
     }
   ]
 }
