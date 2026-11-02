@@ -440,8 +440,11 @@
   }
 
   // Umbrella verdict and a plain-words story for the window, from the blended forecasts
+  // Only the school day matters for the umbrella: rain before 8am or after 4pm doesn't change the verdict.
   function rainOutlook(w, plan, tz) {
-    var idx = plan.idx, n = idx.length, maxP = 0, pk = 0, total = 0, first = -1, last = -1, k;
+    var idx = plan.idx.filter(function (i) { var h = zoned(new Date(w.t[i]), tz).h; return h >= 8 && h < 16; });
+    var n = idx.length, maxP = 0, pk = 0, total = 0, first = -1, last = -1, k;
+    if (!n) return { head: 'No umbrella', story: plan.tomorrow ? 'Dry all day tomorrow' : 'Nothing left of the school day', note: 'Checked 8am to 4pm', level: 'no', icons: ['umbrella'] };
     for (k = 0; k < n; k++) {
       var p = w.pop[idx[k]], mm = w.precip[idx[k]] || 0;
       total += mm;
@@ -454,10 +457,10 @@
     function hr(k2) { return hourLabel(w.t[idx[k2]], tz); }
     var story;
     if (first < 0) {
-      story = maxP >= 30 ? 'Some forecasts show showers around ' + hr(pk) : plan.tomorrow ? 'Dry all day tomorrow' : 'Dry for the rest of today';
+      story = maxP >= 30 ? 'Some forecasts show showers around ' + hr(pk) : plan.tomorrow ? 'Dry from 8am to 4pm tomorrow' : 'Dry from 8am to 4pm';
     } else if (first === 0) {
-      var ends = last < n - 1 ? 'easing by ' + hr(last + 1) : 'rain all day';
-      story = plan.tomorrow ? 'Rain early, ' + ends : 'Raining now, ' + ends;
+      var ends = last < n - 1 ? 'easing by ' + hr(last + 1) : 'rain until 4pm';
+      story = plan.tomorrow ? 'Rain from 8am, ' + ends : 'Raining now, ' + ends;
     } else {
       story = 'Rain from ' + hr(first) + (last < n - 1 ? ' to ' + hr(last + 1) : ' on');
     }
