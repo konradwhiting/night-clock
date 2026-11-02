@@ -1,18 +1,18 @@
 {
   "line": {
-    "state": "minor",
+    "state": "delays",
     "text": "Delays",
-    "detail": "Up to 7 min late"
+    "detail": "Up to 11 min late"
   },
   "name": "Dulwich Hill",
   "state": "ontime",
   "text": "Running normally",
-  "detail": "07:45, 07:51, 07:57, 08:03 on time",
+  "detail": "07:57, 08:03, 08:09, 08:15 on time",
   "cancelled": 0,
-  "trips": 36,
-  "worstMin": 7,
+  "trips": 38,
+  "worstMin": 11,
   "scope": "yours",
   "label": "Dulwich Hill to Jubilee Park",
-  "feedTime": "2026-11-02T20:50:21.000Z",
-  "updated": "2026-11-02T20:50:26.790Z"
+  "feedTime": "2026-11-02T21:00:35.000Z",
+  "updated": "2026-11-02T21:00:45.573Z"
 }
