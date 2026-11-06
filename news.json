@@ -1,6 +1,27 @@
 {
   "syd": [
     {
+      "area": "Earlwood",
+      "source": "Greek City Times",
+      "title": "Greek Bakeries Put Sydney’s Food Scene in the Spotlight",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBCTkZHS1FfeDNDczExWENTUUJMdlR4UDJteEdiOWNvbDhPV3dYNmQtem9JUlpJS2ZkOUhvVndxQ3pHVVQxMG9sTTNTTVRHaF9nNnFjNm83R1BaUHJKdjEybHF3T082WUtKTnU2bVUzRTYtLUM4?oc=5",
+      "published": "2026-11-06T10:10:46.000Z"
+    },
+    {
+      "area": "Earlwood area",
+      "source": "Nine.com.au",
+      "title": "Teenage girl allegedly choked, sexually assaulted in Sydney apartment",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNVkc3M2k5X2hLWXZjd3draWtNYXRBUy04WkxoalF3TThhRDJ0dXFGWkNXSzYxVXZ2WEFBcVE0X09FSkMzVUVuTTdYQ3pGMENRRzl3NlhLS2FRRERJWEtJcUdSdGxvMG1xWFk5ZDJZU09IeDdsakVqY3VCcjRrVXBOWDJuRmRsWlNWTGxibkJGcDJqT0dST3BpS0tSQkpPV3I3U25JQjNoNWVFd3BQRjZXUzFPT1dpRlF0d2ZoYWN5LUh1TWdFd3MweTBXZ3FlcWJ1WUE?oc=5",
+      "published": "2026-11-06T02:34:34.000Z"
+    },
+    {
+      "area": "Earlwood area",
+      "source": "Spice News",
+      "title": "Rebrand for inner-Sydney hotel",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMjdTZ3dVX2FsMThQYm9iVDBDdzFXdDRzTEZuUW1CcDFJZmxicmhkdTZJckVCLWtDOTVyOWl2QThHTGdOZnBUZnNuc1NJZ2stZUFsQ0Nmckp1UnNEV1V0R1hkcFJGSXhXb1RMWXJUdWlDcDdaWm9ON1hDZnRvNlRVaU15MjZxWFNwZDNWRGRuQWlCZw?oc=5",
+      "published": "2026-11-04T07:57:05.000Z"
+    },
+    {
       "area": "Earlwood area",
       "source": "City Hub Sydney",
       "title": "NSW Government Revamps “Forgotten” Sydney Buses With 3,000 Additional Weekly Services",
@@ -37,20 +58,6 @@
     },
     {
       "area": "Nearby",
-      "source": "The Spectator Australia",
-      "title": "Oink! Oink!",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAybDBQTVVoM3dqV3U2X3hOMHgyVkI4ZThmZUUxYThOVUxyaFFmbjdMbjQ2SGYxNmcxRXhfZDhDVnZ3ekQ3UDdyWnAxS254Y0NiaGpjdUg5RU85VDQ?oc=5",
-      "published": "2026-11-05T11:04:44.000Z"
-    },
-    {
-      "area": "Nearby",
-      "source": "Corowa Free Press",
-      "title": "| Corowa Free Press",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPS3dhWkRVdUdHblFpMXlmVnVtOWFJOFVHZUU4MUNZVW1TQ0ZFRk5kemlDS3VJWWlRc0FpMTV4Z25fWmNzTEtGZXhSVlQ3X2ViNXRhNWpPSE5Oc3FzcTMwUHlqSEVGenU5VjlvOFlnUTA2b1g1Rk9xQlM5UmJ1QUhMeFZWVXg2TlhaaTAyaWE1Q2NTeDRGZjRQLWx2Q2hQSlNBbjJ3Y0JYSzJxNzEyU0E?oc=5",
-      "published": "2026-11-05T03:06:51.000Z"
-    },
-    {
-      "area": "Nearby",
       "source": "Rolling Stone Australia",
       "title": "Sydney Live Music Series Booted for Padel Courts: ‘Shows How Little Value Is Placed on Cultural Spaces’",
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUG1KaDh4bVlWUlFIQXktbGdSTlNpWlB0T1hWY1BMN29nZ3gwNVdGREJkOHZDeDhUbVk5VUhjcWdGSmVNZG9NNEV1S19paTJaell5R0RhdnNKVUM0V0VJWlFwbzVjZWxvTEZQa1k4U0gtUTdFT2lfdUhKLWc3TGNOSWY5Y1dtVWR2aXU5WHJTai1VOHd4dEw5ekdZTGNaT0U?oc=5",
@@ -62,15 +69,43 @@
       "title": "What happened to Paul Langmack? Bulldogs great dies aged 61 after reported heart attack",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOV2lyRkExSEpQeUNNdVVfSkszUUFjOE5pWVhLN1Rqa2wxeGJ3c0NoS2pySXNBcS1CVU5OdXcxZVJSTVZ0b0lYQ0RuWXlQbzNUcVV3bG81NjViR2JXTXFqTzhjSjhfS0VkTlBmcG1rR1BiMUFqWWJzX2stcktkcDNnTzlUWUlfM1cyMDdTNUJzQQ?oc=5",
       "published": "2026-11-04T23:45:33.000Z"
+    },
+    {
+      "area": "Nearby",
+      "source": "Bulldogs",
+      "title": "Vale Paul Langmack",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBIdXNlSHZHdERZWXBHd08zaTRPVUFNTWlESVFIZ3FUQ01uYzIyelBfNnp0eFVjZHl1Y2trZzktYm04bldDam5ScFFzVDl1czV3OTlCTHFiSTR4QVJXM052MUxkWlI1R1gyTEN2cUdSVWI?oc=5",
+      "published": "2026-11-04T23:13:10.000Z"
+    },
+    {
+      "area": "Nearby",
+      "source": "Politico",
+      "title": "Albanese cured defect in election fund that gave AU$6M to golf club",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOeXhYU1RBamNZMWN4R3NOeU1DT0g0REF0SEtvdjBCTEgybXI3ZUdZNkFvWHRkOEFGLTZTdWN1ckQxQU0tS0JWQjB3VHhnWE5RcVF0R3JRbmFVam9STzRmdUM2TTAzQ2lGWE5vU0JReW5jRDlWSkYtQzV3N3dKZmc1QTJOQlBhM0hBdXRwMXk0SWt1YnNXRENqMjNrMFJ4UTE1aUlaTDlsUFc5aHV4dHdKdVg0WUFkc2Nla3oxZnJUM2MxbXhTcWF2NHlja1Z1WnpfckE?oc=5",
+      "published": "2026-11-04T18:01:00.000Z"
     }
   ],
   "uk": [
     {
       "area": "Eastbourne",
-      "source": "sussex.news",
+      "source": "SussexWorld",
+      "title": "Pop up pub in Eastbourne care home",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQdmNuQmx2RUQtcGlKWmJmTHhfYUc2eFdPRkJDbHpKblBTRjd4akY1OFlPRXRvQ29mZ0xkWG1ScHpaOUtSckZ4VzVMMHJPZnYxSE1fWjVLV2ZVM1otQUpfZXFsNHJTZmpOaGZydDFFSk8wenVGc2NZeldWSlhUSVR2YUpjXzk4aG55YmlfSlpR?oc=5",
+      "published": "2026-11-06T09:03:00.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "SussexWorld",
+      "title": "Belief coursing through Eastbourne Borough veins – King’s revolution is moving fast",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUXB6LVM1X2pibEFtTDJrQlFhSjBFNG5pSWhpbmhEOUpjUlIzclR6R245OThnMHJUUVRieHJUYUkzeTIyNzg4NVI2YXAtTEZBYUdPLTNPNmNiR1NTU0R1Y3hicUpLNmlXU0xNUGwxeGhSaDR4SDlSc0FyTEtFSnNnNS1peHlEQTM3ZGpibHRFU1N3SExVZHpZWlNJVnZSWEVqX1RrNG5DM0hpNzhhR1JyX29ZVXdKUXo0WjRsMjE4NFV4ZnVINWNwaEhacnhxNUhR?oc=5",
+      "published": "2026-11-06T08:00:00.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "Sussex.News - Sussex.News",
       "title": "Arlington Stadium to reopen in November as racing returns to Eastbourne",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNS3MxbXF6LVpzRFR0Q3phVFpScGxYZXNSUmJ5WkRhZzJwb1BCNEVLUnZZMlJfdE05V3Z0ZjhQYWNUU1dVSXFQVlhXQ0hyRFpfMXdDS1BRTHRTMUFMTHp5aEZZS3NPZkUwRm5PTXJRcFFIaFhuZ1BRTk50OGNMU0FKcW5KZVQ5OC1ITVB3ZS02aXBhdUFkX1pFMVpxY0ZDZi1Yb21tNWhjdHJ0OXc4RGVn?oc=5",
-      "published": "2026-11-05T23:13:12.000Z"
+      "published": "2026-11-06T00:02:44.000Z"
     },
     {
       "area": "Eastbourne",
@@ -94,57 +129,57 @@
       "published": "2026-11-05T14:25:00.000Z"
     },
     {
-      "area": "Eastbourne",
+      "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "Eastbourne extends deadline for presentations for Local Plan",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQkFGa0xTWnFqRS1hX1FsSmtFc21UN1UtaUFqSFRjeXQzckNKVjA4X0RVN3pocmVRNnR5bm9VSHJTajVnY21rbXROYmFqaGxtNDNvSV9iNlJnakh6b0g1ZVdibS1jdFlfM1NxSms5NVI2b3UzX2JudG93OWVuV05wU012NFllR0l6Q0l5cFZfSy1RVUVFZllXVzNDUEItZGs4cVFTZ0xIWmxOdF9YZXRXYTE2NFVjY0NxSTZEMkxNdw?oc=5",
-      "published": "2026-11-05T13:53:00.000Z"
-    },
-    {
-      "area": "Eastbourne",
-      "source": "The Argus",
-      "title": "Rugby club secures back-to-back victories with impressive 45-24 win",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNd0IxQ2JSWFZHb3oyQk1IYnFYeVZ0YkJiN3BNUGN0S1ljMFU3LUNBTTVBeDdyY0MzU2V1aWxCNndLdXVRTlE2anJ1LVpBenhXN2lvaXpjaG5fNmh3ZFBnVTZrVElIODhUMUVfWG1uRXRqcWRMSHB4TE9XREY3dkMydklYMVNZaUhhVUZlR0tOWWdRY0Z3bUNzVHp1Yw?oc=5",
-      "published": "2026-11-05T13:30:06.000Z"
+      "title": "Too gourd to waste! Sussex zoo gives Halloween decorations a second life",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOczRRb1RDamFxT0VLblZtQUJONnQtR2IyNmhDYzVqem5oR1dkTjlaRUQxb0JFQVg1SUtMX0pCOXhSbWdlWVlLN2lWSVV5ejA5Q0x0QjI3c2h3VzRrODBaYVRZX2xua2RRQWVwYXhZT2pvb2VJM0p6eXZhZWlsbjNYYkRQd2tBZ0g3c1RvTkJOOUNpSGxVTUhzMWVndEM0UlRPNkVJNHFib3NJVVJrTGpVQU1HbGRwdWhQN2g1dkxGbw?oc=5",
+      "published": "2026-11-06T10:00:00.000Z"
     },
     {
       "area": "East Sussex",
-      "source": "BBC",
-      "title": "Crowds gather for Lewes Bonfire celebrations",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1PTElqZTJ6emEtZ2hsU2VZSUxvcDRJc3drYUM2c0NLMEhmTXZESjFTUFZOc0FkV3Y1Q0ZQcGRJdW5iYXBhX2NnZ2UwMmYwazI3M2lIb2pyRUMxNFk?oc=5",
-      "published": "2026-11-05T22:05:39.000Z"
+      "source": "SussexWorld",
+      "title": "Police advise to enjoy fireworks safely and responsibly",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPLWlLbmZESWQwYmlCSzR2SUhJbVM5SEdsendtbW96M1N1ZVB2WEROSC1QRXZ6Nk9xWGI0UDFWcGlkWDNjb3lweTUzXzhxVmxpZG9yU2NMSmlac2hrWnR5b1lEVkVCN0JZYnZuXzh0QjlpdFYzdDZLUlVKcDU5dkFQRWp4U1M0bXVJMWRIN1dlTGFCTGFqUUIxZllVUXNJenNxa19STkl0UnZmTlZfTXRtQUZ2Zw?oc=5",
+      "published": "2026-11-06T09:39:00.000Z"
     },
     {
       "area": "East Sussex",
-      "source": "sussex.news",
-      "title": "VIDEO: Disqualified driver jailed after 104mph police pursuit through East Sussex",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYTZWMDVsV3lrV3hqR1ZfTmpUaDBIOUhwOENQNWVLM3l6QXVuYzNMNUN6T1ZiWEVQbEtEVXBTOGZtbmRGX29ibEt0aHhCajIwSl9GUTA5ek5wLTJrcTFVWFMxcWZMeUZKQW9MVXBiVmNQLVhEWmZiemhoWHczcGtiMjZwMi11dlZzYUFkZVo3TEgydEt6YkFsb1VqTzlxanpIU19COFRfQ3pySmVzLW5JMTBlY2E?oc=5",
-      "published": "2026-11-05T22:01:33.000Z"
+      "source": "SussexWorld",
+      "title": "East Sussex wildlife charity launches Christmas appeal to ease the pain of injured animals",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNZWNmTnVFMzVraG1OcXNhS0ZjdFVTS3hEbTE4QTU2UFNaNV9fSEFxVGFMdGFOS2J0QkZoOFpfY3NQeVkwdjgxUUVmZHM4Q1hlTkllYnI0aWNPaVN3WVU5OVNvTTRldFYwWTZ3VHRFcWEweFBSVnRkZzQtRFF1WUlaejFfaGYyRlBabDlEdjBsNFdDVzl4YmdPaUFOWHdPbUxpcW1TX1RMbW1LWkZLR0lod0pFUkVEbHJzRDhUYldUb0xFZElxNDQ3TTV1eWNkcUdMbzhGWWdtUGE?oc=5",
+      "published": "2026-11-06T08:59:00.000Z"
     },
     {
       "area": "East Sussex",
-      "source": "UK Property Forums",
-      "title": "Government signals next steps for Sussex LGR",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5MN3FkdDR5TE1xMUhOemcwNFU5eWpySnRtQTNLdWVNZjhSZGpfd2Rsd0NyamdjZmNJMUpTVDd6cXRkQUJOY0kyZDM5TnBiSURZTXNSZldmYy1VUEpndFVDWVhEMFBGY1c4bTZ6aElRUmpta1FUMTRTdWVUTFlIbUk?oc=5",
-      "published": "2026-11-05T16:37:53.000Z"
+      "source": "SussexWorld",
+      "title": "Sussex's independent spirit: why shopping local is worth the detour",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONnpmVXJzSTNvY08xd0R1MGt6WENRdjBvSmpJMVVWMVdnZmM2Y0huZkU5Nk41UUp6azVYWG9YU1k4eGI1dWhXWTZfbDZVUThVWnk5eE1sYXVuUF9iQmd6Yll2V3YtblJfVzJDSDZ6b3NHWWxkd3VCOVVwT1pRdk9UZVlZX1VLZjFiMktmMU9MS1BOYldIZzIxNzA1cw?oc=5",
+      "published": "2026-11-06T08:27:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "SussexWorld",
+      "title": "Man, 45, jailed for burglary 'spree' in East Sussex",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQS3MyY1JpeWN4LUt2bmlaUkZ4Y2lLcE96YmtiWGxwMG9WY0ptRW9xNGJ1YnBCbldjTHJuZ1Q2aWNMQ1d2N185eUZlcE9VM0lCTEhwMkd1MGltMmUtbktVNTNFZGxGVHRsNklWbHNlOW9penZPaVlPbXB5ZmtpSFdxQjFQS0UzbkN6dWlCU3Q2QVpLRnJ1MjgxbktzbHk1TDg?oc=5",
+      "published": "2026-11-06T08:08:00.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Racing set to resume at stadium after closure",
-      "link": "https://www.bbc.co.uk/news/articles/cqrly6yp52x7o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-05T16:19:29.000Z"
+      "title": "Police arrest 11 at 'successful' Lewes Bonfire",
+      "link": "https://www.bbc.co.uk/news/articles/cq3988xr732go?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-06T07:41:50.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "'My thumb almost delayed a Batman film'",
-      "link": "https://www.bbc.co.uk/news/articles/cwq6ndp299j2o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-05T06:00:05.000Z"
+      "title": "'I've taken an extra job to pay for heating oil'",
+      "link": "https://www.bbc.co.uk/news/articles/cmj47j7e92gvo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-06T06:06:00.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Plans for 223 homes on agricultural land approved",
-      "link": "https://www.bbc.co.uk/news/articles/cqx2vvyz9pzgo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-05T21:53:26.000Z"
+      "title": "Lottie Brooks success makes author 'grateful'",
+      "link": "https://www.bbc.co.uk/news/articles/cx30e55m5jq5o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-06T06:05:42.000Z"
     }
   ]
 }
