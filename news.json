@@ -1,167 +1,135 @@
 {
   "syd": [
     {
-      "area": "Earlwood",
-      "source": "Greek City Times",
-      "title": "Greek Bakeries Put Sydney’s Food Scene in the Spotlight",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBCTkZHS1FfeDNDczExWENTUUJMdlR4UDJteEdiOWNvbDhPV3dYNmQtem9JUlpJS2ZkOUhvVndxQ3pHVVQxMG9sTTNTTVRHaF9nNnFjNm83R1BaUHJKdjEybHF3T082WUtKTnU2bVUzRTYtLUM4?oc=5",
-      "published": "2026-11-06T10:10:46.000Z"
-    },
-    {
-      "area": "Earlwood area",
       "source": "Nine.com.au",
       "title": "Teenage girl allegedly choked, sexually assaulted in Sydney apartment",
       "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNVkc3M2k5X2hLWXZjd3draWtNYXRBUy04WkxoalF3TThhRDJ0dXFGWkNXSzYxVXZ2WEFBcVE0X09FSkMzVUVuTTdYQ3pGMENRRzl3NlhLS2FRRERJWEtJcUdSdGxvMG1xWFk5ZDJZU09IeDdsakVqY3VCcjRrVXBOWDJuRmRsWlNWTGxibkJGcDJqT0dST3BpS0tSQkpPV3I3U25JQjNoNWVFd3BQRjZXUzFPT1dpRlF0d2ZoYWN5LUh1TWdFd3MweTBXZ3FlcWJ1WUE?oc=5",
-      "published": "2026-11-06T02:34:34.000Z"
+      "published": "2026-11-06T14:54:35.000Z"
     },
     {
-      "area": "Earlwood area",
-      "source": "Spice News",
-      "title": "Rebrand for inner-Sydney hotel",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMjdTZ3dVX2FsMThQYm9iVDBDdzFXdDRzTEZuUW1CcDFJZmxicmhkdTZJckVCLWtDOTVyOWl2QThHTGdOZnBUZnNuc1NJZ2stZUFsQ0Nmckp1UnNEV1V0R1hkcFJGSXhXb1RMWXJUdWlDcDdaWm9ON1hDZnRvNlRVaU15MjZxWFNwZDNWRGRuQWlCZw?oc=5",
-      "published": "2026-11-04T07:57:05.000Z"
+      "source": "The Guardian",
+      "title": "One Nation asks donors at $3,000-a-head Sydney fundraiser to accept ‘non-disclosure agreement’",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdHlielRyQm03cnVRczdZSlVDaUZZY3hWU0twdW4wY1A0ZlVCM09yZGFuVGN5a0ZQX1BCYTBDdDIyZnZrcm5HVHhzV1gwVU1ldVA0ZW5PM0RXR2x5X1FBVmF1bUFKbzVvMF9rUDdhNmZOOTd0MDdMbHhHYU9oVGRQMmp5a2RCZjVOUlNpd2o0UmIweHkxZEM4ZlNGMFE3QkpuUEE3Uzk1QmhnVlp1OWc?oc=5",
+      "published": "2026-11-06T14:24:00.000Z"
     },
     {
-      "area": "Earlwood area",
+      "source": "The University of Sydney",
+      "title": "NSW Police open simulation training to university students",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNV0w4N3NmWlJ6dkItaXpqVWhVVzdHczEyUG1QWkJScUdlUFNISkFEQ1lnVHVpUWJNUl96NnROdjFmSE5tTG1MUElDeXVjaFdCVGxfZl9yNDRteVhHT2hwRHpSbTFQdldTdzdxUGtjemVwbU1JUmFvSFhUUXlkQllYWDZ6TDBlcEEweU1KYzEyUVZtODhoLWN1andPcEZ5OW1mQUtoRlZqZzhhTFR2TnViQksyRHJQVk4tQVE?oc=5",
+      "published": "2026-11-06T08:13:27.000Z"
+    },
+    {
+      "source": "Secret Sydney",
+      "title": "NSW's largest museum is finally opening in Sydney this weekend – with immersive art and a huge 23-day festival",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9sU3ZVQVdNUno3NHVDTGNtblIyNHU2LWxlZjk5UWowRzZMaDkyb1JjcjY3cmN3ZHNKUWNqaDNHT2QySTVSM0lIeWxoQUpqTWdlYmFoYU01UVpWcUNJUDN5M2l5SXk3M2gweExhenBIVEpqWFNW?oc=5",
+      "published": "2026-11-06T06:56:09.000Z"
+    },
+    {
+      "source": "NSW Government",
+      "title": "$5.2 million boost to firefighting capability for growing Sydney",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbHc1WTNFV1psdjJCZ2FRdzZVNkRQVVhWWEFwQmVicVBsQ052TFVPRVNNYVY3MlFmVG43aEdNX2lyd3R1V3lNQlRENm1HM3dHNDY5eVpFU21McEJJNlh0d2RVU3dZNEVnTHltSW02LWlNS2tLeXI0a3MyWEZlMlNqbDhWSnYxYUZFLWtqSFZn?oc=5",
+      "published": "2026-11-06T06:41:04.000Z"
+    },
+    {
+      "source": "The Canberra Times",
+      "title": "Rivals share city visions months from state election",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQkV1N2RKX1pkbDNkczRzVkZ5VHZPVml2S0RGYVllak1waHdiUkQ5Z3p0Y3Q4N1lkXzd0S2d5NE5zSHQ1SHp1UmRRNU5JZVdiRWNvNFRzSXB3Mks2SU83RjhnaWhoYzcwbkxhVjBxMmc1aUlWclFWa2hBNWJxUExKWEN5UWliY1p5Qkg0X3ctMTczX0N2UlV2d1ptZHZEMm1ublE?oc=5",
+      "published": "2026-11-06T06:05:26.000Z"
+    },
+    {
       "source": "City Hub Sydney",
-      "title": "NSW Government Revamps “Forgotten” Sydney Buses With 3,000 Additional Weekly Services",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNOVFiOW1pMlFudnFJTFhZMTJJbUJWZmdrbUJUc2g4Qy12Ykx5UmVYWEwtdHpkOXpxUzgyZTBMenE5WWRFejRKSGRKaFZuTkU0NDBKdnZRY0tXOHMzWURGUXBLd3ZKQTJUbjlKS0tlWTUxajMycktJRmhKOHVrcHM2UVFYTl95bUE5WXNLSkxPblNpcXZfZk1Bc0tNb25ZVnFteDhoVTVPLUswZw?oc=5",
-      "published": "2026-11-04T00:47:15.000Z"
+      "title": "Sydney Councils Yet To Take Up Grants To Fix Obstructive E-Bike Parking",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPX3A1U3l3eTJDWGVXc2gyRHAxUk4xTVpOT0dnak8tRl9XOFI2OXBmVGdBb1VaM1lySVA0eXF1clFFcDlqdmIwaTFjYVA4RXpLX2VZRUNqTk94QUY2cW5YWG8tNlJyTDNVRUs5LXR5bG1QN1BhWmUyYnIyNUxFTjNQMlU2Zkh0al9Qb0pMU3VoTE1Xd2NLTmNmQlI2OA?oc=5",
+      "published": "2026-11-06T05:57:25.000Z"
     },
     {
-      "area": "Earlwood area",
-      "source": "Infrastructure Magazine",
-      "title": "NSW adds 3,000 weekly bus services",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBuX050MkdOT3BoYWcyaHItallodXQ2VW9Bd0hacG14VkNkTllpZl9XR2JBYi1WMUloNEt1N0ZfZ2duQkcxVUFyRl9ZY2lQWC1aalVxMS1FUDhGaVNMdzBoU1ZhN01hczBoQTFpS05xN2dVVjhPc0xmcnRKNDg?oc=5",
-      "published": "2026-11-03T21:45:16.000Z"
+      "source": "Fox Sports",
+      "title": "What time does Paul Gallen vs Nelson Asofa-Solomona start and who’s on the full fight card?",
+      "link": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQRS15VDZaU1lKcjFaNlB2ZnM4ZWZxSWl3TC1pUk1abVljMGJRcVRmckExWTh2T1ZzS1d6amkzM2k1MWR5WW5rWkdYWjhsdm15VzViZ20xaW9NbUd3bGVCMHBlTWZjQmt0WDZMajd4WFo4b25BbU84NFpBYXhsZ211ODY3WUJqSVd1TVVXLXhVbjBQYnBhaURJbTY4TGVZTmJoTDFIdG1BQk5EX3QyNFVmbV85UGtROGNBWWM5VXFfSHV3OEM2eG9OSFo3VllORmdnZHcxb1p3S2NCa0JMMUxoUWtaZ3JhRVJIbGZzZWQ1S0pVZ0JhZUhBVi1Na3NtN3ZHUXg2RTQ0UDkxSWdHSGRmcnF1emhDOTdJUGMtOEtQSTYyUnJi0gGkAkFVX3lxTFBFLXlUNlpTWUpyMVo2UHZmczhlZnFJaXdMLWlSTVptWWMwYlFxVGZyQTFZOHZPVnNLV3pqaTMzaTUxZHlZbmtaR1haOGx2bXlXNWJnbTFpb01tR3dsZUIwcGVNZmNCa3RYNkxqN3hYWjhvbkFtTzg0WkFheGxnbXU4NjdZQmpJV3VNVVcteFVuMFBicGFpREltNjhMZVlOYmhMMUh0bUFCTkRfdDI0VWZtXzlQa1E4Y0FZYzlVcV9IdXc4QzZ4b05IWjdWWU5GZ2dkdzFvWndLY0JrQkwxTGhRa1pncmFFUkhsZnNlZDVLSlVnQmFlSEFWLU1rc203dkdReDZFNDRQOTFJZ0dIZGZycXV6aEM5N0lQYy04S1BJNjJScmI?oc=5",
+      "published": "2026-11-06T05:47:35.000Z"
     },
     {
-      "area": "Earlwood area",
-      "source": "Time Out Worldwide",
-      "title": "These are the 34 best wine bars in Sydney",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1QTVFnMnRSUXpxS1U2N2JmYk8zVzNmT1ExdkJJRHBRaDFjTnpEQzhXN0NYVFdILW9JZ2p6bkVCUVJzcUtDbVVoZXEtaG14eEc5Ynl2cE8tX0FlUUtPVy0zbkNzZXRwUVRNaUN5QWJqUW9DZw?oc=5",
-      "published": "2026-11-03T13:00:00.000Z"
+      "source": "ABC News",
+      "title": "Drug driver jailed for crash that resulted in premature baby death",
+      "link": "https://www.abc.net.au/news/2026-11-06/man-jailed-for-albury-crash-premature-baby-death/107355348",
+      "published": "2026-11-06T06:36:41.000Z"
     },
     {
-      "area": "Earlwood area",
-      "source": "Time Out Worldwide",
-      "title": "The best restaurants in Sydney 2026 to book right now",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5faVVaRXRYSWw4UnVmX2JRcTc1SFlNLUY4bGJBSEZoTDNyNjN5eXlPSUZnVk1CTUwzR2tILV9kMGUzdFdnemVXVksxa2pNRHZhVWFWRzdhcjNud191ZENMZmxtY20tY3VmdmlhTVBVMEkxaTZBeHVDeW03NXhkZw?oc=5",
-      "published": "2026-11-03T13:00:00.000Z"
+      "source": "ABC News",
+      "title": "Woman pleads not guilty to DV murder of man found dead on Newell Highway",
+      "link": "https://www.abc.net.au/news/2026-11-06/lisa-anne-silson-pleads-not-guilty-murder-mark-akers/107355300",
+      "published": "2026-11-06T03:47:57.000Z"
     },
     {
-      "area": "Nearby",
-      "source": "The Weekly Times",
-      "title": "Biggest names pay tribute to league great",
-      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNT1hHYkNHWl9fb0VTem13bERmTmJlQmJ3QVBIT2M1Wm9lZGdrZUEwWFpTWlIyMl9QZk9EZTBiRWhOS1ZsUHlYZTM5SVhIV3BISjVQQjFFdE9hWTFQa3Rlc0dSVF81ZUc4WVI4M2tPX3NnVnJqdVc5N2R2NjByRWNhdk1jVGQxbjNZQ3dSTUtueFJlelltakl1OVQ2eVk3MkZlM1ZHcE1VcXk4eGNaSnR4M05Nd0YyODgzeFI0Y2Y5Y2VVX2VKdEYxNVJrOFdObzE2T3lBRXl6NHVwLTdPdHh5X1BDdjZKYkhzelVwSG5CdUVGMUV2dEQ4cmltZXVwUlNNTHVKUQ?oc=5",
-      "published": "2026-11-05T11:13:08.000Z"
-    },
-    {
-      "area": "Nearby",
-      "source": "Rolling Stone Australia",
-      "title": "Sydney Live Music Series Booted for Padel Courts: ‘Shows How Little Value Is Placed on Cultural Spaces’",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUG1KaDh4bVlWUlFIQXktbGdSTlNpWlB0T1hWY1BMN29nZ3gwNVdGREJkOHZDeDhUbVk5VUhjcWdGSmVNZG9NNEV1S19paTJaell5R0RhdnNKVUM0V0VJWlFwbzVjZWxvTEZQa1k4U0gtUTdFT2lfdUhKLWc3TGNOSWY5Y1dtVWR2aXU5WHJTai1VOHd4dEw5ekdZTGNaT0U?oc=5",
-      "published": "2026-11-05T00:37:28.000Z"
-    },
-    {
-      "area": "Nearby",
-      "source": "Nacionale",
-      "title": "What happened to Paul Langmack? Bulldogs great dies aged 61 after reported heart attack",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOV2lyRkExSEpQeUNNdVVfSkszUUFjOE5pWVhLN1Rqa2wxeGJ3c0NoS2pySXNBcS1CVU5OdXcxZVJSTVZ0b0lYQ0RuWXlQbzNUcVV3bG81NjViR2JXTXFqTzhjSjhfS0VkTlBmcG1rR1BiMUFqWWJzX2stcktkcDNnTzlUWUlfM1cyMDdTNUJzQQ?oc=5",
-      "published": "2026-11-04T23:45:33.000Z"
-    },
-    {
-      "area": "Nearby",
-      "source": "Bulldogs",
-      "title": "Vale Paul Langmack",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBIdXNlSHZHdERZWXBHd08zaTRPVUFNTWlESVFIZ3FUQ01uYzIyelBfNnp0eFVjZHl1Y2trZzktYm04bldDam5ScFFzVDl1czV3OTlCTHFiSTR4QVJXM052MUxkWlI1R1gyTEN2cUdSVWI?oc=5",
-      "published": "2026-11-04T23:13:10.000Z"
-    },
-    {
-      "area": "Nearby",
-      "source": "Politico",
-      "title": "Albanese cured defect in election fund that gave AU$6M to golf club",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOeXhYU1RBamNZMWN4R3NOeU1DT0g0REF0SEtvdjBCTEgybXI3ZUdZNkFvWHRkOEFGLTZTdWN1ckQxQU0tS0JWQjB3VHhnWE5RcVF0R3JRbmFVam9STzRmdUM2TTAzQ2lGWE5vU0JReW5jRDlWSkYtQzV3N3dKZmc1QTJOQlBhM0hBdXRwMXk0SWt1YnNXRENqMjNrMFJ4UTE1aUlaTDlsUFc5aHV4dHdKdVg0WUFkc2Nla3oxZnJUM2MxbXhTcWF2NHlja1Z1WnpfckE?oc=5",
-      "published": "2026-11-04T18:01:00.000Z"
+      "source": "ABC News",
+      "title": "Controversial councillor must stay away from colleague under AVO",
+      "link": "https://www.abc.net.au/news/2026-11-06/snowy-monaro-councillor-thaler-higgins-avo/107350248",
+      "published": "2026-11-06T03:31:38.000Z"
     }
   ],
   "uk": [
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Pop up pub in Eastbourne care home",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQdmNuQmx2RUQtcGlKWmJmTHhfYUc2eFdPRkJDbHpKblBTRjd4akY1OFlPRXRvQ29mZ0xkWG1ScHpaOUtSckZ4VzVMMHJPZnYxSE1fWjVLV2ZVM1otQUpfZXFsNHJTZmpOaGZydDFFSk8wenVGc2NZeldWSlhUSVR2YUpjXzk4aG55YmlfSlpR?oc=5",
-      "published": "2026-11-06T09:03:00.000Z"
+      "title": "BT remove telephone boxes in Eastbourne to be replaced with Street Hubs",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQUt0Ni1abFE5X29aSnVoUUZYU2JkQW5QQ0JTNjg2UkFqdUNrOWo1S2haUnByYmpxOXdqOGdkb2pkeUNGeEVkVS1XY1BYQ284c1FiSkNLYmVxYVBPbUVjWGYzRDNmVzFSaDU5V1VVcHp4SUVQQXZRNnNOUzlQYXhPTFRqSU5jekJm?oc=5",
+      "published": "2026-11-06T14:55:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Belief coursing through Eastbourne Borough veins – King’s revolution is moving fast",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUXB6LVM1X2pibEFtTDJrQlFhSjBFNG5pSWhpbmhEOUpjUlIzclR6R245OThnMHJUUVRieHJUYUkzeTIyNzg4NVI2YXAtTEZBYUdPLTNPNmNiR1NTU0R1Y3hicUpLNmlXU0xNUGwxeGhSaDR4SDlSc0FyTEtFSnNnNS1peHlEQTM3ZGpibHRFU1N3SExVZHpZWlNJVnZSWEVqX1RrNG5DM0hpNzhhR1JyX29ZVXdKUXo0WjRsMjE4NFV4ZnVINWNwaEhacnhxNUhR?oc=5",
-      "published": "2026-11-06T08:00:00.000Z"
-    },
-    {
-      "area": "Eastbourne",
-      "source": "Sussex.News - Sussex.News",
-      "title": "Arlington Stadium to reopen in November as racing returns to Eastbourne",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNS3MxbXF6LVpzRFR0Q3phVFpScGxYZXNSUmJ5WkRhZzJwb1BCNEVLUnZZMlJfdE05V3Z0ZjhQYWNUU1dVSXFQVlhXQ0hyRFpfMXdDS1BRTHRTMUFMTHp5aEZZS3NPZkUwRm5PTXJRcFFIaFhuZ1BRTk50OGNMU0FKcW5KZVQ5OC1ITVB3ZS02aXBhdUFkX1pFMVpxY0ZDZi1Yb21tNWhjdHJ0OXc4RGVn?oc=5",
-      "published": "2026-11-06T00:02:44.000Z"
+      "title": "Eastbourne semi-detached house needing modernisation sold by auctioneers",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNblJoSm15YThhaVBDckM2Y1A0bUVGcGlvOUJuX24wNUJYUWQ2aTgxMTRJVmxCWElUbm8zeDZYQXNtbkpWdlY1dHgzY19ES0VPVjJXRzhxNlE5d3RlVUgzRUhGVXlEclFIdnpibVFpRlF1T3duQ3FwUFRtQl82ZlVJR1VYQXd5NS1RUG5DdVZCWmNBdVhVU1RmTldhSDlkV2RKUkV0NjdnWmZoZEFGdWp0NXAybnlrZUs2S0VTQUM3ekk?oc=5",
+      "published": "2026-11-06T14:20:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Are you ready for the Christmas season? Age UK is encouraging sustainable shopping",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMno3YW0zTXNLWDNGUmZnd29GUzBQOFRJd0pRcTZ4NFpvQlI1Q1pwdHpGdldIdFZqOHlLTC1XVEx3ZTRPaDNPYkZVQ1pBVHNtZ1NWUVIwclM3S2pCeF9IOHpROWZVTm1WZ2k3MUpLdFlEY1VfMHBMRGlKc2VpMjdPeEtWeW9VQy1NMjM2SUZGaXhLN3Q1dzc1YWs0M08tTThwVHNKbkdwdzRTb3hfNUp4UHJBcUhLVWFmYmxBQ1A4dzNPMnlNdTM2VXd3RzdmY3kzYmc?oc=5",
-      "published": "2026-11-05T16:20:00.000Z"
+      "title": "Eastbourne dads invited to this 'proper night out'",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaE1iLUV1VWFRLUpYSkdaN2N5eVVlVU1EeGwtSXR3dl9RWl9XcTFWVFFGd0NBYnByY3dwcXpHai1mVFc5ZHcwYXBLUUZTa2lqaU5BTUZ6U1pqbFBUaDFJeHhQNDB4QjcyLTdpWWM3d0VNUHpPYVBwYVktU0pXVEdJOGxUa0Y1NFdqY253UnJNT3pyNnFGQXhDM3RZLWdOYlBzUXc?oc=5",
+      "published": "2026-11-06T13:29:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Eastbourne among UK's five fastest-growing autumn destinations, new research shows",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMDZCUUJNeEN3U3dnU2dzZ2JKdnZDS2NiR2pyWFNEOU56VGI0MldzUy1TVFljcmlqTGotMC1semdKM1hRTmd0QTFKRExjTk1jRHk5cFFaUUl1UGRJdWpMenAwOGNSaHdIcEl2QkkzTDBZcGQ2X0kxb0dTNlptMDR1ZkdWcFZnNWdxcEhWNTlkWVlndmh0OEpyd2pFZkF0cTRqMWRXY0J0MWVvdEZCalVRaWI1M05IcG5uQ1o2T2h1WFFhV05PYkk4WQ?oc=5",
-      "published": "2026-11-05T15:37:00.000Z"
+      "title": "'We will fight these plans at every stage' - Eastbourne Conservatives say they would not introduce 'tourist tax'",
+      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOQ0RGOWRUWnBYOEVRblBzTFhMUjUyNnhRdWxnQjFaa19jeTJzcDhZOGhoRjd3VjBCNzRha2RMWXFXMFZHNU9FSmp6U1Q5UXlPU25BdlQzWDlaUjVMSjhHY2M0Vzg0cGpOX1lhVlNBcDlURGo0ZEVydmxfOEh4SDc5TEZPb1BZejlnN1FSN0NiZEU4WFlNdE14YnRLc3lSRUY0bExwWkkzWUtmRWxCQUV4UVdUTHhfUkNpWDlJbTVSR2ZuWHNBZWJYSjViamxkN3hPWkNkQjNpajg1RkIzcHVhUVMyc3piR0Q3LThXQVZ3?oc=5",
+      "published": "2026-11-06T12:40:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Person taken to hospital following collision involving a pedestrian in Eastbourne",
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxORDVfVmRYUUUxbnU0RGxacklHb1FTMkd0bFlHalFfejczaHNieFdubVNlVFN2UzNpWTdxQTJnVE5QZ3ZBSlItUXh4bjRsUVhYSnB4WlF1NjktQUdBaG9TZmMxcFJNckt4UGpjM3hwT3FHVXlaU0F1by13THhXc0pWUHY0b1o3YUVqQVdnbjgxbUhEREsyckVxRFdJdGVMbFpRSXFpZnRJal85MEY0S3BuLXJBSXFNY3ZfUlRtNnpueUhUdmNjU213UThkOVJxdnFXMUlKZF9yZ1FKVXJPN1E?oc=5",
-      "published": "2026-11-05T14:25:00.000Z"
+      "title": "Southern Rail: warn services between Eastbourne and Ashford International limited",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTktYanNIeFBycXFrZDktUHE2UWZIREZLMjJKWlUybm1wN19XUl9Ma0VjZGRyZzFYbG1EUTY1SlFRYUFqQnF3WDY2TDNaMHdUTXczZmRWRlAyVTlnNHVYTFg1TVlGSDFRbWEzQWlVLVlqTDZpdWtUbXJrNlFqeGhVVkhfVUZOSy1ac1BwMUFLMlBxaVRHc3lMMzBQVDkxVUdxTFVlNWgtcTNlNzNxYUdRQmNzd2tPelJoSEFjR3paR0RJLVFIaXpOYU1RQ1VOU1lsM3JPQUoxdlQ2V0dhMjJmRlpWR1NOV3dmZTQ3M3gwSQ?oc=5",
+      "published": "2026-11-06T11:55:00.000Z"
     },
     {
       "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "Too gourd to waste! Sussex zoo gives Halloween decorations a second life",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOczRRb1RDamFxT0VLblZtQUJONnQtR2IyNmhDYzVqem5oR1dkTjlaRUQxb0JFQVg1SUtMX0pCOXhSbWdlWVlLN2lWSVV5ejA5Q0x0QjI3c2h3VzRrODBaYVRZX2xua2RRQWVwYXhZT2pvb2VJM0p6eXZhZWlsbjNYYkRQd2tBZ0g3c1RvTkJOOUNpSGxVTUhzMWVndEM0UlRPNkVJNHFib3NJVVJrTGpVQU1HbGRwdWhQN2g1dkxGbw?oc=5",
-      "published": "2026-11-06T10:00:00.000Z"
+      "title": "East Sussex veterans launch perilous winter Himalayan expedition",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdl9yTzF6UGFFLU5HckJoTmN5VUE4Mm8yZW0yZFlaYVByWF9wbDRWbUZtMHV4ZjZnWC05VFd3ZXRKem9TYnZ6OXJ5MXFCOXpnTVY3UHNHMWFwRFMxUDVuakxlcC1ySlVXdUcyZTRZakpRUG4xcndlN1BDVG1CMUlEMkZBZEMycHVuZFFsN0JacUJkYVlYeENzNHlROTU3c1h6N3FyaGwyd2J1Q1BUbkJyQjlIM01QZw?oc=5",
+      "published": "2026-11-06T14:19:00.000Z"
     },
     {
       "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "Police advise to enjoy fireworks safely and responsibly",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPLWlLbmZESWQwYmlCSzR2SUhJbVM5SEdsendtbW96M1N1ZVB2WEROSC1QRXZ6Nk9xWGI0UDFWcGlkWDNjb3lweTUzXzhxVmxpZG9yU2NMSmlac2hrWnR5b1lEVkVCN0JZYnZuXzh0QjlpdFYzdDZLUlVKcDU5dkFQRWp4U1M0bXVJMWRIN1dlTGFCTGFqUUIxZllVUXNJenNxa19STkl0UnZmTlZfTXRtQUZ2Zw?oc=5",
-      "published": "2026-11-06T09:39:00.000Z"
+      "title": "Disruption on Southern Services now ended",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOblNFYk1Mc3E2YVVselRvcDRhc0xwcnYzVjkybHNOLUxhQUV1aXRDUlFLYUJIZU1Wd29DRDYzV0lfLUlXbVlVN2gxWWtLbVIwZXNWdG5QdklXUWlhWWlEa20wWEQ4ZkVNYk1fQm9LNjQ0M2VNMmRCb2RaS2RabVBBcGxzak9GM25yTjMxZ1NQcWVhaWtSYlVyaGhnSkpjU1poS0JrY3dZaWFPWUFISGZBRVNRT3lxcWtFR2dn?oc=5",
+      "published": "2026-11-06T11:55:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "sussex.news",
+      "title": "Lewes Bonfire clean-up sees crews clear ten tonnes of litter overnight",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9VQTlkU0tJZERTWFd5ZTdEZExlUkM2NDJIUjRaOTJJcHVJX2dXbTBCZDQ0VjAzdFNjNDZyOTM0Z2lzRGdNSVRiLUZ1bS0tbjdUUFJRUVBvVEJmNGo3bnZkZzFLQTNoWW9TYVVMQkI2TWZMdmgzQ2hZ?oc=5",
+      "published": "2026-11-06T11:24:15.000Z"
     },
     {
       "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "East Sussex wildlife charity launches Christmas appeal to ease the pain of injured animals",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNZWNmTnVFMzVraG1OcXNhS0ZjdFVTS3hEbTE4QTU2UFNaNV9fSEFxVGFMdGFOS2J0QkZoOFpfY3NQeVkwdjgxUUVmZHM4Q1hlTkllYnI0aWNPaVN3WVU5OVNvTTRldFYwWTZ3VHRFcWEweFBSVnRkZzQtRFF1WUlaejFfaGYyRlBabDlEdjBsNFdDVzl4YmdPaUFOWHdPbUxpcW1TX1RMbW1LWkZLR0lod0pFUkVEbHJzRDhUYldUb0xFZElxNDQ3TTV1eWNkcUdMbzhGWWdtUGE?oc=5",
-      "published": "2026-11-06T08:59:00.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "SussexWorld",
-      "title": "Sussex's independent spirit: why shopping local is worth the detour",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONnpmVXJzSTNvY08xd0R1MGt6WENRdjBvSmpJMVVWMVdnZmM2Y0huZkU5Nk41UUp6azVYWG9YU1k4eGI1dWhXWTZfbDZVUThVWnk5eE1sYXVuUF9iQmd6Yll2V3YtblJfVzJDSDZ6b3NHWWxkd3VCOVVwT1pRdk9UZVlZX1VLZjFiMktmMU9MS1BOYldIZzIxNzA1cw?oc=5",
-      "published": "2026-11-06T08:27:00.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "SussexWorld",
-      "title": "Man, 45, jailed for burglary 'spree' in East Sussex",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQS3MyY1JpeWN4LUt2bmlaUkZ4Y2lLcE96YmtiWGxwMG9WY0ptRW9xNGJ1YnBCbldjTHJuZ1Q2aWNMQ1d2N185eUZlcE9VM0lCTEhwMkd1MGltMmUtbktVNTNFZGxGVHRsNklWbHNlOW9penZPaVlPbXB5ZmtpSFdxQjFQS0UzbkN6dWlCU3Q2QVpLRnJ1MjgxbktzbHk1TDg?oc=5",
-      "published": "2026-11-06T08:08:00.000Z"
+      "title": "125 homes plan for East Sussex mill building and Grade II listed oast house site",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNNDMtVDk3UlhrWUhWQTlSbzdBR3pQUWhlUE1CSkZPdzRvdkswZFJMdW5fWWktZ1R0M21RaVF1cGlLVE41U3ZPdW9MRHFpYkgzMmFRdVU5dk9sY0dKZzVaaU1XdDZIR2x0WjlzOGJycjdEM1JsYlNsY2xMOVJMUHFyS2Fha09HY1NDSDlNa2pzRXR4M0NBWk1xRGVyUktiSHlwM3czSjZBSDBhcVdmSHE4NDdEYWNYcjNxdXNQdGM2WUFnY1pGUUxTMg?oc=5",
+      "published": "2026-11-06T10:44:00.000Z"
     },
     {
       "source": "BBC News Sussex",
@@ -171,15 +139,21 @@
     },
     {
       "source": "BBC News Sussex",
-      "title": "'I've taken an extra job to pay for heating oil'",
-      "link": "https://www.bbc.co.uk/news/articles/cmj47j7e92gvo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-06T06:06:00.000Z"
+      "title": "Lobby calls for end to IVF 'postcode lottery'",
+      "link": "https://www.bbc.co.uk/news/articles/crgj99yyg9vdo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-06T11:59:29.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Lottie Brooks success makes author 'grateful'",
-      "link": "https://www.bbc.co.uk/news/articles/cx30e55m5jq5o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-06T06:05:42.000Z"
+      "title": "PCs accused of injuring detained man, says watchdog",
+      "link": "https://www.bbc.co.uk/news/articles/cqzrdd1nvlemo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-06T13:48:02.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "'I've taken an extra job to pay for heating oil'",
+      "link": "https://www.bbc.co.uk/news/articles/cmj47j7e92gvo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-06T11:40:35.000Z"
     }
   ]
 }

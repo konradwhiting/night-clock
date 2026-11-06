@@ -17,11 +17,11 @@ const MAX_ITEMS = 14;  // headlines kept per place, most local first; the page s
 const gnewsUk = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=en-GB&gl=GB&ceid=GB:en';
 
 export const PLACES = {
+  // Earlwood stories are too rare to fill a screen, so this column is Sydney-wide news (no area, so the page shows no tag)
   syd: {
     feeds: [
-      { area: 'Earlwood', url: gnews('Earlwood Sydney when:14d'), newest: true, maxAgeHours: EARLWOOD_MAX_AGE_H, take: 3 },
-      { area: 'Earlwood area', url: gnews('"Inner West" Sydney when:7d'), newest: true, maxAgeHours: MAX_AGE_H, take: 6 },
-      { area: 'Nearby', url: gnews('Canterbury-Bankstown OR Marrickville OR "Dulwich Hill" OR Campsie OR Hurlstone when:7d'), newest: true, maxAgeHours: MAX_AGE_H, take: 6 }
+      { url: gnews('Sydney NSW -Sweeney when:1d'), newest: true, maxAgeHours: MAX_AGE_H, take: 8 },
+      { source: 'ABC News', url: 'https://www.abc.net.au/news/feed/52498/rss.xml', newest: true, maxAgeHours: MAX_AGE_H, take: 4 }
     ]
   },
   uk: {
@@ -84,7 +84,7 @@ export function parseFirstItem(xml) {
 export const EXCLUDED_SOURCES = /smh\.com\.au|sydney morning herald|the age|theage\.com|afr|financial review|daily telegraph|telegraph\.co|^the telegraph|^the australian$|courier.?mail|herald sun|herald-sun|west australian|the times|financial times|economist|wall street|new york times|washington post|ssbcrack|senator james|news24/i;
 
 // Search feeds pick up obituaries and notices that are not news.
-const SKIP = /obituar|death notice|funeral notice|in memoriam|\bRIP\b|property value estimate/i;
+const SKIP = /obituar|death notice|funeral notice|in memoriam|\bRIP\b|property value estimate|homes? for sale/i;
 
 /** The most recently published item, or the first one if none has a date. */
 export function newestItem(xml, exclude = SKIP) {
