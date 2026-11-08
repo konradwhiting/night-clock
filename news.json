@@ -1,76 +1,64 @@
 {
   "syd": [
     {
+      "source": "Sydney Criminal Lawyers",
+      "title": "AI CCTV Scanning Proposed for Sydney City, While Drone Policing Is Being Rolled Out in Perth",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZnUyUTRuVnF1aUF2NVdrblRZaFhjUHlvOFc5RXF0bDhDZkl6QjBoYnduODJRRTRUMWsyTElkM0J1b0h6a0EzX3NXODRMcndOVWE1Um95MC12WHUwVmN3U1A5QTRHSkdPR0liLUNjOXJpcm1TaDdpMkFUdWRVZjBmam9JZFY2dkR5eEdlNFZpZlpJb2hVUzlLSURNXzkzend2RUxER2g3U1IzZEYwN25wekZkOHVDM1NWYWJwdkYtYmR0T3B3VFNXTHNpNDhLUzVBQTZpNA?oc=5",
+      "published": "2026-11-08T05:27:25.000Z"
+    },
+    {
+      "source": "Bloomberg.com",
+      "title": "Australia Scraps Plan to Sell Sydney Barracks After Backlash",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUlNvekRnNXNzVERPT005YjhHTHpGbU5CeExVYTV4eTIwak9VaGhuM3VSYV9oTUQ0SUVKdXhxTG9zN0VpSU5SWTFmOXhfQmRIc0VaS0hOV1pVRmM4U1VLOEk3NXBGSlpxcmRiQ0xjUUFSdEloVzhfOTBiT3NuV3RXWmFTbXdDbnN4bUVTZDM4YjZUVWtpUy1VYzQxQjJuQm01R0szS1RQaHlXZWxQbUVtUA?oc=5",
+      "published": "2026-11-08T04:47:00.000Z"
+    },
+    {
+      "source": "Mirage News",
+      "title": "South West Sydney Expands Support for Women, Families",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSFV4WkVxWkhFa1p3SHMxSjNrWGRydGRSNnJRaFpZTHk4bnVYWU5abUhxT2lIUjl4UFU5bDdNZkR2ajgyUmFFcjlydUFzNUNfM3pGaTUtWUpZVmxBSWxnb3RiYm9tU2JPYXBpRTRxanNhWW5UV2RzUVlSVW81RFJpQkRQSmxYZw?oc=5",
+      "published": "2026-11-08T04:35:00.000Z"
+    },
+    {
+      "source": "The Guardian",
+      "title": "Victoria Barracks in Sydney and Melbourne to remain in public hands after partial backtrack on defence property selloff",
+      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxONVIxanVNQVBoUnE1XzUzUEJEaTRXcGlfbmE3TDNsaGw5RnBNQ1NiV05jazNhdktqMWoxR3dSTU9PUGs0blUtakNXdFRkaHVKQ2JHVTQ2S3dwcFRRaWhrUDRIV2ZPNzFuNjF0Z01GMzNFSlJjc2J1YzY1MkhNcHl1UlU3OEtfMWl6cUQtb3pCUF9KaHp2S2RnenBya3BWa1dmcnZQZHBBSG9wVWM5VVc1YzBYc0dOUkZzMGN3ejZaSUt2Znd1aHRTRFJNOHRhTnJwalRSZFVjam03QmNoZ1JlbTF3UlUtaWZJU0R5a25mOUM2alRMWmNR?oc=5",
+      "published": "2026-11-08T03:48:00.000Z"
+    },
+    {
+      "source": "7NEWS",
+      "title": "Homicide detectives called in after body found in bushland near Lithgow, west of Sydney",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMWxpdlJsUUUzWC1mNFh3N3Q0VmRrbm16X3hoY2pRUkd6OTNnbFdBTUZXQnZ2a0FieHNnYjhVa0lYR0JnbFpaWXJxY082TWVoYWZFX1gxeEV0U09POWtWM2lIOUE4TTN0Z3B5a3k2dl9GZHFFdzVrTVVPLWdLeWJRYng4dTV0SENjSGpCVnRmTDZwQzZJU1lYbWpEZC10ZEcxVzN6ZDh4aGhWM1JTSUxMWTJsUm5qS1NmdWxKRUMwSWdtWkVzV0HSAcsBQVVfeXFMUEE2ckp1dVlvMkV0LWNjNGQ3ek9QekJlcXVIOFJTYzN1V25aMFdMZjJsVm03akNFdlJNX0FwaDJXSkx0NzJjUEt2YVItZjBIcXRVZzc5THpldG1xUXg0emJOQW5qLU5SdXBkY2lsa2tFMkNuaXZQcFFMT05za0lTRDFvTjFyRER0QTJfN0NiY2d4TG5NTHJ3Z2oyZ1kxYmM2M0VOMmVCNnBOb3dEaGN5MEdYVlh0ZnFTYzBsZHo5VGpWTkZWZlIzNHNOamM?oc=5",
+      "published": "2026-11-08T01:37:00.000Z"
+    },
+    {
       "source": "Weatherzone",
       "title": "Coldest November nights in decades for Sydney and parts of southeast",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaUlqU1Y4dVFncWNSZzA5WWRsYlpiVlVkTmVpbjJoZUhUMjdzOHMteGx4b0stakQwUFQyclBzdGl5dXJCcUJoajJWTVVBdExidzlYLUV0bF9UNGFCV0tnRHNEOTZEd0RBMllxMjZOQV9ONTg4ZkdwcXpJNmN6WkF3N2dNMk1kVVN5dmlRdFZNcFBPZ3kzMUhHc1NiSUhBenV1aVI2U2pkYnVoM00yYjF5OUJ3?oc=5",
       "published": "2026-11-08T00:17:30.000Z"
     },
     {
-      "source": "Nine.com.au",
-      "title": "‘Remarkable’ cold front brings November snow to NSW, Victoria",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxON3N6WnhSUmJscFNsaWRiazdIN0NEREYzZ3BoWWx2UWMwMm5UZVlKMkxER2Mtd2l2dVF5MFduT2JXSDNna053cHRCNmVid1IzbFRyN1JMUG5JZk14NmduMUhnLXQ1T0ZRMjJDd1hLRGdpNWVxZzJxM1h6V2hFdXB5ZjJGSklzZE5oQzZMWGp3WENSdERpbzAtVHdRMGt1dUpTWk5tcVJZbUNPMWMyODZVTXVjRnJZRnJMc1FJbkNZc0Eyc0hQZ3ZqNS0wMTkzVy1rWDdPTGxHUG0yZWM?oc=5",
-      "published": "2026-11-07T23:29:27.000Z"
-    },
-    {
-      "source": "News.com.au",
-      "title": "Cold front batters Aussies with sudden freeze",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOM3JUczdpcHViSlRMZFVpZFlyM0VrN0o1V2pUZUZoZUlGWTJUZ2l3VUdHSG9pc3l5ZmFPaWlCNDRYdFh6U1ZSTFBSeno5bFJfZ1Z3U1hPbHZES0dmUGliempMZDRSazBqdVV5TEp6NmVEN0ZvaEJoUllXclNjdTJDM0ZDZkd3aW4zMEdaNXk0RFlfRHRLMXVGSGR0RnJQdGltYm9ES255eEFIVWNfMzF4RzhCWGhjQWFfeVhFejJPYzkzMXc0WHl1LVJUcnJVNEwwM2VVdUV2RGt1Z0pCZFFETDlpbjl5SldIS1I1ZXFB0gHzAUFVX3lxTE04X2FfYW51V0xObnZOOXRzTVI5ZUFEZktMNm1MYXNHaGY1YVVWdkZ2VDlQVlJleTFHeWNHMWc3eFhtcXlHUlVWZWlmLV9ERE1MTW5yVVlzbk01YjNNU2EyM2NkYUxnaW1mbEtiWUNlWWltd0VfdU5NVW5PVjlVMjBvMmMtQXc0bW9kc19ublZZNDlPZFJqRkRWY2NyUXRWXzBhTDdBUFA0Umd2OHlScWdDTG9UdGJVYkhiTHFzNHpWNjI4TVBKUFlZZTVOdGQ1U0ZFUVlzSjBkc1JCOHB3bkxVU0swVXI0OTUwcVBTVkJNZkVsWQ?oc=5",
-      "published": "2026-11-07T21:15:37.000Z"
-    },
-    {
-      "source": "Domain",
-      "title": "Billionaire’s daughter snaps up iconic Sydney pub",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOWjdoODlWNW5YVHE4ZE9TbUw5QVZvV0trRkxyQW5jMHhvOVVwS2EtNlhyY0VPR0kxYkdaeTJSMXlJckRodjBKUGVuTzZBck5Uelc3WnhkUWdsNWVmMVJVV1lndm5reWlBTEFfald5MkhEMDBKYTE2OEdpbTJiT19kaXZSUk1Uem5lcjhhd1YzTVo2UQ?oc=5",
-      "published": "2026-11-07T13:59:00.000Z"
-    },
-    {
-      "source": "ad-hoc-news.de",
-      "title": "Sydney Opera House hosts AU.X Screenworks from 30 November",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSmlRemxEQ1Jha2pqWV9QaXRNUlpXcXhxR1JVNWtWSjRVUEhtczVzUEVqa2I4ZmpPM0RUYm9NbGljRTlVWld2MURKSW5RMS1BYnhvOE9laGNTS1kwR0NqeHRpT3BOakhsR1VWQlFrVE5wdzM1V1JzQzBXUnE5d3E2RGFBQURDcUJ0MURhYUNxZVAwa0FTSE5XZ2pyaUljOHJPLUtIMVpQaWZDWDRaSHNmbXRlSmI?oc=5",
-      "published": "2026-11-07T13:28:28.000Z"
-    },
-    {
-      "source": "NRI Affairs",
-      "title": "Faiths and cultures share the light at interfaith Diwali celebrations in Sydney and Melbourne",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQXlzRWxVMTM2ZldsMXQwMHp2Z2lTUXFobnVZOV9SU2JqX2hjWGkwRHk0UnVJbVFkalhtQ2VhZXFqMjdMRmdMalc0R0V3UUEtTnZLN0xwSFRKRnZSQ0tXUk5BaEU4TEhaTDdKUWVIdGRFYU5TT0ozTmVMTUQ4NkdXc085N2pKcVJOYWVSVTl0TjJ3c0NqRmxHSG1pcGllcUhMbG1YSGZfRktXQ3E3X0tfX252N0RLV3o1TFBGeWVB?oc=5",
-      "published": "2026-11-07T12:21:53.000Z"
-    },
-    {
-      "source": "News.com.au",
-      "title": "Alpine region hit by snow weeks from summer",
-      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxObENodXBPUnB0dDNlQ28zX0x3LWlhWjlhZEFwR3JsNk5aYjlQU1czYXZrQ0h6SlVUeHdXUmJiOTczbWhMTzBITWM4SWhPMTBXdFlENmJRZmhYNE50cGdoT2NFT0p0WXlsc1RaSGVFS1NHamlIQnlXVEJzNXE3aC00X1g2TE8yREdsbWM1WnZRS2xBanB1NFV0V3NieGhpNTVZQkdPU2EwZFRQeXBUYzhwVTBLU1dTM1g5MmE0Skw5SGs1bW5KdllMVjRRMUJWV19pZl9aczUxZkFTeHhFQ0dFZldoUzV0Sjl3Rm9oNWd0TVVZLUVlXzlRT2JJNHHSAYICQVVfeXFMT1M3bjZkOS1OenNFSkhJVEM3X3BqemRNS0N2VFpMTi05Y0YtZi1BV0VfZUdHb0VBMkxZSmZNVE1LckNUcG1qQ1BVR2VYcWVxMzNxQkIzeDIxMjhHbVRGY0JxUHJydGRUcFBZMnpEdFNuVE5yelBNOG1FcEw0ajh4RUx1eWJDSDZYdnNBQXpmT1RwbVpIWTBJbWFmanlQV0psdXpILUpBc1JPMURGTjhwVkxYdEdicWhTVjFkU0NJblhBWGNtV3gzcHY0WnVzN3hEd24wUGhaS3FocGhfejNwR3d1ajNxQjhQeWdTLW00cjMyUUxaZ0lCaTlRVmJhYkJ0cXN3?oc=5",
-      "published": "2026-11-07T10:35:23.000Z"
-    },
-    {
-      "source": "racenet.com.au",
-      "title": "Hayes heist: Evaporate scoops up Diamonds to seal $2m payday",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPTHVQSEIyRlp2LVc3WkhHOGtPbEViWEJHZzdPZnRuYUk5RnBwSHhHOVBONXhFQ2F1NFQwYm5jdUFlYUh6WFdMYkJqT0ZPTVdzU0h1bVA5Z2pzeGxEOXRiVlF1Z3FDMXQ2bEo1MDEtSk9mZnlrTk1zWEl6UDJGRmFnVkdQSUxsc1d1d3BzMzJxcWxzYkRRUExKTGpvcEVUU3BfVDFZNjU5NkhfZ3RNbVV1UA?oc=5",
-      "published": "2026-11-07T07:02:17.000Z"
+      "source": "ABC News",
+      "title": "Snow blankets parts of NSW just weeks away from summer",
+      "link": "https://www.abc.net.au/news/2026-11-08/snow-falls-parts-of-nsw-after-strong-cold-front/107361014",
+      "published": "2026-11-08T05:53:05.000Z"
     },
     {
       "source": "ABC News",
-      "title": "Guns, traps and baits to target 'ballistic' NSW feral pig problem",
-      "link": "https://www.abc.net.au/news/2026-11-08/feral-pigs-farms-prompts-nsw-government-plan-walgett/107349386",
-      "published": "2026-11-07T21:25:51.000Z"
+      "title": "Swans, Hawks prevail in AFLW elimination finals",
+      "link": "https://www.abc.net.au/news/2026-11-08/aflw-elimination-finals-swans-bulldogs-suns-hawks/107361122",
+      "published": "2026-11-08T04:50:39.000Z"
     },
     {
       "source": "ABC News",
-      "title": "94yo poet who can't read or write celebrated in Stockman's Hall of Fame",
-      "link": "https://www.abc.net.au/news/2026-11-08/australian-stockman-hall-of-fame-outback-poet-jim-oconnor/107291852",
-      "published": "2026-11-07T20:38:49.000Z"
+      "title": "Residents bought into communities but may end up living in 'wastelands'",
+      "link": "https://www.abc.net.au/news/2026-11-08/collapsed-bathla-property-projects-risk-becoming-wastelands/107358154",
+      "published": "2026-11-08T03:49:40.000Z"
     },
     {
       "source": "ABC News",
-      "title": "After taming Tonga, the World Cup is New Zealand's to lose",
-      "link": "https://www.abc.net.au/news/2026-11-08/new-zealand-tonga-world-cup-kalyn-ponga/107359742",
-      "published": "2026-11-07T19:44:57.000Z"
-    },
-    {
-      "source": "ABC News",
-      "title": "Corrections should play no role in prison mental health, psychiatrist says",
-      "link": "https://www.abc.net.au/news/2026-11-08/nsw-prisons-failing-inmates-on-mental-health-says-psychiatrist/107302582",
-      "published": "2026-11-07T18:53:15.000Z"
+      "title": "Cancelled AI data centre 'victory for people power' after backlash",
+      "link": "https://www.abc.net.au/news/2026-11-08/sydney-ai-data-centre-scrapped-after-community-backlash/107360592",
+      "published": "2026-11-08T03:26:43.000Z"
     }
   ],
   "uk": [
