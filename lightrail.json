@@ -3,10 +3,10 @@
   "name": "Dulwich Hill",
   "state": "delays",
   "text": "Delays",
-  "detail": "Up to 18 min late",
-  "trips": 20,
-  "worstMin": 18,
+  "detail": "Up to 29 min late",
+  "trips": 22,
+  "worstMin": 29,
   "cancelled": 0,
-  "feedTime": "2026-11-09T09:10:21.000Z",
-  "updated": "2026-11-09T09:10:29.560Z"
+  "feedTime": "2026-11-09T09:20:20.000Z",
+  "updated": "2026-11-09T09:20:30.281Z"
 }
