@@ -1,8 +1,12 @@
 {
   "line": "L1",
   "name": "Dulwich Hill",
-  "state": "error",
-  "text": "Status unavailable",
-  "detail": "Feed problem: could not read the feed",
-  "updated": "2026-11-09T13:30:39.813Z"
+  "state": "ontime",
+  "text": "Running normally",
+  "detail": "10 trams tracked",
+  "trips": 10,
+  "worstMin": 1,
+  "cancelled": 0,
+  "feedTime": "2026-11-09T13:40:20.000Z",
+  "updated": "2026-11-09T13:40:27.055Z"
 }
