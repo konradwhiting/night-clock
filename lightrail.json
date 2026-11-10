@@ -1,12 +1,8 @@
 {
   "line": "L1",
   "name": "Dulwich Hill",
-  "state": "ontime",
-  "text": "Running normally",
-  "detail": "22 trams tracked",
-  "trips": 22,
-  "worstMin": 1,
-  "cancelled": 0,
-  "feedTime": "2026-11-10T02:30:36.000Z",
-  "updated": "2026-11-10T02:30:38.940Z"
+  "state": "error",
+  "text": "Status unavailable",
+  "detail": "Feed problem: HTTP 504",
+  "updated": "2026-11-10T02:40:26.201Z"
 }
