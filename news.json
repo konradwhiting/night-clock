@@ -1,13 +1,19 @@
 {
   "syd": [
     {
+      "source": "Domain",
+      "title": "The Sydney properties defying the downturn and what they have in common",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQTGNsTEJjNTF1Uzd3VUJVdm5ienhrYVk1VzFDWE93cFphZEVEaGZXZlJnaUdKU083dmxLemV4Mnh2bTZ3Yi1kVHNqNEVTOTdmb3kySUZFVXI0M0prcGJhak9FNWphTHR5cXg5bGNyblBpanBONGlkNzh3TXAxZ1dBbVZ1WFN0M1lXYUhCNXp4RzJUTmhNWkJIN3Nzelp4c3dtNEF6UDVwSU9oN1dXY0tqNWM3ZkpxN1drRXc?oc=5",
+      "published": "2026-11-10T13:29:00.000Z"
+    },
+    {
       "source": "Nine.com.au",
       "title": "Strathfield news: Teenage girls hospitalised, one critical, after crash in Sydney’s Inner West",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOblYtLVlPUmw2UUh0MDhtWEtGM3Bqdm1ia1Vwcjd5WExDQVoyTVVSejdWSlRkeDZ3QV9oMU5QWEw0M0VDVHpxSGV2Q3FXbHhuckNVaWEtZm1DazE4NnAzNWowd1lRcWM1VGR5WEo5czg5QVNtY0NWc0g1Nnd4bWNUNGRldUxHVUt1cm5CWnpHZWFtMnQ4NExneG1vY2NTOHRzMEJVNVBVTmdZVGFSUEs3V2h3RE8zdTZlRVFUOVBxRjhwejNnc2d1RXRSYkwyemQwckY2OQ?oc=5",
       "published": "2026-11-10T08:57:54.000Z"
     },
     {
-      "source": "streamlinefeed.co.ke",
+      "source": "https://streamlinefeed.co.ke/",
       "title": "NSW parliamentary inquiry exposes severe child safety and funding failures at Sydney private school",
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTFkwTHU0bm9sQVR2OHR5Tmx4amU4TFZHdzFJZ3ZTQzZnVWtiUjB3ZV9aWnhKUWgyUGx1Z3hnaU9Nc0VnYVFfRXFLMGJ4SVZpbXNRSkF6YlZMa1RlMWY4VWlGS1JFZmd2akhQYVMzQzZrVW9RRXAtVkNFUm5tRWVDdXRVRDlnb0FZY2w2WFgyQXFjYWxOVVhIZnZ6cG5jb2tubFIzZHItMjJNUFVJeHBjMnMxNFcwVXdXWENlVnZOT3MzcENmM2pZRGFEZTd6QQ?oc=5",
       "published": "2026-11-10T08:57:42.000Z"
@@ -25,16 +31,16 @@
       "published": "2026-11-10T05:41:23.000Z"
     },
     {
-      "source": "Muswellbrook Chronicle",
+      "source": "Newcastle Herald",
       "title": "What's the best way to travel from Sydney for a weekend getaway?",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOVGZsM3NFektJWUlBVjZnMFZ6TGtaRWF3WEViZFpzOFpMVktSbThhMy1VLVgwTkxMVS1TY0dxZ3JzVkdOT0Y4ZkluNjYxN3RjOUFPTkREQzlpRnJ6Z1p6dk1iME4zTndYdU5fLV9TWjQ1MzlHM0RTOURobWZkOExra21BTW5mNzRYNjRtYTZVWDVoZGxqVzVEUTlMOVE5N01mclRPSjdNSzc0UzRhREdTSVpYVnNQbU5KV1E?oc=5",
-      "published": "2026-11-10T04:43:01.000Z"
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNVI5YUNmZlJZSWdUTzdMN1pHMDQxNG16YXFjZUJPbG5CbXpFbnMyaXBqRkdMRTFTVzNTX1Jhc0owTjdGdmpvMFVoQU5fOGprN1JLRUR0UHRpQllKVjV2SkhIOVN0LTNCRktxcXpSS3lGOWdETnE5eVNfajREUnlQSlNqa0h0dmZZNU9pRUZfaW9Fa0dUX1JBQk0wMXpVYjc3dmcwdGtRTExJZDQxcE92eGdn?oc=5",
+      "published": "2026-11-10T04:48:29.000Z"
     },
     {
-      "source": "Mirage News",
-      "title": "$12.5M to Restore NSW Grassy Woodlands for Climate Change",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQMW4zY0ltYjJtcm0xNDJpTkUxbUltTklnamM1eHYzMzFHM1RucTk1alJsVjRaNnR6RVF5aEVqY1ZDb2ZRdHpScFdCRHN3NVUyRUNfbmxhbGxqcEZFS3ZPOEdqZkEzVHVwVE15cWNfLW04REFZanRPTHZTNTZjR2ZGekhmbw?oc=5",
-      "published": "2026-11-10T03:13:00.000Z"
+      "source": "ABC News",
+      "title": "Eleven unknown Australian soldiers killed in WWI formally identified",
+      "link": "https://www.abc.net.au/news/2026-11-10/eleven-australian-soldiers-killed-wwi-formally-idenified/107370258",
+      "published": "2026-11-10T11:30:13.000Z"
     },
     {
       "source": "ABC News",
@@ -53,101 +59,95 @@
       "title": "'Not enough evidence' to determine young woman's cause of death, inquest finds",
       "link": "https://www.abc.net.au/news/2026-11-10/death-inquest-findings-wilcannia-nsw-coroner/107368106",
       "published": "2026-11-10T06:54:03.000Z"
-    },
-    {
-      "source": "ABC News",
-      "title": "'Sounds crazy. I love him': Lamarre-Condon quizzed over texts",
-      "link": "https://www.abc.net.au/news/2026-11-10/beau-lamarre-condon-denies-jesse-baird-obsession/107366852",
-      "published": "2026-11-10T05:25:14.000Z"
     }
   ],
   "uk": [
     {
       "area": "Eastbourne",
-      "source": "PWPonderings",
-      "title": "RevPro 11/8/2026 Live In Eastbourne Results",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbF94ZlFoTVplaUVaNFBYS2E5Snl1UHJFNHJTUVlhV05wVmVTR3U2a0Z2Y05hd2dVM3pzNE52QUREdnFuR0drUFFvZG9HYnFFMVVibDNPaVNVV1dETGl1cEtoWmJsel9zUHJDQTIyUzdEZGJJU3lfOUQ1dHdEQVhPcWtYdC1wOHM?oc=5",
-      "published": "2026-11-09T21:57:25.000Z"
-    },
-    {
-      "area": "Eastbourne",
-      "source": "The Argus",
-      "title": "Controversial seafront apartments 'no longer viable', leaked email reveals",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYkxmZzkyYVpSYkxiWFAtWU9RYkdKUDJPQlZDSGZjWkduQXpsTGFVZF9QeXBreHNGaVJ2bElQZ3VYbVRkUllIdVZSdHpkWlpheTlQc3VnbnBqOFh4NzVjSi1GOGpqRWZBSlZjUnRsN1ZzN3FlekItaTAxa1lrVnViOFlCWjJFczJzRElzR1hmVEhpcTdEOWc?oc=5",
-      "published": "2026-11-09T16:34:37.000Z"
+      "source": "SussexWorld",
+      "title": "Eastbourne Borough Council Leader Stephen Holt column",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQWjFuWlFIUDNPTlF6YkFEWklqUU1zeWNaMkZ2X09LQ1oxN0JqbXJYZndpdENndnJ5TmRlNTh0QW5hcXBQMTl3RWN4UjV1WnhOWllidm9OMS1NQ1JwLTRaREpsU2dObXFBSWlCMWc1YV84RnNZNnE0ajVTWmVzMExudG9PY3psZlVoN1ZkTkFUZzJSYy1qakVqdTQ5cnJCNmhyVGJkM2NjZld4ajYxb3E5N09rMUhhNjFTOGZQb2FJZ3ZaYnZhVTVCdTBvZ19hMnRpRW9HWThB?oc=5",
+      "published": "2026-11-10T16:45:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Eastbourne parents walk along East Sussex Coast to raise money to save kids' football team",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNSnc0Rk04MmNsc1k4VnRRYWYxTDc0ckxZSTVWR2h1ZFp5RWxTUThoemJDSGxsanNSdVFaWF9ZZWhSeGVBMmF3c05yTVlqWEZpa1k3V3EwS1JmenhqTEI4eWNId3MxWVUxd2Mybk1QVU5YRENuNUt6TVlQY3dlY3h0OVpfbE5FeGlZVGxQczIzZDhOR0gybnhJSXQ2clM3Vmt6dWcyYWk5V1JOQ1l5T3VfU3d1OTJwbF9Mdi1US2lLQWJUSUpQ?oc=5",
-      "published": "2026-11-09T16:14:00.000Z"
+      "title": "Solar Powered Communities programme opens to all of Eastbourne",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOc1JjRG1pOWpIUzgtMjlKbUJaZUd3XzhwWUJCN3AxMHhySUhlNW5IcTVLSjBCSmtlV2hCWGdibGU0ZGlnTklSazlfemhtV3MzZlBBSkkySEpocnZ1ZWVmbDNHZDgwQ1V0V3Vra2V4Q0d4ZFRJZ0VqdC1PcTVtT0RESmpzLTRrN0RObDZPMGFxcU4wWFExN0wtSTljOWpsWEQ0Y1Y0MTdtdjVPVnE0QlRxekhWOA?oc=5",
+      "published": "2026-11-10T16:11:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Tree of Light service in Eastbourne offers a special place to remember loved ones this Christmas",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQWkwyYTFNUnB1bDJaUGVOWk5fVU9MaTJXTVU5UmtFTjN1Vk9zOF9ZR1AzVzZCODVnU3Aza09hc1lUUWx2Und1NHE5cVBNMk9IanhnN2NscXNtcnhveWE4SHFWdWxkZThrUXVVSk5ya1FCTVg3SGdtX3RacVF4SXdURVptMHBVX2VXSDhBSWxrMWYtUnBCUGhHQnF6WmNwczJXQXp4U1Y2U2J5SGFZZHRPZ0NROFd2TW9feWdOYlNHbzZ2cFplU2RoWkdTT29yM2w0NFp6anc4dFVCN2dUZEN5dGtn?oc=5",
-      "published": "2026-11-09T16:10:00.000Z"
+      "title": "Eastbourne to host East Sussex's largest jobs fair",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNT29mRXhtTC1idnZId1JDd2dWd1J5N2hSMUNuekdJX1pIVTNqeVhGZFI3ejJiemNhMkt4WHhEV1UtVVZ2NzM5cUVFbWVnanZIT3R6anpZYnVPZnQ4TklRandaN0NKRVJZb3Y5ekV0NEJMM0VHYVFPUnB0dUt0aXNhSGJWMmJKb1l6cmRaMW9PMlY3RktDYkNOWk5uSHVDdEU?oc=5",
+      "published": "2026-11-10T15:19:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Eastbourne MP holds talk with local businesses following the Budget",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVkZRa0VVbmJYbTlfcTlfcnM5YXhsQ2s5cVhySEJLbVFPX09reURkVUh0bFlXQzQybUdZVm5oYWFjd3hGSVZUV3ZYUFVKLUxaUEx5NW94Q21DVXNwaUhvRURkRFpiVzljSWVLS2N4NVJIQTBldUJPYkJSSVJoZHA5VDIwc1BCeTA0a0R4Ui1aTTkxby1mQzRsXzd3RXFja25VRGtTSy1nRVlQaVhNWlROYXNlSklxSTZUMHlfVXN3?oc=5",
-      "published": "2026-11-09T16:06:00.000Z"
+      "title": "Downing Street announces Eastbourne vicar as Dean of Exeter Cathedral",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdFg0OUVKS3UtMFhJdTFPYW1KSjhLdFdabzhjbFpLVF9YTjJzY2hkdWlzbVBKRzZEbTd1NGFyTmRFZ1dzN3pxSTFya1dlY3JJY19QS1RtdkVyTlBzamZocTE2eG52dWhqRFVQVFN2VjN2aVp5SUViVzF2WElCRnpIZUtDQ1dOVmRBeWRkQmlHSkREMU9pMU9tcDdyOEpnUnFkNUpWTnA3Y21FMHhnc3U1em0wd3pha2R5X2R5Zw?oc=5",
+      "published": "2026-11-10T15:07:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Eastbourne welcomes Real Living Wage accreditation",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMnRmNTVhSDl3dHpVVFZZc0I4Mi1QWFVRMWtySE9RQkdSN3pfVlhGNHJEakJUNlpBcm5CVGhoNWRfVHI5cC1uTlBHQ2FNeHRGSExrc0FGSlNOSGpucjRONXVDLWdsS3dlejduaDBsd2JLb19NamxHcGdOM0d1MGdiRXRPR0FURmNtd3NRR21tcnhybGo1djgtNnhReE1OOXpWNWR0OEdtYTdCVDdJRnA2Y0tn?oc=5",
-      "published": "2026-11-09T15:54:00.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "The Argus",
-      "title": "Plans for school to serve alcohol spark several objections",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUGNHQ2lISEVpU1k0RllXQzNMMG0tV0VNV0tTUjBMMnA2bFpDbUNyYWo2Y0lTODBoQUVXU05DSU9XaWdJLXd2V1JPdlFnTE9VRGJHeU03VTJvNFE5cWkyNGZ1T1diYjB4clc3SkhldkJqTzJNNW1XNmJfeEpWdVgtVlhBcVpXZGZGTGdvMjc0UzE5bUhiOEIyRWh4S1RrUQ?oc=5",
-      "published": "2026-11-10T05:00:00.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "The Argus",
-      "title": "Sussex's largest reservoir below 40 per cent full after dry weather",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNT2NYazRQR2lsSko1YzBXN19BUVdYU0JlQTlodVJSQ1JwNmFyeTBPcnNUUGY5TGxHRGhPX041VlBSMUdBRy05bzVSQno5OE10RVhmWHJWZkZEWWFxZk1nblpoOG50VF9aNm9qalJhX3JKTTRvclhTMlJZYVBNN2o0LWZ6MmVDYXF6TjlCX3RvTWpwUQ?oc=5",
-      "published": "2026-11-10T05:00:00.000Z"
+      "title": "Eastbourne nursery joins nationwide one million read and rave pledge for BBC Children in Need",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNaG9jaDFHOHVkV3Boci1MN3JESkViMVJkakRZZURCUUFncE1wd212UkstQkhXcjlPTTJyc1NNMDFCd0toMGhpeV9raGlreXZGc2VxSVZISHE2TFJKWm9kSWFzNHN2RFZrbWVxQlJib0p3Slo2QzFFSi0waHZUYktkMjFBcFRMbWdLVjJWeld6QmFsNlpsSWZGUUhLamlDbW9Lb3d1dGtSMEtpOTlfV3VGM29sTFk3WTZKR2k5ZGh5RnVoVXFiUzBLM1lEX2VKd1hHYW05Zl80NHREVlU?oc=5",
+      "published": "2026-11-10T15:01:00.000Z"
     },
     {
       "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "'Government must restore heat pump funding and keep EV targets'",
-      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQblJCejVZSFZEdC1jUEtkVXc5NExaMV9Jd3N2UWlxYUhUYTBoT3pYV1d0dzdTZFBLUXNfbnVsbmNlMnJKTUVoWTZSSURmT0Y4RWxKMXpuVExLRll5cHhzcTdRN0dnN2pTa0RKd3VCLWRlUXM0alpaY2s0eFBMTGdiVXRZeDlwZW1XaTdEQThvMGdzR1g2ZW1RcHZUV2lFQS1uMngzRUpVTmg2cUVQOTZxZ0E5SjdSYnNSMC0zX3RyeGFhY1I4bGtLYWNJWl9OVFVWRkxnamNjN0owdktoTUZPSXQ5T1VNQ3NHLVd4VWk0aEJobFRiT2RVQzViam05Nk1BZF9R?oc=5",
-      "published": "2026-11-09T16:15:00.000Z"
+      "title": "Festive warming spa day for two in Sussex has 55 per cent off",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOQVoyX0pDaUNHbUNab3U2YkJoVTl1cy1LeE1MRTZPVUc2NndaNzVyTVN0WExsTHFLOUNwTFZDOGxqQUpNZ3lLX19ZZk1YRmlEN2Z5RmM2LVY0ZndKdG1JdVJvamZPazhPdmxEU090d1lSZ0tpUEpWTVY1aUJZejZ6bDBWYmNfZ3c2YXV5Yy1EeTFBWHdyMm5kcWhTR3B2S0ZBMnpFSkkwMlVIQl9xY0wtQ3VMaWNXQnpRc1dmZVFISQ?oc=5",
+      "published": "2026-11-10T16:46:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "FE News",
+      "title": "East Sussex College students get behind the scenes at local film studio",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdkdLMHRFM2JaUC1KdDU1VGZOUkRHbW1MbGFnNnIwQ0xVdjlERjFuM19qQndiOENGRlZ3NlpyOTBxWGxld2ZyS01LMThPTU4tQklKbDZOR3Q1NXhaXzU3TFhZbm42TEZMTTFaanVQZlA1NVlCUjhyZERCLTdJcFRZMlFLWktOak5YbHhOMHAtUTY2QWFpNTFPQ016cHZOdGFhOUF5Ymg5TmZrYWs?oc=5",
+      "published": "2026-11-10T16:11:02.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "SussexWorld",
+      "title": "Police across East Sussex support 'shop kind' movement to promote better treatment for staff",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZWl3d21GMlZvSHI1cXpOMzJNVG1nSjFxSkloZ3NrN2sxdllPXzl3akJuZ2JLYi1DeTdPbURTQnpSN1J2NTlOTGxqVVMwTFJQbFNPUXVWZkFJQTc2TEtOek52Z0kwcU5TcGx4NXpKUGdYS09Uck9BRGRYNW5rQnROeUZPZGprSkY2bldya25JbWVQYjRSRzJUaFZ1Z0Rlbk04NWEzUWJOc3IzM2NsZ2JFREQwMmhaWDVGSHc?oc=5",
+      "published": "2026-11-10T15:15:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "SussexWorld",
+      "title": "Free practical workshops help East Sussex businesses get to grips with Google, AI and cyber security",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWEh0WHF6YjJCd2RJVHBTUDhoY1NpaElWcVVuc2cwd1MyZ1c0SE9ObXZkd0JZa2JpOVRiZW56dW1jVXpXUzhFWWQ0VUNFUXhYTDc3cm9RN0pFVXhDR1hXcDJ5N2NETThGeHlhdmtzOVZWWEJXZ0E4eVE3ODRBQVVudUpaeEF5NTJwNlQwTmdOUEJ1cTRkZGlGTDk4OE11RVBIMUplV0p2aXQzbHl1djJnTVhPUjR3VXlycE9ybGRnOFZEZGlpd2FjSlR4cVk4aS1ITGhjQmF5S1VFekpWT0E?oc=5",
+      "published": "2026-11-10T14:36:00.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "Pair face murder charges after cyclist's death",
+      "link": "https://www.bbc.co.uk/news/articles/ckly0yevdddjo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-10T15:57:24.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "Body of man found at Hove seafront, say police",
+      "link": "https://www.bbc.co.uk/news/articles/cmd7q7p90xgeo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-10T11:25:43.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "Four Sussex police officers deny assault charges",
+      "link": "https://www.bbc.co.uk/news/articles/cxdd8dllm4v9o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-10T12:33:09.000Z"
     },
     {
       "source": "BBC News Sussex",
       "title": "Parents of children harmed by drug fearful for future",
       "link": "https://www.bbc.co.uk/news/articles/cqdjvjdzxvwdo?at_medium=RSS&at_campaign=rss",
       "published": "2026-11-10T06:09:03.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Driver caught watching an adult video at the wheel",
-      "link": "https://www.bbc.co.uk/news/articles/cmvgx10zwr14o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-10T06:18:38.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Man celebrates first bodybuilding contest win at 61",
-      "link": "https://www.bbc.co.uk/news/articles/cr1exezdzjyjo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-10T06:11:15.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Man arrested after fireworks display sexual assaults",
-      "link": "https://www.bbc.co.uk/news/articles/cxyvrvm806e8o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-09T17:15:23.000Z"
     }
   ]
 }
