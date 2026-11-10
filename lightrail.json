@@ -3,6 +3,6 @@
   "name": "Dulwich Hill",
   "state": "error",
   "text": "Status unavailable",
-  "detail": "Feed problem: HTTP 504",
-  "updated": "2026-11-10T02:40:26.201Z"
+  "detail": "Feed problem: HTTP 404",
+  "updated": "2026-11-10T02:50:26.598Z"
 }
