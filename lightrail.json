@@ -5,11 +5,11 @@
   "text": "Cancellations",
   "detail": "The 08:45 tram was cancelled",
   "trips": 35,
-  "worstMin": 1,
+  "worstMin": 0,
   "cancelled": 1,
   "cancelledAt": [
     "08:45"
   ],
-  "feedTime": "2026-11-11T21:50:21.000Z",
-  "updated": "2026-11-11T21:50:30.674Z"
+  "feedTime": "2026-11-11T22:10:21.000Z",
+  "updated": "2026-11-11T22:10:32.332Z"
 }
