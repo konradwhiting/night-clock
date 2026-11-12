@@ -1,55 +1,88 @@
 {
   "syd": [
     {
-      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
-      "title": "Breaking: Teen critical after train fall on Sydney Harbour Bridge",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSVBzSG02WnBoVGJkYkxqWWxKUWQydGR4T2UyUWw3WW8zQ2d1Sy1faFVUUVFnbXBiS2tCMUhBaWdiX2dpZ3lwMHJMTFVHcHE1TzBhaUFDSEcyU2UtVU5qWEFodERXNFhmeXlwSzBXa3pUZnNfREJ5NEdEUXZNUlpsc2dDUldNWHFlWmF0MW8wUQ?oc=5",
-      "published": "2026-11-12T02:48:05.000Z"
+      "source": "Nine.com.au",
+      "title": "Teen fighting for life after suspected train surfing accident on Sydney Harbour Bridge",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNaW1UTmQ4bi1ZeTRKTTU4MmJWQUFmbWE5a0hKOFlQb1c5Y3pnNlMzZWIwV1EyNDlhZXB4YnN6NU1wZl9nRERjQnpDZVcwRGI0VnkteFZtNUhnRUJXeWZoRDNKbFJRQkRxSUMxSWZMbzZZMlhDSVFEeVZOT3dMRnl5eVdQM1RIdEFUNVRqRHJILVBCWXUxYTRnNFRFNnlpZDRDT0dGZTZTTkE?oc=5",
+      "published": "2026-11-12T09:15:28.000Z"
+    },
+    {
+      "source": "Nine.com.au",
+      "title": "‘Recipe for disaster’: Sydney community outraged after bus attacks on the rise",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQQWEyNFdDMUlXOWRsUUVYaEplWlRhd2t6clMtV0hsYmUwSnBxNmt2cGVtQ19iUy1sSWJIUjFRN0hlYXB0LUExc1RmbThFUnZxWFhxWE5GMEpZTmkzaXFXWjBIU3dEYzRhZmZ0a2M4QnJsa3ByNHlyTS1JV3JTeTJKMmxYY2dhZTZpd1RUT1ZQcEItTEtYQXlXaXR3dVZtdw?oc=5",
+      "published": "2026-11-12T08:23:27.000Z"
+    },
+    {
+      "source": "The National Tribune",
+      "title": "NSW JCTT charge Sydney teen with allegedly collecting documents and items for a terrorist attack",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNWXlydkNIUzFCcUt3aXNtdFNGcXRBdjdxaWZid3dFSl81cE04SVl3MU9nY3JJalVvZUg3enNWazFaR0ZhdjYwQW9Yem84NHJpMXphV3BqdV83aEVNWFRRNXZpQXZKQk9kNzV0eVVZc2pyRWlWa3QzbDJWWXRKdWpnd2dlbnJKaml1a1dhWVhRb2hVTVlkbng5VEFqTFZRNXVFa1l6S3BiT0IteHNSSmVHLWZoaXJxZXVnbXV1YjhVV3VUeU5rdDFQM3pQRmQ?oc=5",
+      "published": "2026-11-12T06:32:01.000Z"
+    },
+    {
+      "source": "7NEWS",
+      "title": "Measles alert issued after traveller returns from Thailand, visits Sydney International Airport and hospital",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQOF9iZ2J4eUlNZ2lvaFljSTJqVWhFQXpkY1FNUUlvc1EzN2poLWtVeDJaLTlldzE4NUVNSk11dmNyY0dBYXZXWVZIcVFWOTktWnQtQjl3Nnd1UjlhY0FzbWRobGc2bi1nWC0yS2FLV2Z5bmQ3Qk9RTVJ6VTJDM1IzLVVkOUlseEVoX2l4YnFVamRjTEJnemVFVXJtT3ZXckNmMWpjN1RPWGhQeExOLWJDLVR2S3pPeDlyck5zZG53eE1vVFNweUJyXzdSYkFoZFVZM1N2eXdGUDBlRk0wdWJSc01fdjdKVElvS3F6NWRhWdIB9AFBVV95cUxPemdIQ1dHZnNmTnUtcVJpRUd2MXlwX2p1LXZ3Q0gtLTYtNDdOUGNwbEVUZEhzZy03WUNocGVaX2xMWXhrTTVUU3VGTGc0T0dGM3RRYTBiV09pMGFicmVTVDVFUlo5VmNKc3BOS3hFR3FQNy1OZlJGbk5lSkJ4OWNxQXg3c2J0c2k1cTJQTmhkc00yY2JGN1pIUzVPazdjTUJKcmJ6LUNOMEhpRy1wclZlaE10dHBWcDRFOHRyd2JDUkZkZXZVX0w4bGtqeW5VQ1ZBbFkzMkZGZnl0NUV4bEw0eGxxNXpRY2pVOGpGRmJzeHZlYy1B?oc=5",
+      "published": "2026-11-12T06:26:00.000Z"
     },
     {
       "source": "News.com.au",
-      "title": "Major Sydney pubs to get $54m change",
-      "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNMlU3ajVna0dFOEJTLV9Pd2NpcDdzMmJuemVxY3ZaY2htRk9ieUJPLVpQYkFBZ2tVQlNrSGpxZjBIWEJKZV91ck5VUGtWMzlibEItZkVPV2JJZ2s1QkEyNzlFM1hLY3I0ekRtM1ZCTS1zSVFpTl9yX2t1N29iaGdwOTVfWXA0UFFNNU5STFVkWGdaXzhhS1F4NVhoSTE1RlNaNDlnM003eVhUUk9DbE1GQ1ROLUdOdExSX3NzLWxfMHU3eHJVMS0xZXZYVmJzOW1WYUhCVWc1dHQtSGtNZ1FyTnUzS0ZHdVl3NXFLaTlEWE9tcmtydjhyajFNYzJfbFXSAYQCQVVfeXFMTWR1SzU3ZDVuQl9qMHNzRGdNSHBrdXl0Qzh2S0ItVG05Y2hoMzlaRTNXM3VmZ1VaRE5Ec1NCYU9HMzFSQU1oczRfaHJOQlpXMDNPSW9uVVZUd2RvNFdKVzBwQzhMcEVubXJmakxLaEpxUWdWOEJXQ1dXOG5tQlVRYktVazJnelhldWE1a0NLOTVwNFFTREZwdmFueG4zRDJ6YWNDSGc3RWpYd0d2UWFjR0cybGMwSmUzLVNCa1E5SHZUak13MlowcUlDekxsTnhvYXJxcGpiUm94M2NWTWdiZ3NjVVNfZUhVWG43VkN0dmRNUmlRN055ZFBTcGRuc2NMT0p1QzA?oc=5",
-      "published": "2026-11-12T01:22:51.000Z"
+      "title": "Sydney on alert over contagious disease",
+      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQb2ZGMW9oQy1iTnVCTmVnVU9fZnJVWVdWNjVVRURPYnZ1ZFdKdEdnek9hMmwzbHJtNnhvRUFXTWFnbDg3X3VFMFJaN1FMSmZXTFk4ckhuUW43UTRaU3M1WnRqbzV1Q2NISGFybnRKRWQyeFhibkt4aWExRjdDNjF5QnBzemtQcmVKRWxJN19lUWZHakJyMWkzQ19vS0xMTGwyTmhYcEZ3a0VhdzY1cmNhdkZzM0xlS2p3cFBjTzIzR01jblBaYmVjbzc0MUdGajFMeWYybHBKQk9kOGE2dG1FVmhiOFZJSTA2UUp0VVpwcTUzOGh5UmJyWW9uRdIBgAJBVV95cUxNYmZwTEVBTkJsaWpvV3ViX2xKTkNsYkJjRDVQNk05YzNxck4xeno3OXRIRllEQXRlNDJoQ3ZCS28tY3ctRTF3Q0RTanNWMWFDT1VuTEVsdzhWMmRYUDdHQ0djSUVSb1lfN2ZSQ2tOVVRPSGQwUnpBT1hyRTZsMDZ3dll1VXBzRFZnYXJkR1A4Sk51SXpwbjlueGduN3ppMV9TVkFtU2lQV0hHX3ZxbmtYT2ZsOWFfcmVkM3VpTHNqOHJjeUtyOVM4MFpzTGdjNWFRRzg2djBRNVptZHQtd0JhVmt0RFZtUllMLUZlTkV0MEtGX2ZtVnJtMW9PQnBJdXM4?oc=5",
+      "published": "2026-11-12T05:22:25.000Z"
     },
     {
-      "source": "Weatherzone",
-      "title": "Severe thunderstorms threaten southeast Queensland and northeast NSW again on Thursday",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOemRFd2F5cGt2NERBbS1IRVl0QTJnYzlmdDVvRHJQSG5sLUEzOWMtR0pZTUg5QU4zT2Vnd3ZhLUZXSHlROUlRbDRoT0tTZVZ4VzVoTnRseWhLWGZDNmtOZzRQWEZYTXNnS05CbXRhTXdOTS1ITGc3MVNnOWVaalZnRlF0WUJBMjdVVEZ4MFFqVC1JMUNmd2IwNEZvcUNVOXpDUUZ0QVBMejZSWUFXSEZ1ajBhQ21rbGxBVUt6THQ3N2R6TWhoMzBNSWJ3?oc=5",
-      "published": "2026-11-12T00:50:16.000Z"
-    },
-    {
-      "source": "Apartments.com.au",
-      "title": "Arada secures approval for $650 million Castle Hill apartment development, Wattle Green",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMjQ2ZmQ4T2V3bXhCeTJTaHozZnJVUDYwQlh5bWI2QTc5LXFHQjdHamxVNllJTWxvZnB1UnRha1pua3c0MUVXMzNpVzNKVlNFdlZteDJXOTFZam9zY0FaRnlHRFNmeExseHo3dkh5eW9pcVo5VFh6d3VLS0ItdTVkZ0ZoNlFVbUM0Sm93OXdWZjJTUTFNTU54M25jNGcwVG1maVdsRE93Z09NQ3NUOExiaFpZNXpzVVI4MHdLbGVGZU10Zw?oc=5",
-      "published": "2026-11-12T00:42:28.000Z"
-    },
-    {
-      "source": "Yahoo Lifestyle Australia",
-      "title": "Aussie discovers 'most secluded beach' just 1 hour from Sydney CBD: 'Doesn't look real'",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeU9PWG4wVExoNHA5N1Z5X2lEOGNDNHFFbHN0ZlFkTWRjTmk1cFJlRVY5N0dLbk1Tbzh3eEdfRUlYRkxaNDZOTnhWY3BlUkQ3Q0hFQnVLTUpQTnFQdng5NWhyd0VfNE1hbnVFWnEtODJEQzB6QzU5Q2Y5UEUwdDhNcTBvdllxaVpaVzRoTjY3eFdmeUludFZZR1d5enQzejBBV2FBTGxwaXczdDlWb3RiZUxDMmpRc3Z0aF9oSVB6RFlZTkh5RFE?oc=5",
-      "published": "2026-11-12T00:31:00.000Z"
+      "source": "News.com.au",
+      "title": "Truly sickening detail as torso found in sofa",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZVBoUmh2R2RQX3RuWm4wSkNGeUdwN3g4cm9Sd2NiaElrV2dkQUlEcU5PcnpxdExXVG15Y0FqUnJLM1NEWjRTR1c3RlNNN1ZybVZrcGd3dTF1M3NlOFptckFzbmJybXNITlQ0anpVZlZMeXhYckZXd3dEYjBJZG9XUUc2UGNtbDVraDJFdFJLaGxiNkxzZm1CclIxUGpRTHU3NFAyOGtaYjJLOW9BMXNyLXViRXZwMEpBeWZfMDdUUEh0cGdNUXRwQUtPeGEwcmFZMDJrQ0syNE92U1VKQzBqV3hSMy1zUmh3NnZic0xaRWLSAfYBQVVfeXFMTXBNMmVqODRFR1NsMkNGU1lMY0NFcDlad3Fsd3pyc2RLLWNta3o0MmhES1VWTlJzT2dGcDBweWRURGVTUFJocGhzb2tjNzU3cHdIRHlmSE9DbmRpWjZxNmI3bTJuaWJDam4xanhFaGhiU1BrN25wWTRTZG93UXo3WUEtckZBYUNpTjlrVnIxRlBsY2Jhdmp2a3dWcEJuMVRGMU5ZMU9sbnVvbTNScTUyRXlqT19qc01sLUZuc2pVbldRQVVBazBOZDJmUFRzQ0xxOEZTWGpVTHM0WGRnQTFRN1U2dmNteHYyM1lzS0JLcmFELU92VTZR?oc=5",
+      "published": "2026-11-12T02:39:14.000Z"
     },
     {
       "source": "ABC News",
-      "title": "Man dies and toddler critical after being pulled from water",
-      "link": "https://www.abc.net.au/news/2026-11-12/man-dies-boy-critical-after-fishing-accident-mid-north-coast/107377842",
-      "published": "2026-11-12T02:50:37.000Z"
+      "title": "Data centre industry butts up against community challenges",
+      "link": "https://www.abc.net.au/news/2026-11-12/data-centre-industry-butts-up-against-community-challenges/107379250",
+      "published": "2026-11-12T07:29:48.000Z"
     },
     {
       "source": "ABC News",
-      "title": "AFP officers forced to flee Türkiye over crime boss threats",
-      "link": "https://www.abc.net.au/news/2026-11-12/nsw-crime-boss-safety-threats-forced-afp-officers-out-of-turkiye/107373570",
-      "published": "2026-11-12T01:26:55.000Z"
+      "title": "Ex-wife of police prosecutor tells court of assault just after C-section",
+      "link": "https://www.abc.net.au/news/2026-11-12/nsw-police-prosecutor-domestic-violence-assault-mz/107379212",
+      "published": "2026-11-12T07:20:08.000Z"
     },
     {
       "source": "ABC News",
-      "title": "Hail storms hit NSW Mid North Coast",
-      "link": "https://www.abc.net.au/news/2026-11-12/hail-storms-hit-nsw-mid-north-coast/107376512",
-      "published": "2026-11-11T23:48:13.000Z"
+      "title": "NSW teacher banned from schools but avoids jail over intimate images",
+      "link": "https://www.abc.net.au/news/2026-11-12/brody-luke-anderson-banned-from-teaching-nsw-intimate-images/107376506",
+      "published": "2026-11-12T05:43:41.000Z"
+    },
+    {
+      "source": "ABC News",
+      "title": "Lamarre-Condon told Baird he 'won't exist' after break-up, trial hears",
+      "link": "https://www.abc.net.au/news/2026-11-12/beau-lamarre-condon-break-up-text-to-jesse-baird-probed/107378442",
+      "published": "2026-11-12T05:17:03.000Z"
     }
   ],
   "uk": [
+    {
+      "area": "Eastbourne",
+      "source": "SussexWorld",
+      "title": "From the pier to the 13X bus, Eastbourne writers tell the town’s stories",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQY2lReGNMM0JIQ2ptdU1meV9YVnNCWXg1aFhsek82Nld3a0xCWmtaVU5WcXJXRHQzMm1CUzAzUllVQjEtX1ZrOFpIWlZhRjVXMmExZUxQQ1VpVUtRamk4N0JFR0llaFJicUhPWVA1Z2laZDNiLUpYeTM2b1Y3ZEtSZHpJbjJMNnN0U1VLQThPNzhfZEhmZ0dUWkVZeUZtZTBLT3lKX3p5dHhBQVVQcEl3YmlhUnJzZE1LbDdDNDhn?oc=5",
+      "published": "2026-11-12T10:27:00.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "SussexWorld",
+      "title": "Political opinion with Josh Babarinde MP: Eastbourne will never forget",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQYnB4dEExWmZBNzVMWGlVOVJhNXJvdll0QTRTTFBoR2xMaWRzaDA4NnlDZXNLcFdQWW9HTFFKa05yd2NUejVqaF94czNGUlJMR1BOR016MFNLRE03SFdMZVVpY0RKTVlZbWxwZk1jY29KRE1IdFM4T2lnTTM3Z3JlQUtPWkFSS1o4NU1vQXQzUkF3NFNCV1hrTVVQc1ZNTTlmQ2hZLXdOM01CbGx5VTQxNEtUdUVXNURxbDdXWA?oc=5",
+      "published": "2026-11-12T08:51:00.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "SussexWorld",
+      "title": "Eastbourne Hospital has overall rating downgraded from good to requiring improvement",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxObVpiOHl3M0JFNm5uaW5va3VwS2xOMHlFMlZfSmVrS1RKSlBpdDFENTdYdWZhb1g5b3hNYW1XVnppY0pMN0p3M3pBcXdkMlpHV0hValJqazNpYlBBM2Y4NXpDVUZZb1BXazNxN2h4Z2lLM092UHd2NEt1X3VudFdpUlF6ZFI4WFNoSENTZ3Q3TGtkZXF1aUYyaktnT29TdWdLa0wwemtsWU0waUp3cnNkN2RkUVVOei1VNTFwc0pDb2FDTGh3M2RxZTc0NA?oc=5",
+      "published": "2026-11-12T07:19:00.000Z"
+    },
     {
       "area": "Eastbourne",
       "source": "Sussex News",
@@ -72,39 +105,45 @@
       "published": "2026-11-11T16:13:00.000Z"
     },
     {
-      "area": "Eastbourne",
+      "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "71% of East Sussex College students believe they have the skills for the future of work",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPMmdla2JmWUN2YUZUNVYyZUxXSGNTV3hrdHdkcktvbG5pem9PWXlGY3JoMm43Z2gxNzlGUDIza203VTFCRVBHTkJkZGhzU0FwS0VoRXljOXlxS0lRX0NPS0owTERTSnlpN0tiOU9COV9DanlYX3BpbnU1Q1dmLUp6S3FuUUc4WXZrS2J3bHc3UkRSRWVaNHkyNW1MMEdsWHh0Z1hhMTA1NkJlME9oS3dwN0huZjl5ZnI2b3N6UHZKMnI2QXUzb1FHUG1oT2NteG9FejdN?oc=5",
-      "published": "2026-11-11T14:57:00.000Z"
-    },
-    {
-      "area": "Eastbourne",
-      "source": "SussexWorld",
-      "title": "Police cadets in Eastbourne support Remembrance services",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSFZYeFpuakpMcE5vR3drODE1YmQ1NGxtTnNVYVVkVmwwVkd0V2xHOUZJRmswR1VxQlVFMHdIOEtpcUItQm9fLVJxRENVSzYxdzRkNF9DQXFfYU5Bc2k4MF9zaGZOTktoSTVaWlJtNUFYczRiRjdVbjliaTgxTExzRHF6U2VvaG1nb3FveXBpMFlnSHBnREFZU29zb1R0bFNSdFNzbXlSQVU2ZGhGSnc?oc=5",
-      "published": "2026-11-11T14:52:00.000Z"
-    },
-    {
-      "area": "Eastbourne",
-      "source": "SussexWorld",
-      "title": "Disruptions now ended on Southern services between Hastings and Eastbourne",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOWhGaDJJRElGR0FUSk5EeWlaV3JRenZuMUFfZnBFNE9FMklwUmV4dEx3NHdrTFp6QVd6Vl85Z2xxRnZFaUtCR1J2cjZBZHFqeFBQd1hJbFM4azhYRTdMaGNSU2d4T0lUN0JXc2ZzS3pSU1ZMMlpDSnBFNU94THZkYTEyRE40QQ?oc=5",
-      "published": "2026-11-11T14:10:00.000Z"
+      "title": "East Sussex College showcases kitchen technology and investment in hospitality training",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOLVJ1XzZPOGdHLTl5Si1Gay1UQURIUjZpbnBWTWJzRHh0LXJWX2dwWlllVlJYQWg5LWEtakU2TUJPWUpTS0dLcUVMdkhVb2Q5R3Rabld6RmtNZ0YydW81S18wR212eXp4TWNWUGpCUjFqYTJYaHRqbld1WDlkdUhkVUY0elQ3UG54X01Mb3htY1BHNV93OWJSdGR6Ykh1Z2xDclZ1MVhsSlJNSnE5ZFNaaU8yMU1SZTlobXQ4eUMyeEFOd1JsSERGRlBaVmZOSjkwM0tKbXpibVI?oc=5",
+      "published": "2026-11-12T09:20:00.000Z"
     },
     {
       "area": "East Sussex",
-      "source": "SussexWorld",
-      "title": "Police appeal for witnesses and information after series of burglaries at farms and farm shops in East Sussex",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPdy1CbnE3R1V4dnlfam9WOWdZZTU3cnRzdnNhWUtEZ3ROLVJ0VndsR2dBQlR5azhCTWxuSFZwMFdRTktCS21uM3ZadXRNbFV5c3AyTjF3OW5Ta1N3QUNqWWtPQkhDNUZCdmMtQ3J2ZWtvOTJjQVRNSWd6VFFjNHlnckhGRVRodlkzYml4c0xBZ3dEdE5mb1ZRVkJEbUVXNi1rUDJObW5EV3Rfc0tUUWUyRHVPN3BCSW85NFhnNV9iSWdvZm5JaEhUR3pldFJTVlpTWmVGUlNiQjZoZWVXSzFZNG0zd2YyWnpuV1FEdjN4bXRoZw?oc=5",
-      "published": "2026-11-11T18:18:00.000Z"
+      "source": "BBC",
+      "title": "CQC downgrades urgent and emergency care at St Leonards hospital",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBDVkNyb0hiSHhGcV85SDdGUVpwdVZ6cHFEX2FfNFNOUkl2bHhCY0t3YjF6MEhQZDFzOU1YWnI3dXdYeThCTnpGajRubFlqa1pQUEZpbGsxQXhCV0E?oc=5",
+      "published": "2026-11-12T06:12:18.000Z"
     },
     {
       "area": "East Sussex",
-      "source": "Sussex Police",
-      "title": "Former Bexhill teacher jailed for child sex offences",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWW9sTXBaMkVSQlZ0MXdRazYyTUZZbFUxMVlteVd1OXpGUmFHUzhYdUlaQ0d4Ujc4N0RMV2N4dk1MSmhreXUyLW5FdlBnN2hRZVNOd0tCR01qeXVISkZQeWtWLURGM1h6ZGZ0VldnTmZwQnhSUTdscnpraldWdWczaWpXLWEwcUlNUnFrX3MwMXRTSVNZWjBPaDBRaVhYTVpyczFrdjBnYkQxVldkMWpkTXlYQQ?oc=5",
-      "published": "2026-11-11T15:30:00.000Z"
+      "source": "The Argus",
+      "title": "Council welcomes new scheme to improve wellbeing through arts and culture",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWhqRmZxNm5WdzNBMndVdFFJWlBoZENhdlBVcHl1R2NEMDAwSGV5N0xjQUJ4cm1kTDI2RjlqZC1ETno1eXNLQWFWS2FtemdJa3VOeUhGVEZtcHVlbVFYdE9uMXhMYWFyVjdRejlPNmVRR1pnZ2RJMS13c2VIbFhDTjNpWWlHY2pjWjd3N1VDbw?oc=5",
+      "published": "2026-11-12T05:00:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "The Argus",
+      "title": "Survey reveals growing interest in environmentally friendly careers among students",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ1d2TXhZUnhqbW5uMnIyeXFOOHBGYVJPajFPUGRqVEs0eDNwQzY4SWJqdzlVX1p1TWpkeDNwbFVWNFhiRnJ0NmgwdHJMX2IydkdLTzFfNXNGOGZoREtadGYtZnRTeUpjSTFWVk82Ri1Odl9qVHdsZWJiTnB4U2ZWN1g3WWFBUTZCMmhsUkRlQ0ZaNEwxTXYwbHdqcDdUN0E0?oc=5",
+      "published": "2026-11-12T05:00:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "The Argus",
+      "title": "Students inspired to explore green careers during special college event",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSjJYRUs1MThJdFN2YW5VTm53a2pEVEVLUndDbm1zbENBOWM1NXduUndmMjVZWWJYVnY4VnZ1VjdFeFdHdDJmNWpZRTBrTnBoMXNqbFpTZlhEWHU2ckd0Ujc3QTZLZW1PTnpBYzlSWk9EZWlBaGtFWWY1SS1hN3Fwd1poSUl4LTU4a2Izc0ZxRHlYMjhJOEpPOENfMkh2UVEzNVE?oc=5",
+      "published": "2026-11-12T05:00:00.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "Railway trespass incidents on the rise in Sussex",
+      "link": "https://www.bbc.co.uk/news/articles/c3ewew9j87yxo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-12T06:09:30.000Z"
     },
     {
       "source": "BBC News Sussex",
@@ -117,18 +156,6 @@
       "title": "Libraries will not remove Walliams books, council says",
       "link": "https://www.bbc.co.uk/news/articles/cjx2r9dgk112o?at_medium=RSS&at_campaign=rss",
       "published": "2026-11-11T19:16:44.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Campaign aims to stop teens sharing intimate images",
-      "link": "https://www.bbc.co.uk/news/articles/c64gnezz49y7o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-11T14:12:21.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "'Even my pick and mix shop is getting robbed'",
-      "link": "https://www.bbc.co.uk/news/articles/cx4g1gy0nne8o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-11T14:10:57.000Z"
     }
   ]
 }
