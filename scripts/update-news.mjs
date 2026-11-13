@@ -16,12 +16,33 @@ const MAX_AGE_H = 72;
 const MAX_ITEMS = 14;  // headlines kept per place, most local first; the page shows as many as fit
 const gnewsUk = (q) => 'https://news.google.com/rss/search?q=' + encodeURIComponent(q) + '&hl=en-GB&gl=GB&ceid=GB:en';
 
+// Headline words that mark sport, national or international stories, which the Sydney column leaves out.
+// Property, food and what's-on sites are not news, so the Sydney column skips them too.
+const NOT_NEWS_SOURCES = /real estate|domain|concrete playground|broadsheet|gourmet traveller|mirage news|time out|urban list|drinks trade|sydney times|secret sydney|catholic weekly/i;
+const NOT_SYDNEY = new RegExp('\\b(' + [
+  // job ads
+  'finance officer', 'vacanc\\w*', 'job ads?', 'position available',
+  // sport
+  'cricket', 'test match', 'ashes', 'bbl', 'afl', 'nrl', 'a-league', 'rugby', 'wallabies', 'socceroos', 'matildas', 'soccer', 'football',
+  'tennis', 'golf', 'f1', 'grand prix', 'olympic\\w*', 'commonwealth games', 'world cup', 'premiership', 'state of origin', 'melbourne cup',
+  'swans', 'roosters', 'rabbitohs', 'eels', 'bulldogs', 'sea eagles', 'storm', 'broncos', 'warner', 'cummins', 'khawaja', 'smith', 'kyrgios', 'de minaur',
+  'swimming', 'athletics', 'jockey', 'racing', 'horse', 'boxing', 'ufc', 'sport\\w*', 'coach', 'quarterback', 'nba', 'nfl',
+  // national
+  'albanese', 'prime minister', 'canberra', 'federal', 'coalition', 'senate', 'senator', 'parliament house', 'one nation', 'liberal party', 'labor party',
+  'reserve bank', 'rba', 'asx', 'westpac', 'cba', 'anz', 'nab', 'aussies?', 'australians', 'across australia', 'australia\\W?s', 'nationwide',
+  // international
+  'trump', 'biden', 'putin', 'ukraine', 'russia\\w*', 'gaza', 'israel\\w*', 'hamas', 'china', 'chinese', 'xi jinping', 'nato', 'eu', 'europe\\w*',
+  'uk', 'britain', 'british', 'london', 'us', 'u\\.s\\.', 'america\\w*', 'new zealand', 'nz', 'japan\\w*', 'india\\w*', 'iran\\w*', 'korea\\w*', 'microsoft', 'google', 'apple', 'tesla', 'bitcoin'
+].join('|') + ')\\b', 'i');
+
 export const PLACES = {
-  // Earlwood stories are too rare to fill a screen, so this column is Sydney-wide news (no area, so the page shows no tag)
+  // Earlwood stories are too rare to fill a screen, so this column is Sydney news (no area, so the page shows no tag).
+  // Sport, national politics and world news are filtered out by headline (NOT_SYDNEY).
   syd: {
     feeds: [
-      { url: gnews('Sydney NSW -Sweeney when:1d'), newest: true, maxAgeHours: MAX_AGE_H, take: 8 },
-      { source: 'ABC News', url: 'https://www.abc.net.au/news/feed/52498/rss.xml', newest: true, maxAgeHours: MAX_AGE_H, take: 4 }
+      { url: 'https://news.google.com/rss/headlines/section/geo/Sydney?hl=en-AU&gl=AU&ceid=AU:en', newest: true, maxAgeHours: MAX_AGE_H, take: 10, skip: NOT_SYDNEY },
+      { url: gnews('"NSW Police" OR "Inner West" OR "Sydney council" OR "NSW Government" when:1d'), newest: true, maxAgeHours: MAX_AGE_H, take: 8, skip: NOT_SYDNEY },
+      { url: gnews('Sydney NSW -Sweeney when:1d'), newest: true, maxAgeHours: MAX_AGE_H, take: 6, skip: NOT_SYDNEY }
     ]
   },
   uk: {
@@ -126,7 +147,7 @@ async function main() {
     for (const feed of place.feeds) {
       try {
         const xml = await fetchFeed(feed.url);
-        let items = parseItems(xml).filter((it) => !SKIP.test(it.title) && !EXCLUDED_SOURCES.test(it.publisher || feed.source || ''));
+        let items = parseItems(xml).filter((it) => !SKIP.test(it.title) && !EXCLUDED_SOURCES.test(it.publisher || feed.source || '') && !(feed.skip && (feed.skip.test(it.title) || NOT_NEWS_SOURCES.test(it.publisher || '') || /[^\x00-\x7F\u2018-\u201F\u2013\u2014\u2026]/.test(it.publisher || ''))));
         if (feed.newest) items.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
         items = items.filter((it) => !(feed.maxAgeHours && it.published
           && Date.now() - Date.parse(it.published) > feed.maxAgeHours * 3600 * 1000));
