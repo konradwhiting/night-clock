@@ -5,8 +5,8 @@
   "text": "Running normally",
   "detail": "22 trams tracked",
   "trips": 22,
-  "worstMin": 3,
+  "worstMin": 2,
   "cancelled": 0,
-  "feedTime": "2026-11-13T01:30:21.000Z",
-  "updated": "2026-11-13T01:30:34.341Z"
+  "feedTime": "2026-11-13T01:50:21.000Z",
+  "updated": "2026-11-13T01:50:34.695Z"
 }
