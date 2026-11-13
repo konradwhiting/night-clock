@@ -1,6 +1,42 @@
 {
   "syd": [
     {
+      "source": "7NEWS",
+      "title": "Former NSW MP Rory Amon found guilty of raping a 13-year-old boy",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdlliMXFqNUc4UC15eGhYazhqalVGN2RnVU5VTXYxVTUwcnA1TndEdEZBbDBXSkJxNVQxdGxndHBPVXk4Wml1Uk5UN2lKcG9HaU9qelp5ZGtpZW05OUFONlZIOG5qSzNHQ19ncTJONmd1S1JXOEZDekRZa0hKd21FT1Rwd1pWcWVJeTFjLWtzNTVJakg4ME05SkpvRWVCdDhwMFMxcE0zcG_SAa4BQVVfeXFMTWJHMjBja1pHaFBRZjZRN1hWSTdsNU9WN0lJRHEwaXhIOXhtdGt3dmhqODBYbk50bGdBd3B4MDNfZG93cTM4LTY4RGRPQUx3dzZfTFp3bUpFcTlLZzFkV0tjQW1rOUEwdmtnbDRTQWc1VHdSbFM5WlBKeHJTRnQwRVllS3BUSk4zd0xSZzJlaWZfMTFIaTdiaW5YS2hZb1llMG9jWm9nQXFBc2ptb0ZR?oc=5",
+      "published": "2026-11-13T06:38:00.000Z"
+    },
+    {
+      "source": "Dealroom",
+      "title": "Sydney's Global Surgical Innovations wins $50K NSW grant for resorbable graft",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQcjFiMm5XdjJNYXpqdjFvSy0tTXpScDNGN00xOGVuSkprLVdTMVdqeUhKQVE4SnozV19WckE5U0VnVWh0eGVmeWw3cHBXNkZhaW9fbFNpdkduMWFkbkozT04walFxUGw0R2NjOGZyUHlXbm56MUk4ZkdJM3VHTTNTNzNxQ3otS1R3azA2SWlGaGMwUWkxSC1TSzhZeFJMRDlKMkVJcmp5ejlzVFRQdGI4?oc=5",
+      "published": "2026-11-13T01:35:21.000Z"
+    },
+    {
+      "source": "Sydney Times",
+      "title": "Minns Labor Government Backs NSW Small Business Innovators With $3 Million",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOa1hQZmRtT3VEdlRBMjNQdzNMcEYwbkgzT0ZISHZhMFdtUmlSTmVQc1FCNEJqU2ZPbWdUVW9MNzlQSW9odG80aDRpXzJ0YnpkQ2tuczJzbXFaLVpaQkFNd0ZTSzZDTEZBMW9JWklCWEFyZGNPTmdiaUZOYmRnWHlGN0hLRW9zenZZbnUxSDY2NkFkNEt0UURDaDBXUmZPLVhMZDNZbHAyZWtmZ1Y5QnV3OTBtcm5XeEJGNFNWM29FUXYtMzA?oc=5",
+      "published": "2026-11-13T01:21:59.000Z"
+    },
+    {
+      "source": "Sydney Times",
+      "title": "What’s On In Sydney Guide For The Week Of Friday, 13 November To 19 November 2026",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPQ0FyeFB5OWU2T3paVlYwTExpa2otdkRPZE9jWGpzOHBKR1dSUWJSWWJWb0h3MDdYLU1aUlFvUzZ0M3Y3UHJFSnZ3NnhLY2QyLVFXS0tWLVJwVllWRk1aR1VXR1BoNkw1SGEybmFjdkNncE5MLWRnd2JPaG84TU1QaWVJUDEtWlp3eklaOHR6cl91WGx0OXJTYTRkMmhOeENLVTZCNmY2SHZLcUlYODJhSjdKUUg5Q2VIY01OT1lYTVRCUQ?oc=5",
+      "published": "2026-11-13T00:30:29.000Z"
+    },
+    {
+      "source": "City Hub Sydney",
+      "title": "NSW Government To Invest In Sydney Startups Pioneering Innovative Defence & Medical Technologies",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNY0hGQlBlRnJhREJ0S1pmMGJEQ1pPXzVnRnJYXzMxU0o2TmwzSk9zeEtPajVGUTFVUW1Gd2Y4Uy1hNlhvSkM4SXNjTVBZMG43Mm9OdWZNRVhWUldMbzVtX3p3R2s5SFZKQXZxdmEzM2x6ZWhGcm5zempkaVhrZXdLWi04cGJNaE1wSzlsNXd2VTQ0YmtFY3l1M3N5MllSWVhCTHo2TU9aYnpUWmhrUEljd20tQXZvSGxRZkE?oc=5",
+      "published": "2026-11-13T00:15:20.000Z"
+    },
+    {
+      "source": "News.com.au",
+      "title": "Hero bystander ends teen’s Syd mall rampage",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOSTRNOXZkS1FRekNxR2lFZ3NYTE4wYmJiMmpub0d5ajNLRFhpc05kQU1TMmFNUUJSOHFrNk5CcnlGejR6dWhWaDhuTjloNmo5c1MxbTRDZW5RTl9aSG1FQ3g2VEs3Z0Ryc3p6SURULURlUi1WMXYtUWFKeXF1aERMWEkyNWRsNHJ0NWpkbTZCRFY5NnZmXzFTRHVFaWNHMEl5cmpEQkhyTVFuMThxd1VCTl83bm1QZ1hiQkFWSFZSNERCQVBkZmZraksxRFVxM3owX2MtMVJkRjlWbkZ4d3BPNUZsajnSAeoBQVVfeXFMUG9ubVIyZ1RJa0REeUpnMFhSaE9CZF8yUk94ZFo3ZzJOeHAyeHg5Z0dXXzFyck5kazM4RU9KeV9xcmNuUWhBMDNiWTA4NTRfa3psU2lKSFYzWF9CUldZSEI4OHVtQzVaMG1KU2xDZm1vaTQteG5LdUtSSHdPTVpHWXNfQlNZMDRsaFo4SlNfRjJIQUtXMDNYUWZ6U0M4TWtMVnZ6dVc4bzFrd0VTT2RmVTVXOGNHWFJudG5hNldXb3ZxTDBBcmJHT0ZQQUl5NjRHMDMxdVNEZkZFYjdZMjJyaU9jMnVJREN6RWtB?oc=5",
+      "published": "2026-11-13T00:05:42.000Z"
+    },
+    {
       "source": "Sydney Times",
       "title": "Motorcycle Awareness Month Puts Rider Safety In The Spotlight For All Road Users",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVm5LQjRoOXlpRzlxa2MxREc4RDNKSGlaN0hqOF90cHpWRm44aDQ2MEFvRkd6ME9aeGNULUhMWm83cUd1S2QwVGhlRHZmaGdYUDBIbVMxdndDd2NVNjVUMmk1aFhhbEs4SV9uckpmeEJqTlFyLWVnX29ZRENDNndPOVNmTEVSY0E2WVZUZ0NPMF9VSlNsMURwaE5Vd3pSeG9JdUFoSVFGM1BKc1pJYV9HU1NuTWFwcjB3WGJrSTNzRDhKdkNnMl9QM295UkU?oc=5",
@@ -13,67 +49,52 @@
       "published": "2026-11-12T22:03:14.000Z"
     },
     {
-      "source": "NSW Government",
-      "title": "Minns Labor Government helps Southwest Sydney students kick-start careers in trades and skilled industries",
-      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOM1VHVmtVWDdTdTFCM2VyUFdTSkotQTd3MHJrU3NnZ1ZiVlBYbUEyN0lUbG5wTXM0dUk0dTB0TDZtR3VGNWxiUWYzbFBTLTJMa25SekpWdWFaenBScXRvRUF6emJfQ3BmT1JpLVJLTVVDc0lZb2xVYmZLR0NYaVFOR2xXMGZlWmJzOU1sR2J0UFRlSUU2MnpNcFdJVFJYWUlKZW44UkVFWU1lU1JBVTJySDVEdnVSRnV1Q2I3TENtamFJVzQtWDNUVXIzVy1WaUhQekJOa2dlMkk1amYyX3N4bQ?oc=5",
-      "published": "2026-11-12T21:56:15.000Z"
-    },
-    {
-      "source": "The Indian Sun",
-      "title": "Art Gallery of NSW to host free Diwali celebration in Sydney",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNTRFQXpsRXBRN1ZUZ0JOU1RVb0dPaTVWSFlrUXVfcjZOSGdkSmlwRmJnTktBOXo0bFd1NVZVZEFSRGJLUjdyNmtNN29qZVdLeklkZS01OXBXeVBwRFpiUnhlWldLd0Z6clBXZG1YdmJIbEtOTnZFY1ZOelRULUszeFBJMzJ4XzY1bXFiTVBvS1I0d1NhcWhuSWRPT0NhUEY2blBmeklISQ?oc=5",
-      "published": "2026-11-12T21:00:21.000Z"
-    },
-    {
-      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
-      "title": "New $76m hub helps agencies enter 'chat room' to disrupt youth extremism",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPenlwcUJCUUI3RnJkTUtUVC1Jc1lYVEJnWkdQYUk1SHoxT1Z6MVcxR3JEYUZVbDNPSmIwYW9fS3M3a1pQeGVFeHdWaXVEa3JfMGpfbUI0T21nWUpyR0lGYlJqVFQwdFVXQ2dGWmFuTTVwMllMekQzQ2RPLURNZ0x0eHdoSWF1NldFUng4YnItTE8wX0pLV3llQmlqOFMySmtTdVE?oc=5",
-      "published": "2026-11-12T18:00:00.000Z"
-    },
-    {
-      "source": "News.com.au",
-      "title": "How 17yo fell from train on Harbour Bridge",
-      "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPZkZQNUVfX2JfNnRVeVRGSVdsQVhDZnFnakhBZVZyMzIwN3F2LTNGRzhpSHVqTGM2WmlWUE9mdkxGRXdKWUNsNFYzelhhaGhzTnV3U2RXdTlmLVpXS240UEtJS1hiTnlOX2ZrejdEeXJ5Rkt4U2Jmdm05bzJwaUxJRF92MjZiZGZFUUpIS2dwYU0tclFCZ3RyVzNqcG9VeTBCTmk0aERvdHZsSV9tbkY1LXdkMGZzazhMeUVOSEx3cG9uSDNiTHJmc3pHOTYwb29MZEEyVjFLV1FjMlhETzZFZjhNeDFvSUYtT3oxTHl0NlZ3cnlxUWhqRHlsT3BPd9IBgwJBVV95cUxOVWlOSmFDblVNQ3dLd0sydjZKb0R2bUR6bE5lRnFwLWg2RTJoRHJSWDh2TlNJWWVhSEZ4SkppOWpYaV9BdGhScm9qOWk4bE8xTHVSdldEdkt4OWZTby1HZVZZUUVQbnZJRV8yUHF4TFRhX3U5VXpwTDV3WUFiSUdxX0pTUmdBR0VJdWM5SlI5WHJBSEpEYkNkYjlXMzRYdUJnUkM5TXRaWlZNeXFtLWVZUEZaUUNOQjFfc0NIMUpYYkNfYThlbVBuWG91V1FGYjVRbmVNWkFuWFNHUl9yanczZjdiMVRWVER6amR0djA3STUtZW9pYjhTSl9HYlVxUGpjVVV3?oc=5",
-      "published": "2026-11-12T14:48:11.000Z"
-    },
-    {
-      "source": "e-architect",
-      "title": "The Mall, Powerhouse Parramatta, Sydney exhibition",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZjB5Vm1mWVVxNENlcXJ4cUhNMTliRFBoQ0kwTlRxa2RoU2YzS2FCQzYzYjB0dXVSUG5RZ2l4Rk56NU9nbU5Ld0xibWV2V1hsa01PZm5sdE9wcTRReGpwR0MwQlFWb21ySW8xU2UzNDZ3YzNEWUJzaFJiN2VkUnBORmJYYzNzOUtHMGEw?oc=5",
-      "published": "2026-11-12T13:11:30.000Z"
-    },
-    {
-      "source": "News.com.au",
-      "title": "Man dead, boy critical in drowning tragedy",
-      "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxOX0UxakU2aVhGUXNRa1ZNNlZXaGpza1V5Tm5uT3ZlUDVLa0tXdUdJdUc1VXpLTlQ3WlMyRXVodFdJWE8zREdRbUZSUkt1S2xBWG0wYzNGcHdReHR5azlQYkx5UkxzUGY1UnMtN1N3allEU1NrVXVzMW11Vy14QVRKX3ZYTW5KMVJjcGI1anpXbHU0V01jTXRtczQ4M21iZjVaZFZjc3oxNzJQVW02aWlJdW1NVWM1QVNtQS02UHZGajJrZWg5d2RNbk5tM3I5ZVhwc1pkNXdIb2NOX3J5UHhLRDNrMDF6cTR4RUFGQkpFTWpHM3hmT0RLNm5MeGltbUxXbFdoZ2RQMHdSV0FU0gGSAkFVX3lxTE5yR0xIUllZRVltTV9oOVpLNl9ZU2xQNHZLcVBqWlQyeW5NM0RlRC01b2tsNjJPWEJqQkZSSDZGNXViRVR4MUlyZExkdWt4VXliWF9YdjdhNHhCa0pxRmJmbFk4WGJDY2pYbG55eGxOU01vbVY3NExHZ3dBNlB2SVhyRlZUdHdyVV9OZ2FaOFBxVzJzV2trNVF1NkpvdEVubl9ST2VDNWlNQ2lZNHpjWjk4Sl92bTF1YjRFZUs2TnZGcGtfTTAzMjdjTXNkLTVteUpoNlF4X0E5SWhRMWlaeUhORkg1RG9KOE9hOWs4aXMxZVVEVndsZ2wtUmxtRTFIcEEyODhwQm1hUDFqTmxsNzdfdWc?oc=5",
-      "published": "2026-11-12T12:36:05.000Z"
+      "source": "ABC News",
+      "title": "'Embarrassing' state of Indigenous rights must be addressed, UN expert says",
+      "link": "https://www.abc.net.au/news/2026-11-13/un-special-rapporteur-on-indigenous-rights-report-findings/107372310",
+      "published": "2026-11-13T06:37:06.000Z"
     },
     {
       "source": "ABC News",
-      "title": "Race to Australia's first green steel entering final stages",
-      "link": "https://www.abc.net.au/news/2026-11-13/australian-green-steel-race/107378754",
-      "published": "2026-11-13T00:02:01.000Z"
+      "title": "Ex-NSW Liberal MP guilty of raping 13yo boy",
+      "link": "https://www.abc.net.au/news/2026-11-13/ex-nsw-liberal-mp-rory-amon-guilty-sexual-assault-13yo-boy/107384336",
+      "published": "2026-11-13T06:15:59.000Z"
     },
     {
       "source": "ABC News",
-      "title": "Breaking: Sydney Swans players will not face charges over sex assault investigation",
-      "link": "https://www.abc.net.au/news/2026-11-13/sydney-swans-players-cleared-by-police-over-pullman/107372082",
-      "published": "2026-11-12T23:56:20.000Z"
+      "title": "Lamarre-Condon pressed on 'lies' as prosecutor claims 'murder plain and simple'",
+      "link": "https://www.abc.net.au/news/2026-11-13/beau-lamarre-condon-purchases-searches-prior-to-alleged-murders/107381002",
+      "published": "2026-11-13T05:59:19.000Z"
     },
     {
       "source": "ABC News",
-      "title": "Live: Beau Lamarre-Condon denies he remains 'angry' with Jesse Baird",
-      "link": "https://www.abc.net.au/news/2026-11-13/beau-lamarre-condon-trial-live-blog-cross-examination-friday/107379430",
-      "published": "2026-11-12T23:01:48.000Z"
-    },
-    {
-      "source": "ABC News",
-      "title": "Live: Microsoft 'aggressively pursuing' solution to major outage",
-      "link": "https://www.abc.net.au/news/2026-11-13/microsoft-outage-affects-users-worldwide/107381050",
-      "published": "2026-11-12T20:31:31.000Z"
+      "title": "Coal protest to go ahead on harbour after court rejects police objections",
+      "link": "https://www.abc.net.au/news/2026-11-13/newcastle-harbour-protest-court-decision/107376804",
+      "published": "2026-11-13T05:29:20.000Z"
     }
   ],
   "uk": [
+    {
+      "area": "Eastbourne",
+      "source": "The Argus",
+      "title": "Parents invited to free event offering support for babies and young children",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQVXR2d1E0Q2FOXzFId0dDQlVudnFkZEpqcEg5OEhBZUFYWjdMR3hqZ3l2TVdaWHU5cEJzUlBfQzV1Z25jbERFM3M0LTEzM2o1V0JYYmIyOHdJY0Y0VGtmSVJ0bFpXTkhOVVpsTUoxT0tIWm5TdlowOUx4eGdhOXZpTjFhQTBreWN3NDlMZzRRcFVNM2E4N2c?oc=5",
+      "published": "2026-11-13T05:00:00.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "The Argus",
+      "title": "Trinity Homecare appoints new manager after impressive career progression",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPVHZJVnY1R2w5SFUwcHBDbEY2TlBDQjFqeUM4REFaV2hnb0ctQmJtclVHSGdsYkVzVWhkbS1ZeWI0d3pZOERncWh2YnhabGgzcWVhYkQ3b3ltblZSUGgyck1Nc193S3VLdXJXWGNzUVJfalFINHpJYzBoaUJyZEx3bXZmclA2R1MyWFZqajNscWxUdjlKYTdKN19id2sxdw?oc=5",
+      "published": "2026-11-13T05:00:00.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "The Argus",
+      "title": "Firefighters and police delight nursery children with special visits",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZWhBV2I1VE5GZ3A3VzZMUEpYY0ZheG5nQnI1Nk9fdkRlUDFoUGVWaUU4Ymd0clBqMlVEOW5TV0NBeE0yVmhSZDY0akw0alBLRXltOEhDeFFKbFFVazdrMjZvR0JHRkVfd1pHTjhGTVFHNFBSN2VTQllpdnlwam1JUHY3b2tueEVPSDk1bU0xaU93bHZodURoc3V3?oc=5",
+      "published": "2026-11-13T05:00:00.000Z"
+    },
     {
       "area": "Eastbourne",
       "source": "Fightful",
@@ -96,25 +117,25 @@
       "published": "2026-11-12T20:00:00.000Z"
     },
     {
-      "area": "Eastbourne",
-      "source": "SussexWorld",
-      "title": "Parents fundraising to buy flowers for every baby and infant grave at Eastbourne Crematorium this Christmas",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOVkpMdTRJSTJiY05hQUZ2ejFHaktfRE9ubWdqenItUk9lNk1pVVdJbEIzeDV4Mjk5ckkxSUI4ZzR5eFJEZ0NvbFYzZklfblQzWnplRDV3UFREWDNyZk40ZmNJZXRTVHoyeExqeW5JWnI0S2dTazZJako5VHRjV3dhb0lyTE9fSGNkTUR4NVIxdms1eDFQeG50ZHdjM1I0aWJOSDVrcC1uV2FNWFJMLXN0WDNyYmNpNE1YLTcxMFRRWnV2azNQRjhJWVFYdXJlV2szbjcwM29pZFNybm9SaDAtNDNyZ2NFbkhXZFVPSTFWNnQ?oc=5",
-      "published": "2026-11-12T16:25:00.000Z"
+      "area": "East Sussex",
+      "source": "V2 Radio",
+      "title": "Police investigate six farm burglaries across East Sussex as CCTV of suspects released",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdG45b2xTa1hXRjNvWjNFcWFTTV91VnBVRy1SdW5tUzB2RDluSXowbnF6ZWNFZGRPMDFFNE1idE9sRE5UQUpXaENEaFVNR1lTTm1sc3VrcVQxRDhMei1aenVwVEZXM0FSY2VBdUdIck81REJXYWhUUVB3T1dDc2NSRWNiQ2RIeDFtVExDNEltVHdqNzE2RVFuelBBcHFicWV1bUoya2FCNV9jUlFMd3ZkQUs1alA3NDdPbWVuOFVRdGlRbFloNmpJ?oc=5",
+      "published": "2026-11-13T06:00:00.000Z"
     },
     {
-      "area": "Eastbourne",
-      "source": "SussexWorld",
-      "title": "Eastbourne fitness club reopens after rebrand",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBLNnEyb1ZwbEM1ak1oWWpWRWx1dkJWSFF2UGQ5UDJEUnpYMFd1SW5vNjVHc1JSM3ZVaE53UnVXVk4tMmdDNzFTYnhiM01BN2NHN0ZXUk1UN0ZBb3ZwRGs3LS1mZmZmaVFSSGtnS2tfVGJhN1pyOXc?oc=5",
-      "published": "2026-11-12T16:22:00.000Z"
+      "area": "East Sussex",
+      "source": "The Argus",
+      "title": "Hospitals slammed by watchdog amid list of failures",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNTm1NUjNaMEZWLTlva05lYTNXTGktYXBfalBmaGNGeXlORU1DZzVrdTZnOVJvUXhDZ2NvQ2tWQnNjeGprU0VsY0I5V3ROcjhVVmZ4UlMyeVBuX2FZVlE0eWdLcW5zYVRCV185RTNoYTlaZnFhOUVrY01vZEJhOUtzSS1MR0QwRXR2TGNHbjBMMEdGOVUwYXc?oc=5",
+      "published": "2026-11-13T05:13:00.000Z"
     },
     {
-      "area": "Eastbourne",
-      "source": "SussexWorld",
-      "title": "‘Better than looking at that monstrosity’ - readers react to proposal of building transformation Eastbourne",
-      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPVTUzOWJ2X2p5MFVBSFVMUDR5ZV84NnhRZjd5b0JxMTJxSEJpUUMzdTBLaXdxUlFhSFVpU2VMR3k4TlV4QVFpUmF0dkw2RkUwZFBjcGJDdllfTDcwdXhQaTRCbUZEeGVtdndoQUlnWmpHLVBJMXdNSGRvUG5zblo0dDlERi1qSVJDR21xMTBXNi11ejRiSC1UQnNjQzEyOWFOcW9MYVZENzkxNnlNVTdhQ0pxdk1IZW90TWNwVkpwVUloNnBFaTk0MG44Y2kyRUJWQm9RRHB2TEVCdHV2Z1B2MmstMC1DZWp6OU5R?oc=5",
-      "published": "2026-11-12T14:38:00.000Z"
+      "area": "East Sussex",
+      "source": "The Argus",
+      "title": "Nursery children combine books, music and dancing for charity challenge",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxONFVSWkVQdkdLYmhDWFR4a05tMlZnUWZtdXpWQXlmdFYzU25lWnF5WkJ3QU9qLWExSGJ5dDREcUoxWnNlR1BBaTNwVV9NQXVqMWhXMVlNVTN4MGQ4allJR0t2TGlKWGF5cWluNUFyNlhIN1dnR1FOcFBCQU1uSEk4ZUduRl9JbElyWWJKclc0YzE4b3c?oc=5",
+      "published": "2026-11-13T05:00:00.000Z"
     },
     {
       "area": "East Sussex",
@@ -124,32 +145,16 @@
       "published": "2026-11-12T20:00:00.000Z"
     },
     {
-      "area": "East Sussex",
-      "source": "The Argus",
-      "title": "'Rare' black deer spotted in Sussex countryside",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOX2V6TVpYYlQ3blpPR25aU25XbGgxLXVZRHpvU2dQc0hCZVgtc1ZPRGNKSnB0RU1YSzFUNTlJMkZiaFFoTTJxVXFYXzFKT2llUXo5aS15M2xsLXZBY3J6dFJiVnE0SkFaMmpKdWoyUFJjS0NXWFRzSWNsTzFvYUZYTl9XZkRNY19FSnpodjVHaDJMT1MtcUFLWVBzbzg?oc=5",
-      "published": "2026-11-12T20:00:00.000Z"
+      "source": "BBC News Sussex",
+      "title": "Repairs after train derailment set to cost £5m",
+      "link": "https://www.bbc.co.uk/news/articles/cxyvdpvd70njo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-13T06:18:36.000Z"
     },
     {
-      "area": "East Sussex",
-      "source": "BBC",
-      "title": "Police hope tattoos will unlock dead man's identity",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5sSFktM3dZM1NuWkozS1dEMmQwdk8xS0xILVQ1T1lWTkdGLUdCV3FXME5jMEpaSjJFSGt3eDU2VzhsRUFIUE5DU2hBUmlBVGNMZXZMV093cUdwc2ViOVE?oc=5",
-      "published": "2026-11-12T17:06:22.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "SussexWorld",
-      "title": "Police still yet to identify man recovered from East Sussex beach",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUEpnZk5Udkt0MEM2NS1GMXc0TnlYVWt3T1BseXpQZGM1LTFZcVFhSnNpQWttaS1BV29hT3BnbmstVDliZ3YzNkpvb3RZS01lUFJXaVEta043NmFBNl9qbXVrR2k1alBNVWMzMHlrdG81T1N4M2FmV015X0VoTU1Wd2pHMVNVUzZmX0UyeFZwcWFHUGJ0VVQ5b3dzZkpKV0oxN1k2V1VKTnZkWW9haG5MSXlGZU9wSVkw?oc=5",
-      "published": "2026-11-12T17:01:00.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "SussexWorld",
-      "title": "Up to 125 homes at East Sussex mill and oast house site approved",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPTWFVRWhoekpydDZubkJFVzdveTNTR0xuWVFpTkt0bS04ME85ZjkzZTdZOEV4WXNaUmpYNG5NSlFBbmw5SHpmT0t4Y0VUVTVLcHdtQ3I2OWJiN2E3RS01cTR3WEo2dlUwU3VkaFd2YlRGMVl5SkdyQlRuQjZqVGQ1NTZnck1qdFBTWWNibVpIMFBGaEpyRDFSMzJCQ3IxUXVpTExlUGlQb2YxVXZKUmE1MVVNWDdGY2lJMXYxV2xRYUg?oc=5",
-      "published": "2026-11-12T15:24:00.000Z"
+      "source": "BBC News Sussex",
+      "title": "Rewilding sessions help us feel calmer, children say",
+      "link": "https://www.bbc.co.uk/news/articles/cm3rgllp3zvro?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-13T06:14:09.000Z"
     },
     {
       "source": "BBC News Sussex",
@@ -162,12 +167,6 @@
       "title": "Fraudster sentenced over £2m jewellery scam",
       "link": "https://www.bbc.co.uk/news/articles/c65yn51we1j4o?at_medium=RSS&at_campaign=rss",
       "published": "2026-11-12T17:58:55.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Six farms targeted in single night of burglaries",
-      "link": "https://www.bbc.co.uk/news/articles/cq8j4ljx8g0po?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-12T16:03:48.000Z"
     }
   ]
 }
