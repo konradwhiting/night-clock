@@ -4,12 +4,12 @@
   "state": "delays",
   "text": "Delays",
   "detail": "Up to 14 min late · The 10:34 tram was cancelled",
-  "trips": 34,
+  "trips": 39,
   "worstMin": 14,
   "cancelled": 1,
   "cancelledAt": [
     "10:34"
   ],
-  "feedTime": "2026-11-14T23:40:21.000Z",
-  "updated": "2026-11-14T23:40:28.012Z"
+  "feedTime": "2026-11-15T00:00:35.000Z",
+  "updated": "2026-11-15T00:00:46.455Z"
 }
