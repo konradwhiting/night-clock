@@ -1,6 +1,18 @@
 {
   "syd": [
     {
+      "source": "McGrath Estate Agents",
+      "title": "Sydney’s market is closer to a turning point",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZExNSklVT0NJdTkxbXltb3RyQWlycnhrLXBnWTZ1SjhUOVU2allsVXR6UHVVcGdkS3pTRlhDa3AtcHRvY0lzR2hTRjdPZjRDV2FXQTlwSHFsd0NaS2RSanFvdlJVYTNLV1RtV084REtqem4yYWFsNExHV0dFcWJUaER6amJZWF9meldyM256N0REdUp0S2tMRGpZNjRzWGh0QXprNmtyNk1KdDBN?oc=5",
+      "published": "2026-11-15T22:12:22.000Z"
+    },
+    {
+      "source": "Newcastle Herald",
+      "title": "'Deviant' child sex offender taking bid for bail to state's highest court",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQM3F3amtQQjZVUk8ta2hGMWIwaGZvdXZzbWVCaENqbVlmS2ZFUndKbGZCb2NXSVJJNFNVcHdxSnJxcmYwM1VpajFhXzlJeDh6U1o3eVZhUUtIUE1UeEFNVFZialB0NmdlTlBiV1dyRFN5anRPU25xUWR3T3J0M1hhZGhtZ1B4dE1LMWFrc2ZPZXIwRTM5TFZOQ3pLTG1KQm13N2xubS02VEdnRjdQZDA2bA?oc=5",
+      "published": "2026-11-15T18:22:30.000Z"
+    },
+    {
       "source": "Northern Beaches Advocate",
       "title": "Homeless camp catches fire",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQX2JMM0IzTlNjQWxYTHlNQ1hLdHhWT3dKQnZrQVA3SXV2VXJ4LW0wRGRTNmtsLUJBNkhGU2V5Q01NYWRwNVQwTDlIT0daV0htck1SZjZwcm42TWJoZTNOdzEzeW5waUV1QXZOcENoR3JoaU5HdG5WN3JfSFdBaDNHd0N4Q056dmtf?oc=5",
@@ -49,49 +61,37 @@
       "published": "2026-11-14T00:33:34.000Z"
     },
     {
-      "source": "St George & Sutherland Shire Leader",
-      "title": "Shire Letters: Disgusting public toilets; Kirrawee traffic; E-bikes on oval",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRldwdGc1blZhZVpsaGhZQ0JLVEJORnVfNkhwMnRHeVZ4bVc4X0hadjdjWW9LbEQxNWhiWlotZU5uaTlUbnlXdk5TVWxpVllKVGstR0ZFT2NhVFpmZjdYSnE1VEV2YTVqc3FNWUZMLXdnMHdadlFEMDVjLUZDUzlkdzVSZkZfV3RncFltZk41UXY5OVppRkhnZ295VQ?oc=5",
-      "published": "2026-11-13T23:58:46.000Z"
-    },
-    {
-      "source": "Milton Ulladulla Times",
-      "title": "Why one Milton resident is walking 42km through the night for children in need",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMGh6TmZUN0RlaUxxelNicklMcmxxU2doZ0FxRDBnbEpiZ1JJaGFPTERmNERqSnVUQ1plZWdrTDhCT2Vaa3NfaTBTS0NOQW93R3J0ZUdPMTFpRy05VmRkUWVPMEF4eTYxZ3lqTUszWWk3YllVM0Mza0lHRXNLOHN3MndaZm1lNjFmbHBuWll0ejI5QW41dEY0TUg5RnFEUGJLWWtLdmdSUFNxcG8y?oc=5",
-      "published": "2026-11-13T21:59:27.000Z"
-    },
-    {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOSFBuUUdmaWVWYkFxb0tQd3NVNUNNc2RFWk9WYnZoTXdsbm5FVVMtZXVWLWtuQ1lkUktJbjY0RlV2U2FnUUdxZU9meDVzeURhbkZNZDRKYVF3R19CQlJKOE1aVFJYRzQ0azA2V1hWR2gyaWlUMFVzclZ3aHZqNnpHbm43SUxaU1FWdDIyVTJwbVZIbDlNcENQdldmVE9nUVRDYWVsWWk0ZFVObGNoTGRIN1oxTjhXVUNXbXpYQ0hwMzZCSWhvZGs0QjFldVBRX0lLS3NyZVNRYnN3UEFWRDJ6VjcxVzd1WkN0bS1wWndKMThhWHRiZ1hj?oc=5",
-      "published": "2026-11-15T11:29:40.000Z"
+      "source": "Q News Pty Ltd",
+      "title": "NSW Police investigate homophobic vandalism of Alex Greenwich’s office",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQc3FBNXRzTUp1QWY3d2hyNlF6S24tLTlEeW5rUU5zN1ZFVW8xVHVCUDFfN1JpZ3dkV0g0OG9tck5VeXYxcEREN1UtSlU4WHVuX2x3YVZvRG1KZnU3YXpSX0lGTVBhWXVNcTc0YXNpdzRnRkxMMi1WQlBHSExkVkhwUm4teUhfQTlpa0VqNk9tTmFQWDNReWc?oc=5",
+      "published": "2026-11-15T22:29:05.000Z"
     },
     {
       "source": "The Sector",
-      "title": "NSW Government pledges 100 new long day care centres as key election promise",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNblBvTDZYMHBZcEdmclF3d2E5SV9uMGdvci0tS3FucGZxTF9vX3VfRFJNYjRpa3dkZmVGbEZ5d093eXBPSGI4aElQV0l5dnhhZGZCd0NfMS1VUk5xbVN5ZkVQajBrdnpqZ3N4ZGx3aTRKY25kUkxnZmpBUVZMWHBVaDlNdnhmUl9SWnhiMTBR?oc=5",
-      "published": "2026-11-15T10:29:52.000Z"
+      "title": "ELACCA slams NSW Government for ‘blindsiding’ long day care providers",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOWHJURzhVdjV0VG5uUXlfWThrMFdTSS1CcFVHbWR0WHE5dHFmN3ZYTjEzbDV2SGh5QVBvbFFwbXMzd2FLR1ItZDVnbDJmcDdrbEdnMWgyVHJCbmo0Nm9nUXJwTmZseWZKT1MtcnNObkZSdExSUHZXdk85YWRpanpUU0VrTkhJU3FDMXQ4ODdUVkx1ZnZy?oc=5",
+      "published": "2026-11-15T21:31:00.000Z"
     },
     {
-      "source": "The Sector",
-      "title": "Educators breath sigh of relief as NSW Government backs down on community preschool funding cuts",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1DUElaRFpYVXFMai12V2lMUjF4WHNFWkhUY0FyNWhjYUtZWkxwcEh2Q1ozRUNzaHpvbnNRTVlvR3FEVTFsY2UtODhaemNRNjFxNjdKazAwd2UyX3U1TEhjLU93dkIwZFFIV1V2NFA2R0Mtdw?oc=5",
-      "published": "2026-11-15T10:14:55.000Z"
+      "source": "Brisbane Times",
+      "title": "Weapons seized, hundreds arrested during statewide DV blitz",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOREVKdjdqSVN5Q3hZZUZrVWQ4YkR4cWZhNXNEWDZuZ2VSRThfOFJRaXpEMUprSEFLR1A2WlVjNkY5MXR2LVk2V2NEWTNWdFN1UkJnV3pxbzhnVl9XUktkaWhFaHZ3WEI4dDZabW9JcHVvVVZuYmI5TW1BeXhtNHRWQzE0N2Y1ZDJYQk5icmJtMXZUU2lueGdXYzVjaTJ4emtGQUlsWVlVVkNxWnYyM05CTFNjbFROV1JZVU5CVldXVUF4WGc?oc=5",
+      "published": "2026-11-15T21:28:44.000Z"
     },
     {
-      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
-      "title": "Homophobic graffiti sprayed on Sydney MP's office under investigation",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOHczbjQ2bzBTZy03NksyUFRNaklSaUFfZkRid1JWcUo5SC05RFNlcGZVc0dvNHZ2SlRaVkdKSmtQaFRJVXVRSlFLSEpiTC1pM0pia29ha2l0YWlTY0dLUnMtbHVtMmRIMXA0dVdSNUh1WHRBa04wVkFWUmQ2RkZOdTdhaGhTZm1pdGxxcEtONFdHRlFPOXBWWVJneHBGY2VDc3NJTXR5UXFlTFI5NmVFa2szVQ?oc=5",
-      "published": "2026-11-15T08:15:58.000Z"
+      "source": "2ST",
+      "title": "NSW Government Guarantees Community Preschool Funding",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5CZTh2OFhsaWRpMFJXRnhVRTRlYlZaU0N6VEZnVXdOOExiNm5nN3g4VTc1U2tjSnhsUU1TZkltZ1BxUldLcGdCSm9nUjJSY3lIaWI2M2YwZTgxQ0VR?oc=5",
+      "published": "2026-11-15T21:13:52.000Z"
     }
   ],
   "uk": [
     {
       "area": "Eastbourne",
-      "source": "sussex.news",
+      "source": "Sussex.News - Sussex.News",
       "title": "Eastbourne lifeboat launched to mayday rescue near beach",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBDRWhjcXRHNXlzeXZuTl9seExyOFRQRENCRHRZMU5iQ2dnSjVJV3FacjRTZlg3UEIwX003VjJacHNkTWxHRURqV3pmNUgyaDZqa2ZBVTQ1RG9xUkx5SG9Mb2JqY0ZQZ1NPMUxxZms2aGRudnEw?oc=5",
-      "published": "2026-11-15T14:03:52.000Z"
+      "published": "2026-11-15T15:51:27.000Z"
     },
     {
       "area": "Eastbourne",
@@ -137,13 +137,6 @@
     },
     {
       "area": "East Sussex",
-      "source": "BBC",
-      "title": "The night Bexhill turned violent over smuggled goods",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3Ykt1RUJCaVMxemJoTVRuSWloaEo0RzRPVWVSNkl4WVdRR2dLTzQ4c21aaXlRSUtpbHhkeGhmdHhXRElyWUVYOGliYVQ4eXdjdjNDOS03SHFuaUE?oc=5",
-      "published": "2026-11-15T07:09:10.000Z"
-    },
-    {
-      "area": "East Sussex",
       "source": "The Argus",
       "title": "Pretty village in Sussex countryside that famous British actor calls home",
       "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5hc3ZqUWJ6VEx2eGVVQU9Md25hOGdkTDBEenZodnBoTHlrdnJRbVB1VHp0cHU1MkJlaTE0ZDRHVWJZZFlJMWdIall6RlFraWJsZWVwdmFONjY5S1JXUVdBdm5qMlVRY0ppSDJDaFJWNFUyVHhyWWlJ?oc=5",
@@ -155,6 +148,13 @@
       "title": "Torture survivors may have been sent to Sussex asylum camp unlawfully, documentary reveals",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSjdPQlEzMWFHVENadlRjenNRZzZfRlpuY3lUUEFJc3JRR3BudlFJcXZOZkV6T1RPbXNmdHhCUklXSFZvMEtJT0NrMG90SXFkWmM3M0JjQmtyWUx4WUt5NkZhTUtSREtQYnBBUGV5S21Sd1huTjQxZHJwTENGYlEzWHJNQUd4Qlpjdmw1eTZhakRKTXNRVHUya3RHazVyUlQ3akZNTEh4TVR1dw?oc=5",
       "published": "2026-11-14T11:00:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "The Argus",
+      "title": "Water company seeks emergency drought permit amid severe shortage fears",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUkE3TTVsdzBPZWdtTkNLcnBlZm5xVTcyckptNXVHdzV1a2ZUTXBDZEdWenNhdm4wdl8wVFBEdXVONVZBcVJ5T1NGZkN5cjFsX0ptak55ZUtEc0l0SW0zMlBucGZmRm54WW91dHRiQ011Wlk2aTZmOGwwZ2JXSlVFeFhMTGhubHdZNF95ZWFpV2tkSlIzVFhDUEZWelhnbUpnYkE?oc=5",
+      "published": "2026-11-14T05:00:00.000Z"
     },
     {
       "source": "BBC News Sussex",
@@ -173,6 +173,12 @@
       "title": "Anti-social behaviour rising in housing, finds report",
       "link": "https://www.bbc.co.uk/news/articles/ck1wrj21e7d9o?at_medium=RSS&at_campaign=rss",
       "published": "2026-11-15T15:26:22.000Z"
+    },
+    {
+      "source": "BBC News Sussex",
+      "title": "The night Bexhill turned violent over smuggling",
+      "link": "https://www.bbc.co.uk/news/articles/cm0l3837jpl3o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-15T07:09:10.000Z"
     }
   ]
 }
