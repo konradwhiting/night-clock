@@ -1,15 +1,8 @@
 {
   "line": "L1",
   "name": "Dulwich Hill",
-  "state": "delays",
-  "text": "Delays",
-  "detail": "Up to 16 min late · The 05:30 tram was cancelled",
-  "trips": 16,
-  "worstMin": 16,
-  "cancelled": 1,
-  "cancelledAt": [
-    "05:30"
-  ],
-  "feedTime": "2026-11-20T19:00:50.000Z",
-  "updated": "2026-11-20T19:00:57.482Z"
+  "state": "error",
+  "text": "Status unavailable",
+  "detail": "Feed problem: HTTP 404",
+  "updated": "2026-11-20T19:10:36.661Z"
 }
