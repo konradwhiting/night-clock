@@ -1,8 +1,12 @@
 {
   "line": "L1",
   "name": "Dulwich Hill",
-  "state": "error",
-  "text": "Status unavailable",
-  "detail": "Feed problem: HTTP 404",
-  "updated": "2026-11-21T14:30:40.146Z"
+  "state": "quiet",
+  "text": "No trips in the live feed",
+  "detail": "",
+  "trips": 0,
+  "worstMin": 0,
+  "cancelled": 0,
+  "feedTime": "2026-11-21T14:50:20.000Z",
+  "updated": "2026-11-21T14:50:30.245Z"
 }
