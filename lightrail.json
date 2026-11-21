@@ -4,13 +4,13 @@
   "state": "delays",
   "text": "Cancellations",
   "detail": "2 trips cancelled: 17:10, 17:16",
-  "trips": 33,
+  "trips": 40,
   "worstMin": 3,
   "cancelled": 2,
   "cancelledAt": [
     "17:10",
     "17:16"
   ],
-  "feedTime": "2026-11-21T06:20:21.000Z",
-  "updated": "2026-11-21T06:20:27.943Z"
+  "feedTime": "2026-11-21T06:40:21.000Z",
+  "updated": "2026-11-21T06:40:32.348Z"
 }
