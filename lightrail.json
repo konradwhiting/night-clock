@@ -3,15 +3,16 @@
   "name": "Dulwich Hill",
   "state": "delays",
   "text": "Cancellations",
-  "detail": "3 trips cancelled: 11:21, 11:27, 11:28",
-  "trips": 32,
+  "detail": "4 trips cancelled: 11:21, 11:27, 11:28…",
+  "trips": 36,
   "worstMin": 4,
-  "cancelled": 3,
+  "cancelled": 4,
   "cancelledAt": [
     "11:21",
     "11:27",
-    "11:28"
+    "11:28",
+    "11:34"
   ],
-  "feedTime": "2026-11-22T00:30:36.000Z",
-  "updated": "2026-11-22T00:30:37.596Z"
+  "feedTime": "2026-11-22T00:40:22.000Z",
+  "updated": "2026-11-22T00:40:33.785Z"
 }
