@@ -1,10 +1,22 @@
 {
   "syd": [
     {
+      "source": "The AU Review",
+      "title": "Two Door Cinema Club Sydney Review: Hordern Pavilion 2026",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE41NVhkY3c4bThlRHd0RHVFc2VfOXMtTW5WTG9HS2V0UlB4NkxJdVNRbGhzUlA0UER6VFJMbmhETHlrS1pOXzF4MlJ5U1JpRFgzai1hNHp0cHh0dXliYmhZX045Q1liUDhId2p4QThJb1BRekJCV1B0TTFMVHFESDQ?oc=5",
+      "published": "2026-11-22T08:42:27.000Z"
+    },
+    {
       "source": "The Guardian",
       "title": "Police say man whose body lay undiscovered in Sydney bushland for 12 days was killed in suspected hit-and-run",
       "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQZWJtRHU2cW1QUk95ZkNNYXR5OGFrWlZxYUdzbk5iLVRQNy1vbi05N3RHNTFLQXNZTXI5THRuTzRndklmbjM3aUlFSUQwZE1CZ0xSbzdSSjdJcHBXcWNNeFRWUjhlTkR0dEdLUjhkeWtPMmtfMFBIYTg3bzcxaE9pZzB3VVFTMExTWmJRSmdmM01NU2JRRWMtV2wyVjd2Y0N5QlJoZTBreDJua0puWElicVJ5NmZSWUp2MklZMlhWVlZTQ2xzSlJkWHhFRlVXdnJ5V2R3dGtHM1Q1eWJWcVNVZkg3TXhWRDFROHV1bkVMUXZJQ3l1RnhBUFprVmpjVThi?oc=5",
       "published": "2026-11-22T05:21:00.000Z"
+    },
+    {
+      "source": "Pittwater Online News",
+      "title": "Pittwater Online News",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWVpEb2dBSXExSENiTDVzYW4tT1N6X05OeTZNWEZlNXJDNlBYQV93QkZKaDhTR0cwTVpONklQWjMzUzExUXhQbG0wdmQtMlZsaWNlZXRDSnV2TTJoOFBOZHh4NEpsWWZlNmxqMW12N1VEaWdMM01zS092ZjhESm5Ub1NVNUw?oc=5",
+      "published": "2026-11-21T20:08:40.000Z"
     },
     {
       "source": "BroadwayWorld",
@@ -25,22 +37,10 @@
       "published": "2026-11-20T21:17:54.000Z"
     },
     {
-      "source": "Manly Observer",
-      "title": "ZOMBUCHA! – Catch It While You Can!",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9peDc1a19vWmtqU3lLcHR0Ti1ULURwaXozdzJnSGNtRE13bnh0SGVOcEhBODlScjFnSkl6RWJaSlVwUmJuRmNXVmFUdl9PUXQySzZMQVdjaTdZcDFyY3ptdVBxZk5sMEdOUnotcHZTQURzZXRnV3c4?oc=5",
-      "published": "2026-11-20T12:29:54.000Z"
-    },
-    {
       "source": "BroadwayWorld",
       "title": "REVIEW: New Australian Musical SILVER TONGUE Reimagines Treasure Island For A Modern Age",
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNQ01EdWJ4dXVKRHZTTG96aVNycEZQTEJnaGNNZzNtamdOUVVZY1c2M1FtUGUwVlpUay15TzNYWWZ1OVZHNVZUYmZuNm1aRmdiZEhWVmE5WC02dmtkUVR1XzFhcmRyU2NlM2Y5NjhCYndaN2xUM2xqM0xyd2FOZXlZQ0s0RnZQb2VTTHRDOU1ac1FZUERnVmhGWkQ5R3ZSdTNTU1dVcW1jNFFDNzVvWXNrWFB1TWNBR0xUSEFpcEZUb2tWd05SZGdnWUg5NEY3blRiMVVaSjR0UjM?oc=5",
       "published": "2026-11-20T11:22:18.000Z"
-    },
-    {
-      "source": "Sydney Criminal Lawyers",
-      "title": "Activist Released on Bail After a Week in Maximum Security: Interview with Stephen Langford",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcFo5eDlwbnMteEVndklYM2YtZWd5Mk1mSVlpemdubzdRNXA4VHR2cFNQMWY2VFJ1WFFTamY5ejB6NnRTczNmdVlUMnhaYS0wQTF2U2tlVWVLU1F6Rk9mYnp0MVl4TGZxVjhFdzRDSndEZ3o3a0ZaZTNtMXFCVURuNHpLNzRBWS1oYnBveVBlbmZmLVJXakxPZFYyQmFUUmhxZlZVdE9sMG9PaHlpYWZXMzNqNWQyY2VSQ0VlRjZYVXBEMGpxb0FTemMtSVdhM0tXQ3l3?oc=5",
-      "published": "2026-11-20T06:54:23.000Z"
     },
     {
       "source": "Northern Beaches Advocate",
@@ -49,43 +49,64 @@
       "published": "2026-11-20T06:33:12.000Z"
     },
     {
-      "source": "Manly Observer",
-      "title": "Wakehurst Parkway closed this weekend in both directions this weekend",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNUlSV2U1RjJtWU45NGZIV2U5eXhsblJOTmdqUzV2cGdWTHZIcWhGTTI2cHlUZU92dWpTQlU4dWNhaHpveUxlbXVsWFc1OEtVRFc2X2t0VmJodDdoQXBqaXpjQm1FaEcyU0E1VFgwY3V5bGd2eEpwS3dDTXVxRklRSGdaQndkX0dJM1MtY2ZkOHpOeXJkMTJFV3AzcVByR0lx?oc=5",
-      "published": "2026-11-20T06:21:53.000Z"
+      "source": "2GB",
+      "title": "‘Broken jaw’ – Phil O’Neil involved in motorcycle crash",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9KNUlQSGhsMFREU3pTcG9FblExSHNESlRKUUNieGFBN0tuUWVSS1luMVNWY2hVSWFIcTJwSTgwRHp0Zk1GN0Y2b0pIRmctaDhvblA5SXdJREE4eHM0bS1HakpxdjNodzU3X29OZWlNelM4NVFWZlh4UjlUbw?oc=5",
+      "published": "2026-11-19T22:44:49.000Z"
+    },
+    {
+      "source": "NSW Police",
+      "title": "Latest News",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFAxcV9aNy12a243azh0MVk4NFBBMEtVbUJvcUllM1A2RjE0SWZsYmV0SldFWTVwNkdidlQxYXREYUlVOE11QU51X0FHMFJEQWJQREtObDlSZEJDcWF0dEZ3N1Z3?oc=5",
+      "published": "2026-11-22T12:24:27.000Z"
+    },
+    {
+      "source": "Renew Economy",
+      "title": "Laws changed to allow coal mine extension blocked by High Court in state’s last act of parliament",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUGxQdTZpUExkTFZ2NE9KVnhVN1lwSVNkd3BkS0VsaXR1Q0lnZEVFNklJd21feUZTbXpzRXJWNjh1c05jeVFDcUROUUtzVnBKSDI5dXp1X0ZUdlJZTDJ5VFJRQ1pmSkxfZnktMGhnamhSeXYyT2d6b3RrX1dNaENMX0QwTE4yZ2JXZ1FCVFI0clZmZEZkdWFGU2RuZmJEYkpObmxXWHJEbkZLUS1xLURKbS1TWE5RQ3VSa1YxNExublBFUXlBcnN2c9IByAFBVV95cUxPUGxQdTZpUExkTFZ2NE9KVnhVN1lwSVNkd3BkS0VsaXR1Q0lnZEVFNklJd21feUZTbXpzRXJWNjh1c05jeVFDcUROUUtzVnBKSDI5dXp1X0ZUdlJZTDJ5VFJRQ1pmSkxfZnktMGhnamhSeXYyT2d6b3RrX1dNaENMX0QwTE4yZ2JXZ1FCVFI0clZmZEZkdWFGU2RuZmJEYkpObmxXWHJEbkZLUS1xLURKbS1TWE5RQ3VSa1YxNExublBFUXlBcnN2cw?oc=5",
+      "published": "2026-11-22T10:37:03.000Z"
+    },
+    {
+      "source": "South Coast Register",
+      "title": "Cash, knives, and a 2kg haul: Inside the dramatic raids across the South Coast",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbzhIalQzMzlmaFZrS1hDYV9YNlZmc0p3LVNncmo2S1NYZklDUTNQZjFGODNPU1VQMnA3Q1RLSks5MkxhWGhsYml4UGRxdGQ5UFpMXzNOWHlKMHRIVERWRXRGdm5VMURlSm5yamc5Q2NYTmZucXhzaDQ1a1VOUGZUMjFzTklzTjhaeURpb0lsaTVXeWNXWGFJNUNDZXFxZzNtQ3FSUU5UQlU4VDNmSjR3?oc=5",
+      "published": "2026-11-22T09:34:34.000Z"
+    },
+    {
+      "source": "NSW Police",
+      "title": "Latest News",
+      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOQ2dCNV9EbUVzLTlEeERaNUJnY0lKaTNGb19FS29ESnRMVDFWZGc5M1FCM20zWXl5cl92Uy1iLUNkRktpU3NZZDBvclBRZjFyeDJ3elI1dzE2dnB5d2hvZDlGUDRtcGtJQkpSaGJjQjkzSWRVSnlVVGRUTEk3Q2dmN0pMc2VBZFYtSk83WVNEVU1mbjZSUFlxaDBRek1EZ3BucGhYbTNyMVlYeTZST1JyR28xNklFRjN3WXBwTVBzNWVzNUs3R0hMN0NpU1hhMWFkZTIwWjJ1cnZZb3NVN3pmSExucmZwcW1IdVBLSzFwLUJWZUJmVG9z?oc=5",
+      "published": "2026-11-22T07:13:07.000Z"
     },
     {
       "source": "Yahoo News Australia",
       "title": "Man dead after hitting window during arrest",
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yazlma3Q2MkVnTzVMMWdvQnNCdllnZnA0Q0hPS3dtZ3dteF9yaVQtOG85RHJ6aEpITXl2MHpIWHVWeEZnMjhMVjljS29Iczk4TmRJdjVGZHUzRjhXUVVwX1d4c2daNmE3TkxyZVcxb1h5alhGazhZLVpxNA?oc=5",
       "published": "2026-11-22T05:31:00.000Z"
-    },
-    {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9jZkFFODVxWVBEaUhUYjYxSGUyMXlXUDMzMFFuV1I5TW45d1dLUDVhRUNSaUZldndBeFRNQlo3aDhhS0JQQ0FzMm00My11cFhFOXowNlRhVHRHS2FtNEZpRkFB?oc=5",
-      "published": "2026-11-22T04:56:03.000Z"
-    },
-    {
-      "source": "NSW Government",
-      "title": "Experienced education leader to head NESA Board as new Chair",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSzNwM1hlMGl1Ymg5c1BvdDBNejhxQ2xBLTFYQ2dLNmJlbXF3bEM2YV9adlpmUUJzeEJ1dXZGVlU3Zk82NjM4ZzN6bVl1RGg2ME94SW5Mb3hJeVp2QkV2cnZzUGkzMkN5MVJXZnZRTFVYM2wtVjNHTG9sZUwzSFNqbnI4Nzh2ZE9DVEhTVnNYZnZxQU9TUHVoLXMtM3dBT3Q3UkE3OS1Caw?oc=5",
-      "published": "2026-11-22T03:50:51.000Z"
-    },
-    {
-      "source": "Wisevoter",
-      "title": "NSW Allows Hotels on Venues NSW Land",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQkd1bzRKODdEeUNqejltdTYzWUs5WjNwOUF5ek40bjVJdWxid0dpMFp1UGNCaWRRUGF4YkRlV18wVzBXTzVKNkEwQnJvTmpNNDRkQ0U2TVJCT3IxZURNeXF4b2VmRldSS3V3LUVOcjdxbDBZS19wNldiZk1IR1JKM0cwV0wxdw?oc=5",
-      "published": "2026-11-22T00:29:13.000Z"
-    },
-    {
-      "source": "7NEWS",
-      "title": "NSW Police are investigating after a man died following an arrest attempt in Potts Point",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUjhTdU5peWtzWHJrVmVZcUhqQkQwZUpldWFOVHJiVW9YSlFkQWdqd0ZTSDVwUDM0SnRnNTZSZVdpdTU2dTk2blRXWXYxcUM1VlJNU2stMWxrUmFqcFpPRDdCU2YyUGozMDBIZWoyZ09PYlB5LWsyUFpzYUIzRjNuQ1ZnQjBabjIwTExWRDR4MXFBeVRDNDJhWTNKRVZaSVJMVE9oSFB3NUc0R2g0MVdiWU1TdVEwNVFzUmt1X3dzU0ltb2ZDbzIzcDBEONIB0AFBVV95cUxPOGRSLWp3RmxoRHdSdVRFeGpiTUFOeXZMZmFkV3BQNUZRWVNDRzBEeWszeTNxOVdqLWJLZkdWUXAzV19GTGR3bV9OeGRtMzJLVFJKTUMwcXFfRFc2SndmTlNhOWtoLU5NWlg5ak51XzlzSzdQc3ZNbEdGZUlKMlpKOGVSWElHVE5iSkxQRGVsRlJiTHp2NUl6dnJ6VUNRbElzSHpDdEVrQ2ZyUGhxLTJhelU4SWEwd2JMcGFVSGhoLUJjeEJmZ0kxM25mTFZ6YVFl?oc=5",
-      "published": "2026-11-21T23:20:00.000Z"
     }
   ],
   "uk": [
+    {
+      "area": "Eastbourne",
+      "source": "SussexWorld",
+      "title": "46 photos from Eastbourne Borough's 4-4 thriller at Enfield Town",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPSDg3Tlhfam1XaktXTFc5Vnpya2NYcTRGcUdPTVlKLWpUaG94VnZuektnQUlVYUFPVldia053TWpLMXR5OEgtbXRSb1RGMi1Kamg4N09UTHM4ckZNY0t1ODFSQkp5U25odFhCZEI1YW9XOGZDV2ZmWlE5S2piOHFGcktKYXJRcmduNmdhQVRobzFsQjhocF9ZVGppNGlmanZGNXBSZGJQTllPMzBxWWJLWk9PcXRnand3YVE?oc=5",
+      "published": "2026-11-22T12:16:00.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "Sussex.News - Sussex.News",
+      "title": "Eastbourne police appeal after dog walker assaulted",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0zVmVkUndlWE5hd2cwMnd2MFQtQzR2aHZJQ1hMXzR1MmpSV0dLLTFoZW5MdW0wNmsyaW5RcjFYZW90c2dDM1NLMFZrS1luTTR2ZFM0cFA2R1M0SDdOUlhfS2Zwd0JkQVE4b3IzczlhYU0?oc=5",
+      "published": "2026-11-22T11:59:42.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "SussexWorld",
+      "title": "Scores of young dancers bring Peter Pan ballet to Eastbourne",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQzRSQkxac1FBbVpoQlpWM1V4eEJ4Y19DYm9UUk1wVmM0bmtWYzVQUlR4RDdfZGVRRHl4UkFqR3BHdFhpZ0xnVTdIRXROZUcxWUFtX0o1Q2hGU21MaFNsbkc5dXFJUzE0VmR1Q2NnU0ZFbmhna0pHTWlkTUxkTU5yYWJqOXJjTTdDX2tydWlvTmlPQWh2NGxMYUk1ZHJDQ19kVHV6QzdXdk5PSzVGa3c?oc=5",
+      "published": "2026-11-22T08:05:00.000Z"
+    },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
@@ -108,25 +129,18 @@
       "published": "2026-11-21T12:55:00.000Z"
     },
     {
-      "area": "Eastbourne",
-      "source": "Latest TV Brighton",
-      "title": "Living Life Eastbourne: 30 Years of Humanitarian Aid, Shoebox Projects and Fostering in Croatia",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNSy1Vc2VYRjBOZHBtazREUzNiX29QRlBnZldLRi1xRG1QLWI3el8ybDhKSjFkZzBPWnkxNm9VaUYwNGNnQjRiaGttZTdneGtEN0xqMUVYNVRxRkc2WFd3Q1pjaDhkMHVSVnpWUmFlanAyV1dvdHFvOVk5NXdCSFhLRXpIZHctOVZRNlhySkI4YVVqVF9BRDN6cWZEZUw5Ym5MRk1ka3RNZUpRTTRtMWhXdUhESU1GUEJka0N2aEpYRWEzZ01weGNfX0FPS0s2LVM5NmMwbA?oc=5",
-      "published": "2026-11-21T12:24:05.000Z"
+      "area": "East Sussex",
+      "source": "BBC",
+      "title": "Newly weds driven to reception by Sussex Police after breakdown",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOS1Z4NzFPVWdzZ2t2WUE0MmhJb2o4ZXRtMGZacUlrTXlUNWtUb3FhQndYWU00RER3WUlET2hJWGM4SVN1MDJlUEZZNXlTOC1aSGpKaHhjTl9ieHRjVVdYU0lVNlVRTEZleGtvbnN5dy1FdEhLbkMyS0hfeHZMU3FoWkhlTHV5c2dzaFE5ODVBUjhPUWFhVVZLQ2Q1UHlvQy16dk4xbjcyV2c1M0JicWhXNXEwc2dDYlNIbW5nTkozNGdLVGV0RzJ6M25Jdm9xS1ZNNTB3VG9BRkJKM2Z3NGVjSndsdw?oc=5",
+      "published": "2026-11-22T14:24:36.000Z"
     },
     {
-      "area": "Eastbourne",
+      "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "Police ‘urgently seeking’ missing Eastbourne woman",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQV25kOUwzZHFUVVRnenBabkZHSDBDZnU4amRZdXAxUnNrSkI0T2xwaDVsWUhZNlUwcjM2ZlJnTTB1OEZqMjhUNzFJT2t1eVRuY1dJVk5pTndoWFU4ekNJRmFfM2Q3enFBR0g3QjlmNWM2VkFNd1dXeVZBNmZzWWs2RF9pZ2pJZFVXZzNyT2wxZTlsWWhPT0dCTmpzNTVWM3JJYnc?oc=5",
-      "published": "2026-11-21T09:31:00.000Z"
-    },
-    {
-      "area": "Eastbourne",
-      "source": "The Argus",
-      "title": "'Goldfinger' pier owner 'was paid to house asylum seekers despite £160k water debt'",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNT2dBOEVVSEhpSGlGeGFTRXplX0dCM1FSTWc5NFU3UTl2X01HR3JkcVZFS1lTeTZVWWJMTjNhbWhyc2NFRS1Wa18tb190SjNOc3A1eEc5bEF3WTFORlltcGtvbkdHVHIzaWNMLURYeUZNMFRiYjhVVnRWUjRyX3NxTUF6T0FXd3ZxX192bUV2YzhCb3JjVTZ1QVRYLUNjTmM?oc=5",
-      "published": "2026-11-20T20:00:00.000Z"
+      "title": "Southern Rail issues update after power cut leaves East Sussex station without trains",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPTy02RW0walU2UndUNFpzeTN3d1E4alVHRjlSMDE4cDk5czl0ZDBhdU1rcG5mcnBzVUdYTVVxWmNNTy1BdXpFUGl5U0VQWnpYVlE3bkdtX1ZJbWVpM3ZCdllsQmhIVVAwWU8yTnVFZkp5ajlnSGpOYjZLRGZDZi15V25Tak9mMEZub0NvakpVRm1EalZaaFRYbERkU2JBbF9ObEVWRktZcnZid3NWSlg0RFV2TE05cDh1eFNXdElNT2dCeXZveUNiWGVvNXBibHMySXp4VjhVWQ?oc=5",
+      "published": "2026-11-22T09:24:00.000Z"
     },
     {
       "area": "East Sussex",
@@ -150,36 +164,22 @@
       "published": "2026-11-21T09:00:00.000Z"
     },
     {
-      "area": "East Sussex",
-      "source": "Metro.co.uk",
-      "title": "What I Own: I quit London at 48 and bought my first home in Sussex for £325,000",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTWJydGhBUGxCclFWd0pCVW5yckVOMjFTc2kwV2Y2Q0ljV2ttNW9tRFd5a2dGWEd2NG9QbkszVU1sTmpWd3Z0MjJ5ZHpMNmFqNlZ4djIxemZRRmp2M3hubTNQOFJETWMzeUdJeHl0QXdscURqSnBiNXhnamtOaXBEVXUyZGFvaldNUE82Tkw0cUJlVlZqcFJFOWFPZlpmVVJZV0w0czRQc09WSmNucFlkZEJ0cENVTTBr0gG-AUFVX3lxTFB4Nk9rNzhqQVFadXBoalljbElaamN5YmZyXzBIVzczLU92NmVrdWp2YWlJQzBUcE9JUmh3UGJ3RWh0R2N2eDgwdWFXczJ2aDVEWXNVNWlRWDA5OTcxdUkwbERZOEtLaDhFTm9BZjQ4YmtSNWdndGhQM2d6cGl6VlQ4bldxZkZCY1hpWU9yeWlkOHVBemRGbWFoc0U2WFZlRWVIdXlzZE04ZWFqWlZWVVZzLVFEck8zMUw3MWZ4ZXc?oc=5",
-      "published": "2026-11-21T08:00:00.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "The Argus",
-      "title": "Panel finds allegations against teacher convicted of drunk driving to be proven",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPb1k0NmxkaEdIZXNob3hycVdzNmJZZi1WVnpOYzdhRWkzbXphLTU3WGcxWElRZE9WQTNNZ1N4dV9IbFh4cWtSU0RxcC1DNFA5cXh0VHlqd3JEQ3QxUUx4N0s1RGpaUUJVejA0UVNONENfSEd2VGh4QktqZFdrNWYtcUZPa04tRHlyTjd1RjlFNkhlaGtxSkE?oc=5",
-      "published": "2026-11-20T20:00:00.000Z"
+      "source": "BBC News Sussex",
+      "title": "Newlyweds get lift from police after breakdown",
+      "link": "https://www.bbc.co.uk/news/articles/cwm2m5g6dezjo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-22T14:24:36.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Protest after homophobic and racist incidents",
-      "link": "https://www.bbc.co.uk/news/articles/cv98x55zzyx1o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-21T19:29:13.000Z"
+      "title": "Alert as fire destroys roof of property",
+      "link": "https://www.bbc.co.uk/news/articles/cm702zy9ewy0o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-22T13:02:34.000Z"
     },
     {
       "source": "BBC News Sussex",
-      "title": "Woman trapped under car suffers serious injuries",
-      "link": "https://www.bbc.co.uk/news/articles/ck9q8wj521yyo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-21T12:27:20.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Bus drivers to strike after rejecting pay offer",
-      "link": "https://www.bbc.co.uk/news/articles/ck3wg1y25qn3o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-21T07:02:24.000Z"
+      "title": "The town that rioted against sobriety",
+      "link": "https://www.bbc.co.uk/news/articles/cqrky3xen77mo?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-22T07:00:21.000Z"
     }
   ]
 }
