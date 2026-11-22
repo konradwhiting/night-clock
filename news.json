@@ -1,6 +1,12 @@
 {
   "syd": [
     {
+      "source": "The Guardian",
+      "title": "Police say man whose body lay undiscovered in Sydney bushland for 12 days was killed in suspected hit-and-run",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQZWJtRHU2cW1QUk95ZkNNYXR5OGFrWlZxYUdzbk5iLVRQNy1vbi05N3RHNTFLQXNZTXI5THRuTzRndklmbjM3aUlFSUQwZE1CZ0xSbzdSSjdJcHBXcWNNeFRWUjhlTkR0dEdLUjhkeWtPMmtfMFBIYTg3bzcxaE9pZzB3VVFTMExTWmJRSmdmM01NU2JRRWMtV2wyVjd2Y0N5QlJoZTBreDJua0puWElicVJ5NmZSWUp2MklZMlhWVlZTQ2xzSlJkWHhFRlVXdnJ5V2R3dGtHM1Q1eWJWcVNVZkg3TXhWRDFROHV1bkVMUXZJQ3l1RnhBUFprVmpjVThi?oc=5",
+      "published": "2026-11-22T05:21:00.000Z"
+    },
+    {
       "source": "BroadwayWorld",
       "title": "Chatter at The Grand Electric Australia - Sydney (Jan 13 – Jan 17, 2027)",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5iWmxVc0ZFMmhNYXpLaGVsOGYxU21ndE90NkNMWHdfRDhMR3h6ckw1XzRjVFdVQkxLLTlfQ25ZYjE5SGtkT0taMU5lb1pnaGJBX3JNMFh4bGV0S3RpNUlZNDZCdUl5TTBaRHVsbkhn?oc=5",
@@ -13,16 +19,16 @@
       "published": "2026-11-21T04:39:39.000Z"
     },
     {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNWnhoQVVqb2ZFVzNQX3d6dkhlNWpwUTk1TzRJWHBiS0ctbzJieldaNzVqc2FNZGh5RlRkcGJwR0l0c1hUdTZOdnZ1UVpzbWU1cXVvZUFZTDVocTJZZGtDbjNCZ2p4ODNRUU1LNW5nOWZxdDRLd2Y2bkxvb1llX3IxUXVFUFY1U24tazVOM1o4djZyWExGM242U3E5OG5fWWFVLXhhblJKSDV3UEJNTURUX0ROOXVRVnFlYkFaczR4czV2MlJGMGZoVzJ1T1JKTk9wdnZCbmtnM0R2dDUxRENKX190Mmd2azNBeFVHcQ?oc=5",
-      "published": "2026-11-21T02:37:51.000Z"
-    },
-    {
       "source": "Northern Beaches Advocate",
       "title": "Public safety round-up",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcnY4X2R2N0lmYTE1cmN1TVJCTWRvdG5aWTdpYUVzNmpZV05JSExwSDZ3N2JfLUlWRFk2OXFObDY0TWNWeTJyZDJiWDJfZ1ZCWm5NN0FpeWlZUDlTZVJDdmhBMW0xZmkxNHdiUE1vdTFaZHZzMTRGS1JVaDlNbEQ2WHdoSTgtX3J5?oc=5",
       "published": "2026-11-20T21:17:54.000Z"
+    },
+    {
+      "source": "Manly Observer",
+      "title": "ZOMBUCHA! – Catch It While You Can!",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9peDc1a19vWmtqU3lLcHR0Ti1ULURwaXozdzJnSGNtRE13bnh0SGVOcEhBODlScjFnSkl6RWJaSlVwUmJuRmNXVmFUdl9PUXQySzZMQVdjaTdZcDFyY3ptdVBxZk5sMEdOUnotcHZTQURzZXRnV3c4?oc=5",
+      "published": "2026-11-20T12:29:54.000Z"
     },
     {
       "source": "BroadwayWorld",
@@ -49,40 +55,34 @@
       "published": "2026-11-20T06:21:53.000Z"
     },
     {
-      "source": "Southern Cross",
-      "title": "Desperate appeal after missing man's body found in bush",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQ1hsbGcwN3psYllPU3dZYTJuUTNzMlVaNTdERmdpaFdRV3VINkVadnBoakJIb2ZYSTVqRXJjY25NMTNuRFZuaFVtYUEyYjBtMGJIbjhFWVRDd29VNkpFeUItalNsQ0dLVDRyVjVBWi1udEpRUENoZGJXQTRsMndKY1FaSDZGbERtdmxwNWRWSTY0d0lsVDhGdkZtSzN3Uy0zWXRudUppdlNGa1k?oc=5",
-      "published": "2026-11-21T23:00:51.000Z"
+      "source": "Yahoo News Australia",
+      "title": "Man dead after hitting window during arrest",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1yazlma3Q2MkVnTzVMMWdvQnNCdllnZnA0Q0hPS3dtZ3dteF9yaVQtOG85RHJ6aEpITXl2MHpIWHVWeEZnMjhMVjljS29Iczk4TmRJdjVGZHUzRjhXUVVwX1d4c2daNmE3TkxyZVcxb1h5alhGazhZLVpxNA?oc=5",
+      "published": "2026-11-22T05:31:00.000Z"
     },
     {
       "source": "NSW Police",
       "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5YWXNHRmpDX0FfTXpBQUtWaTMwZ3dETlFJUzhUazVEZVJEdVZUWlY1VHEwNGJrU3phekhzWDlXSEN1d3hMMk9RVG0tMmM2VW9icHVCMk4zQzJKMWNWc2hTcWlB?oc=5",
-      "published": "2026-11-21T19:49:27.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9jZkFFODVxWVBEaUhUYjYxSGUyMXlXUDMzMFFuV1I5TW45d1dLUDVhRUNSaUZldndBeFRNQlo3aDhhS0JQQ0FzMm00My11cFhFOXowNlRhVHRHS2FtNEZpRkFB?oc=5",
+      "published": "2026-11-22T04:56:03.000Z"
     },
     {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPdm42VTVzdFcyNEdWZEtJZ0ViVExLT0NULTUxNFlWOExrelNUaFFOdE9kMjFhV1lLWkcxZjg3Ri1BX2J1MXNRN1dCdVc0Uk03aS1oYzRIZzIyeGV2R0REM1E2Z005Mm5DSzhTcGJxcEFEaWUtZWN6b1c2UG9IQmMta3IyYWExTUZmMUtfd3FQanFvM0JJc25JTjRudHNKOW9hOEU4MUxUUlRZYk5FcU9mdEpydVlncmNNaVQyWEJ6Y2NnbldMNmN4T0Vhc1AtTTZMamRCeXdvWmFjT2dsYlhOR29LSTZTMnRId05UcA?oc=5",
-      "published": "2026-11-21T16:27:56.000Z"
+      "source": "NSW Government",
+      "title": "Experienced education leader to head NESA Board as new Chair",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSzNwM1hlMGl1Ymg5c1BvdDBNejhxQ2xBLTFYQ2dLNmJlbXF3bEM2YV9adlpmUUJzeEJ1dXZGVlU3Zk82NjM4ZzN6bVl1RGg2ME94SW5Mb3hJeVp2QkV2cnZzUGkzMkN5MVJXZnZRTFVYM2wtVjNHTG9sZUwzSFNqbnI4Nzh2ZE9DVEhTVnNYZnZxQU9TUHVoLXMtM3dBT3Q3UkE3OS1Caw?oc=5",
+      "published": "2026-11-22T03:50:51.000Z"
     },
     {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQZTU4YmJYaHRuU0drU09YUEVVZjBVNjI2dk1zUjBqVVU1RVRJMnhPdHBDRllxaU5HazFBY01sUE10YVJFQ2NvTUNsT1VCTTZZcTl1U2ppQWJUMko4UlBsdTAwX0ZQOEd6dG5hTTJsbHdhLVVGeE8xYzZiVnZVSTdXamJxUkw4OFUyenJDMXNDQy1hSmdCbU5Zb1hLTVVaV3ZHWHZhOThiTmRqa0NEbEMwa2xZc3lkV0ZEaVNqOVN6ZU5GN1p3dG1hdzFRU3g0Ykk5TnNFdEhUZWdoR2hFVTNBcnBxdGs1anpLN3NkUA?oc=5",
-      "published": "2026-11-21T15:52:58.000Z"
+      "source": "Wisevoter",
+      "title": "NSW Allows Hotels on Venues NSW Land",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQkd1bzRKODdEeUNqejltdTYzWUs5WjNwOUF5ek40bjVJdWxid0dpMFp1UGNCaWRRUGF4YkRlV18wVzBXTzVKNkEwQnJvTmpNNDRkQ0U2TVJCT3IxZURNeXF4b2VmRldSS3V3LUVOcjdxbDBZS19wNldiZk1IR1JKM0cwV0wxdw?oc=5",
+      "published": "2026-11-22T00:29:13.000Z"
     },
     {
-      "source": "St George & Sutherland Shire Leader",
-      "title": "Council 'hamstrung' on e-bike enforcement, says mayor",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOF9KQ0JpYzZNMjQ1MVdZSTI1My13bXVTMkx4Vk43NFN0WkhmeU5nRkotRWpSVXJNLS1JWW9zUm5jWkRONDhZc3ZWX3BkYU5uVUZ4c2RWTlNvUnB2U09kcS02NXFvdWRPRE5wZDJldG1KbDZudkdVZnpwb00xaGJaQldJTzh0SFVpWkp5UHhGX0ZVVWJBdU1UbWZqR3hOdjBacVFJS1BOVQ?oc=5",
-      "published": "2026-11-21T14:58:14.000Z"
-    },
-    {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOeHpwZVFSVnYzU18zcFkzZ2tkb01rQ2RuRUpZdVBrWEVlRTZKMDlRdGw1Rjd0ZjJ4eFJmWEJqdnhuTk9QM09pdXZwc2ZLQnp4ZjNkS0FmLTU2VVViRHZOcEc5UV9aZlF2ZGVKVUpEcWV2eTZ0WmNqZXJTYWgxdkd3ZDNqN2FzTFdtVDFueTg5WTdvUTVpdDdBQV9vNEY5Qm9qQzZxOVM3c3ZGS2RBTFhYRzBkX0psQ210VWJ4Q3NYVVQ0enhjYUJtVmZScHdZbUlqN1VKbEYwQ01Qa2RiV0NmM3BFbUxldFRrTU5UQQ?oc=5",
-      "published": "2026-11-21T12:19:24.000Z"
+      "source": "7NEWS",
+      "title": "NSW Police are investigating after a man died following an arrest attempt in Potts Point",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUjhTdU5peWtzWHJrVmVZcUhqQkQwZUpldWFOVHJiVW9YSlFkQWdqd0ZTSDVwUDM0SnRnNTZSZVdpdTU2dTk2blRXWXYxcUM1VlJNU2stMWxrUmFqcFpPRDdCU2YyUGozMDBIZWoyZ09PYlB5LWsyUFpzYUIzRjNuQ1ZnQjBabjIwTExWRDR4MXFBeVRDNDJhWTNKRVZaSVJMVE9oSFB3NUc0R2g0MVdiWU1TdVEwNVFzUmt1X3dzU0ltb2ZDbzIzcDBEONIB0AFBVV95cUxPOGRSLWp3RmxoRHdSdVRFeGpiTUFOeXZMZmFkV3BQNUZRWVNDRzBEeWszeTNxOVdqLWJLZkdWUXAzV19GTGR3bV9OeGRtMzJLVFJKTUMwcXFfRFc2SndmTlNhOWtoLU5NWlg5ak51XzlzSzdQc3ZNbEdGZUlKMlpKOGVSWElHVE5iSkxQRGVsRlJiTHp2NUl6dnJ6VUNRbElzSHpDdEVrQ2ZyUGhxLTJhelU4SWEwd2JMcGFVSGhoLUJjeEJmZ0kxM25mTFZ6YVFl?oc=5",
+      "published": "2026-11-21T23:20:00.000Z"
     }
   ],
   "uk": [
@@ -131,9 +131,23 @@
     {
       "area": "East Sussex",
       "source": "The Argus",
+      "title": "Community group combatting rural loneliness wins award from King",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSE4tOHRsak5GTUQ2NWNKempPMVpTRVB0SkFzTnNwczdXeDNYVWFNZk9RVmVsUXNkcXZvcmUwLWxRdDVXNE5PR2pZMnFzSVRDS2UxUVhvcWJFTFJkdU5KZ2U5UHhtTUFPQnZYeU85Rnh1LXRnMThPa1U2OV96ZTRKbVRpLVhnM09TUVFQYWxyTHZGLTE0cEdONC13REt5N1BPWUtoaEd3?oc=5",
+      "published": "2026-11-22T05:00:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "The Argus",
       "title": "Pub allowed to keep outdoor area as it is after enforcement notice quashed",
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMEJTN1ZLc0NMQk9zR2F4eWphcnVOWllXamVkYzBPMENBQXNkZnRnb1VtcWFXMVJqMklFUHhBNHE3YThOSEN1ZEE1a1dFS2VpbnRTUEJFNHdyZVdLQlA2ekw1YnB3QXNhQTFjYk9XYkN3NHdnenFDLWhweU9yQ0hjT093QjU4RHJ6NV90Vk9XQ01xaEFWcDJCeG5R?oc=5",
       "published": "2026-11-21T17:00:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "SussexWorld",
+      "title": "Cuckfield Christmas Tree Festival returns on Friday 4th December at Holy Trinity Church",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd0lfNDFpd2pXUExFcU9ncmhPODdUMDg0VFNpNWJfdkc1MHZabjM3eWFfLXhxWjlPVWwyeG5JQVNIbFBnQzlsWVhNeFROdDdUMVlJTEp5ZWJHYXhzWWhUdW1ZcmRfMGVnMHMyLW9WUmVudi1PVVVWUE9LVF9hLVcyWGFXNTl1S2xiZDJGck55eFl1VDlCeVhPOFA5RXQ4NUw5MHpsTnFNb25oSEJkWjVfYlZtZnBhbGtBbFRnRU5Sb2tySEVWeFE5U2M4dUlmTFpkdVBJ?oc=5",
+      "published": "2026-11-21T09:00:00.000Z"
     },
     {
       "area": "East Sussex",
@@ -148,20 +162,6 @@
       "title": "Panel finds allegations against teacher convicted of drunk driving to be proven",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPb1k0NmxkaEdIZXNob3hycVdzNmJZZi1WVnpOYzdhRWkzbXphLTU3WGcxWElRZE9WQTNNZ1N4dV9IbFh4cWtSU0RxcC1DNFA5cXh0VHlqd3JEQ3QxUUx4N0s1RGpaUUJVejA0UVNONENfSEd2VGh4QktqZFdrNWYtcUZPa04tRHlyTjd1RjlFNkhlaGtxSkE?oc=5",
       "published": "2026-11-20T20:00:00.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "SussexWorld",
-      "title": "East Sussex cider makers preparing to conjure up the spirits to bless their crops",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNV2oxcmhPaGpXYmc5QkxlNGlVcXVxRjg0bmFweWJkUWhQeUxPNENVLXAtVkg4YWh3bS1XSmIwVGs1SlJSNEpzeGRIbUxxQld6VDhGYUVkYXR4ZjlEYmVwN0NKWmx6MFpYdXJYTTY1RUlWSmJvamp6LWpZRG1PbmQ4ekVBcEYzcXBKZUpUUEVYMVpHY1MzM2I2dEJmelkyY295enpKWExSUF9adzlrMmVhY1lRMjJuU2xraXB0ZzhHazMzcUlKTFd2RkpjMmVSQQ?oc=5",
-      "published": "2026-11-20T17:18:00.000Z"
-    },
-    {
-      "area": "East Sussex",
-      "source": "SussexWorld",
-      "title": "Flood installation goes live at National Trust home of world-famous author",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPblY5YUgwVGE4QnRBUGM3OFhKQ2I2MmN0MkNRZ3FhVUJGVXdMcWNKVWJkOHkwWjgwcTFZWFVoY0x0aUlGdG1lUkxYZEFPd2ljbzMyZXQxYjFCcGN4R05MMTdMQW50MWY4bGtKRkp1REJaeTNLZ2dEY1V5YW82bnZtS2s2TDJDV244STU4RkdxclQxaVVrT21jTWRNT2tQeF9YZVJweG45RVBTZDYzaEt3cTlRUFJSUkdQSHhzSzVZU2ZFQQ?oc=5",
-      "published": "2026-11-20T15:12:00.000Z"
     },
     {
       "source": "BBC News Sussex",
