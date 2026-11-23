@@ -1,8 +1,18 @@
 {
-  "line": "L1",
+  "line": {
+    "state": "ontime",
+    "text": "Running normally",
+    "detail": "22 trams tracked"
+  },
   "name": "Dulwich Hill",
-  "state": "error",
-  "text": "Status unavailable",
-  "detail": "Feed problem: HTTP 404",
-  "updated": "2026-11-23T02:40:28.851Z"
+  "state": "ontime",
+  "text": "Running normally",
+  "detail": "15:07 on time",
+  "cancelled": 0,
+  "trips": 22,
+  "worstMin": 1,
+  "scope": "yours",
+  "label": "Jubilee Park to Dulwich Hill",
+  "feedTime": "2026-11-23T02:50:35.000Z",
+  "updated": "2026-11-23T02:50:26.813Z"
 }
