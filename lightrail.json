@@ -1,17 +1,16 @@
 {
   "line": "L1",
   "name": "Dulwich Hill",
-  "state": "delays",
+  "state": "minor",
   "text": "Delays",
-  "detail": "Up to 11 min late · 3 trips cancelled: 08:34, 08:52, 08:57",
-  "trips": 40,
-  "worstMin": 11,
-  "cancelled": 3,
+  "detail": "Up to 5 min late · 2 trips cancelled: 08:52, 08:57",
+  "trips": 34,
+  "worstMin": 5,
+  "cancelled": 2,
   "cancelledAt": [
-    "08:34",
     "08:52",
     "08:57"
   ],
-  "feedTime": "2026-11-25T22:00:35.000Z",
-  "updated": "2026-11-25T22:00:45.746Z"
+  "feedTime": "2026-11-25T22:10:21.000Z",
+  "updated": "2026-11-25T22:10:27.791Z"
 }
