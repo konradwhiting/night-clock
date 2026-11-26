@@ -1,22 +1,46 @@
 {
   "syd": [
     {
+      "source": "The Guardian",
+      "title": "‘Disaster’ unfolding as Sydney fire ant outbreak partly blamed on ignored biosecurity recommendations",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNYnFRT0h1dHoxdllNZWE5RVN3aFlTVUN5V01GcHhjaU9Bbl95eUJFMnE1VWpXcEV6UElycFNKcEMwSG5wUFJtRGVCMk5CQkR3VUZkNEUzN0p5LXZNVXpHMEVKeWRYbFB2amdmdWhkMVBIRnZtOFljdVJJVXdIaFI5aWctVjAtdE9zVkNGczlleWdzTHlVZERwQlNlMWlEaTlJdGVjN3Ixb0pkZGJ6?oc=5",
+      "published": "2026-11-26T14:02:00.000Z"
+    },
+    {
+      "source": "St George & Sutherland Shire Leader",
+      "title": "17 storeys on the south Cronulla peninsula among new projects fast-tracked",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV1dtQlZpRG1oNDZ5TzlJSTduUmVCc1JSMkdaYm5hVEZtMGJuZmNlQzdkX29DZW01THFJRmRsYVJOaXZXaFA3YldRNldjR1NQNEVlMmR5SDNZQlBUTkhUWF9NWDdiTEpTZEdsNllta1VNWDZCWW9PUk9aY2cwb1YzRnVHeFRRdU55b0s4aWxDcmpKVTRkVERlVVJTcVJfNV9jM0R1NkdfOFk?oc=5",
+      "published": "2026-11-26T13:00:36.000Z"
+    },
+    {
+      "source": "Manly Observer",
+      "title": "Salvos to exit aged care, sell Collaroy services; plans 13 storey development for Collaroy Centre site",
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNejlLeTZ5Tmx1ODNrRHpPbWVRdVNINGc2Z0ttd3p1WkJzMUNHMU1SaS1JcHNpV2oyV24zWmJwOXpNREx2eExPclFsUFMzeHJtdWxadWRPNWxTWEFsUjhGcXNmNmYtSDJPQVlPNW1keW84SGJlMDZsTzlld2xGY1dvLXdDQm1nb2NTYWRiNGQ5Wnd5c2plWWZmTUNyUnltTU8tY01QbmtGeHlIVHJFZkJ3cjQ4VXdEdWZQS3llR3NZWk1ZN2pHeldsV2Nn?oc=5",
+      "published": "2026-11-26T09:32:08.000Z"
+    },
+    {
       "source": "Northern Beaches Advocate",
       "title": "Libs pick Cuneo as future talent",
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWXBGTjBxcHFqTmlac1NVeHlxMkJsR3pRTk50RVNlUHU4eEVFTFhXU2xsNFBFMTY0NWctbm1zUmhYWXpTZ1U0aFhxdlZrbjMyVjNNUHZ0TTNnY2F2ZVQ5T2g2b1FraUU3UjNDSkpPcFNVRlVYYlVCRy16R3M1VkJJSk1XOVo1UTNyN2NOVzNmb18?oc=5",
       "published": "2026-11-26T08:10:05.000Z"
     },
     {
-      "source": "The Guardian",
-      "title": "Teen’s homicidal thoughts dismissed as ‘crap’ days before she killed 10-year-old, inquest hears",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPOHR4U3dreHFiWEN3UmpETk9iOGY4VFVRdjVYZVVaRFViaEJraGtVWlRyNGYzSlVsRWF4VWViUTBKN2ZaTnBRTG1IYkY0VDE4b3lmbUJ5bC1YTlV5TWNfV1Noc2tGT014YjVXYmtWWXhIVkZ1bVlESUMxRFFRZkZVcXEzUWlIMFpqQ2hZSnN6dGJTQVlKQTFlMXo4OUdOY2xVUWtXQkloYmFzNl84VC0xVWJ3akFhcEY1RGtCMXpENHR1NGMzWEIxcEFCWnYtNUItV183cA?oc=5",
-      "published": "2026-11-26T04:11:00.000Z"
+      "source": "Manly Observer",
+      "title": "Why restricted parking has been placed on the Collaroy ‘car yard’",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNbTl6bE5aNVc4V054SVgzN3NlUW9mV21GdzI3RnY3eHg2VUxKSjc0ZTk3S2pOY2F4OVZldmFKMi1XbURvMjVRaHg2UHhiSkZEWWdURlF3dldWTi1sSTJVcEEwWWtZSzRIRGZPNDhHbmlHZHhCOXBacmYzRmxraVdTdXdQZWdYbWExdHBrVldXWXloSjdJeXdrSmNn?oc=5",
+      "published": "2026-11-26T05:59:33.000Z"
     },
     {
       "source": "The Guardian",
       "title": "Aidan didn’t expect a spoken-word component in his thesis - but universities hope it will help tackle AI",
       "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRDg0THBvV21MNlVFbXRjQ2F1MFZQLXhYaEh2MkVhWm1RSW01RmxMY2VwZFhuLXFPQ0loSlBBd09kWHBKVThFNm1ESFlLZDJUTDZzSjlIeE1uSzFZbHpXNW5tWVpuMFIwSGtBeXE5NnFrbW9XVVMtY0MwRDdkc2RSZWFFQ2dyOHBhMGJfSk9aT2tlUHpWbXNBOHl6NmhVYmJtOVVoWkNVV190QXRYSnhYdGNJT2J5SWlUVXd0MlBUWmRBeXBTZG1PWVZUVDJmb3V1?oc=5",
       "published": "2026-11-25T23:12:00.000Z"
+    },
+    {
+      "source": "Manly Observer",
+      "title": "Civilian police employee charged over Manly assault, driver allegedly four times over the limit and an appeal for information over 13-year-old boy's assault in this week’s Crime Watch",
+      "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxQQVJwbEU2MEs0S29YbFFLYVhJY0xiZlpFSFhGRmJ0WXZXU2NzWVg0ZVY0ZFdpaWVnemh0V2VfcDNhZzBvOWJGdXlFbXdrZ24yRXpTVklGU2E0N3RiWUh2aUktaGw3ZTZRcVU4RmljVjJmeGZRU29nZEc3QWE0b196S09feXo3NFd6S1BjRHlVZEc3SldGempFMzc2ZUZFSi1BZVZWT1lCS1ZuNHk4V0pVdVFWTEtlQUtMb1dfNXFRVFdlUkdqVHRRUWpHdFhPZkZhdnVhaEZFRGxHMGJYbEhzZ196NElpQlgxa3BaaUlSUjNXaFl5aGVxeHBrOEExYkVCd2ppRW9fcjVPeF9EOEljelNCV1BGcGxfXzZGazR1V0hWc3YtNlBjcmVKS3h2bDV4R2toOQ?oc=5",
+      "published": "2026-11-25T22:50:51.000Z"
     },
     {
       "source": "NSW Police",
@@ -26,9 +50,9 @@
     },
     {
       "source": "The Guardian",
-      "title": "A nest of fire ants with ‘multiple queens’ has been found in Sydney. Here’s what you need to know",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOSlNWN0k5ZnBsZWhBN1RXMngyTFdGZEtabklSQXIzbDkwVDZLTUJSWVd3WllZU0p6dlhSWXExWWdWdVJiSlJnUDZZcExaX3NzWUtxZ08tbGV4NUNJZXpXdk96QzNLektaQ1YzV3hVTG53RHZsTDNTZzZPU2huMmxoNzVuYWhxYnBFOWFkR3RpSmNhU2kzVXhhQ3VZMXdSYWF5cmR3WHkwc0dYVkRhanJPc1lqS1l4WXZHRHZv?oc=5",
-      "published": "2026-11-25T06:03:00.000Z"
+      "title": "Australian politics live: Taylor announces two new jobs for Hastie as Duniam departs; NSW ‘scaling up’ response after fire ants found in Sydney",
+      "link": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNeWgxZHNBMG9Hb1JEZUtYM0pQMVZVWkx4N0pkeTc4YjZoZlpWbHlLRXUxOTZLTGJKc1NVS196dURkSEp1WUkyUjhIeXpkRkFaQUZxZ3NuV29QdUphdUs1MTZQV2dQU3RxcFktM2dWSG1RM3lYYnloTXJFMGV3R2w5bnQxWWptSG1YSHU2TTZjSjF2NU1wM2hFdEtzZzlBQzVEa2xLNGQ0LUFYWkhmZUdJQnRGdllFVU1MejZLeDJhYmxwejlhb0dWN29wVHJtelhFalJ2R2UyOTh0eWFBQ0F2Mng2cFRHck8ydzRTdkllNmdiSjJQT0tlTFV5V1lnZ3lhbHRaRGNn?oc=5",
+      "published": "2026-11-25T03:40:44.000Z"
     },
     {
       "source": "2GB",
@@ -37,148 +61,118 @@
       "published": "2026-11-25T01:59:45.000Z"
     },
     {
-      "source": "St George & Sutherland Shire Leader",
-      "title": "17 storeys on the south Cronulla peninsula among new projects fast-tracked",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV1dtQlZpRG1oNDZ5TzlJSTduUmVCc1JSMkdaYm5hVEZtMGJuZmNlQzdkX29DZW01THFJRmRsYVJOaXZXaFA3YldRNldjR1NQNEVlMmR5SDNZQlBUTkhUWF9NWDdiTEpTZEdsNllta1VNWDZCWW9PUk9aY2cwb1YzRnVHeFRRdU55b0s4aWxDcmpKVTRkVERlVVJTcVJfNV9jM0R1NkdfOFk?oc=5",
-      "published": "2026-11-25T01:21:05.000Z"
+      "source": "NSW Government",
+      "title": "Narrandera's Jasmine Morrison honoured with prestigious NSW award",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObE53RTBIODl5dDVhSTQzSHpzT1djSlROTDdWTEFHMFNDRTZLTEx3LXZiaGNPQk9iRjNZRVk4TjJfWmY4NHRqNWtzdzgyZmUxVU9hcThMZThKM3VwX2M1YlBzbC1xdFVmaVBoMjQ5eHdGMzgtRHJTcFRfOXZicjlxeVZsT05kMGtfMXFOWnVpMnhfOVhxbzF0X2lkM1A3ajgtdlN0SThhUTQ?oc=5",
+      "published": "2026-11-26T15:51:37.000Z"
+    },
+    {
+      "source": "NSW Government",
+      "title": "Two decades of dedicated mental health care in the Blue Mountains",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNQldoMXNwTTZBd1AxMVBZMEJKcXpuelhGdTFhamdJdkZra1BYS1R5anN5dVBOQTUtTlJtcm0xRGt0aUtqcmJ6LWlQZW5pSmtnREpFZzRiNlVSdVdrejRTbHRRdWJFUGdRSWhYS09SQTcwUmdYWk8xMHptOEdpWE5HNTRFMkJEZkZxQU5UWTNhNklXSGFMSklKTW5UVDFQOFdRdkJ6OFE0b2hIaHJqWE5tRFdlS3V2cFlXcE03Q0ZFcGFyNFVU?oc=5",
+      "published": "2026-11-26T14:46:24.000Z"
+    },
+    {
+      "source": "The Guardian",
+      "title": "Beau Lamarre-Condon used his service weapon to murder two men. Did NSW police recruiters miss any red flags?",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONEtxSkwzd2xJX0k3Q05GYnc0ZVliaTBCenBqQjVmNHRxY28wbUh5WmRGSERHeDhLVlZ6QzlneUswLW8xZlcxNGROLXZTdzJxaUZmME9sLTB6a2taQ0xHbkhjbklrbmdfMVdXWHlsbkEteF8xeEdjelRlanA1djl1ODFWazZYMzlCcEN3YWJIaTJwYnBHRXllaGZLUWxnMk4yTS1JR3pYX1FNTVM5OUVRZWxUQXV5eDVqLVRaaElR?oc=5",
+      "published": "2026-11-26T14:00:00.000Z"
     },
     {
       "source": "NSW Police",
       "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNMFlvVVNhMW9YVGxmN002VVNncnFBVFRpazBsbU9wQXh4Tlo2djZKc0lTdHdZd012QnJnOTJNVnpZaGREanFXZnhlZFYyazBCUHNoMDBNaWUzOTM3RG9MbndudE10WXRUUlNRUTA5dE5OT0YtczNuM1dRc3pfXzZtSnVLT0VmcmFPcGNWSHJwcGViN1FVdTBkbk5zajhzN3lMRnBlNlFPcV9pV2lYdW1VVVZyMlhWSlQxT0NqeUlyRVBBOTFtVTZWcHB2WWhPS0xVczdGSWJ6N0hDSEI5T1BTQjRheElGOVJncmk1TA?oc=5",
-      "published": "2026-11-26T09:21:38.000Z"
-    },
-    {
-      "source": "The Sporting Base",
-      "title": "Will Hopoate Charged by NSW Police, Manly Confirm",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE56dWhfT01SQm4zNGc5Wm9JWFdkSmp5eG10bm1zTWs2UUN3RzhvMVVoY1d0UUx4QnNyaFlBRXFYM3pOM2dsOVJTc2hKZ1l0UWVLdEx4SmhwOHNoRnJZZEMzdlBGUDhtOHIzWnNUdmpHZHAxdkE?oc=5",
-      "published": "2026-11-26T08:35:00.000Z"
-    },
-    {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQZmpKd3o0a1I5MkdBUkNpd19jQkN1Q2xUSkZLRHVmLXp3OGdVX1FDZWtfY1lzbF9FUVVRdk5WVWFKRUx4UEtsajVDLXFZWjRLTU4yYUZQYi1Xd0syay1ENjdqQS00dHJWVmEyZktpa2c2ZkdIX1Q5M1EyVXJ1blFIUXhLX3RWa2FMLXdnSkxQQ0RROEtOZW5QTXpzME1XQWVzTTZzUXFjeEFVMzhLNmxuUGxkZEZBS3cwZDA2TXBnZ0xtRmJ3WjRSZW5tTjNZWTFMQUpvaWV1endFLXYyYnVqU3NXbXc3OGczRlFacHo0a2dhU2EyRE5z?oc=5",
-      "published": "2026-11-26T06:20:21.000Z"
-    },
-    {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQWldLYUY4Wm81WUZlc2YydWtJTHR5RVhwbmVDNnFpSFRma19HTUxsNWV0cFFJM0dyN0h2MEluMzNyaGJlNHFNcDQ5bnJzU3l5blpwMDFTSmd3cVBPeHRuZFMtWkotdU54MHBVSWY1ck92c3dXLVpoQXpZZlY4ZGRqN09UOWRfZ0NjRDlNWXc0QUdOeEJ3THpqbFcwZ3JWcDJkOU5oRWxHVGZRWlpWMlVOQW9FdVJkd2Y5M0ZhNm9WS3A4V3k1YVFCRWZkaThFTUNScTNCem5VdEhTOFBpR0k5aTd1ZHBpWDBLdjFtWVo2V3d6R3ZNVDlN?oc=5",
-      "published": "2026-11-26T05:33:17.000Z"
-    },
-    {
-      "source": "Mudgee Guardian",
-      "title": "Teen charged after alleged high-speed pursuit through Mudgee's CBD",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSlR5UWRzWUd4YUUzUEdtYmFLeHlFNDVOUk9vX0VUcG9MUmlCdU92bVotVnN1MWtLZ0Fva1dEYkRkVUdiUUpJdHdhaVlxeHgyNm02WWxqSHZPa2hRU3ZyQTBkS2doZVpnZzBtTkc5dTFyWVBtb2E0VVl3WVUxdkJ3OW05WVNGU01CQzVpRW1sUXZUb0dyMFc1QjhmQlU0enZqb3VUZnl5aGt5UWM?oc=5",
-      "published": "2026-11-26T04:29:43.000Z"
-    },
-    {
-      "source": "WAtoday",
-      "title": "‘He would lose his composure’: Lamarre-Condon red flags face scrutiny",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOT1dQMW9TVW1mNGNuazdSV1N0SjIwcXI0eUU5T0hLOGRCOURBRVRZNXMyOHcxemlpVENzRmNhdGlhM0hZWGIzNHZKS2Z2TEhrUS1aYjNUUjF3Q3NWSUlfcnZuQTZGMjhoX2ctM2VwUzdqX2tJWTQtM2ZNeUQ5R25aTktRV1RHZG9leVJHVG45aG04TTFZUVpweEs2dkJ0SGdYZFJ5eXByNllfaUt4TDhtM2xod0w2ZTFKd1VLUElET0lVdTlKLUE?oc=5",
-      "published": "2026-11-26T01:13:07.000Z"
-    },
-    {
-      "source": "NSW Police",
-      "title": "Latest News",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1DUHFkd2YzV3drT09fSDBsQnNQemxZNmNhWXNUMG1TVnBOaW9RUVkyM09jVUNlckJUTDJ2VnVNa1o1QTExOUdlekpUcTFuTzh5YmdNX2tDdWFac3hYTEU4VVVB?oc=5",
-      "published": "2026-11-26T00:54:37.000Z"
+      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNUWZQdXdLdDAzZWpJTGk5QzRUbnVEVUxJZkdmdzlHVUdfYzJ2YndlQlVxWGRWUU1YSXh4cDVWSHRzV3dIR01wT0xibGtldUs3Z0h3YUUtMENuZklzU29rVVNkbVJWNWk1MkRfa3EtUFpmazdfekM4U0JoajRESWd0ZWt2Sm93dERYblB1bXExTzNGTVhXay1CSmtnRDhtX0VlVGRPQzQ5b0JucDFBWU5FWUR5LTJ6a29VYk91YkNVdU9JT1M0QTZpdDhsZi1GZnVvMXBJTU1XQmZkYWI2LXl4NHRvSi1CUXJnRWhnWQ?oc=5",
+      "published": "2026-11-26T13:06:36.000Z"
     }
   ],
   "uk": [
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Long delays on A259 as mile-long queues build towards Seaford",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTFJ5RkktSXRlS1JaU0czYk9ZYVFudFhQVnlXZEE2ODRoUERLdUUxRU9vNWw2RVhCSWF0Vl9aOVRpLU1xclRfYzU1b3ppc25ObFNsLTlPT3lBNFJHdThjalpqSC05NWdrcl9sQ1lNd3NnUmcwWktia09HcnVrMmZPa05kSWVjMW5sb2Qwd0daMzMxVHdFYVBaWFIyS29kTU56MzQwUFFuenZMX1hfRFJyUDNKck5vdlU?oc=5",
-      "published": "2026-11-26T09:01:00.000Z"
+      "title": "Try-fest in Surrey: Eastbourne storm to 85-7 victory at Weybridge",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRGMzUHBxVHlnYkpUZ3dBWDM2UDY5dlc2bHZWa1ZNWVJEZTd3Rl9aLXJ1Y1pXN2M1c0djNTh2SXMza3VDSHN5WEI0dGVqb3Q2Qmh3X2VnWFNIbkVMSHEyMklfWDR2dXhMbGZzQS16WmVPY1RPcVJVdlJvZ0YzRTBZQ3YwN18wbW5YZnpaLUp5aVZmWGg5cFR1c0UwZ3dCenpBVXB5NXR3?oc=5",
+      "published": "2026-11-26T18:14:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Hastings Pier owner denies any knowledge of £160k unpaid water bills at three Eastbourne hotels",
-      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNR3JoTDJTNEY1Slo5MWFEYWJEVXlHbkx3S2l2VHA0MFRIMjhFNVdyZ0taeFBXeUh5VWZ6WlhjYlljZVV3VTY4d3RzclhrS2s1bS11QUFPR05tbFR5X01UcXZ4SXpfWV9udGVGSUppNnZva0JURUV1d3JIT3ljM1VGelFncWtWaHo0dkhmUVU3VzNsWjdxb0JuOFZ5dmZ3d2RoOFFQWDRMeEJ1R3M2VDQwOUhpS0RvcVQ5ZkppVFRiSkdlSFprV2F5MlJmOXRiT0dudXRMYmN0WGxfa2pOcndoYg?oc=5",
-      "published": "2026-11-26T08:26:00.000Z"
+      "title": "Eastbourne MP congratulates local business on world champion culinary award",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMmJ5aXo3Sy1TTE9CVEdxVmlMU2owYTBidDhPVFExZncxVlJucFRxb0FMRTNyQ0NMaVF4OTkxSXJYNWU2NUY4RUxhYXhvdWtwLVBCWWhuYndkZzlVQS05MndxRHBVS2kycmZOdENPRk5oTzRGeTVxLXdYYlp5UzhkQjZFbFo0OS1DU2lBSEs3VGY3TzBVODJuM2JxNWtQMW4wVTBlVmIyQzB5aUd5MlE?oc=5",
+      "published": "2026-11-26T16:01:00.000Z"
+    },
+    {
+      "area": "Eastbourne",
+      "source": "Great British Life",
+      "title": "Christmas in Eastbourne: lights, markets, parties and festive fun",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNb2hST24xNURNcTFBMTNMcDlfeDdzVFRYZXBKc0RrVUZxWkE0YUxIel9SaGhIaHlIVHAxRG5mclBxUUdxcG9jU1FscThFd1kyaEdOOVRYUE45Z3BKb25oOWpscldYNFoweXprWTFXS3liNUtvZndpRTJXVmIzYjF1b0JUYmtIMnpnYkJLVzZWczludlFDMXpBRzU3S0xrd28?oc=5",
+      "published": "2026-11-26T16:00:00.000Z"
     },
     {
       "area": "Eastbourne",
       "source": "SussexWorld",
-      "title": "Reports of 20 minute delay on A27 near Lewes",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWFlnMjBqcG9aaXl0QS1LMEpBVFYxbzJqMFVHNjl5b2plVXp5ejBzb3hGQUlHNktaUVZsemkzNF9FOUJJdTZ1aE82M19uenR5LTRLTXBUTThTb0xWNWJjMlEtSWpSVlQ1aEtFaS12ME45X002ZTZFNGw5ZFZPdFBlNDBTdHZxc3ZfZXg2YUVJUkJvcUhKQVZYTGoyUW93UXBUSzN1TFhDLW1LZWsydU43dGh3NlVCeFJuVVd3?oc=5",
-      "published": "2026-11-26T08:10:00.000Z"
+      "title": "Eastbourne family turns a train journey into a brand-new family card game",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZEJzQWRSNEVTTDZaQkxnTmtpQ3RRWmthSGMyZkd2aERnQU5WV2FnTG12bW5KYWpaLXdPcHNHVmVweUtSeE9aRXJUODE1REczd2FlZVdtTGs2dFo0UVBxWHhVTHhSNXRqUXd5Q1FnR3d4ODExWGZEVU1uM3FGLURlWGxLbzlHV0o0ZG1lWkRaUjBiMDB3U1ZRZ185b1VYWDZnNzJUMGVvcnFBUEI2blRrWmluTEI2bURRbW5nZW1YbGY1QQ?oc=5",
+      "published": "2026-11-26T14:07:00.000Z"
     },
     {
       "area": "Eastbourne",
-      "source": "V2 Radio",
-      "title": "Appeal after serious assault in Eastbourne",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZ0lZUllkWW5SdjRvMjkybUdKeTJfWkZXOUJDRkIxVXNXdjhHdEp2UmxSSGFVd2JBR2J4UDdEMGQ2b2hRbURTbmdiaGJfc0tRQ2taSEZrNVFoWloyeFVOUFVXYk8tOVBpY2ZOcVVKZThqaHZQMzIyUnVReXNkcnlRamJGRWJ5U0tzQWpSWg?oc=5",
-      "published": "2026-11-26T08:00:00.000Z"
+      "source": "SussexWorld",
+      "title": "The former old bank building in Eastbourne will be turned into a chocolate shop",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQQXduWnhKMUhycHlFYTd4TklEUTdxNlY1V0xEWlhkNTExNlJXYTNmRGNndnpsRWJYaGVCSWVQOVF0VHVRel9VeWdvRzFXWnEza19jZi10cFd1TTN0VE9DVk41X2lOcWVEOGMxV2VTMS1uS3Zucm9LVjVVWjFsYWxjT0tZa3FXX245WXRsdDk2Wi1FRC13SmRhY1hyS1pzcDVXYmpQdzU5SW1wZldGY3hUSDBaemRsOUdPLWFBRDBQbUc5TjR3MjVN?oc=5",
+      "published": "2026-11-26T13:53:00.000Z"
     },
     {
       "area": "Eastbourne",
-      "source": "Rayo",
-      "title": "Arrest after man reportedly assaulted with hammer in Eastbourne | News - Greatest Hits Radio (Sussex)",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOb1o4b3BnY0JtaHMyOTM2UDB3Nkk0YkRhZm1RMjJmV2MtSWJzWEVyMFRvaEd0WDVqNm11RWhJSHlYa0w0TVc5WGZaakp6R2tnelpOd2pnbGZhWUxnV2VBRU0zemRoZEg5NmwwaVZsZlhodDFSdEFBNWFuQlkzVGVBQWFzTVdVbTF4a1dmeURIRTVEYXZJMzFabEJqQ19zdmIxT2hlYThHYjVDTndKXzNpcXRxd2s0SDF2?oc=5",
-      "published": "2026-11-25T18:22:28.000Z"
+      "source": "Bournefree Live",
+      "title": "This weekend – The Sussex Craft & Design Christmas Fair returns to the Enterprise Shopping Centre",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOckF1NlN0bTVuUUN0cjBxZnhPdTAyV1RvRDE5TjlIUFY0eVZGcW9KVi1VR0I0S3E0SFQwaW0wUGxqRTFyNWNiU29uYWNlYlpMX0UyU2tZRVlSN1pDM0pEUURrbW9URHVGQXJMQ0YtYW1ILTA2MHc0cV9kQ3lLNEhSbFk4ZGVsdEVlMjZwSjdkRWQ5WW1RZXRpM2htbjhlR01tcFR2N0xKWk5mS0JPUGZkTXhhVHQ2dk96aFdrUS1EU2E?oc=5",
+      "published": "2026-11-26T13:30:50.000Z"
     },
     {
-      "area": "Eastbourne",
-      "source": "BBC",
-      "title": "Eastbourne hotelier not involved in billing, fraud trial told",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9IZVBDRVEtOWVuUGlNd1dHMy1mV2lYdWV2TXo1YmYtY0NXSXhkS29oVlllclVyVVNScXZhbWF2dlZJTWV2LWhrVkhFM1JBbXkyeTF6QU5tT2VRbTQ?oc=5",
-      "published": "2026-11-25T17:49:46.000Z"
+      "area": "East Sussex",
+      "source": "Yahoo News Canada",
+      "title": "Drought conditions could continue, company warns",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPdF9RMFA0YTN0R21OWl9TNEtJZmpUT21RdEZkT1JOb0pwZFd3OXI2VHhiVUZhdmhURUlLYlB1a01VdllGbmFBcG1DUUlGZk8xR2VZbURJb20xTTJweURrZGoyMTM0SGZvcDFKSnByUGJmVG5QVVBpOW5TZWhlREljYU9nX0NwNGNvc2c?oc=5",
+      "published": "2026-11-26T18:40:27.000Z"
     },
     {
       "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "In Pictures: Full steam into Christmas as the Sussex Belle delights Hastings crowds",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOazZkV3B4dTFsZ3puTTc1ME5DZEUydXFnV1Y2VWxGMUQ2WTRKODhsY0NwVFlvOEx5el9WbDBrNlpTNm0yRDc3ZTduT3RpenFvWEpOSGVSMmNPNjdOVmFoRk1mV1dwbUUxVExMNm1TN29BcUVNRHB5cTRJd2dIdjloaWpTOEN3TzE1UU0xNVAzMHJ0MDFCWFh2V2FZMllNWTVDU2I4cmQ4TWxrOWZGRVRnVkdJZTZvbmZKanpNdFhLZkNBWkRPNVp2WXNXeloyX2c?oc=5",
-      "published": "2026-11-26T09:12:00.000Z"
+      "title": "These planning applications were submitted to Mid Sussex District Council last week",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPM1RoTXRFQlRPUzF4cUJKaFlyYy02N25iWEpqYlA1ZjhZOXdNUnpKRzZFSXlsdFFjWmplSkdZeUxUVlZ2WVVaLVhMRkNWb2djbHo3YlNzc1Nkb2Y5cFpZMGxoT192Qk5xSG4taWF3cUJxSlFZRk9PZ00xZkVfWk1lMXFmdnlSX2pSTFdaejlUX29ELXZQVlE4VGZNYkx2T0ZRSndZRGlSV0FLbjdnZzFDOU1vVFk2OEtIb0RpT0xGSVlyRWtXY3RvcHE4SDFvOG53bzNacVlydldNVnViX2tYMnhsNmVCUQ?oc=5",
+      "published": "2026-11-26T14:55:00.000Z"
+    },
+    {
+      "area": "East Sussex",
+      "source": "Room151",
+      "title": "East Sussex weighs LAPFF membership",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVnEwMVVzN3FUZUs3ejZLdnE0enpGNjVhRHI5dXNzMXlZTlRJT0d5Yi1lNURXNEJhZlRhNnhaeU9MUjFwT0tZUXBZU2ExRzlJTnlyX3c4S0dNVy1ZRXl3VHZ0LVVna1VURllqV20wOWpIZmQ5TUw0d29mZkVBbV8yRmNidjQ2Y1dyYmJucHZpcmNUcWRxRV9PNEU4NXhHOUFnd3BsNkxxNVg?oc=5",
+      "published": "2026-11-26T13:46:44.000Z"
     },
     {
       "area": "East Sussex",
       "source": "SussexWorld",
-      "title": "More than 3,000 parking interventions help keep East Sussex buses moving",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVW5BdUpaZDJuSHUyZUpSYVd1cVZ0VzZrWVNNblotLXIwMlRDdlZfcU5kRXpjTWtiblRTTUllYkZiNWlkeVdWYVM1NmROOHZYeEZFRlVxWXBlTjAtakVncVFDU2NRY1lUd18tWlN0Ti15N0JZbVlNbEg4UlRlQ0M4WU04UUowOElKYWZyM0dBMnI1dXJxd3dfdTV4SmtmTFV0SVJ6Rno2UFhIWTFPMTNJS3p6M0ZyOWtVeGVmNTl5SQ?oc=5",
-      "published": "2026-11-26T09:09:00.000Z"
+      "title": "Emergency services are at the scene of a serious collision involving a car and three pedestrians, say police.",
+      "link": "https://news.google.com/rss/articles/CBMipAJBVV95cUxONGFFZUhyeWhNQVVwdHJ6WHpMRHV5SWVPMXhBalNCc3E2VERXZDlUX0UyV0xJNWVaWWVfWnhaUTA3VWpHUXpTMFZTUWcxTjVtbWdIaHZZcW9VWW9MZ2gwV2pROFJzaWxPamk4SVk5ZVlDTTRyeEdJcHFobkFxZEZzQ1FSeVdZTEx5T1BTV1JGNF9scFh5Y21ycmhtcmFaNUxoZGNIVnh2SFlNN0dNSEc0UnVNbTcteGtKeU5kQnJVZ01JSEFMb0F5MUF5YlJMLS1nRFAydEY3ZjgyYXR1ajlnRmhIQnhnOGpzbEJ1NnZmenpZUFVzWGVZNmpRU2NQUFlxUk0wOUp2ZnJBZUtGbGVRYWl3UVd5NW9kRWZ6YW4xOGdNUExR?oc=5",
+      "published": "2026-11-26T13:29:00.000Z"
     },
     {
-      "area": "East Sussex",
-      "source": "The Argus",
-      "title": "MP slams council for \"refusing\" to attend flooding meeting",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdUJrTjk5VmlDNU84QmZQOW9YUWVTdm10RktFX19ldllHRlJjdDNvREVKd2dFYUxBRUJHWHlWUXhvTGthTkJZYld2MFB2dm1GbzVlUVJQMFdqT0lpc3NkRGVKZGVLelhEX2dwQ1VzaTIxWThUMklMV28yMXZUTzFsUlBCelVFOFAtUVdxUVpPME9hSnNUMnJfNUx6R0dfVGM?oc=5",
-      "published": "2026-11-26T05:00:00.000Z"
+      "source": "BBC News Sussex",
+      "title": "Two children who were struck by car leave hospital",
+      "link": "https://www.bbc.co.uk/news/articles/cwr5grmm43qno?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-26T14:40:18.000Z"
     },
     {
-      "area": "East Sussex",
-      "source": "The Argus",
-      "title": "Pretty beach with East Sussex's only sand dunes that's perfect for a winter walk",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZXY2ajlQZktlSW5hdGs5dk03N2tDdWthVzNPb1VWTlp3Ql82X1dqN2JNV3VWbzc5YVlSS29CVGgxZGRHWm9qZHNZWDhETDlzZkZlbGNVdTlqYldOeDNfZ2h4RFlzN25MMGRoQ09zX0JMMmhmbzJxbWFQNUNMUFVweGhHQnBCTFBFZXRQMFVpMA?oc=5",
-      "published": "2026-11-26T05:00:00.000Z"
+      "source": "BBC News Sussex",
+      "title": "What we learned from Sussex Police in Hot Seat",
+      "link": "https://www.bbc.co.uk/news/articles/c6x29qlj1x09o?at_medium=RSS&at_campaign=rss",
+      "published": "2026-11-26T14:02:43.000Z"
     },
     {
       "source": "BBC News Sussex",
       "title": "Parking fines cause concern for local business",
       "link": "https://www.bbc.co.uk/news/articles/c862p997g9ryo?at_medium=RSS&at_campaign=rss",
       "published": "2026-11-26T06:11:41.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "BBC Radio 1's Big Weekend 2027 heads to Brighton",
-      "link": "https://www.bbc.co.uk/news/articles/cr1ewjpgd2llo?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-26T09:16:32.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "Parents cutting basics at Christmas, charity warns",
-      "link": "https://www.bbc.co.uk/news/articles/cq1k98gpzmy4o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-26T06:13:47.000Z"
-    },
-    {
-      "source": "BBC News Sussex",
-      "title": "AI porn deepfakes put women off public life, MP says",
-      "link": "https://www.bbc.co.uk/news/articles/cr742z9gx894o?at_medium=RSS&at_campaign=rss",
-      "published": "2026-11-25T19:01:59.000Z"
     }
   ]
 }
